@@ -14,7 +14,7 @@
 
 ## Travis
 
-### FilesForEveryExtensionCreator
+### FilesForEveryExtensionCreator build status
 
 [![Travis build status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)
 
@@ -34,21 +34,21 @@
 
 ## Nuget
 
-### DotNetFlags
+### DotNetFlags downloads
 
 [![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)
 
 ## Chrome webstore
 
-### VSMM
+### VSMM rating
 
 [![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo?hl=en-GB&gl=GB)
 
-### VSMM
+### VSMM version
 
 [![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo?hl=en-GB&gl=GB)
 
-### VSMM
+### VSMM downloads
 
 [![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo?hl=en-GB&gl=GB)
 
@@ -88,11 +88,11 @@
 
 ## Codacy
 
-### todo
+### todo grade
 
 [![](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](TargetRepoFileOrUrl)
 
-### todo
+### todo coverage
 
 [![](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg)](TargetRepoFileOrUrl)
 
