@@ -85,9 +85,17 @@
 
 [![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
+### FilesForEveryExtension Top Language
+
+[![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
+
 ### OpenInApp.Launcher number of different languages
 
-[![Github top 6 languages](https://img.shields.io/github/languages/count/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+[![Github nbr of diff languages](https://img.shields.io/github/languages/count/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+
+### FilesForEveryExtension number of different languages
+
+[![Github nbr of diff languages](https://img.shields.io/github/languages/count/badges/shields.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
 
 ### OpenInApp.Launcher Pull Requests
 
