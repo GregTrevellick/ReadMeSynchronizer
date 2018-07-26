@@ -9,7 +9,7 @@
 [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 
 ## Travis
-
+### FilesForEveryExtensionCreator
 [![Travis build status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)](TargetRepoFileOrUrl)
 
 ## VSMP
@@ -21,6 +21,7 @@
 [![Visual Studio Marketplace ratings](https://img.shields.io/vscode-marketplace/r/GregTrevellick.vsts-extensions-tweets-vsts.svg)](TargetRepoFileOrUrl)
 
 ## Nuget
+DotNetFlags
 [![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](TargetRepoFileOrUrl)
 
 ## Chrome webstore
@@ -32,7 +33,7 @@
 [![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](TargetRepoFileOrUrl)
 
 ## Github
-
+### OpenInApp.Launcher
 [![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
 [![Github top 6 languages](https://img.shields.io/github/languages/count/badges/shields.svg)](TargetRepoFileOrUrl)
@@ -46,8 +47,10 @@
 [![Appveyor build status](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)
 
 ## Coveralls
+### TrivialApisForIDE
+[![Coveralls coverage status](https://img.shields.io/coveralls/github/GregTrevellick/TrivialApisForIDE.svg)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
 
-[![xxxxxxxxxxxxxxxxxxxxxxxxx](https://img.shields.io/coveralls/github/GregTrevellick/TrivialApisForIDE.svg)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
+### TrivialApisForIDE
 [![Coveralls coverage status](https://coveralls.io/repos/github/GregTrevellick/TrivialApisForIDE/badge.svg?branch=master)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
 
 ## Codacy
