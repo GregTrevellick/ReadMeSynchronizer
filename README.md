@@ -28,7 +28,7 @@
 
 ### todo tests
 
-[![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](TargetRepoFileOrUrl)
+[![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
 
 ## VSMP
 
