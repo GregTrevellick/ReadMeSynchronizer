@@ -81,9 +81,11 @@
 
 ## Github
 
-[![Github All Releases](https://img.shields.io/github/downloads/GregTrevellick/OpenInApp.Launcher/total.svg)]()
+[![Github All Releases](https://img.shields.io/github/downloads/GregTrevellick/OpenInApp.Launcher/total.svg)](https://github.com/GregTrevellick/Badges-playground)
 
-[![Github All Releases](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher/total.svg)]()
+[![Github All Releases](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher/total.svg)](https://github.com/GregTrevellick/Badges-playground)
+
+[![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/Badges-playground)
 
 ### OpenInApp.Launcher Top Language
 
