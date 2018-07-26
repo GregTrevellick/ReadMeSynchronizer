@@ -12,11 +12,23 @@
 
 [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 
+# CI
+
 ## Travis
 
 ### FilesForEveryExtensionCreator build status
 
-[![Travis build status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)
+[![Travis Build Status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator.svg?branch=master)](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)
+
+## Appveyor
+
+### FilesForEveryExtensionCreator build status
+
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/b1t4vqmcjjoqos9u?svg=true)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+
+### todo tests
+
+[![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](TargetRepoFileOrUrl)
 
 ## VSMP
 
@@ -65,16 +77,6 @@
 ### OpenInApp.Launcher Pull Requests
 
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/cdnjs/cdnjs.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
-
-## Appveyor
-
-### todo tests
-
-[![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](TargetRepoFileOrUrl)
-
-### todo build status
-
-[![Appveyor build status](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)
 
 ## Coveralls
 
