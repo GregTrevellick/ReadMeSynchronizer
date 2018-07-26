@@ -4,7 +4,13 @@
 
 <!-- [![PlaceholderText](https://img.shields.io/SomePath/SomeSvgBadgeWithBothLeftAndRightText.svg)](TargetRepoFileOrUrl) -->
 
+### licene
+
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+
+### charity ware
 
 [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 
