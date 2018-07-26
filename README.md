@@ -16,49 +16,55 @@
 
 ### FilesForEveryExtensionCreator
 
-[![Travis build status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)](TargetRepoFileOrUrl)
+[![Travis build status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)
 
 ## VSMP
 
-[![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-vsts.svg)](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInEmacs.svg)
+### @VSTS version
 
-[![Visual Studio Marketplace downloads](https://img.shields.io/vscode-marketplace/d/GregTrevellick.vsts-extensions-tweets-vsts.svg)](TargetRepoFileOrUrl)
+[![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-vsts.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-vsts)
 
-[![Visual Studio Marketplace ratings](https://img.shields.io/vscode-marketplace/r/GregTrevellick.vsts-extensions-tweets-vsts.svg)](TargetRepoFileOrUrl)
+### @VSTS download count
+
+[![Visual Studio Marketplace downloads](https://img.shields.io/vscode-marketplace/d/GregTrevellick.vsts-extensions-tweets-vsts.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-vsts)
+
+### @VSTS version ratings
+
+[![Visual Studio Marketplace ratings](https://img.shields.io/vscode-marketplace/r/GregTrevellick.vsts-extensions-tweets-vsts.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-vsts)
 
 ## Nuget
 
 ### DotNetFlags
 
-[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](TargetRepoFileOrUrl)
+[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)
 
 ## Chrome webstore
 
 ### VSMM
 
-[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](TargetRepoFileOrUrl)
+[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo?hl=en-GB&gl=GB)
 
 ### VSMM
 
-[![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](TargetRepoFileOrUrl)
+[![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo?hl=en-GB&gl=GB)
 
 ### VSMM
 
-[![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](TargetRepoFileOrUrl)
+[![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo?hl=en-GB&gl=GB)
 
 ## Github
 
-### OpenInApp.Launcher
+### OpenInApp.Launcher Top Language
 
 [![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
-### todo
+### OpenInApp.Launcher Top 6 Languages
 
-[![Github top 6 languages](https://img.shields.io/github/languages/count/badges/shields.svg)](TargetRepoFileOrUrl)
+[![Github top 6 languages](https://img.shields.io/github/languages/count/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
-### todo
+### OpenInApp.Launcher Pull Requests
 
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/cdnjs/cdnjs.svg)](TargetRepoFileOrUrl)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/cdnjs/cdnjs.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
 ## Appveyor
 
