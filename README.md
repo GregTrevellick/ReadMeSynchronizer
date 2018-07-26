@@ -28,7 +28,22 @@
 
 ### todo tests
 
+1
+
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+
+2
+
+[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/b1t4vqmcjjoqos9u.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+
+3
+
+[![Appveyor unit tests](https://ci.appveyor.com/api/projects/status/b1t4vqmcjjoqos9u?svg=true)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+
+4
+
+![Test status](http://teststatusbadge.azurewebsites.net/api/status/GregTrevellick/filesforeveryextensioncreator)]
+(https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
 
 ## VSMP
 
