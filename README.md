@@ -58,7 +58,7 @@
 
 [![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
-### OpenInApp.Launcher Top 6 Languages
+### OpenInApp.Launcher number of different languages
 
 [![Github top 6 languages](https://img.shields.io/github/languages/count/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
@@ -68,11 +68,11 @@
 
 ## Appveyor
 
-### todo
+### todo tests
 
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](TargetRepoFileOrUrl)
 
-### todo
+### todo build status
 
 [![Appveyor build status](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)
 
@@ -88,15 +88,15 @@
 
 ## Codacy
 
-### todo grade
+### todo code quality grade
 
 [![](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](TargetRepoFileOrUrl)
 
-### todo coverage
+### todo coverage status
 
 [![](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg)](TargetRepoFileOrUrl)
 
-### todo
+### todo coverage percentage
 
 [![](https://img.shields.io/codecov/c/github/codecov/example-python.svg)](TargetRepoFileOrUrl)
 
