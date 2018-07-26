@@ -33,7 +33,7 @@
 
 ## Github
 
-[![Github top language](https://img.shields.io/github/languages/top/badges/shields.svg)](TargetRepoFileOrUrl)
+[![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
 [![Github top 6 languages](https://img.shields.io/github/languages/count/badges/shields.svg)](TargetRepoFileOrUrl)
 
