@@ -81,31 +81,25 @@
 
 ## Github
 
-[![Github All Releases](https://img.shields.io/github/downloads/GregTrevellick/OpenInApp.Launcher/total.svg)](https://github.com/GregTrevellick/Badges-playground)
-
-[![Github All Releases](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher/total.svg)](https://github.com/GregTrevellick/Badges-playground)
-
-[![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/Badges-playground)
-
 ### OpenInApp.Launcher Top Language
 
-[![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
 ### FilesForEveryExtension Top Language
 
-[![GitHub top language](https://img.shields.io/github/languages/top/badges/shields.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
+[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/FilesForEveryExtension.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
 
 ### OpenInApp.Launcher number of different languages
 
-[![Github nbr of diff languages](https://img.shields.io/github/languages/count/badges/shields.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+[![Github nbr of diff languages](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
 ### FilesForEveryExtension number of different languages
 
-[![Github nbr of diff languages](https://img.shields.io/github/languages/count/badges/shields.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
+[![Github nbr of diff languages](https://img.shields.io/github/languages/count/GregTrevellick/FilesForEveryExtension.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
 
 ### OpenInApp.Launcher Pull Requests
 
-[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/cdnjs/cdnjs.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
 ## Coveralls
 
