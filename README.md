@@ -22,28 +22,26 @@
 
 ## Appveyor
 
-### FilesForEveryExtensionCreator build status
+### FilesForEveryExtensionCreator build status (via appveyor directly)
 
 [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/b1t4vqmcjjoqos9u?svg=true)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
 
-### todo tests
+### OpenInApp.Launcher tests (not via appveyor but shields.io instead) HYPHEN NOT DOT
 
-1
+[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/OpenInApp-Launcher.svg)](https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher)
 
+### FilesForEveryExtension tests (not via appveyor but shields.io instead)
+
+[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/filesforeveryextensioncreator.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+
+<!--
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+-->
 
-2
-
-[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/b1t4vqmcjjoqos9u.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
-
-3
-
-[![Appveyor unit tests](https://ci.appveyor.com/api/projects/status/b1t4vqmcjjoqos9u?svg=true)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
-
-4
-
+<!--
 ![Test status](http://teststatusbadge.azurewebsites.net/api/status/GregTrevellick/filesforeveryextensioncreator)]
 (https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+-->
 
 ## VSMP
 
