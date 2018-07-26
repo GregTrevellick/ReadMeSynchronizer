@@ -37,7 +37,14 @@ TODO
 
 [![Appveyor build status](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)
 
-[![](https://img.shields.io/coveralls/github/jekyll/jekyll.svg)](TargetRepoFileOrUrl)
+
+# COVERALLS
+
+[![xxxxxxxxxxxxxxxxxxxxxxxxx](https://img.shields.io/coveralls/github/GregTrevellick/TrivialApisForIDE.svg)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
+[![Coveralls coverage status](https://coveralls.io/repos/github/GregTrevellick/TrivialApisForIDE/badge.svg?branch=master)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
+
+
+
 
 [![](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](TargetRepoFileOrUrl)
 
