@@ -44,6 +44,8 @@ todo imgbot
 
 todo accesslint
 
+todo codecov
+
 BetterCodeHub VsixToolWindowAsyncPackageExample
 [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/)
 
@@ -51,7 +53,11 @@ BetterCodeHub VsixFootie [![BCH compliance](https://bettercodehub.com/edge/badge
 
 BetterCodeHub FilesForEveryExtension [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/FilesForEveryExtension?branch=master)](https://bettercodehub.com/)
 
-todo codefactor
+CodeFactor solutionopenpopup [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup/badge)](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup)
+
+CodeFactor visualstudiomarketplacemetrics [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics/badge)](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics)
+
+CodeFactor vsixfootie [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie/badge)](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie)
 
 Charity Ware [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 
