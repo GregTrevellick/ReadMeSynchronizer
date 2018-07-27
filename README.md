@@ -76,6 +76,8 @@ Travis build status VsixFootie [![Travis Build Status](https://travis-ci.org/Gre
 
 Travis build status FilesForEveryExtensionCreator [![Travis Build Status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator.svg?branch=master)](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)
 
+Travis build status VisualStudioMarketplaceMetrics [![Travis Build Status](https://travis-ci.org/GregTrevellick/VisualStudioMarketplaceMetrics.svg?branch=master)](https://travis-ci.org/GregTrevellick/VisualStudioMarketplaceMetrics)
+
 ### VS IDE extensions
 
 todo 
