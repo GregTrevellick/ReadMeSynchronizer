@@ -28,13 +28,13 @@ Codacy code quality grade SolutionOpenPopUp [![Codacy Badge](https://api.codacy.
 
 https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo
 
-https://docs.coveralls.io/dot-net
-
-https://www.nuget.org/packages/coveralls.io
-
 todo Codacy coverage status [![](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg)](TargetRepoFileOrUrl)
 
 todo Codacy coverage percentage [![](https://img.shields.io/codecov/c/github/codecov/example-python.svg)](TargetRepoFileOrUrl)
+
+https://docs.coveralls.io/dot-net
+
+https://www.nuget.org/packages/coveralls.io
 
 todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://img.shields.io/coveralls/github/GregTrevellick/TrivialApisForIDE.svg)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
 
@@ -44,7 +44,12 @@ todo imgbot
 
 todo accesslint
 
-todo better code hub
+BetterCodeHub VsixToolWindowAsyncPackageExample
+[![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/)
+
+BetterCodeHub VsixFootie [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixFootie?branch=master)](https://bettercodehub.com/)
+
+BetterCodeHub FilesForEveryExtension [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/FilesForEveryExtension?branch=master)](https://bettercodehub.com/)
 
 todo codefactor
 
