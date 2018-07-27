@@ -20,7 +20,17 @@ Github Pull Requests OpenInApp.Launcher [![GitHub pull requests](https://img.shi
 
 Github Pull Requests OzCode.VisualStudioExtensionAnalyzers [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OzCode.VisualStudioExtensionAnalyzers.svg)](https://github.com/GregTrevellick/OzCode.VisualStudioExtensionAnalyzers)
 
-todo Codacy code quality grade [![](https://img.shields.io/codacy/grade/e27821fb6289410b8f58338c7e0bc686.svg)](TargetRepoFileOrUrl)
+Codacy code quality grade AutoFindReplace [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/AutoFindReplace/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/AutoFindReplace&amp;utm_campaign=Badge_Grade_Dashboard)
+
+Codacy code quality grade FilesForEveryExtension [![Codacy Badge](https://api.codacy.com/project/badge/Grade/35560f38029b47258343156a1866f349)](https://www.codacy.com/project/gtrevellick/FilesForEveryExtension/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/FilesForEveryExtension&amp;utm_campaign=Badge_Grade_Dashboard)
+
+Codacy code quality grade SolutionOpenPopUp [![Codacy Badge](https://api.codacy.com/project/badge/Grade/23dfefe3b5014fd8b8462b47a3f38c1c)](https://www.codacy.com/project/gtrevellick/SolutionOpenPopUp/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/SolutionOpenPopUp&amp;utm_campaign=Badge_Grade_Dashboard)
+
+https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo
+
+https://docs.coveralls.io/dot-net
+
+https://www.nuget.org/packages/coveralls.io
 
 todo Codacy coverage status [![](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg)](TargetRepoFileOrUrl)
 
