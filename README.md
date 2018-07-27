@@ -64,7 +64,15 @@ Appveyor tests FilesForEveryExtension [![Appveyor unit tests](https://img.shield
 (https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
 -->
 
-todo Travis build status OpenInApp.Launcher [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
+Travis build status OpenInApp.Launcher [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
+
+Travis build status SolutionOpenPopUp [![Travis Build Status](https://travis-ci.org/GregTrevellick/SolutionOpenPopUp.svg?branch=master)](https://travis-ci.org/GregTrevellick/SolutionOpenPopUp)
+
+Travis build status QuickLaunchButtons [![Travis Build Status](https://travis-ci.org/GregTrevellick/QuickLaunchButtons.svg?branch=master)](https://travis-ci.org/GregTrevellick/QuickLaunchButtons)
+
+Travis build status DotNetFlags [![Travis Build Status](https://travis-ci.org/GregTrevellick/DotNetFlags.svg?branch=master)](https://travis-ci.org/GregTrevellick/DotNetFlags)
+
+Travis build status VsixFootie [![Travis Build Status](https://travis-ci.org/GregTrevellick/VsixFootie.svg?branch=master)](https://travis-ci.org/GregTrevellick/VsixFootie)
 
 Travis build status FilesForEveryExtensionCreator [![Travis Build Status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator.svg?branch=master)](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)
 
