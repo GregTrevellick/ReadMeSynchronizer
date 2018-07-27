@@ -26,6 +26,10 @@ todo Codacy coverage status [![](https://img.shields.io/codacy/coverage/c44df2d9
 
 todo Codacy coverage percentage [![](https://img.shields.io/codecov/c/github/codecov/example-python.svg)](TargetRepoFileOrUrl)
 
+todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://img.shields.io/coveralls/github/GregTrevellick/TrivialApisForIDE.svg)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
+
+todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://coveralls.io/repos/github/GregTrevellick/TrivialApisForIDE/badge.svg?branch=master)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
+
 todo imgbot
 
 todo accesslint
@@ -38,13 +42,14 @@ Charity Ware [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%
 
 ### Almost all
 
+<!-- Appveyor note: hyphen not dot for OpenInApp.Launcher -->
 <!-- Appveyor build status via appveyor directly -->
 
 Appveyor build status OpenInApp.Launcher [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher) 
 
 Appveyor build status FilesForEveryExtensionCreator [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/b1t4vqmcjjoqos9u?svg=true)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator) 
  
- <!-- Appveyor tests not via appveyor but shields.io instead. note: hyphen not dot for OpenInApp.Launcher -->
+ <!-- Appveyor tests not via appveyor but shields.io instead --> 
 
 Appveyor tests OpenInApp.Launcher [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/OpenInApp-Launcher.svg)](https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher)
 
@@ -62,12 +67,6 @@ Appveyor tests FilesForEveryExtension [![Appveyor unit tests](https://img.shield
 todo Travis build status OpenInApp.Launcher [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 
 Travis build status FilesForEveryExtensionCreator [![Travis Build Status](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator.svg?branch=master)](https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator)
-
-### Coveralls
-
-todo TrivialApisForIDE [![Coveralls coverage status](https://img.shields.io/coveralls/github/GregTrevellick/TrivialApisForIDE.svg)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
-
-todo TrivialApisForIDE [![Coveralls coverage status](https://coveralls.io/repos/github/GregTrevellick/TrivialApisForIDE/badge.svg?branch=master)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
 
 ### VS IDE extensions
 
