@@ -30,6 +30,23 @@ Codacy code quality grade FilesForEveryExtension [![Codacy Badge](https://api.co
 
 Codacy code quality grade SolutionOpenPopUp [![Codacy Badge](https://api.codacy.com/project/badge/Grade/23dfefe3b5014fd8b8462b47a3f38c1c)](https://www.codacy.com/project/gtrevellick/SolutionOpenPopUp/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/SolutionOpenPopUp&amp;utm_campaign=Badge_Grade_Dashboard)
 
+BetterCodeHub VsixToolWindowAsyncPackageExample
+[![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/)
+
+BetterCodeHub VsixFootie [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixFootie?branch=master)](https://bettercodehub.com/)
+
+BetterCodeHub FilesForEveryExtension [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/FilesForEveryExtension?branch=master)](https://bettercodehub.com/)
+
+CodeFactor solutionopenpopup [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup/badge)](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup)
+
+CodeFactor visualstudiomarketplacemetrics [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics/badge)](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics)
+
+CodeFactor vsixfootie [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie/badge)](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie)
+
+Image bot [![ImgBot](https://img.shields.io/badge/Image-Optimizer-aqua.svg)](https://imgbot.net/)
+
+Charity Ware [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
+
 https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo
 
 todo Codacy coverage status [![](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg)](TargetRepoFileOrUrl)
@@ -44,24 +61,7 @@ todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://img.shiel
 
 todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://coveralls.io/repos/github/GregTrevellick/TrivialApisForIDE/badge.svg?branch=master)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
 
-Imgbot [![ImgBot](https://img.shields.io/badge/Image-Optimizer-aqua.svg)](https://imgbot.net/)
-
 todo codecov
-
-BetterCodeHub VsixToolWindowAsyncPackageExample
-[![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/)
-
-BetterCodeHub VsixFootie [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixFootie?branch=master)](https://bettercodehub.com/)
-
-BetterCodeHub FilesForEveryExtension [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/FilesForEveryExtension?branch=master)](https://bettercodehub.com/)
-
-CodeFactor solutionopenpopup [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup/badge)](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup)
-
-CodeFactor visualstudiomarketplacemetrics [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics/badge)](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics)
-
-CodeFactor vsixfootie [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie/badge)](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie)
-
-Charity Ware [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 
 ### Almost all
 
