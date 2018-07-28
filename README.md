@@ -47,12 +47,15 @@ Image bot [![ImgBot](https://img.shields.io/badge/Image-Optimizer-aqua.svg)](htt
 
 Charity Ware [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 
+<!--
 https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo
 
 todo Codacy coverage status [![](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg)](TargetRepoFileOrUrl)
 
 todo Codacy coverage percentage [![](https://img.shields.io/codecov/c/github/codecov/example-python.svg)](TargetRepoFileOrUrl)
+-->
 
+<!--
 https://docs.coveralls.io/dot-net
 
 https://www.nuget.org/packages/coveralls.io
@@ -60,8 +63,9 @@ https://www.nuget.org/packages/coveralls.io
 todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://img.shields.io/coveralls/github/GregTrevellick/TrivialApisForIDE.svg)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
 
 todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://coveralls.io/repos/github/GregTrevellick/TrivialApisForIDE/badge.svg?branch=master)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
+-->
 
-todo codecov
+CodeCov OpenInApp.Launcher [![codecov](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher)
 
 ### Almost all
 
