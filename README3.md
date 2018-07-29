@@ -1,13 +1,3 @@
-blah 
-<!-- Badges START -->
-this should be replaced
-<!-- Badges END -->
-blah
-
-
-This isBLAHBLAHsentence
-
-
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
