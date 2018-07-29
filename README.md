@@ -107,7 +107,15 @@ Travis build status VisualStudioMarketplaceMetrics [![Travis Build Status](https
 
 ### VS IDE extensions
 
-todo 
+<!--https://github.com/badges/shields/issues/1704-->
+
+https://github.com/badges/shields/issues/1704
+
+AutoFindReplace version [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
+
+AutoFindReplace download count [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
+
+AutoFindReplace rating [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
 
 ### VSTS / VSO extensions
 
