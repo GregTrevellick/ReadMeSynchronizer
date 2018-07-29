@@ -4,7 +4,7 @@
 
 License [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 
-Accesslint github [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://github.com/AccessLint)
+Accesslint github [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 
 Github Top Language OpenInApp.Launcher [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
@@ -12,9 +12,9 @@ Github Top Language FilesForEveryExtension [![GitHub top language](https://img.s
 
 Github Top Language VisualStudioMarketplaceMetrics [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/VisualStudioMarketplaceMetrics.svg)](https://github.com/GregTrevellick/VisualStudioMarketplaceMetrics)
 
-Github language count OpenInApp.Launcher [![Github nbr of diff languages](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
+Github language count OpenInApp.Launcher [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
-Github language count FilesForEveryExtension [![Github nbr of diff languages](https://img.shields.io/github/languages/count/GregTrevellick/FilesForEveryExtension.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
+Github language count FilesForEveryExtension [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/FilesForEveryExtension.svg)](https://github.com/GregTrevellick/FilesForEveryExtension)
 
 Github language count VisualStudioMarketplaceMetrics [![Github nbr of diff languages](https://img.shields.io/github/languages/count/GregTrevellick/VisualStudioMarketplaceMetrics.svg)](https://github.com/GregTrevellick/VisualStudioMarketplaceMetrics)
 
@@ -22,18 +22,19 @@ Github Pull Requests OpenInApp.Launcher [![GitHub pull requests](https://img.shi
 
 Github Pull Requests OzCode.VisualStudioExtensionAnalyzers [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OzCode.VisualStudioExtensionAnalyzers.svg)](https://github.com/GregTrevellick/OzCode.VisualStudioExtensionAnalyzers)
 
+BetterCodeHub VsixToolWindowAsyncPackageExample [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/results/GregTrevellick/VsixToolWindowAsyncPackageExample)
+
+BetterCodeHub VsixFootie [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixFootie?branch=master)](https://bettercodehub.com/results/GregTrevellick/VsixFootie)
+
+BetterCodeHub FilesForEveryExtension [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/FilesForEveryExtension?branch=master)](https://bettercodehub.com/results/GregTrevellick/FilesForEveryExtension)
+
 Codacy code quality grade AutoFindReplace [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/AutoFindReplace/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/AutoFindReplace&amp;utm_campaign=Badge_Grade_Dashboard)
 
 Codacy code quality grade FilesForEveryExtension [![Codacy Badge](https://api.codacy.com/project/badge/Grade/35560f38029b47258343156a1866f349)](https://www.codacy.com/project/gtrevellick/FilesForEveryExtension/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/FilesForEveryExtension&amp;utm_campaign=Badge_Grade_Dashboard)
 
 Codacy code quality grade SolutionOpenPopUp [![Codacy Badge](https://api.codacy.com/project/badge/Grade/23dfefe3b5014fd8b8462b47a3f38c1c)](https://www.codacy.com/project/gtrevellick/SolutionOpenPopUp/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/SolutionOpenPopUp&amp;utm_campaign=Badge_Grade_Dashboard)
 
-BetterCodeHub VsixToolWindowAsyncPackageExample
-[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/)
-
-BetterCodeHub VsixFootie [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixFootie?branch=master)](https://bettercodehub.com/)
-
-BetterCodeHub FilesForEveryExtension [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/FilesForEveryExtension?branch=master)](https://bettercodehub.com/)
+CodeCov OpenInApp.Launcher [![codecov](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher)
 
 CodeFactor solutionopenpopup [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup/badge)](https://www.codefactor.io/repository/github/gregtrevellick/solutionopenpopup)
 
@@ -59,8 +60,6 @@ todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://img.shiel
 todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://coveralls.io/repos/github/GregTrevellick/TrivialApisForIDE/badge.svg?branch=master)](https://coveralls.io/github/GregTrevellick/TrivialApisForIDE?branch=master)
 -->
 
-CodeCov OpenInApp.Launcher [![codecov](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher)
-
 ImgBot  [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 
 Charity Ware [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
@@ -78,9 +77,9 @@ Appveyor build status FilesForEveryExtensionCreator [![Appveyor Build status](ht
  
  <!-- Appveyor tests not via appveyor but shields.io instead --> 
 
-Appveyor tests OpenInApp.Launcher [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/OpenInApp-Launcher.svg)](https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher)
+Appveyor tests OpenInApp.Launcher [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/OpenInApp-Launcher.svg)](https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher/build/tests)
 
-Appveyor tests FilesForEveryExtension [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/filesforeveryextensioncreator.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
+Appveyor tests FilesForEveryExtension [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/filesforeveryextensioncreator.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator/build/tests)
 
 <!--
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/NZSmartie/coap-net-iu0to.svg)](https://ci.appveyor.com/project/GregTrevellick/filesforeveryextensioncreator)
@@ -129,7 +128,7 @@ AutoFindReplace version [![Visual Studio Marketplace version](https://vsmarketpl
 
 AutoFindReplace download count [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
 
-AutoFindReplace rating [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
+AutoFindReplace rating [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace#review-details)
 
 ### Nuget
 

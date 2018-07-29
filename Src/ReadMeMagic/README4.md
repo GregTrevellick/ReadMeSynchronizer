@@ -5,7 +5,7 @@ this should be replaced
 blah
 
 
-This isBLAHBLAHsentence
+This isPRODUCTION PRODUCTION sentence
 
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)

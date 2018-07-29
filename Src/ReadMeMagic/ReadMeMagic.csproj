@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="node_modules\**" />
+    <EmbeddedResource Remove="node_modules\**" />
+    <None Remove="node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+    <Compile Remove="zProgram.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Gulpfile.js.BAK" />
+    <None Remove="package-lock.json" />
+    <None Remove="zGulpfile.js.BAK" />
+  </ItemGroup>
+
+</Project>
