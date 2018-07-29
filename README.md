@@ -2,11 +2,9 @@
 
 ### All
 
-Accesslint github [![Access Lint github](https://img.shields.io/badge/A11y-AccessLint-ff69f4.svg)](https://github.com/AccessLint)
-
-Accesslint twitter [![GitHub forks](https://img.shields.io/badge/A11y-AccessLint-brightgreen.svg?style=social&label=A11y)](https://twitter.com/accesslint)
-
 License [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+
+Accesslint github [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://github.com/AccessLint)
 
 Github Top Language OpenInApp.Launcher [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 
@@ -31,7 +29,7 @@ Codacy code quality grade FilesForEveryExtension [![Codacy Badge](https://api.co
 Codacy code quality grade SolutionOpenPopUp [![Codacy Badge](https://api.codacy.com/project/badge/Grade/23dfefe3b5014fd8b8462b47a3f38c1c)](https://www.codacy.com/project/gtrevellick/SolutionOpenPopUp/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/SolutionOpenPopUp&amp;utm_campaign=Badge_Grade_Dashboard)
 
 BetterCodeHub VsixToolWindowAsyncPackageExample
-[![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/)
+[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixToolWindowAsyncPackageExample?branch=master)](https://bettercodehub.com/)
 
 BetterCodeHub VsixFootie [![BCH compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixFootie?branch=master)](https://bettercodehub.com/)
 
@@ -42,10 +40,6 @@ CodeFactor solutionopenpopup [![CodeFactor](https://www.codefactor.io/repository
 CodeFactor visualstudiomarketplacemetrics [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics/badge)](https://www.codefactor.io/repository/github/gregtrevellick/visualstudiomarketplacemetrics)
 
 CodeFactor vsixfootie [![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie/badge)](https://www.codefactor.io/repository/github/gregtrevellick/vsixfootie)
-
-Image bot [![ImgBot](https://img.shields.io/badge/Image-Optimizer-aqua.svg)](https://imgbot.net/)
-
-Charity Ware [![Charity Ware](https://img.shields.io/badge/Charity%20Ware-Thank%20You-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 
 <!--
 https://support.codacy.com/hc/en-us/articles/207993835-Add-coverage-to-your-repo
@@ -66,6 +60,12 @@ todo Coveralls TrivialApisForIDE [![Coveralls coverage status](https://coveralls
 -->
 
 CodeCov OpenInApp.Launcher [![codecov](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher)
+
+ImgBot  [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
+
+Charity Ware [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
+
+Accesslint twitter [![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)
 
 ### Almost all
 
@@ -105,18 +105,6 @@ Travis build status FilesForEveryExtensionCreator [![Travis Build Status](https:
 
 Travis build status VisualStudioMarketplaceMetrics [![Travis Build Status](https://travis-ci.org/GregTrevellick/VisualStudioMarketplaceMetrics.svg?branch=master)](https://travis-ci.org/GregTrevellick/VisualStudioMarketplaceMetrics)
 
-### VS IDE extensions
-
-<!--https://github.com/badges/shields/issues/1704-->
-
-https://github.com/badges/shields/issues/1704
-
-AutoFindReplace version [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
-
-AutoFindReplace download count [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
-
-AutoFindReplace rating [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
-
 ### VSTS / VSO extensions
 
 @Dev_Humor version [![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)
@@ -131,6 +119,18 @@ AutoFindReplace rating [![Visual Studio Marketplace ratings](https://vsmarketpla
 
 @DailyDotNetTips version ratings [![Visual Studio Marketplace ratings](https://img.shields.io/vscode-marketplace/r/GregTrevellick.vsts-extensions-tweets-DailyDotNetTips.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-DailyDotNetTips)
 
+### VS IDE extensions
+
+<!--https://github.com/badges/shields/issues/1704-->
+
+https://github.com/badges/shields/issues/1704
+
+AutoFindReplace version [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
+
+AutoFindReplace download count [![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
+
+AutoFindReplace rating [![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.AutoFindReplace.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.AutoFindReplace)
+
 ### Nuget
 
 DotNetFlags downloads [![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)
@@ -139,10 +139,10 @@ VsixRatingChaser downloads [![Nuget downloads](https://img.shields.io/nuget/dt/V
 
 ### Chrome webstore
 
-Visual Studio Marketplace Metrics rating [![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo/reviews)
-
 Visual Studio Marketplace Metrics version [![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)
 
 Visual Studio Marketplace Metrics downloads [![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)
+
+Visual Studio Marketplace Metrics rating [![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo/reviews)
 
 <!-- [![PlaceholderText](https://img.shields.io/SomePath/SomeSvgBadgeWithBothLeftAndRightText.svg)](TargetRepoFileOrUrl) -->
