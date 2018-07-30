@@ -3,7 +3,7 @@ badge aaa
 badge bbb
 badgeddd
 badge eeeeeee
-<!--BadgesEND-->VsixFootieDotNetFlagsDotNetFlagsDotNetFlags
+<!--BadgesEND-->
 
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
