@@ -1,8 +1,9 @@
 <!--BadgesSTART-->
-badge1b
-badge2b
-badge3b
-<!--BadgesEND-->DotNetFlagsDotNetFlagsDotNetFlags
+badge aaa
+badge bbb
+badgeddd
+badge eeeeeee
+<!--BadgesEND-->VsixFootieDotNetFlagsDotNetFlagsDotNetFlags
 
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
@@ -49,4 +50,6 @@ ews)
 ews)
 ews)
 ews)
+ews)
+
 ews)

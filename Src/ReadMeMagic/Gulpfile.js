@@ -1,29 +1,17 @@
 ﻿/// <binding AfterBuild='default' ProjectOpened='default' />
-
 var gulp = require('gulp');
 var bower = require('gulp-bower');//not needed ?
 var replace = require('gulp-string-replace');
 
-//var lineBreakRegex = "[^\n]+";
 var htmlCommentStart = "<!--";
 var htmlCommentEnd = "-->";
-
 var prefix = "Badges";
-var start = htmlCommentStart + prefix + "START" + htmlCommentEnd;//+ lineBreakRegex;
-var end = htmlCommentStart + prefix + "END" + htmlCommentEnd;
-
-//////////////////var regexMiddle = '(.*)'; 
-//////////////////var regexMiddle = '(.|[\r\n])';
-//////////////////var regexMiddle1 = '[\s\S]';
-//////////////////var regexMiddle = '(.|\r|\n)';
-//////////////////var regexMiddle = '[^]';
-//////////////////var regexMiddle = '(.*|\r|\n)'; 
-//////////////////var regexMiddle = '(.*|[\s\S])'; 
-var regexMiddle = '[^]+';
-
+var start = htmlCommentStart + prefix + "START" + htmlCommentEnd;//<!--BadgesSTART-->
+var end = htmlCommentStart + prefix + "END" + htmlCommentEnd;//<!--BadgesEND-->
+var regexMiddle = '[^]+';//means ‘don’t match no characters’, a double negative that can re-read as ‘match any character’ i.e. even including line breaks
 var badgesRegex = new RegExp(start + regexMiddle + end, 'g');
-
-var newBadgesMarkdown = start + '\nbadge1b\nbadge2b\nbadge3b\n' + end;
+var lineBreak = '\n';
+var newBadgesMarkdown = start + lineBreak + 'badge aaa' + lineBreak + 'badge bbb' + lineBreak + 'badgeddd' + lineBreak + 'badge eeeeeee' + lineBreak + end;
 
 gulp.task('MyTaskNam', function () { return OIAConcat('MyTaskNam') });
 
@@ -46,11 +34,8 @@ function OIAConcat (appNam) {
     });
 
     function OIAConcat2(appNam) {
-
-        console.log("badgesRegex= " + badgesRegex);
-
         gulp.src(["readme4.md"])
-            .pipe(replace(badgesRegex, newBadgesMarkdown + appNam))
+            .pipe(replace(badgesRegex, newBadgesMarkdown))
             .pipe(gulp.dest('.'));
     } 
 }
