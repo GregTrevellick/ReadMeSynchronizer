@@ -27,22 +27,20 @@ gulp.task('default',
 
 function OIAConcat (appNam) { 
 
-    var a = ["a", "b", "c"];
-    a.forEach(function (entry) {
-        console.log(entry);
-    });
-
     var repos = [
         "SolutionOpenPopUp",
         "VsixFootie",
         "DotNetFlags"
     ];
 
-    repos.forEach(OIAConcat2(appNam));
-} 
+    repos.forEach(function (entry) {
+        console.log(entry);
+        OIAConcat2(entry);
+    });
 
-function OIAConcat2(appNam) {
-    gulp.src(["readme4.md"])
-        .pipe(replace(badgesRegex, newBadgesMarkdown))
-        .pipe(gulp.dest('.'));
-} 
+    function OIAConcat2(appNam) {
+        gulp.src(["readme4.md"])
+            .pipe(replace(badgesRegex, newBadgesMarkdown + appNam))
+            .pipe(gulp.dest('.'));
+    } 
+}
