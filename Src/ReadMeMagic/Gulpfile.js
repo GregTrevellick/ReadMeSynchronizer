@@ -1,4 +1,7 @@
 ﻿/// <binding AfterBuild='default' ProjectOpened='default' />
+
+//"use strict";
+
 var gulp = require('gulp');
 //var bower = require('gulp-bower');
 var replace = require('gulp-string-replace');
