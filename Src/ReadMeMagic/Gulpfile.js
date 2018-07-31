@@ -15,7 +15,7 @@ gulp.task('ProduceBadgeMarkdownTask', function () { return ReplaceBadgeComments(
 //gulp.task('UnitTests', function () { return ReplaceBadgeComments('ProduceBadgeMarkdownTask') });
 gulp.task('default', [ 'ProduceBadgeMarkdownTask' ]);
 
-function ReplaceBadgeComments (appNam) { 
+function ReplaceBadgeComments () { 
     var repos = [
         "AutoFindReplace",
         //"Badges-playground",
@@ -59,7 +59,7 @@ function ReplaceBadgeComments (appNam) {
             var badgesMarkdown =
                 [
                     "badge1aaaa",
-                    "badge2",
+                    "badge2bbb",
                     "badge3"
                 ];
 
