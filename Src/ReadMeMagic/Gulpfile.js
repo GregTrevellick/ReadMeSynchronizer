@@ -13,16 +13,15 @@ var badgesRegex = new RegExp(start + regexMiddle + end, 'g');
 var lineBreak = '\n';
 var newBadgesMarkdown = start + lineBreak + 'badge aaa' + lineBreak + 'badge bbb' + lineBreak + 'badgeddd' + lineBreak + 'badge eeeeeee' + lineBreak + end;
 
-gulp.task('MyTaskNam', function () { return OIAConcat('MyTaskNam') });
+gulp.task('MyTaskName', function () { return ReplaceForEveryRepo('MyTaskName') });
 
 gulp.task('default',
     [
-        'MyTaskNam',
+        'MyTaskName',
     ]
 );
 
-function OIAConcat (appNam) { 
-
+function ReplaceForEveryRepo (appNam) { 
     var repos = [
         "SolutionOpenPopUp",
         "VsixFootie",
@@ -30,12 +29,15 @@ function OIAConcat (appNam) {
     ];
 
     repos.forEach(function (entry) {
-        OIAConcat2(entry);
+        ReplaceBetweenStartAndEndHtmlComment(entry);
     });
 
-    function OIAConcat2(appNam) {
-        gulp.src(["readme4.md"])
+    function ReplaceBetweenStartAndEndHtmlComment(repoFolderName) {
+        var source = "../../../" + repoFolderName + "/ReadMe.md";
+        var destination = "../../../" + repoFolderName + "/ReadMe.md";
+
+        gulp.src([source])
             .pipe(replace(badgesRegex, newBadgesMarkdown))
-            .pipe(gulp.dest('.'));
+            .pipe(gulp.dest(destination));
     } 
 }
