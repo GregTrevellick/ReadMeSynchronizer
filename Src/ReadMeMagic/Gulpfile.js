@@ -23,9 +23,26 @@ gulp.task('default',
 
 function ReplaceForEveryRepo (appNam) { 
     var repos = [
+        "AutoFindReplace",
+        //"Badges-playground",
+        "DotNetFlags",
+        "FilesForEveryExtensionCreator",
+        "HelloWorldVstsExtension",
+        "OpenInApp.Launcher",
+        "QuickLaunchButtons",
+        "Quiz.Launcher",
         "SolutionOpenPopUp",
+        "TrivialApisForIDE",
+        "VisualStudioMarketplaceMetrics",
         "VsixFootie",
-        "DotNetFlags"
+        "VsixHelloWorldCommandButton",
+        "VsixHelloWorldPopUp",
+        "VsixHelloWorldToolBar",
+        "VsixRatingChaser",
+        "VsixToolWindowAsyncPackageExample",
+        "VsixTwitterWidget",
+        "VstsDashboardWidgetProjectTemplate",
+        "WpfAsyncBindingPropertyExample"
     ];
 
     repos.forEach(function (entry) {
@@ -40,3 +57,6 @@ function ReplaceForEveryRepo (appNam) {
             .pipe(gulp.dest(destination));
     } 
 }
+
+//vsixratingchaser NugetREADME.md
+//openinapp dedicated readmes
