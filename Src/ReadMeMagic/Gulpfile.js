@@ -1,6 +1,6 @@
 ﻿/// <binding AfterBuild='default' ProjectOpened='default' />
 var gulp = require('gulp');
-var bower = require('gulp-bower');//not needed ?
+//var bower = require('gulp-bower');
 var replace = require('gulp-string-replace');
 
 //Common variables
@@ -60,7 +60,7 @@ function ReplaceBadgeComments () {
                 [
                     "badge1aaaa",
                     "badge2bbb",
-                    "badge3"
+                    "badge3cccc"
                 ];
 
             badgesMarkdown.forEach(function (badgeMarkdown) {
