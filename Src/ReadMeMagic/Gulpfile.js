@@ -3,12 +3,12 @@ var gulp = require('gulp');
 var bower = require('gulp-bower');//not needed ?
 var replace = require('gulp-string-replace');
 
+//Common variables
 var prefix = "Badges";
 var htmlCommentStart = "<!--" + prefix;
 var htmlCommentEnd = "-->";
 var badgeCommentStart = htmlCommentStart + "START" + htmlCommentEnd;
 var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
-
 
 gulp.task('MyTaskName', function () { return ReplaceBadgeComments('MyTaskName') });
 
@@ -39,11 +39,20 @@ function ReplaceBadgeComments (appNam) {
     ];
 
     repos.forEach(function (repoFolderName) {
-        var lineBreak = '\n';
-        var badgesMarkdownPartial = 'badge aaa6' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak;
-        var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
+        var badgesMarkdown = GetBadgesMarkdown();
         ReplaceBadgeComment(repoFolderName, badgesMarkdown);
     });
+
+    function GetBadgesMarkdown() {
+        var lineBreak = '\n';
+        var badgesMarkdownPartial = GetBadgesMarkdownPartial();
+        var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
+        return badgesMarkdown;
+
+        function GetBadgesMarkdownPartial() {
+            return 'badge aaa7' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak;
+        }
+    }
 
     function ReplaceBadgeComment(repoFolderName, badgesMarkdown) {
         var destination = "../../../" + repoFolderName;
@@ -55,6 +64,7 @@ function ReplaceBadgeComments (appNam) {
             .pipe(gulp.dest(destination));
     } 
 }
+
 
 //vsixratingchaser NugetREADME.md
 //openinapp dedicated readmes
