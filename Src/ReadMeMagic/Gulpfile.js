@@ -40,7 +40,7 @@ function ReplaceForEveryRepo (appNam) {
         "VsixToolWindowAsyncPackageExample",
         "VsixTwitterWidget",
         "VstsDashboardWidgetProjectTemplate",
-        "WpfAsyncBindingPropertyExample"
+        "WpfAsyncBindingPropertyExample",
     ];
 
     repos.forEach(function (entry) {
