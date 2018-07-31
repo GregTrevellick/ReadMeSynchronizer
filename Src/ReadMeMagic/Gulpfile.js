@@ -10,8 +10,7 @@ var badgeCommentStart = htmlCommentStart + "START" + htmlCommentEnd;
 var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
 
 var lineBreak = '\n';
-var badgesMarkdownPartial = 'badge aaa4' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak ;
-var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
+var badgesMarkdownPartial = 'badge aaa5' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak ;
 
 gulp.task('MyTaskName', function () { return ReplaceBadgeComments('MyTaskName') });
 
@@ -42,10 +41,11 @@ function ReplaceBadgeComments (appNam) {
     ];
 
     repos.forEach(function (repoFolderName) {
-        ReplaceBadgeComment(repoFolderName);
+        var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
+        ReplaceBadgeComment(repoFolderName, badgesMarkdown);
     });
 
-    function ReplaceBadgeComment(repoFolderName) {
+    function ReplaceBadgeComment(repoFolderName, badgesMarkdown) {
         var destination = "../../../" + repoFolderName;
         var source = destination + "/ReadMe.md";
         var matchAnyCharacter = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
