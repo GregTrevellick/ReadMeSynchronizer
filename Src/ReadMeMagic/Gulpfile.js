@@ -34,8 +34,7 @@ function ReplaceForEveryRepo (appNam) {
 
     function ReplaceBetweenStartAndEndHtmlComment(repoFolderName) {
         var source = "../../../" + repoFolderName + "/ReadMe.md";
-        var destination = "../../../" + repoFolderName + "/ReadMe.md";
-
+        var destination = "../../../" + repoFolderName;
         gulp.src([source])
             .pipe(replace(badgesRegex, newBadgesMarkdown))
             .pipe(gulp.dest(destination));

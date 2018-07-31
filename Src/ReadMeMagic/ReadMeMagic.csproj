@@ -25,6 +25,7 @@
     <None Remove="Gulpfile.js.BAK" />
     <None Remove="package-lock.json" />
     <None Remove="zGulpfile.js.BAK" />
+    <None Remove="zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzREADME4.md" />
   </ItemGroup>
 
 </Project>
