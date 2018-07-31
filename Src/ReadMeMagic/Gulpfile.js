@@ -15,7 +15,8 @@ gulp.task('ProduceBadgeMarkdownTask', function () { return ReplaceBadgeComments(
 //gulp.task('UnitTests', function () { return ReplaceBadgeComments('ProduceBadgeMarkdownTask') });
 gulp.task('default', [ 'ProduceBadgeMarkdownTask' ]);
 
-function ReplaceBadgeComments () { 
+function ReplaceBadgeComments() { 
+
     var repos = [
         "AutoFindReplace",
         //"Badges-playground",
