@@ -45,12 +45,12 @@ function ReplaceBadgeComments (appNam) {
 
     function GetBadgesMarkdown() {
         var lineBreak = '\n';
-        var badgesMarkdownPartial = GetBadgesMarkdownPartial();
-        var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
-        return badgesMarkdown;
+        var multipleBadgesMarkdown = GetMultipleBadgesMarkdown();
+        var badgesMarkdownFull = badgeCommentStart + lineBreak + multipleBadgesMarkdown + badgeCommentEnd;
+        return badgesMarkdownFull;
 
-        function GetBadgesMarkdownPartial() {
-            return 'badge aaa7' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak;
+        function GetMultipleBadgesMarkdown() {
+            return 'badge aaa8' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak;
         }
     }
 
