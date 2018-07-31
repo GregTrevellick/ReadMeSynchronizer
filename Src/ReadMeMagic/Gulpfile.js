@@ -3,23 +3,21 @@ var gulp = require('gulp');
 var bower = require('gulp-bower');//not needed ?
 var replace = require('gulp-string-replace');
 
-var htmlCommentStart = "<!--";
-var htmlCommentEnd = "-->";
 var prefix = "Badges";
-var start = htmlCommentStart + prefix + "START" + htmlCommentEnd;//<!--BadgesSTART-->
-var end = htmlCommentStart + prefix + "END" + htmlCommentEnd;//<!--BadgesEND-->
-var regexMiddle = '[^]+';//means ‘don’t match no characters’, a double negative that can re-read as ‘match any character’ i.e. even including line breaks
-var badgesRegex = new RegExp(start + regexMiddle + end, 'g');
+var htmlCommentStart = "<!--" + prefix;
+var htmlCommentEnd = "-->";
+var badgeCommentStart = htmlCommentStart + "START" + htmlCommentEnd;
+var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
+var matchAnyCharacter = '[^]+';//means "don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
+var badgesRegex = new RegExp(badgeCommentStart + matchAnyCharacter + badgeCommentEnd, 'g');
+
 var lineBreak = '\n';
-var newBadgesMarkdown = start + lineBreak + 'badge aaa' + lineBreak + 'badge bbb' + lineBreak + 'badgeddd' + lineBreak + 'badge eeeeeee' + lineBreak + end;
+var badgesMarkdownPartial = 'badge aaa' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak ;
+var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
 
 gulp.task('MyTaskName', function () { return ReplaceForEveryRepo('MyTaskName') });
 
-gulp.task('default',
-    [
-        'MyTaskName',
-    ]
-);
+gulp.task('default', [ 'MyTaskName' ]);
 
 function ReplaceForEveryRepo (appNam) { 
     var repos = [
@@ -53,7 +51,7 @@ function ReplaceForEveryRepo (appNam) {
         var source = "../../../" + repoFolderName + "/ReadMe.md";
         var destination = "../../../" + repoFolderName;
         gulp.src([source])
-            .pipe(replace(badgesRegex, newBadgesMarkdown))
+            .pipe(replace(badgesRegex, badgesMarkdown))
             .pipe(gulp.dest(destination));
     } 
 }
