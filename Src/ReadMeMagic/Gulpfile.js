@@ -5,6 +5,13 @@
 var gulp = require('gulp');
 //var bower = require('gulp-bower');
 var replace = require('gulp-string-replace');
+var Server = require('karma').Server;
+
+gulp.task('test', function (done) {
+    new Server({
+        configFile: __dirname + '\\tests\\karma.conf.js'//,
+    }, done).start();
+});
 
 //Common variables
 var prefix = "Badges";
@@ -15,8 +22,8 @@ var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
 
 //Tasks
 gulp.task('ProduceBadgeMarkdownTask', function () { return ReplaceBadgeComments() });
-//gulp.task('UnitTests', function () { return ReplaceBadgeComments('ProduceBadgeMarkdownTask') });
-gulp.task('default', [ 'ProduceBadgeMarkdownTask' ]);
+
+gulp.task('default', ['ProduceBadgeMarkdownTask']);
 
 function ReplaceBadgeComments() { 
 

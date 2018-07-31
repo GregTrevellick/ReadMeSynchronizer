@@ -1,12 +1,29 @@
 {
-    "name": "GulpConcatReadMe",
+    "name": "GregWozEre",
     "version": "1.0.0",
     "private": true,
+    "scripts": {
+        "vendor": "gulp vendor",
+        "test": "gulp test",
+        "lint": "tslint -p .",
+        "publish": "gulp publish",
+        "restore": "dotnet restore && yarn install",
+        "clean": "gulp clean"
+    },
     "devDependencies": {
         "gulp": "3.9.1",
         "gulp-bower": "0.0.14",
         "gulp-config": "0.3.0",
         "gulp-concat": "2.6.1",
-        "gulp-string-replace": "1.1.1"
+        "gulp-string-replace": "1.1.1",
+        "@types/chai": "^4.1.4",
+        "@types/jasmine": "^2.8.8",
+        "chai": "^4.1.2",
+        "jasmine-core": "^2.8.0",
+        "karma": "^2.0.5",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-cli": "^1.0.1",
+        "karma-jasmine": "^1.1.2"
     }
 }
