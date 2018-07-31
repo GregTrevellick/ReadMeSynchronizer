@@ -12,14 +12,14 @@ var matchAnyCharacter = '[^]+';//means "don't match no characters" i.e. a double
 var badgesRegex = new RegExp(badgeCommentStart + matchAnyCharacter + badgeCommentEnd, 'g');
 
 var lineBreak = '\n';
-var badgesMarkdownPartial = 'badge aaa' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak ;
+var badgesMarkdownPartial = 'badge aaa2' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak ;
 var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
 
-gulp.task('MyTaskName', function () { return ReplaceForEveryRepo('MyTaskName') });
+gulp.task('MyTaskName', function () { return ReplaceBadgeComments('MyTaskName') });
 
 gulp.task('default', [ 'MyTaskName' ]);
 
-function ReplaceForEveryRepo (appNam) { 
+function ReplaceBadgeComments (appNam) { 
     var repos = [
         "AutoFindReplace",
         //"Badges-playground",
@@ -43,11 +43,11 @@ function ReplaceForEveryRepo (appNam) {
         "WpfAsyncBindingPropertyExample",
     ];
 
-    repos.forEach(function (entry) {
-        ReplaceBetweenStartAndEndHtmlComment(entry);
+    repos.forEach(function (repoFolderName) {
+        ReplaceBadgeComment(repoFolderName);
     });
 
-    function ReplaceBetweenStartAndEndHtmlComment(repoFolderName) {
+    function ReplaceBadgeComment(repoFolderName) {
         var source = "../../../" + repoFolderName + "/ReadMe.md";
         var destination = "../../../" + repoFolderName;
         gulp.src([source])
