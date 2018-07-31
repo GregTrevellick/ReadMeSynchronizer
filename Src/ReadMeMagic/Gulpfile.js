@@ -10,8 +10,9 @@ var htmlCommentEnd = "-->";
 var badgeCommentStart = htmlCommentStart + "START" + htmlCommentEnd;
 var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
 
-gulp.task('ProduceBadgeMarkdownTask', function () { return ReplaceBadgeComments('ProduceBadgeMarkdownTask') });
-
+//Tasks
+gulp.task('ProduceBadgeMarkdownTask', function () { return ReplaceBadgeComments() });
+//gulp.task('UnitTests', function () { return ReplaceBadgeComments('ProduceBadgeMarkdownTask') });
 gulp.task('default', [ 'ProduceBadgeMarkdownTask' ]);
 
 function ReplaceBadgeComments (appNam) { 
@@ -57,7 +58,7 @@ function ReplaceBadgeComments (appNam) {
 
             var badgesMarkdown =
                 [
-                    "badge1a",
+                    "badge1aaaa",
                     "badge2",
                     "badge3"
                 ];
