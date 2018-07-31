@@ -66,8 +66,6 @@ function ReplaceBadgeComments (appNam) {
                 badgesMarkdownFinal += badgeMarkdown + lineBreak;
             });
 
-            //return 'badge aaa8' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak;
-
             return badgesMarkdownFinal;
         }
     }
