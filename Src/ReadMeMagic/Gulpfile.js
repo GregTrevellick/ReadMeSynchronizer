@@ -50,7 +50,17 @@ function ReplaceBadgeComments (appNam) {
         return badgesMarkdownFull;
 
         function GetMultipleBadgesMarkdown() {
+            //TODO
+            //TODO
+            //TODO
+            //TODO
+            //TODO
             return 'badge aaa8' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak;
+            //TODO
+            //TODO
+            //TODO
+            //TODO
+            //TODO
         }
     }
 
