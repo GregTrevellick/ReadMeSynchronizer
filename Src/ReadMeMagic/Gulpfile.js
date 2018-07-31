@@ -9,8 +9,6 @@ var htmlCommentEnd = "-->";
 var badgeCommentStart = htmlCommentStart + "START" + htmlCommentEnd;
 var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
 
-var lineBreak = '\n';
-var badgesMarkdownPartial = 'badge aaa5' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak ;
 
 gulp.task('MyTaskName', function () { return ReplaceBadgeComments('MyTaskName') });
 
@@ -41,6 +39,8 @@ function ReplaceBadgeComments (appNam) {
     ];
 
     repos.forEach(function (repoFolderName) {
+        var lineBreak = '\n';
+        var badgesMarkdownPartial = 'badge aaa6' + lineBreak + 'badge bbb' + lineBreak + 'badge ccc' + lineBreak;
         var badgesMarkdown = badgeCommentStart + lineBreak + badgesMarkdownPartial + badgeCommentEnd;
         ReplaceBadgeComment(repoFolderName, badgesMarkdown);
     });
