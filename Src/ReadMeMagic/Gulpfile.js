@@ -33,7 +33,7 @@ gulp.task('default', ['get_badge_md']);
 
 function ReplaceBadgeComments() { 
     
-    tsnode(dummy());
+    //tsnode(dummy());
 
     var repos = [
         "AutoFindReplace",
