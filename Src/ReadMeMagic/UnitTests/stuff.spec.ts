@@ -1,7 +1,7 @@
 ﻿/// <reference types="jasmine" />
 
-describe("normalizeData", function () {
-    it("accepts golden path data", function () {
-        expect("Maria").toEqual("Maria");
+describe("should", function () {
+    it("do stuff", function () {
+        expect("abc").toEqual("abc");
     });
 });
