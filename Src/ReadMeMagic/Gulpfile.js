@@ -6,7 +6,7 @@ var gulp = require('gulp');
 ///////////////////////////var bower = require('gulp-bower');
 var Server = require('karma').Server;
 var tsnode = require('ts-node');
-require('./gulpfile2.ts');
+require('./update_badges_task.ts');
 
 gulp.task('run_karma_tests', function (done) {
     new Server({
