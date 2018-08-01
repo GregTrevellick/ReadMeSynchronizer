@@ -1,7 +1,6 @@
 import * as gulp from 'gulp';
 
-gulp.task('typscr2b', () => {
-    console.log('Gulp is running 333!');
+gulp.task('update_badges_readmes', () => {
 
     var replace = require('gulp-string-replace');
 
