@@ -6,6 +6,12 @@ var gulp = require('gulp');
 //var bower = require('gulp-bower');
 var replace = require('gulp-string-replace');
 var Server = require('karma').Server;
+var tsnode = require('ts-node');
+require('./gulpfile2.ts');
+
+//gulp.task('typscr2', function () {
+//   tsnode(typscr2b);//gulpfile2.ts;
+//});
 
 gulp.task('test', function (done) {
     new Server({

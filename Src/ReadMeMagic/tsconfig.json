@@ -8,6 +8,7 @@
         "moduleResolution": "node",
         "sourceMap": true,
         "strictNullChecks": true,
+        "allowUnreachableCode": false,
         "noUnusedLocals": true,
         "noImplicitThis": true,
         "noImplicitReturns": true,
@@ -31,6 +32,11 @@
         "ClientApp/**/*",
         "typings/**/*",
         "webpack.config.*"
+    ],
+    "exclude": [
+        "node_modules",
+        "typings/browser.d.ts",
+        "typings/browser"
     ],
     "compileOnSave": false
 }
