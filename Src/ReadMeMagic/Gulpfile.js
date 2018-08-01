@@ -9,12 +9,6 @@ var Server = require('karma').Server;
 require('./GulpTasks/update_badges_task.ts');
 require('./GulpTasks/run_tests_task.ts');
 
-//gulp.task('run_karma_tests', function (done) {
-//    new Server({
-//        configFile: __dirname + '\\tests\\karma.conf.js'
-//    }, done).start();
-//});
-
 //[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 //[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 //[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
