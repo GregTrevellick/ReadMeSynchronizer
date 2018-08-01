@@ -4,108 +4,15 @@
 
 var gulp = require('gulp');
 ///////////////////////////var bower = require('gulp-bower');
-//var replace = require('gulp-string-replace');
 var Server = require('karma').Server;
 var tsnode = require('ts-node');
 require('./gulpfile2.ts');
 
-///////////////////////////gulp.task('typscr2', function () {
-///////////////////////////   tsnode(typscr2b);//gulpfile2.ts;
-///////////////////////////
-
 gulp.task('run_karma_tests', function (done) {
     new Server({
-        configFile: __dirname + '\\tests\\karma.conf.js'//,
+        configFile: __dirname + '\\tests\\karma.conf.js'
     }, done).start();
 });
-
-////Common variables
-//var prefix = "Badges";
-//var htmlCommentStart = "<!--" + prefix;
-//var htmlCommentEnd = "-->";
-//var badgeCommentStart = htmlCommentStart + "START" + htmlCommentEnd;
-//var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
-
-//Tasks
-//gulp.task('get_badge_md', function () { return ReplaceBadgeComments() });
-
-//gulp.task('default', ['get_badge_md']);
-
-//function ReplaceBadgeComments() { 
-    
-//    //tsnode(dummy());
-
-//    var repos = [
-//        "AutoFindReplace",
-//        //"Badges-playground",
-//        "DotNetFlags",
-//        "FilesForEveryExtensionCreator",
-//        "HelloWorldVstsExtension",
-//        "OpenInApp.Launcher",
-//        "QuickLaunchButtons",
-//        "Quiz.Launcher",
-//        "SolutionOpenPopUp",
-//        "TrivialApisForIDE",
-//        "VisualStudioMarketplaceMetrics",
-//        "VsixFootie",
-//        "VsixHelloWorldCommandButton",
-//        "VsixHelloWorldPopUp",
-//        "VsixHelloWorldToolBar",
-//        "VsixRatingChaser",
-//        "VsixToolWindowAsyncPackageExample",
-//        "VsixTwitterWidget",
-//        "VstsDashboardWidgetProjectTemplate",
-//        "WpfAsyncBindingPropertyExample",
-//    ];
-
-//    repos.forEach(function (repoFolderName) {
-//        var badgesMarkdown = GetBadgesMarkdown();
-//        ReplaceBadgeComment(repoFolderName, badgesMarkdown);
-//    });
-
-//    function GetBadgesMarkdown() {
-//        var lineBreak = '\n';
-
-//        var multipleBadgesMarkdown = GetMultipleBadgesMarkdown();
-
-//        var badgesMarkdownFull = badgeCommentStart + lineBreak + multipleBadgesMarkdown + badgeCommentEnd;
-
-//        return badgesMarkdownFull;
-
-//        function GetMultipleBadgesMarkdown() {
-//            let badgesMarkdownFinal;
-
-//            var badgesMarkdown =
-//                [
-//                    "badge1aaaa",
-//                    "badge2bbb",
-//                    "badge3cccc"
-//                ];
-
-//            badgesMarkdown.forEach(function (badgeMarkdown) {
-//                badgesMarkdownFinal += badgeMarkdown + lineBreak;
-//            });
-
-//            return badgesMarkdownFinal;
-//        }
-//    }
-
-//    function ReplaceBadgeComment(repoFolderName, badgesMarkdown) {
-//        var destination = "../../../" + repoFolderName;
-//        var source = destination + "/ReadMe.md";
-//        var matchAnyCharacter = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
-//        var badgesRegex = new RegExp(badgeCommentStart + matchAnyCharacter + badgeCommentEnd, 'g');
-//        gulp.src([source])
-//            .pipe(replace(badgesRegex, badgesMarkdown))
-//            .pipe(gulp.dest(destination));
-//    } 
-//}
-
-
-//vsixratingchaser NugetREADME.md
-//openinapp dedicated readmes
-
-
 
 //[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 //[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)

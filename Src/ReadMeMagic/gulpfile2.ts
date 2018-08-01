@@ -16,8 +16,6 @@ gulp.task('typscr2b', () => {
 
     function ReplaceBadgeComments() {
 
-        //tsnode(dummy());
-
         var repos = [
             "AutoFindReplace",
             //"Badges-playground",
@@ -84,27 +82,26 @@ gulp.task('typscr2b', () => {
                 .pipe(gulp.dest(destination));
         }
     }
-
 });
 
-class Student {
-    fullName: string;
-    constructor(public firstName: string, public middleInitial: string, public lastName: string) {
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
-    }
-}
+//class Student {
+//    fullName: string;
+//    constructor(public firstName: string, public middleInitial: string, public lastName: string) {
+//        this.fullName = firstName + " " + middleInitial + " " + lastName;
+//    }
+//}
 
-interface Person {
-    firstName: string;
-    lastName: string;
-}
+//interface Person {
+//    firstName: string;
+//    lastName: string;
+//}
 
-function greeter(person: Person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
+//function greeter(person: Person) {
+//    return "Hello, " + person.firstName + " " + person.lastName;
+//}
 
-dummy();
-function dummy() {
-    let user = new Student("Jane", "M.", "User");
-    console.log('Gulp is running!' + greeter(user));
-}
+//dummy();
+//function dummy() {
+//    let user = new Student("Jane", "M.", "User");
+//    console.log('Gulp is running!' + greeter(user));
+//}
