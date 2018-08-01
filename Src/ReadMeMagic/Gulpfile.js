@@ -13,7 +13,7 @@ require('./gulpfile2.ts');
 ///////////////////////////   tsnode(typscr2b);//gulpfile2.ts;
 ///////////////////////////
 
-gulp.task('tests_karma', function (done) {
+gulp.task('run_karma_tests', function (done) {
     new Server({
         configFile: __dirname + '\\tests\\karma.conf.js'//,
     }, done).start();
@@ -27,9 +27,9 @@ var badgeCommentStart = htmlCommentStart + "START" + htmlCommentEnd;
 var badgeCommentEnd = htmlCommentStart + "END" + htmlCommentEnd;
 
 //Tasks
-gulp.task('ProduceBadgeMarkdownTask', function () { return ReplaceBadgeComments() });
+gulp.task('get_badge_md', function () { return ReplaceBadgeComments() });
 
-gulp.task('default', ['ProduceBadgeMarkdownTask']);
+gulp.task('default', ['get_badge_md']);
 
 function ReplaceBadgeComments() { 
     
