@@ -19,6 +19,7 @@
         "gulp-sourcemaps": "^1.5.1",
         "gulp-tslint": "^1.4.4",
         "gulp-rimraf": "^0.1.1",
+        "gulp-run": "^1.7.1",
         "gulp-typescript": "^2.5.0",
         "ts-node": "^7.0.0",
         "tslint": "^5.11.0",
