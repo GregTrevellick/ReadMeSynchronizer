@@ -4,7 +4,8 @@
         frameworks: ['jasmine'],
         files: [
             '*.js',
-            'tests/*.js'
+            'tests/*.js',
+            '../../wwwroot/dist/tests.js'
         ],
         reporters: ['progress'],
         port: 9876,
@@ -12,7 +13,7 @@
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['Chrome'],
-        //mime: { 'application/javascript': ['ts', 'tsx'] },
-        singleRun: false,
+        mime: { 'application/javascript': ['ts', 'tsx'] },
+        singleRun: true,
     });
 };

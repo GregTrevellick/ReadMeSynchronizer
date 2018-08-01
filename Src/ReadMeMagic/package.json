@@ -10,6 +10,13 @@
         "restore": "dotnet restore && yarn install",
         "clean": "gulp clean"
     },
+    "dependencies": {
+        "awesome-typescript-loader": "^5.2.0",
+        "ts-node": "^7.0.0",
+        "tslint": "^5.11.0",
+        "tslint-language-service": "^0.9.9",
+        "typescript": "^2.9.2"
+    },
     "devDependencies": {
         "gulp": "3.9.1",
         "gulp-bower": "0.0.14",
