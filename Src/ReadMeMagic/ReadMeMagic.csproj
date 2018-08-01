@@ -23,6 +23,8 @@
 
   <ItemGroup>
     <None Remove="Gulpfile.js.BAK" />
+    <None Remove="GulpfileTest.js" />
+    <None Remove="karma.conf.js" />
     <None Remove="package-lock.json" />
     <None Remove="zGulpfile.js.BAK" />
     <None Remove="zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzREADME4.md" />
