@@ -1,12 +1,9 @@
 {
-    "name": "GregWozEre",
+    "name": "ReadMeMagik",
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "vendor": "gulp vendor",
-        "test": "gulp test",
         "lint": "tslint -p .",
-        "publish": "gulp publish",
         "restore": "dotnet restore && yarn install",
         "clean": "gulp clean"
     },
