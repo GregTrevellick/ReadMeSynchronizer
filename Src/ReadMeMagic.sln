@@ -7,7 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadMeMagic", "ReadMeMagic\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4ED83ABF-B4EC-44BE-87A9-A726102C60A8}"
 	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\LICENSE.txt = ..\LICENSE.txt
+		..\README.md = ..\README.md
+		..\README3.md = ..\README3.md
 		..\todo.txt = ..\todo.txt
+		..\z.travis.yml = ..\z.travis.yml
+		..\z_config.yml = ..\z_config.yml
+		..\zappveyor.yml = ..\zappveyor.yml
+		..\zCHANGELOG.md = ..\zCHANGELOG.md
+		..\zrenovate.json = ..\zrenovate.json
 	EndProjectSection
 EndProject
 Global

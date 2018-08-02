@@ -1,6 +1,13 @@
 convert single run to false
-add code coverage
 
+add code coverage https://theodin.co.uk/2015/12/30/javascript-coverage-with-gulp-karma-istanbul/
+
+enum for magic strings
+//export enum PageNames {
+//    AccountLogin = "accountlogin",
+//    ContactUs = "contact",
+//    Welcome = "welcome",
+//}
 
 
 credits
@@ -11,6 +18,7 @@ matt jeanes
 
 
 badges
+renovate badge
 https://docs.travis-ci.com/user/browserstack/
 https://docs.travis-ci.com/user/coverity-scan/
 https://docs.travis-ci.com/user/sonarcloud/

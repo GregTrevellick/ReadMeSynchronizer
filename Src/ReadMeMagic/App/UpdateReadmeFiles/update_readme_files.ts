@@ -1,96 +1,83 @@
-export class Student {
-    public fullName: string;
-    public appName: string = "My App";
-    constructor() {
-        this.fullName = "joe bloggs";
-        this.greeter();
-    }
-
-    public greeter() {
-        this.fullName = "john smith";
-    }
-}
-
 import * as gulp from 'gulp';
 
-var replace = require('gulp-string-replace');
+export class Student {
+    public replace = require('gulp-string-replace');
+    public prefix: string = "Badges";
+    public htmlCommentStart: string = "<!--" + this.prefix;
+    public htmlCommentEnd: string = "-->";
+    public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
+    public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
 
-//Common variables
-let prefix: string = "Badges";
-let htmlCommentStart: string  = "<!--" + prefix;
-let htmlCommentEnd: string  = "-->";
-let badgeCommentStart: string  = htmlCommentStart + "START" + htmlCommentEnd;
-let badgeCommentEnd: string  = htmlCommentStart + "END" + htmlCommentEnd;
+    constructor() { }
 
-ReplaceBadgeComments();
-
-function ReplaceBadgeComments() {
-
-    var repos = [
-        "AutoFindReplace",
-        //"Badges-playground",
-        "DotNetFlags",
-        "FilesForEveryExtensionCreator",
-        "HelloWorldVstsExtension",
-        "OpenInApp.Launcher",
-        "QuickLaunchButtons",
-        "Quiz.Launcher",
-        "SolutionOpenPopUp",
-        "TrivialApisForIDE",
-        "VisualStudioMarketplaceMetrics",
-        "VsixFootie",
-        "VsixHelloWorldCommandButton",
-        "VsixHelloWorldPopUp",
-        "VsixHelloWorldToolBar",
-        "VsixRatingChaser",
-        "VsixToolWindowAsyncPackageExample",
-        "VsixTwitterWidget",
-        "VstsDashboardWidgetProjectTemplate",
-        "WpfAsyncBindingPropertyExample",
-    ];
-
-    repos.forEach(function (repoFolderName) {
-        var badgesMarkdown = GetBadgesMarkdown();
-        ReplaceBadgeComment(repoFolderName, badgesMarkdown);
-    });
-
-    function GetBadgesMarkdown() {
-        var lineBreak = '\n';
-
-        var multipleBadgesMarkdown = GetMultipleBadgesMarkdown();
-
-        var badgesMarkdownFull = badgeCommentStart + lineBreak + multipleBadgesMarkdown + badgeCommentEnd;
-
-        return badgesMarkdownFull;
-
-        function GetMultipleBadgesMarkdown() {
-            let badgesMarkdownFinal:string = "";
-
-            var badgesMarkdown =
-                [
-                    "badge1a",
-                    "badge2bb",
-                    "badge3ccc"
-                ];
-
-            badgesMarkdown.forEach(function (badgeMarkdown) {
-                badgesMarkdownFinal += badgeMarkdown + lineBreak;
-            });
-
-            return badgesMarkdownFinal;
+    public ReplaceBadgeComments() {
+        var repos = [
+            "AutoFindReplace",
+            //"Badges-playground",
+            "DotNetFlags",
+            "FilesForEveryExtensionCreator",
+            "HelloWorldVstsExtension",
+            "OpenInApp.Launcher",
+            "QuickLaunchButtons",
+            "Quiz.Launcher",
+            "SolutionOpenPopUp",
+            "TrivialApisForIDE",
+            "VisualStudioMarketplaceMetrics",
+            "VsixFootie",
+            "VsixHelloWorldCommandButton",
+            "VsixHelloWorldPopUp",
+            "VsixHelloWorldToolBar",
+            "VsixRatingChaser",
+            "VsixToolWindowAsyncPackageExample",
+            "VsixTwitterWidget",
+            "VstsDashboardWidgetProjectTemplate",
+            "WpfAsyncBindingPropertyExample",
+        ];
+        //repos.forEach(function (repoFolderName) {
+        //    var badgesMarkdown = this.GetBadgesMarkdown();
+        //    this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
+        //});
+        for (let repoFolderName of repos) {
+            this.Rrr(repoFolderName)
         }
     }
 
-    function ReplaceBadgeComment(repoFolderName:string, badgesMarkdown:string) {
-        let destination :string = "../../../" + repoFolderName;
-        let source: string  = destination + "/ReadMe.md";
-        let matchAnyCharacter: string  = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
-        var badgesRegex = new RegExp(badgeCommentStart + matchAnyCharacter + badgeCommentEnd, 'g');
+    public Rrr(repoFolderName: string) {
+        var badgesMarkdown = this.GetBadgesMarkdown();
+        this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
+    }
+
+    public GetBadgesMarkdown() {
+        var lineBreak = '\n';
+        var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(lineBreak);
+        var badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
+        return badgesMarkdownFull;
+    }
+
+    public GetMultipleBadgesMarkdown(lineBreak: string) {
+        let badgesMarkdownFinal: string = "";
+        var badgesMarkdown =
+            [
+                "badge1a",
+                "badge2bb",
+                "badge3ccc"
+            ];
+        badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
+            badgesMarkdownFinal += badgeMarkdown + lineBreak;
+        });
+        return badgesMarkdownFinal;
+    }
+
+    public ReplaceBadgeComment(repoFolderName: string, badgesMarkdown: string) {
+        let destination: string = "../../../" + repoFolderName;
+        let source: string = destination + "/ReadMe.md";
+        let matchAnyCharacter: string = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
+        var badgesRegex = new RegExp(this.badgeCommentStart + matchAnyCharacter + this.badgeCommentEnd, 'g');
         gulp.src([source])
-            .pipe(replace(badgesRegex, badgesMarkdown))
+            .pipe(this.replace(badgesRegex, badgesMarkdown))
             .pipe(gulp.dest(destination));
     }
-};
+}
 
 //[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 //[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)

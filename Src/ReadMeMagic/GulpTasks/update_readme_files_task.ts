@@ -6,6 +6,6 @@ import { Student } from '../App/UpdateReadmeFiles/update_readme_files';
 gulp.task('update_badges_readmes', () => {
     //return run("karma start ./UnitTestConfig/karma.conf.js").exec();
     let student: Student = new Student;
-    let abc = student.fullName;
-    console.log("abc=" + abc);
+    student.ReplaceBadgeComments();
+    console.log("abc done");
 });
