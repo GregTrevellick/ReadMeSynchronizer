@@ -1,82 +1,96 @@
-    var replace = require('gulp-string-replace');
+export class Student {
+    public fullName: string;
+    public appName: string = "My App";
+    constructor() {
+        this.fullName = "joe bloggs";
+        this.greeter();
+    }
 
-    //Common variables
-    let prefix: string = "Badges";
-    let htmlCommentStart: string  = "<!--" + prefix;
-    let htmlCommentEnd: string  = "-->";
-    let badgeCommentStart: string  = htmlCommentStart + "START" + htmlCommentEnd;
-    let badgeCommentEnd: string  = htmlCommentStart + "END" + htmlCommentEnd;
+    public greeter() {
+        this.fullName = "john smith";
+    }
+}
 
-    ReplaceBadgeComments();
+import * as gulp from 'gulp';
 
-    function ReplaceBadgeComments() {
+var replace = require('gulp-string-replace');
 
-        var repos = [
-            "AutoFindReplace",
-            //"Badges-playground",
-            "DotNetFlags",
-            "FilesForEveryExtensionCreator",
-            "HelloWorldVstsExtension",
-            "OpenInApp.Launcher",
-            "QuickLaunchButtons",
-            "Quiz.Launcher",
-            "SolutionOpenPopUp",
-            "TrivialApisForIDE",
-            "VisualStudioMarketplaceMetrics",
-            "VsixFootie",
-            "VsixHelloWorldCommandButton",
-            "VsixHelloWorldPopUp",
-            "VsixHelloWorldToolBar",
-            "VsixRatingChaser",
-            "VsixToolWindowAsyncPackageExample",
-            "VsixTwitterWidget",
-            "VstsDashboardWidgetProjectTemplate",
-            "WpfAsyncBindingPropertyExample",
-        ];
+//Common variables
+let prefix: string = "Badges";
+let htmlCommentStart: string  = "<!--" + prefix;
+let htmlCommentEnd: string  = "-->";
+let badgeCommentStart: string  = htmlCommentStart + "START" + htmlCommentEnd;
+let badgeCommentEnd: string  = htmlCommentStart + "END" + htmlCommentEnd;
 
-        repos.forEach(function (repoFolderName) {
-            var badgesMarkdown = GetBadgesMarkdown();
-            ReplaceBadgeComment(repoFolderName, badgesMarkdown);
-        });
+ReplaceBadgeComments();
 
-        function GetBadgesMarkdown() {
-            var lineBreak = '\n';
+function ReplaceBadgeComments() {
 
-            var multipleBadgesMarkdown = GetMultipleBadgesMarkdown();
+    var repos = [
+        "AutoFindReplace",
+        //"Badges-playground",
+        "DotNetFlags",
+        "FilesForEveryExtensionCreator",
+        "HelloWorldVstsExtension",
+        "OpenInApp.Launcher",
+        "QuickLaunchButtons",
+        "Quiz.Launcher",
+        "SolutionOpenPopUp",
+        "TrivialApisForIDE",
+        "VisualStudioMarketplaceMetrics",
+        "VsixFootie",
+        "VsixHelloWorldCommandButton",
+        "VsixHelloWorldPopUp",
+        "VsixHelloWorldToolBar",
+        "VsixRatingChaser",
+        "VsixToolWindowAsyncPackageExample",
+        "VsixTwitterWidget",
+        "VstsDashboardWidgetProjectTemplate",
+        "WpfAsyncBindingPropertyExample",
+    ];
 
-            var badgesMarkdownFull = badgeCommentStart + lineBreak + multipleBadgesMarkdown + badgeCommentEnd;
+    repos.forEach(function (repoFolderName) {
+        var badgesMarkdown = GetBadgesMarkdown();
+        ReplaceBadgeComment(repoFolderName, badgesMarkdown);
+    });
 
-            return badgesMarkdownFull;
+    function GetBadgesMarkdown() {
+        var lineBreak = '\n';
 
-            function GetMultipleBadgesMarkdown() {
-                let badgesMarkdownFinal:string = "";
+        var multipleBadgesMarkdown = GetMultipleBadgesMarkdown();
 
-                var badgesMarkdown =
-                    [
-                        "badge1a",
-                        "badge2bb",
-                        "badge3ccc"
-                    ];
+        var badgesMarkdownFull = badgeCommentStart + lineBreak + multipleBadgesMarkdown + badgeCommentEnd;
 
-                badgesMarkdown.forEach(function (badgeMarkdown) {
-                    badgesMarkdownFinal += badgeMarkdown + lineBreak;
-                });
+        return badgesMarkdownFull;
 
-                return badgesMarkdownFinal;
-            }
+        function GetMultipleBadgesMarkdown() {
+            let badgesMarkdownFinal:string = "";
+
+            var badgesMarkdown =
+                [
+                    "badge1a",
+                    "badge2bb",
+                    "badge3ccc"
+                ];
+
+            badgesMarkdown.forEach(function (badgeMarkdown) {
+                badgesMarkdownFinal += badgeMarkdown + lineBreak;
+            });
+
+            return badgesMarkdownFinal;
         }
+    }
 
-        function ReplaceBadgeComment(repoFolderName:string, badgesMarkdown:string) {
-            let destination :string = "../../../" + repoFolderName;
-            let source: string  = destination + "/ReadMe.md";
-            let matchAnyCharacter: string  = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
-            var badgesRegex = new RegExp(badgeCommentStart + matchAnyCharacter + badgeCommentEnd, 'g');
-            gulp.src([source])
-                .pipe(replace(badgesRegex, badgesMarkdown))
-                .pipe(gulp.dest(destination));
-        }
-    };
-
+    function ReplaceBadgeComment(repoFolderName:string, badgesMarkdown:string) {
+        let destination :string = "../../../" + repoFolderName;
+        let source: string  = destination + "/ReadMe.md";
+        let matchAnyCharacter: string  = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
+        var badgesRegex = new RegExp(badgeCommentStart + matchAnyCharacter + badgeCommentEnd, 'g');
+        gulp.src([source])
+            .pipe(replace(badgesRegex, badgesMarkdown))
+            .pipe(gulp.dest(destination));
+    }
+};
 
 //[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 //[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -87,7 +101,7 @@
 //[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/OpenInApp.Launcher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/OpenInApp.Launcher&amp;utm_campaign=Badge_Grade_Dashboard)
 //[![codecov](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher)
 //[![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/OpenInApp.Launcher/badge)](https://www.codefactor.io/repository/github/gregtrevellick/OpenInApp.Launcher)
-//[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher) 
+//[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher)
 //[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/OpenInApp-Launcher.svg)](https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher/build/tests)
 //[![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 //[![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
