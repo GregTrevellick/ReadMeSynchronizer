@@ -53,10 +53,9 @@
 
                 var badgesMarkdown =
                     [
-                        "badge1aaaa",
-                        "badge2bbb",
-                        "badge2bbbeeeeeee",
-                        "badge3cccc"
+                        "badge1a",
+                        "badge2bb",
+                        "badge3ccc"
                     ];
 
                 badgesMarkdown.forEach(function (badgeMarkdown) {
