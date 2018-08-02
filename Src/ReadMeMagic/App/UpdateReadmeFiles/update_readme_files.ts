@@ -1,6 +1,6 @@
 import * as gulp from 'gulp';
 
-export class Student {
+export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
     public prefix: string = "Badges";
     public htmlCommentStart: string = "<!--" + this.prefix;
@@ -33,10 +33,6 @@ export class Student {
             "VstsDashboardWidgetProjectTemplate",
             "WpfAsyncBindingPropertyExample",
         ];
-        //repos.forEach(function (repoFolderName) {
-        //    var badgesMarkdown = this.GetBadgesMarkdown();
-        //    this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
-        //});
         for (let repoFolderName of repos) {
             this.Rrr(repoFolderName)
         }
