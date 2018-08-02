@@ -3,9 +3,9 @@
         basePath: '.',
         frameworks: ['jasmine'],
         files: [
-            '*.js',
-            'tests/*.js',
-            '../../wwwroot/dist/tests.js'
+            '../App/UpdateReadmeFiles/update_readme_files.spec.ts'
+            //'*.js'//ReadMeMagic/UnitTestConfig/*.js files excluded 
+            //'tests/*.js'//ReadMeMagic/UnitTestConfig/tests/*.js files excluded 
         ],
         reporters: ['progress'],
         port: 9876,
@@ -13,7 +13,7 @@
         logLevel: config.LOG_INFO,
         autoWatch: true,
         browsers: ['Chrome'],
-        mime: { 'application/javascript': ['ts', 'tsx'] },
+        mime: { 'application/javascript': ['ts', 'tsx'] },//needed?
         singleRun: true,
     });
 };
