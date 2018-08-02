@@ -29,14 +29,12 @@
         ]
     },
     "include": [
-        "ClientApp/**/*",
-        "typings/**/*",
-        "webpack.config.*"
+        "App/**/*",
+        "GulpTasks/**/*",
+        "UnitTestConfig/**/*"
     ],
     "exclude": [
-        "node_modules",
-        "typings/browser.d.ts",
-        "typings/browser"
+        "node_modules"
     ],
     "compileOnSave": false
 }
