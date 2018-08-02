@@ -1,7 +1,7 @@
-﻿/// <reference types="jasmine" />
+/// <reference types="jasmine" />
 
-describe("should", function () {
-    it("do stuff", function () {
+describe("should", function() {
+    it("do stuff", function() {
         expect("abc").toEqual("abc");
     });
 });
