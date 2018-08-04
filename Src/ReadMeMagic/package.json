@@ -18,9 +18,11 @@
         "ts-node": "^7.0.0",
         "tslint": "^5.11.0",
         "tslint-language-service": "^0.9.9",
-        "typescript": "^2.9.2"
+        "typescript": "^2.9.2",
+        "webpack": "^4.16.3"
     },
     "devDependencies": {
+        "babel-loader": "^5.0.0",
         "gulp": "3.9.1",
         "gulp-bower": "0.0.14",
         "gulp-config": "0.3.0",
@@ -34,6 +36,7 @@
         "karma-chai": "^0.1.0",
         "karma-chrome-launcher": "^2.2.0",
         "karma-cli": "^1.0.1",
-        "karma-jasmine": "^1.1.2"
+        "karma-jasmine": "^1.1.2",
+        "karma-webpack": "^3.0.0"
     }
 }
