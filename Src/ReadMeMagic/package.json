@@ -1,12 +1,4 @@
 {
-    "name": "ReadMeMagik",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "lint": "tslint -p .",
-        "restore": "dotnet restore && yarn install",
-        "clean": "gulp clean"
-    },
     "dependencies": {
         "gulpclass": "^0.2.0",
         "gulp-debug": "^2.0.1",
@@ -38,5 +30,13 @@
         "karma-cli": "^1.0.1",
         "karma-jasmine": "^1.1.2",
         "karma-webpack": "^3.0.0"
-    }
+    },
+    "name": "ReadMeMagik",
+    "private": true,
+    "scripts": {
+        "lint": "tslint -p .",
+        "restore": "dotnet restore && yarn install",
+        "clean": "gulp clean"
+    },
+    "version": "1.0.0"
 }
