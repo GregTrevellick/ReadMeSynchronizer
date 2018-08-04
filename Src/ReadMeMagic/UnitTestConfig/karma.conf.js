@@ -2,6 +2,20 @@
     config.set({
         basePath: '.',
         frameworks: ['jasmine'],
+        //preprocessors: {
+        //    'test-context.js': ['webpack']
+        //},
+        //webpack: {
+        //    module: {
+        //        loaders: [
+        //            { test: /\.js/, exclude: /node_modules/, loader: 'babel-loader' }
+        //        ]
+        //    },
+        //    watch: true
+        //},
+        //webpackServer: {
+        //    noInfo: true
+        //},
         files: [
             '../App/UpdateReadmeFiles/update_readme_files.spec.ts'
             //'*.js'//ReadMeMagic/UnitTestConfig/*.js files excluded 
