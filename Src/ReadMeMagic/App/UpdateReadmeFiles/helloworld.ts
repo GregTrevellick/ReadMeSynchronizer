@@ -1,5 +1,5 @@
-function returnHello() : string {
-  return "Hello";
-}
+//function returnHello() : string {
+//  return "Hello";
+//}
 
-export default returnHello;
+//export default returnHello;

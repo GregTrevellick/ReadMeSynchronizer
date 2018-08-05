@@ -22,11 +22,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="App\UpdateReadmeFiles\helloworld.spec.ts" />
+    <None Remove="App\UpdateReadmeFiles\helloworld.ts" />
     <None Remove="Gulpfile.js.BAK" />
     <None Remove="GulpfileTest.js" />
     <None Remove="karma.conf.js" />
     <None Remove="package-lock.json" />
     <None Remove="package.json.orig.bak" />
+    <None Remove="UnitTestConfig\karma.conf.require.js" />
     <None Remove="UnitTestConfig\todo.txt" />
     <None Remove="UnitTestConfig\zzz-boot-tests.ts" />
     <None Remove="UnitTestConfig\zzzboot-tests.ts" />
