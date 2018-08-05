@@ -1,4 +1,4 @@
-import * as gulp from 'gulp';
+import * as gulp2 from 'gulp';
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -69,9 +69,9 @@ export class ReadMeUpdater {
         let source: string = destination + "/ReadMe.md";
         let matchAnyCharacter: string = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
         var badgesRegex = new RegExp(this.badgeCommentStart + matchAnyCharacter + this.badgeCommentEnd, 'g');
-        gulp.src([source])
+        gulp2.src([source])
             .pipe(this.replace(badgesRegex, badgesMarkdown))
-            .pipe(gulp.dest(destination));
+            .pipe(gulp2.dest(destination));
     }
 }
 
