@@ -1,5 +1,6 @@
 {
     "dependencies": {
+        "commonjs": "^0.0.1",
         "gulpclass": "^0.2.0",
         "gulp-debug": "^2.0.1",
         "gulp-inject": "^1.2.0",

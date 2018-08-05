@@ -28,8 +28,11 @@
     <None Remove="package-lock.json" />
     <None Remove="package.json.orig.bak" />
     <None Remove="UnitTestConfig\todo.txt" />
+    <None Remove="UnitTestConfig\zzz-boot-tests.ts" />
     <None Remove="UnitTestConfig\zzzboot-tests.ts" />
     <None Remove="UnitTestConfig\zzzzzzzGulpfileTest.js" />
+    <None Remove="webpack.config.common.ts" />
+    <None Remove="webpack.config.test.ts" />
     <None Remove="zGulpfile.js.BAK" />
     <None Remove="zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzREADME4.md" />
   </ItemGroup>
