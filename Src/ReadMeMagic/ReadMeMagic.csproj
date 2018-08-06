@@ -10,10 +10,13 @@
   <ItemGroup>
     <Compile Remove="build\**" />
     <Compile Remove="node_modules\**" />
+    <Compile Remove="outDir\**" />
     <EmbeddedResource Remove="build\**" />
     <EmbeddedResource Remove="node_modules\**" />
+    <EmbeddedResource Remove="outDir\**" />
     <None Remove="build\**" />
     <None Remove="node_modules\**" />
+    <None Remove="outDir\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +33,11 @@
     <None Remove="package-lock.json" />
     <None Remove="package.json.orig.bak" />
     <None Remove="UnitTestConfig\karma.conf.require.js" />
+    <None Remove="UnitTestConfig\test-context.js" />
+    <None Remove="UnitTestConfig\test-context.ts" />
+    <None Remove="UnitTestConfig\test.ts" />
+    <None Remove="UnitTestConfig\test\index_test.js.component.css" />
+    <None Remove="UnitTestConfig\test\index_test.js.component.html" />
     <None Remove="UnitTestConfig\todo.txt" />
     <None Remove="UnitTestConfig\zzz-boot-tests.ts" />
     <None Remove="UnitTestConfig\zzzboot-tests.ts" />
@@ -38,6 +46,12 @@
     <None Remove="webpack.config.test.ts" />
     <None Remove="zGulpfile.js.BAK" />
     <None Remove="zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzREADME4.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

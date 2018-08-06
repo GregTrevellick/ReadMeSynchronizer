@@ -13,7 +13,7 @@ enum for magic strings
 credits
 https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/
 matt jeanes
-
+//??https://medium.com/@OlegVaraksin/how-to-set-up-and-run-fast-karma-tests-in-front-end-projects-61c17787615a
 
 
 
@@ -26,4 +26,9 @@ https://docs.travis-ci.com/user/coveralls/
 https://docs.travis-ci.com/user/code-climate/
 https://www.codetriage.com/
 
+
+
+
+https://github.com/TypeStrong/ts-node/issues/505
+https://github.com/TypeStrong/ts-node/issues/617
 

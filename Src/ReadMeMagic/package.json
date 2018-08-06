@@ -12,7 +12,9 @@
         "tslint": "^5.11.0",
         "tslint-language-service": "^0.9.9",
         "typescript": "^2.9.2",
-        "webpack": "^4.16.3"
+        "webpack": "^4.16.3",
+        "jasmine": "^2.2.1",
+        "@types/jasmine": "^2.8.8"
     },
     "devDependencies": {
         "babel-loader": "^5.0.0",
@@ -30,7 +32,10 @@
         "karma-chrome-launcher": "^2.2.0",
         "karma-cli": "^1.0.1",
         "karma-jasmine": "^1.1.2",
-        "karma-webpack": "^3.0.0"
+        "karma-typescript": "^3.0.13",
+        "karma-webpack": "^3.0.0",
+        "karma-phantomjs-launcher": "^0.1.4",
+        "karma-sourcemap-loader": "^0.3.7"
     },
     "name": "ReadMeMagik",
     "private": true,
