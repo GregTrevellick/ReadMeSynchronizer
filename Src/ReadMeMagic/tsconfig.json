@@ -30,8 +30,7 @@
     },
     "include": [
         "App/**/*",
-        "GulpTasks/**/*",
-        "UnitTestConfig/**/*"
+        "GulpTasks/**/*"
     ],
     "exclude": [
         "node_modules"
