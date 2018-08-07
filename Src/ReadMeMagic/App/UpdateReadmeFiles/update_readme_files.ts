@@ -59,9 +59,9 @@ export class ReadMeUpdater {
             [
                 licenceBadgeMarkdown, 
                 accessLintBadgeMarkdown,
-                "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubOpenInAppLauncher(repoFolderName) + ")",
-                "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubOpenInAppLauncher(repoFolderName) +")",
-                "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubOpenInAppLauncher(repoFolderName) +")"
+                "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")",
+                "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) +")",
+                "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) +")"
             ];
         badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
@@ -79,7 +79,7 @@ export class ReadMeUpdater {
             .pipe(gulp2.dest(destination));
     }
 
-    private GetGitHubOpenInAppLauncher(repoFolderName: string) { return "https://github.com/GregTrevellick/" + repoFolderName; }
+    private GetGitHubUrlForRepo(repoFolderName: string) { return "https://github.com/GregTrevellick/" + repoFolderName; }
 
 }
 
