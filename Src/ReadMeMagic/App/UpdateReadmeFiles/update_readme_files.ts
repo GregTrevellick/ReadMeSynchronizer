@@ -54,9 +54,11 @@ export class ReadMeUpdater {
         let badgesMarkdownFinal: string = "";
         var badgesMarkdown =
             [
-                "badge1a",
-                "badge2bb",
-                "badge3ccc"
+                "badge1a" + lineBreak,
+                "badge2bb" + lineBreak,
+                "badge3ccc" + lineBreak,
+                "[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)" + lineBreak,
+                "[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)" + lineBreak
             ];
         badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
@@ -75,8 +77,6 @@ export class ReadMeUpdater {
     }
 }
 
-//[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
-//[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 //[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 //[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 //[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
