@@ -1,5 +1,8 @@
 import * as gulp2 from 'gulp';
 
+const licenceBadgeMarkdown = "[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)";
+const accessLintBadgeMarkdown = "[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)";
+
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
     public prefix: string = "Badges";
@@ -54,11 +57,8 @@ export class ReadMeUpdater {
         let badgesMarkdownFinal: string = "";
         var badgesMarkdown =
             [
-                "badge1a" + lineBreak,
-                "badge2bb" + lineBreak,
-                "badge3ccc" + lineBreak,
-                "[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)" + lineBreak,
-                "[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)" + lineBreak
+                licenceBadgeMarkdown, 
+                accessLintBadgeMarkdown
             ];
         badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
