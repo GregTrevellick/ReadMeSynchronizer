@@ -42,26 +42,26 @@ export class ReadMeUpdater {
     }
 
     public Rrr(repoFolderName: string) {
-        var badgesMarkdown = this.GetBadgesMarkdown();
+        var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
         this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
     }
 
-    public GetBadgesMarkdown() {
+    public GetBadgesMarkdown(repoFolderName: string) {
         var lineBreak = '\n';
-        var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(lineBreak);
+        var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(lineBreak, repoFolderName);
         var badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
         return badgesMarkdownFull;
     }
 
-    public GetMultipleBadgesMarkdown(lineBreak: string) {
+    public GetMultipleBadgesMarkdown(lineBreak: string, repoFolderName: string) {
         let badgesMarkdownFinal: string = "";
         var badgesMarkdown =
             [
                 licenceBadgeMarkdown, 
                 accessLintBadgeMarkdown,
-"[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)",
-"[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)",
-"[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)"
+                "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubOpenInAppLauncher(repoFolderName) + ")",
+                "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubOpenInAppLauncher(repoFolderName) +")",
+                "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubOpenInAppLauncher(repoFolderName) +")"
             ];
         badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
@@ -78,6 +78,9 @@ export class ReadMeUpdater {
             .pipe(this.replace(badgesRegex, badgesMarkdown))
             .pipe(gulp2.dest(destination));
     }
+
+    private GetGitHubOpenInAppLauncher(repoFolderName: string) { return "https://github.com/GregTrevellick/" + repoFolderName; }
+
 }
 
 //[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
