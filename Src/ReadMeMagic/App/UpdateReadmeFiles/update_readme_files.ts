@@ -58,7 +58,10 @@ export class ReadMeUpdater {
         var badgesMarkdown =
             [
                 licenceBadgeMarkdown, 
-                accessLintBadgeMarkdown
+                accessLintBadgeMarkdown,
+"[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)",
+"[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)",
+"[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)"
             ];
         badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
