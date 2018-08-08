@@ -26,16 +26,14 @@ export class ReadMeUpdater {
         }
     }
 
-    public GetBadgesMarkdown(repoFolderName: string) {
-
+    private GetBadgesMarkdown(repoFolderName: string) {
         var lineBreak = '\n';
         var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(lineBreak, repoFolderName);
         var badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
         return badgesMarkdownFull;
-
     }
 
-    public GetMultipleBadgesMarkdown(lineBreak: string, repoFolderName: string) {
+    private GetMultipleBadgesMarkdown(lineBreak: string, repoFolderName: string) {
         let badgesMarkdownFinal: string = "";
 
         var badgesMarkdown =
