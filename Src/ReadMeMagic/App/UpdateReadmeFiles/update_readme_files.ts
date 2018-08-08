@@ -40,16 +40,10 @@ export class ReadMeUpdater {
 
     public ReplaceBadgeComments() {
         for (let repoFolderName of repoNames) {
-            //this.Rrr(repoFolderName)
             var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
             this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
         }
     }
-
-    //public Rrr(repoFolderName: string) {
-    //    var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
-    //    this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
-    //}
 
     public GetBadgesMarkdown(repoFolderName: string) {
         var lineBreak = '\n';
