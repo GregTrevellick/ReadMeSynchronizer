@@ -2,6 +2,29 @@ import * as gulp2 from 'gulp';
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoNames } from './MagicStrings';
 
+const repoNames = [
+    RepoNames.AutoFindReplace,
+    RepoNames.BadgesPlayground,
+    RepoNames.DotNetFlags,
+    RepoNames.FilesForEveryExtensionCreator,
+    RepoNames.HelloWorldVstsExtension,
+    RepoNames.OpenInAppLauncher,
+    RepoNames.QuickLaunchButtons,
+    RepoNames.QuizLauncher,
+    RepoNames.SolutionOpenPopUp,
+    RepoNames.TrivialApisForIDE,
+    RepoNames.VisualStudioMarketplaceMetrics,
+    RepoNames.VsixFootie,
+    RepoNames.VsixHelloWorldCommandButton,
+    RepoNames.VsixHelloWorldPopUp,
+    RepoNames.VsixHelloWorldToolBar,
+    RepoNames.VsixRatingChaser,
+    RepoNames.VsixToolWindowAsyncPackageExample,
+    RepoNames.VsixTwitterWidget,
+    RepoNames.VstsDashboardWidgetProjectTemplate,
+    RepoNames.WpfAsyncBindingPropertyExample,
+];
+
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
     public prefix: string = "Badges";
@@ -16,37 +39,17 @@ export class ReadMeUpdater {
     }
 
     public ReplaceBadgeComments() {
-        var repos = [
-            RepoNames.AutoFindReplace,
-            //RepoNames.BadgesPlayground,
-            RepoNames.DotNetFlags,
-            RepoNames.FilesForEveryExtensionCreator,
-            RepoNames.HelloWorldVstsExtension,
-            RepoNames.OpenInAppLauncher,
-            RepoNames.QuickLaunchButtons,
-            RepoNames.QuizLauncher,
-            RepoNames.SolutionOpenPopUp,
-            RepoNames.TrivialApisForIDE,
-            RepoNames.VisualStudioMarketplaceMetrics,
-            RepoNames.VsixFootie,
-            RepoNames.VsixHelloWorldCommandButton,
-            RepoNames.VsixHelloWorldPopUp,
-            RepoNames.VsixHelloWorldToolBar,
-            RepoNames.VsixRatingChaser,
-            RepoNames.VsixToolWindowAsyncPackageExample,
-            RepoNames.VsixTwitterWidget,
-            RepoNames.VstsDashboardWidgetProjectTemplate,
-            RepoNames.WpfAsyncBindingPropertyExample,
-        ];
-        for (let repoFolderName of repos) {
-            this.Rrr(repoFolderName)
+        for (let repoFolderName of repoNames) {
+            //this.Rrr(repoFolderName)
+            var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
+            this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
         }
     }
 
-    public Rrr(repoFolderName: string) {
-        var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
-        this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
-    }
+    //public Rrr(repoFolderName: string) {
+    //    var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
+    //    this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
+    //}
 
     public GetBadgesMarkdown(repoFolderName: string) {
         var lineBreak = '\n';

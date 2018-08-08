@@ -1,6 +1,6 @@
 export enum RepoNames {
     AutoFindReplace = "AutoFindReplace",
-    //BadgesPlayground="Badges-playground",
+    BadgesPlayground = "Badges-playground",
     DotNetFlags = "DotNetFlags",
     FilesForEveryExtensionCreator = "FilesForEveryExtensionCreator",
     HelloWorldVstsExtension = "HelloWorldVstsExtension",
