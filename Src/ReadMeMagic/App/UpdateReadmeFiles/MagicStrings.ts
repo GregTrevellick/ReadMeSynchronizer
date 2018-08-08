@@ -1,22 +1,71 @@
-export enum RepoNames {
-    AutoFindReplace = "AutoFindReplace",
+export class RepoNames {
+    constructor() { }
+    public GetRepoNames() {
+        const chromeExtensionsValues = Object.keys(ChromeExtensions);
+        const miscellaneousReposValues = Object.keys(MiscellaneousRepos);
+        const nugetPackagesValues = Object.keys(NugetPackages);
+        var allRepoNames = chromeExtensionsValues.concat(miscellaneousReposValues, nugetPackagesValues);
+        return allRepoNames;
+    }
+}
+
+export enum ChromeExtensions {
+    VisualStudioMarketplaceMetrics = "VisualStudioMarketplaceMetrics",
+}
+
+export enum MiscellaneousRepos {
     BadgesPlayground = "Badges-playground",
-    DotNetFlags = "DotNetFlags",
     FilesForEveryExtensionCreator = "FilesForEveryExtensionCreator",
-    HelloWorldVstsExtension = "HelloWorldVstsExtension",
+}
+
+export enum NugetPackages {
+    DotNetFlags = "DotNetFlags",
+    VsixRatingChaser = "VsixRatingChaser",
+}
+
+export enum VstsExtensions {
+    VsixTwitterWidget = "VsixTwitterWidget",
+}
+
+export enum VsIdeExtensions {
+    AutoFindReplace = "AutoFindReplace",
     OpenInAppLauncher = "OpenInApp.Launcher",
     QuickLaunchButtons = "QuickLaunchButtons",
     QuizLauncher = "Quiz.Launcher",
     SolutionOpenPopUp = "SolutionOpenPopUp",
     TrivialApisForIDE = "TrivialApisForIDE",
-    VisualStudioMarketplaceMetrics = "VisualStudioMarketplaceMetrics",
     VsixFootie = "VsixFootie",
+    VstsDashboardWidgetProjectTemplate = "VstsDashboardWidgetProjectTemplate",
+}
+
+export enum VsixHelloWorlds {
+    HelloWorldVstsExtension = "HelloWorldVstsExtension",
     VsixHelloWorldCommandButton = "VsixHelloWorldCommandButton",
     VsixHelloWorldPopUp = "VsixHelloWorldPopUp",
     VsixHelloWorldToolBar = "VsixHelloWorldToolBar",
-    VsixRatingChaser = "VsixRatingChaser",
     VsixToolWindowAsyncPackageExample = "VsixToolWindowAsyncPackageExample",
-    VsixTwitterWidget = "VsixTwitterWidget",
-    VstsDashboardWidgetProjectTemplate = "VstsDashboardWidgetProjectTemplate",
     WpfAsyncBindingPropertyExample = "WpfAsyncBindingPropertyExample",
 }
+
+//export enum RepoNames {
+//    //AutoFindReplace = "AutoFindReplace",
+//    //BadgesPlayground = "Badges-playground",
+//    //DotNetFlags = "DotNetFlags",
+//    //FilesForEveryExtensionCreator = "FilesForEveryExtensionCreator",
+//    HelloWorldVstsExtension = "HelloWorldVstsExtension",
+//    //OpenInAppLauncher = "OpenInApp.Launcher",
+//    //QuickLaunchButtons = "QuickLaunchButtons",
+//    //QuizLauncher = "Quiz.Launcher",
+//    //SolutionOpenPopUp = "SolutionOpenPopUp",
+//    //TrivialApisForIDE = "TrivialApisForIDE",
+//    //VisualStudioMarketplaceMetrics = "VisualStudioMarketplaceMetrics",
+//    //VsixFootie = "VsixFootie",
+//    VsixHelloWorldCommandButton = "VsixHelloWorldCommandButton",
+//    VsixHelloWorldPopUp = "VsixHelloWorldPopUp",
+//    VsixHelloWorldToolBar = "VsixHelloWorldToolBar",
+//    //VsixRatingChaser = "VsixRatingChaser",
+//    VsixToolWindowAsyncPackageExample = "VsixToolWindowAsyncPackageExample",
+//    //VsixTwitterWidget = "VsixTwitterWidget",
+//    //VstsDashboardWidgetProjectTemplate = "VstsDashboardWidgetProjectTemplate",
+//    WpfAsyncBindingPropertyExample = "WpfAsyncBindingPropertyExample",
+//}
