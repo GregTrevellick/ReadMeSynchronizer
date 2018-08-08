@@ -39,7 +39,7 @@ export class ReadMeUpdater {
     private GetMultipleBadgesMarkdown(lineBreak: string, repoFolderName: string) {
         let badgesMarkdownFinal: string = "";
 
-        var badgesMarkdown =
+        var sharedBadgesMarkdown =
             [
                 //Do not resequence alphabetically - this is the order we want them to appear in UI
                 this.mp.GetLicenceBadgeMarkdown(), 
@@ -59,7 +59,13 @@ export class ReadMeUpdater {
                 this.mp.GetAccessLintSocial(repoFolderName),
             ];
 
-        badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
+        //if repoFolderName exists in ChromeExtensions then append 'sharedBadgesMarkdown' with chrome badges
+        //if repoFolderName exists in VstsExtensions then append 'sharedBadgesMarkdown' with vsts badges
+        //if repoFolderName exists in VsIdeExtensions then append 'sharedBadgesMarkdown' with ide badges
+
+        //if repoFolderName = BadgePlayground then set 'sharedBadgesMarkdown' to 'sharedBadgesMarkdownBadgePlayground' where 'sharedBadgesMarkdownBadgePlayground' is the pull requests, code quality, download counts for all repos
+
+        sharedBadgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
         });
 
