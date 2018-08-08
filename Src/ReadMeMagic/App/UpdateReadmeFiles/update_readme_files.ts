@@ -1,4 +1,3 @@
-//import * as gulp2 from 'gulp';
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoNames } from './MagicStrings';
 import { FileSystemUpdater } from './FileSystemUpdater';
@@ -81,15 +80,4 @@ export class ReadMeUpdater {
         });
         return badgesMarkdownFinal;
     }
-
-    ////gregt extract to own class
-    //public ReplaceBadgeComment(repoFolderName: string, badgesMarkdown: string) {
-    //    let destination: string = "../../../" + repoFolderName;
-    //    let source: string = destination + "/ReadMe.md";
-    //    let matchAnyCharacter: string = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
-    //    var badgesRegex = new RegExp(this.badgeCommentStart + matchAnyCharacter + this.badgeCommentEnd, 'g');
-    //    gulp2.src([source])
-    //        .pipe(this.replace(badgesRegex, badgesMarkdown))
-    //        .pipe(gulp2.dest(destination));
-    //}
 }
