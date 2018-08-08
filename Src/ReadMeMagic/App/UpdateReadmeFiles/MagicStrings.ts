@@ -1,10 +1,15 @@
 export class RepoNames {
+
     constructor() { }
+
     public GetRepoNames() {
-        const chromeExtensionsValues = Object.keys(ChromeExtensions);
-        const miscellaneousReposValues = Object.keys(MiscellaneousRepos);
-        const nugetPackagesValues = Object.keys(NugetPackages);
-        var allRepoNames = chromeExtensionsValues.concat(miscellaneousReposValues, nugetPackagesValues);
+        const chromeExtensions = Object.keys(ChromeExtensions);
+        const miscellaneousRepos = Object.keys(MiscellaneousRepos);
+        const nugetPackages = Object.keys(NugetPackages);
+        const vstsExtensions = Object.keys(VstsExtensions);
+        const vsIdeExtensions = Object.keys(VsIdeExtensions);
+        const vsixHelloWorlds = Object.keys(VsixHelloWorlds);
+        var allRepoNames = chromeExtensions.concat(miscellaneousRepos, nugetPackages, vstsExtensions, vsIdeExtensions, vsixHelloWorlds);
         return allRepoNames;
     }
 }
