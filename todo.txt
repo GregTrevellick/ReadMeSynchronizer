@@ -1,7 +1,4 @@
-convert single run to false
-
 add code coverage https://theodin.co.uk/2015/12/30/javascript-coverage-with-gulp-karma-istanbul/
-
 
 
 
