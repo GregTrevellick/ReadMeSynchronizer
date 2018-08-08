@@ -39,36 +39,41 @@ export class ReadMeUpdater {
     private GetMultipleBadgesMarkdown(lineBreak: string, repoFolderName: string) {
         let badgesMarkdownFinal: string = "";
 
-        var sharedBadgesMarkdown =
-            [
-                //Do not resequence alphabetically - this is the order we want them to appear in UI
-                this.mp.GetLicenceBadgeMarkdown(), 
-                this.mp.GetAccessLintBadgeMarkdown(),
-                this.mp.GetGitHubTopLanguage(repoFolderName),
-                this.mp.GetGitHubLanguageCount(repoFolderName),
-                this.mp.GetGitHubPullRequests(repoFolderName),
-                this.mp.GetBetterCodeHubCompliance(repoFolderName),
-                this.mp.GetCodacyBadge(repoFolderName),
-                this.mp.GetCodeCov(repoFolderName),
-                this.mp.GetCodeFactor(repoFolderName),
-                this.mp.GetAppveyorBuildStatus(repoFolderName),
-                this.mp.GetAppveyorUnitTests(repoFolderName),
-                this.mp.GetTravisBuildStatus(repoFolderName),
-                this.mp.GetImgBot(repoFolderName),
-                this.mp.GetCharityWare(repoFolderName),
-                this.mp.GetAccessLintSocial(repoFolderName),
-            ];
+        var sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoFolderName);
 
         //if repoFolderName exists in ChromeExtensions then append 'sharedBadgesMarkdown' with chrome badges
+
         //if repoFolderName exists in VstsExtensions then append 'sharedBadgesMarkdown' with vsts badges
+
         //if repoFolderName exists in VsIdeExtensions then append 'sharedBadgesMarkdown' with ide badges
 
         //if repoFolderName = BadgePlayground then set 'sharedBadgesMarkdown' to 'sharedBadgesMarkdownBadgePlayground' where 'sharedBadgesMarkdownBadgePlayground' is the pull requests, code quality, download counts for all repos
 
+        //combine all badges, with line breaks
         sharedBadgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
         });
 
         return badgesMarkdownFinal;
+    }
+
+    private GetSharedBadgesMarkdown(repoFolderName: string) {
+        return [
+            this.mp.GetLicenceBadgeMarkdown(),
+            this.mp.GetAccessLintBadgeMarkdown(),
+            this.mp.GetGitHubTopLanguage(repoFolderName),
+            this.mp.GetGitHubLanguageCount(repoFolderName),
+            this.mp.GetGitHubPullRequests(repoFolderName),
+            this.mp.GetBetterCodeHubCompliance(repoFolderName),
+            this.mp.GetCodacyBadge(repoFolderName),
+            this.mp.GetCodeCov(repoFolderName),
+            this.mp.GetCodeFactor(repoFolderName),
+            this.mp.GetAppveyorBuildStatus(repoFolderName),
+            this.mp.GetAppveyorUnitTests(repoFolderName),
+            this.mp.GetTravisBuildStatus(repoFolderName),
+            this.mp.GetImgBot(repoFolderName),
+            this.mp.GetCharityWare(repoFolderName),
+            this.mp.GetAccessLintSocial(repoFolderName),
+        ];
     }
 }
