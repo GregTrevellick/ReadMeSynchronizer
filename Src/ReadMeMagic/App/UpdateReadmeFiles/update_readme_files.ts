@@ -1,6 +1,7 @@
-import * as gulp2 from 'gulp';
+//import * as gulp2 from 'gulp';
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoNames } from './MagicStrings';
+import { FileSystemUpdater } from './FileSystemUpdater';
 
 const repoNames = [
     RepoNames.AutoFindReplace,
@@ -32,16 +33,18 @@ export class ReadMeUpdater {
     public htmlCommentEnd: string = "-->";
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
+    private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
 
     constructor() {
+        this.fsu = new FileSystemUpdater;
         this.mp = new MarkdownProvider;
     }
 
     public ReplaceBadgeComments() {
         for (let repoFolderName of repoNames) {
             var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
-            this.ReplaceBadgeComment(repoFolderName, badgesMarkdown);
+            this.fsu.ReplaceBadgeCommentOnDisc(repoFolderName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
     }
 
@@ -79,14 +82,14 @@ export class ReadMeUpdater {
         return badgesMarkdownFinal;
     }
 
-    //gregt extract to own class
-    public ReplaceBadgeComment(repoFolderName: string, badgesMarkdown: string) {
-        let destination: string = "../../../" + repoFolderName;
-        let source: string = destination + "/ReadMe.md";
-        let matchAnyCharacter: string = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
-        var badgesRegex = new RegExp(this.badgeCommentStart + matchAnyCharacter + this.badgeCommentEnd, 'g');
-        gulp2.src([source])
-            .pipe(this.replace(badgesRegex, badgesMarkdown))
-            .pipe(gulp2.dest(destination));
-    }
+    ////gregt extract to own class
+    //public ReplaceBadgeComment(repoFolderName: string, badgesMarkdown: string) {
+    //    let destination: string = "../../../" + repoFolderName;
+    //    let source: string = destination + "/ReadMe.md";
+    //    let matchAnyCharacter: string = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
+    //    var badgesRegex = new RegExp(this.badgeCommentStart + matchAnyCharacter + this.badgeCommentEnd, 'g');
+    //    gulp2.src([source])
+    //        .pipe(this.replace(badgesRegex, badgesMarkdown))
+    //        .pipe(gulp2.dest(destination));
+    //}
 }
