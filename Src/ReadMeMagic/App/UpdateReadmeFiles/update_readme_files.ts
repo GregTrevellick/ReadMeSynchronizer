@@ -48,14 +48,17 @@ export class ReadMeUpdater {
     }
 
     public GetBadgesMarkdown(repoFolderName: string) {
+
         var lineBreak = '\n';
         var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(lineBreak, repoFolderName);
         var badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
         return badgesMarkdownFull;
+
     }
 
     public GetMultipleBadgesMarkdown(lineBreak: string, repoFolderName: string) {
         let badgesMarkdownFinal: string = "";
+
         var badgesMarkdown =
             [
                 //Do not resequence alphabetically - this is the order we want them to appear in UI
@@ -75,9 +78,11 @@ export class ReadMeUpdater {
                 this.mp.GetCharityWare(repoFolderName),
                 this.mp.GetAccessLintSocial(repoFolderName),
             ];
+
         badgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
             badgesMarkdownFinal += badgeMarkdown + lineBreak;
         });
+
         return badgesMarkdownFinal;
     }
 }
