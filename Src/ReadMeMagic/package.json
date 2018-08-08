@@ -14,7 +14,8 @@
         "typescript": "^2.9.2",
         "webpack": "^4.16.3",
         "jasmine": "^2.2.1",
-        "@types/jasmine": "^2.8.8"
+        "@types/jasmine": "^2.8.8",
+        "ts-enum-util": "3.1.0"
     },
     "devDependencies": {
         "babel-loader": "^5.0.0",

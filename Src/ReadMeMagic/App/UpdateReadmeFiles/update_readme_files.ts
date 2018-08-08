@@ -1,29 +1,7 @@
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoNames } from './MagicStrings';
 import { FileSystemUpdater } from './FileSystemUpdater';
-
-const repoNames = [
-    RepoNames.AutoFindReplace,
-    RepoNames.BadgesPlayground,
-    RepoNames.DotNetFlags,
-    RepoNames.FilesForEveryExtensionCreator,
-    RepoNames.HelloWorldVstsExtension,
-    RepoNames.OpenInAppLauncher,
-    RepoNames.QuickLaunchButtons,
-    RepoNames.QuizLauncher,
-    RepoNames.SolutionOpenPopUp,
-    RepoNames.TrivialApisForIDE,
-    RepoNames.VisualStudioMarketplaceMetrics,
-    RepoNames.VsixFootie,
-    RepoNames.VsixHelloWorldCommandButton,
-    RepoNames.VsixHelloWorldPopUp,
-    RepoNames.VsixHelloWorldToolBar,
-    RepoNames.VsixRatingChaser,
-    RepoNames.VsixToolWindowAsyncPackageExample,
-    RepoNames.VsixTwitterWidget,
-    RepoNames.VstsDashboardWidgetProjectTemplate,
-    RepoNames.WpfAsyncBindingPropertyExample,
-];
+import { $enum } from "ts-enum-util";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -41,7 +19,9 @@ export class ReadMeUpdater {
     }
 
     public ReplaceBadgeComments() {
-        for (let repoFolderName of repoNames) {
+        const repoNamesValues = $enum(RepoNames).getValues();
+        //console.log("ccccccccccccc");
+        for (let repoFolderName of repoNamesValues) {
             var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
             this.fsu.ReplaceBadgeCommentOnDisc(repoFolderName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
