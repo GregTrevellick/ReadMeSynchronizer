@@ -20,7 +20,6 @@ export class ReadMeUpdater {
 
     public ReplaceBadgeComments() {
         const repoNamesValues = $enum(RepoNames).getValues();
-        //console.log("ccccccccccccc");
         for (let repoFolderName of repoNamesValues) {
             var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
             this.fsu.ReplaceBadgeCommentOnDisc(repoFolderName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
