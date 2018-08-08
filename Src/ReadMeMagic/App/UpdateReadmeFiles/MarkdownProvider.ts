@@ -10,15 +10,25 @@ export class MarkdownProvider {
         return "[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)";
     }
 
-    public GetGitHubUrlForRepo(repoFolderName: string) {
+    public GetGitHubTopLanguage(repoFolderName: string) {
+        return "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
+    }
+
+    public GetGitHubLanguageCount(repoFolderName: string) {
+        return "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
+    }
+
+    public GetGitHubPullRequests(repoFolderName: string) {
+        return "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
+    }
+
+    private GetGitHubUrlForRepo(repoFolderName: string) {
         return "https://github.com/GregTrevellick/" + repoFolderName;
     }
 
+
 }
 
-//[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
-//[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
-//[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](https://github.com/GregTrevellick/OpenInApp.Launcher)
 //[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/OpenInApp.Launcher?branch=master)](https://bettercodehub.com/results/GregTrevellick/OpenInApp.Launcher)
 //[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/OpenInApp.Launcher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/OpenInApp.Launcher&amp;utm_campaign=Badge_Grade_Dashboard)
 //[![codecov](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher)
