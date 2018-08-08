@@ -82,6 +82,7 @@ export class ReadMeUpdater {
         return badgesMarkdownFinal;
     }
 
+    //gregt extract to own class
     public ReplaceBadgeComment(repoFolderName: string, badgesMarkdown: string) {
         let destination: string = "../../../" + repoFolderName;
         let source: string = destination + "/ReadMe.md";

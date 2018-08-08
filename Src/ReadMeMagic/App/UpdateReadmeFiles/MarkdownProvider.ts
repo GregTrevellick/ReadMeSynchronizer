@@ -95,14 +95,16 @@ export class MarkdownProvider {
     }
 
     public GetChromeWebstoreVersion(repoFolderName: string) {
-        return "[![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)";
+        return "[![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](" + vsmmWebstoreUrl +")";
     }
 
     public GetChromeWebstoreUsers(repoFolderName: string) {
-        return "[![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)";
+        return "[![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](" + vsmmWebstoreUrl + ")";
     }
 
     public GetChromeWebstoreRating(repoFolderName: string) {
-        return "[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo/reviews)";
+        return "[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](" + vsmmWebstoreUrl + "/reviews)";
     }
 }
+
+const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo";
