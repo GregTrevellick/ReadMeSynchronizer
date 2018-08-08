@@ -1,5 +1,6 @@
 import * as gulp2 from 'gulp';
 import { MarkdownProvider } from "./MarkdownProvider";
+import { RepoNames } from './MagicStrings';
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -16,26 +17,26 @@ export class ReadMeUpdater {
 
     public ReplaceBadgeComments() {
         var repos = [
-            "AutoFindReplace",
-            //"Badges-playground",
-            "DotNetFlags",
-            "FilesForEveryExtensionCreator",
-            "HelloWorldVstsExtension",
-            "OpenInApp.Launcher",
-            "QuickLaunchButtons",
-            "Quiz.Launcher",
-            "SolutionOpenPopUp",
-            "TrivialApisForIDE",
-            "VisualStudioMarketplaceMetrics",
-            "VsixFootie",
-            "VsixHelloWorldCommandButton",
-            "VsixHelloWorldPopUp",
-            "VsixHelloWorldToolBar",
-            "VsixRatingChaser",
-            "VsixToolWindowAsyncPackageExample",
-            "VsixTwitterWidget",
-            "VstsDashboardWidgetProjectTemplate",
-            "WpfAsyncBindingPropertyExample",
+            RepoNames.AutoFindReplace,
+            //RepoNames.BadgesPlayground,
+            RepoNames.DotNetFlags,
+            RepoNames.FilesForEveryExtensionCreator,
+            RepoNames.HelloWorldVstsExtension,
+            RepoNames.OpenInAppLauncher,
+            RepoNames.QuickLaunchButtons,
+            RepoNames.QuizLauncher,
+            RepoNames.SolutionOpenPopUp,
+            RepoNames.TrivialApisForIDE,
+            RepoNames.VisualStudioMarketplaceMetrics,
+            RepoNames.VsixFootie,
+            RepoNames.VsixHelloWorldCommandButton,
+            RepoNames.VsixHelloWorldPopUp,
+            RepoNames.VsixHelloWorldToolBar,
+            RepoNames.VsixRatingChaser,
+            RepoNames.VsixToolWindowAsyncPackageExample,
+            RepoNames.VsixTwitterWidget,
+            RepoNames.VstsDashboardWidgetProjectTemplate,
+            RepoNames.WpfAsyncBindingPropertyExample,
         ];
         for (let repoFolderName of repos) {
             this.Rrr(repoFolderName)
