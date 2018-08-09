@@ -1,5 +1,5 @@
 import { MarkdownProvider } from "./MarkdownProvider";
-import { RepoNames, ChromeExtensions, NugetPackages } from './MagicStrings';
+import { RepoNames, ChromeExtensions, NugetPackages, VstsExtensions } from './MagicStrings';
 import { FileSystemUpdater } from './FileSystemUpdater';
 import { $enum } from "ts-enum-util";
 
@@ -41,14 +41,20 @@ export class ReadMeUpdater {
         var sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoFolderName);
 
         if ($enum(ChromeExtensions).isValue(repoFolderName)) {
-            sharedBadgesMarkdown.push("chrome_chrome_chrome_chrome_chrome_chrome_chrome_");
+            var chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoFolderName);
+            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(chromeExtensionsBadgesMarkdown);
         }
 
         if ($enum(NugetPackages).isValue(repoFolderName)) {
-            sharedBadgesMarkdown.push("NugetPackages_NugetPackages_NugetPackages_NugetPackages_");
+            var nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoFolderName);
+            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(nugetBadgesMarkdown);
         }
 
-        //if repoFolderName exists in VstsExtensions then append 'sharedBadgesMarkdown' with vsts badges
+        if ($enum(VstsExtensions).isValue(repoFolderName)) {
+            var vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoFolderName);
+            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(vstsExtensionsBadgesMarkdown);
+        }
+
         //if repoFolderName exists in VsIdeExtensions then append 'sharedBadgesMarkdown' with ide badges
         //if repoFolderName = BadgePlayground then set 'sharedBadgesMarkdown' to 'sharedBadgesMarkdownBadgePlayground' where 'sharedBadgesMarkdownBadgePlayground' is the pull requests, code quality, download counts for all repos
 
@@ -80,4 +86,28 @@ ${badgeMarkdown}`;
             this.mp.GetAccessLintSocial(repoFolderName),
         ];
     }
+
+    private GetChromeExtensionsBadgesMarkdown(repoFolderName: string) {
+        return [
+            this.mp.GetChromeWebstoreVersion(repoFolderName),
+            this.mp.GetChromeWebstoreUsers(repoFolderName),
+            this.mp.GetChromeWebstoreRating(repoFolderName),
+        ];
+    }
+
+    private GetNugetBadgesMarkdown(repoFolderName: string) {
+        return [
+            this.mp.GetNugetDownloads(repoFolderName),
+        ];
+    }
+
+    private GetVstsExtensionsBadgesMarkdown(repoFolderName: string) {
+        return [
+            this.mp.GetVisualStudioMarketplaceVSTSDownloads(repoFolderName),
+            this.mp.GetVisualStudioMarketplaceVSTSRatings(repoFolderName),
+            this.mp.GetVisualStudioMarketplaceVSTSVersion(repoFolderName),
+        ];
+    }
+
+    
 }
