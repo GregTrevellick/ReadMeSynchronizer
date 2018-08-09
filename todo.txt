@@ -6,7 +6,7 @@ credits
 https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/
 matt jeanes
 //??https://medium.com/@OlegVaraksin/how-to-set-up-and-run-fast-karma-tests-in-front-end-projects-61c17787615a
-
+https://codecraft.tv/courses/angular/es6-typescript/template-strings/
 
 
 badges
