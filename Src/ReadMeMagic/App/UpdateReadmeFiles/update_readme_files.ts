@@ -56,6 +56,7 @@ export class ReadMeUpdater {
         }
 
         //if repoFolderName exists in VsIdeExtensions then append 'sharedBadgesMarkdown' with ide badges
+
         //if repoFolderName = BadgePlayground then set 'sharedBadgesMarkdown' to 'sharedBadgesMarkdownBadgePlayground' where 'sharedBadgesMarkdownBadgePlayground' is the pull requests, code quality, download counts for all repos
 
         //combine all badges, with line breaks
@@ -108,6 +109,4 @@ ${badgeMarkdown}`;
             this.mp.GetVisualStudioMarketplaceVSTSVersion(repoFolderName),
         ];
     }
-
-    
 }
