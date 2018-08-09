@@ -30,13 +30,13 @@ export class ReadMeUpdater {
     }
 
     private GetBadgesMarkdown(repoFolderName: string) {
-        var lineBreak = `\n`;
-        var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(lineBreak, repoFolderName);
+        var lineBreak = '\n';
+        var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoFolderName);
         var badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
         return badgesMarkdownFull;
     }
 
-    private GetMultipleBadgesMarkdown(lineBreak: string, repoFolderName: string) {
+    private GetMultipleBadgesMarkdown(repoFolderName: string) {
         let badgesMarkdownFinal: string = "";
 
         var sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoFolderName);
@@ -46,7 +46,7 @@ export class ReadMeUpdater {
         //if repoFolderName = BadgePlayground then set 'sharedBadgesMarkdown' to 'sharedBadgesMarkdownBadgePlayground' where 'sharedBadgesMarkdownBadgePlayground' is the pull requests, code quality, download counts for all repos
 
         //combine all badges, with line breaks
-        sharedBadgesMarkdown.forEach(function (badgeMarkdown, lineBreak) {
+        sharedBadgesMarkdown.forEach(function (badgeMarkdown) {
             badgesMarkdownFinal += `
 ${badgeMarkdown}`;
         });
