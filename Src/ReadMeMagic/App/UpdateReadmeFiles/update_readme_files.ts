@@ -1,7 +1,7 @@
 import { MarkdownProvider } from "./MarkdownProvider";
-import { RepoNames } from './MagicStrings';
+import { RepoNames, ChromeExtensions, NugetPackages } from './MagicStrings';
 import { FileSystemUpdater } from './FileSystemUpdater';
-//import { $enum } from "ts-enum-util";
+import { $enum } from "ts-enum-util";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -21,8 +21,7 @@ export class ReadMeUpdater {
     }
 
     public ReplaceBadgeComments() {
-        //const repoNamesValues = $enum(RepoNames).getValues();
-        const repoNamesValues = this.rn.GetRepoNames();
+        const repoNamesValues = this.rn.GetRepoNames();//gregt put in ctor ?
         for (let repoFolderName of repoNamesValues) {
             var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
             this.fsu.ReplaceBadgeCommentOnDisc(repoFolderName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
@@ -40,7 +39,15 @@ export class ReadMeUpdater {
         let badgesMarkdownFinal: string = "";
 
         var sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoFolderName);
-        //if repoFolderName exists in ChromeExtensions then append 'sharedBadgesMarkdown' with chrome badges
+
+        if ($enum(ChromeExtensions).isValue(repoFolderName)) {
+            sharedBadgesMarkdown.push("chrome_chrome_chrome_chrome_chrome_chrome_chrome_");
+        }
+
+        if ($enum(NugetPackages).isValue(repoFolderName)) {
+            sharedBadgesMarkdown.push("NugetPackages_NugetPackages_NugetPackages_NugetPackages_");
+        }
+
         //if repoFolderName exists in VstsExtensions then append 'sharedBadgesMarkdown' with vsts badges
         //if repoFolderName exists in VsIdeExtensions then append 'sharedBadgesMarkdown' with ide badges
         //if repoFolderName = BadgePlayground then set 'sharedBadgesMarkdown' to 'sharedBadgesMarkdownBadgePlayground' where 'sharedBadgesMarkdownBadgePlayground' is the pull requests, code quality, download counts for all repos
