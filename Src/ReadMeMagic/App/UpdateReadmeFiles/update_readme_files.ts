@@ -50,31 +50,42 @@ ${badgeMarkdown}`;
         return badgesMarkdownFinal;
     }
 
-    private GetRepoBadgesMarkdown(repoMeta: IRepoMetaData) {
+    private GetRepoBadgesMarkdown(repoMetaData: IRepoMetaData) {
 
-        let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMeta.appNickName);
+        let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData.appNickName);
 
-        if (repoMeta.isChromeExtension) {
-            let chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMeta.appNickName);
-            repoBadgesMarkdown = repoBadgesMarkdown.concat(chromeExtensionsBadgesMarkdown);
-        }
+        let repoTypeSpecificMarkdown: string[] = this.GetRepoTypeSpecificMarkdown(repoMetaData);
 
-        if (repoMeta.isNugetPackage) {
-            let nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMeta.appNickName);
-            repoBadgesMarkdown = repoBadgesMarkdown.concat(nugetBadgesMarkdown);
-        }
-
-        if (repoMeta.isSpecialRepo) {
-            let specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMeta.appNickName);
-            repoBadgesMarkdown = repoBadgesMarkdown.concat(specialReposBadgesMarkdown);
-        }
-
-        if (repoMeta.isVstsExtension) {
-            let vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMeta.appNickName);
-            repoBadgesMarkdown = repoBadgesMarkdown.concat(vstsExtensionsBadgesMarkdown);
-        }
+        repoBadgesMarkdown = repoBadgesMarkdown.concat(repoTypeSpecificMarkdown);
 
         return repoBadgesMarkdown;
+    }
+
+    private GetRepoTypeSpecificMarkdown(repoMetaData: IRepoMetaData) {
+
+        let repoTypeSpecificMarkdown: string[] = [];
+
+        if (repoMetaData.isChromeExtension) {
+            let chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.appNickName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(chromeExtensionsBadgesMarkdown);
+        }
+
+        if (repoMetaData.isNugetPackage) {
+            let nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.appNickName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(nugetBadgesMarkdown);
+        }
+
+        if (repoMetaData.isSpecialRepo) {
+            let specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.appNickName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(specialReposBadgesMarkdown);
+        }
+
+        if (repoMetaData.isVstsExtension) {
+            let vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.appNickName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(vstsExtensionsBadgesMarkdown);
+        }
+
+        return repoTypeSpecificMarkdown;
     }
 
     private GetChromeExtensionsBadgesMarkdown(repoFolderName: string) {
