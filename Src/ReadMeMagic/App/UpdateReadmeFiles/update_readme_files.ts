@@ -123,10 +123,16 @@ ${badgeMarkdown}`;
     }
 
     private GetSpecialReposBadgesMarkdown(appNickName: string) {
-        return [
-            //for each repo return the following 
-            //    "###" + repo name + line break + all badges
-        ];
+
+        let badgesMarkdown = "";
+
+        var allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.appNickName != appNickName);
+
+        for (let repoMetaData of allReposExceptSpecials) {
+            badgesMarkdown = "#### " + repoMetaData.appNickName + this.GetBadgesMarkdown(repoMetaData);
+        }
+
+        return badgesMarkdown;
     }
 
     private GetVstsExtensionsBadgesMarkdown(appNickName: string) {

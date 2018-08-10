@@ -54,8 +54,8 @@ export const openInAppLauncher: IRepoMetaData = {
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
-    isSpecialRepo: true,
-    isVsIdeExtension: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
@@ -79,7 +79,7 @@ export const quizLauncher: IRepoMetaData = {
     isMiscellaneousRepo: false,
     isNugetPackage: false,
     isSpecialRepo: false,
-    isVsIdeExtension: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
@@ -91,7 +91,7 @@ export const autoFindReplace: IRepoMetaData = {
     isMiscellaneousRepo: false,
     isNugetPackage: false,
     isSpecialRepo: false,
-    isVsIdeExtension: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
@@ -103,7 +103,7 @@ export const quickLaunchButtons: IRepoMetaData = {
     isMiscellaneousRepo: false,
     isNugetPackage: false,
     isSpecialRepo: false,
-    isVsIdeExtension: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
@@ -115,7 +115,7 @@ export const solutionOpenPopUp: IRepoMetaData = {
     isMiscellaneousRepo: false,
     isNugetPackage: false,
     isSpecialRepo: false,
-    isVsIdeExtension: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
@@ -127,7 +127,7 @@ export const trivialApisForIDE: IRepoMetaData = {
     isMiscellaneousRepo: false,
     isNugetPackage: false,
     isSpecialRepo: false,
-    isVsIdeExtension: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
@@ -139,7 +139,7 @@ export const vsixFootie: IRepoMetaData = {
     isMiscellaneousRepo: false,
     isNugetPackage: false,
     isSpecialRepo: false,
-    isVsIdeExtension: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
@@ -151,7 +151,7 @@ export const vstsDashboardWidgetProjectTemplate: IRepoMetaData = {
     isMiscellaneousRepo: false,
     isNugetPackage: false,
     isSpecialRepo: false,
-    isVsIdeExtension: false,
+    isVsIdeExtension: true,
     isVsixHelloWorld: false,
     isVstsExtension: false
 };
