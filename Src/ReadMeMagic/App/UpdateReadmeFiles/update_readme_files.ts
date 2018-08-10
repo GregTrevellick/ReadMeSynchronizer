@@ -32,7 +32,6 @@ export class ReadMeUpdater {
     private GetBadgesMarkdown(repoMeta: IRepoMetaData) {
         let multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMeta);
         return `${this.badgeCommentStart}${this.lineBreak}${multipleBadgesMarkdown}${this.badgeCommentEnd}`;
-        //return this.badgeCommentStart + this.lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
     }
 
     private GetMultipleBadgesMarkdown(repoMeta: IRepoMetaData) {
