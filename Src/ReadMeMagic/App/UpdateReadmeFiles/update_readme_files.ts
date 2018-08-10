@@ -88,52 +88,52 @@ ${badgeMarkdown}`;
         return repoTypeSpecificMarkdown;
     }
 
-    private GetChromeExtensionsBadgesMarkdown(repoFolderName: string) {
+    private GetChromeExtensionsBadgesMarkdown(appNickName: string) {
         return [
-            this.mp.GetChromeWebstoreVersion(repoFolderName),
-            this.mp.GetChromeWebstoreUsers(repoFolderName),
-            this.mp.GetChromeWebstoreRating(repoFolderName),
+            this.mp.GetChromeWebstoreVersion(appNickName),
+            this.mp.GetChromeWebstoreUsers(appNickName),
+            this.mp.GetChromeWebstoreRating(appNickName),
         ];
     }
 
-    private GetNugetBadgesMarkdown(repoFolderName: string) {
+    private GetNugetBadgesMarkdown(appNickName: string) {
         return [
-            this.mp.GetNugetDownloads(repoFolderName),
+            this.mp.GetNugetDownloads(appNickName),
         ];
     }
 
-    private GetSharedBadgesMarkdown(repoFolderName: string) {
+    private GetSharedBadgesMarkdown(appNickName: string) {
         return [
             this.mp.GetLicenceBadgeMarkdown(),
             this.mp.GetAccessLintBadgeMarkdown(),
-            this.mp.GetGitHubTopLanguage(repoFolderName),
-            this.mp.GetGitHubLanguageCount(repoFolderName),
-            this.mp.GetGitHubPullRequests(repoFolderName),
-            this.mp.GetBetterCodeHubCompliance(repoFolderName),
-            this.mp.GetCodacyBadge(repoFolderName),
-            this.mp.GetCodeCov(repoFolderName),
-            this.mp.GetCodeFactor(repoFolderName),
-            this.mp.GetAppveyorBuildStatus(repoFolderName),
-            this.mp.GetAppveyorUnitTests(repoFolderName),
-            this.mp.GetTravisBuildStatus(repoFolderName),
-            this.mp.GetImgBot(repoFolderName),
-            this.mp.GetCharityWare(repoFolderName),
-            this.mp.GetAccessLintSocial(repoFolderName),
+            this.mp.GetGitHubTopLanguage(appNickName),
+            this.mp.GetGitHubLanguageCount(appNickName),
+            this.mp.GetGitHubPullRequests(appNickName),
+            this.mp.GetBetterCodeHubCompliance(appNickName),
+            this.mp.GetCodacyBadge(appNickName),
+            this.mp.GetCodeCov(appNickName),
+            this.mp.GetCodeFactor(appNickName),
+            this.mp.GetAppveyorBuildStatus(appNickName),
+            this.mp.GetAppveyorUnitTests(appNickName),
+            this.mp.GetTravisBuildStatus(appNickName),
+            this.mp.GetImgBot(appNickName),
+            this.mp.GetCharityWare(appNickName),
+            this.mp.GetAccessLintSocial(appNickName),
         ];
     }
 
-    private GetSpecialReposBadgesMarkdown(repoFolderName: string) {
+    private GetSpecialReposBadgesMarkdown(appNickName: string) {
         //set 'sharedBadgesMarkdown' to the pull requests, code quality, download counts for all repos
         return [
             //TODO
         ];
     }
 
-    private GetVstsExtensionsBadgesMarkdown(repoFolderName: string) {
+    private GetVstsExtensionsBadgesMarkdown(appNickName: string) {
         return [
-            this.mp.GetVisualStudioMarketplaceVSTSDownloads(repoFolderName),
-            this.mp.GetVisualStudioMarketplaceVSTSRatings(repoFolderName),
-            this.mp.GetVisualStudioMarketplaceVSTSVersion(repoFolderName),
+            this.mp.GetVisualStudioMarketplaceVSTSDownloads(appNickName),
+            this.mp.GetVisualStudioMarketplaceVSTSRatings(appNickName),
+            this.mp.GetVisualStudioMarketplaceVSTSVersion(appNickName),
         ];
     }
 }
