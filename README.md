@@ -17,6 +17,7 @@
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)
+
 #### AutoFindReplace<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
@@ -33,7 +34,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### DotNetFlags<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### DotNetFlags<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -50,7 +52,8 @@
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)
-[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)<!--BadgesEND-->#### FilesForEveryExtensionCreator<!--BadgesSTART-->
+[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)<!--BadgesEND-->
+#### FilesForEveryExtensionCreator<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -66,7 +69,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### OpenInAppLauncher<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### OpenInAppLauncher<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -82,7 +86,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### QuickLaunchButtons<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### QuickLaunchButtons<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -98,7 +103,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### QuizLauncher<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### QuizLauncher<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -114,7 +120,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### SolutionOpenPopUp<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### SolutionOpenPopUp<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -130,7 +137,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### TrivialApisForIDE<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### TrivialApisForIDE<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -146,7 +154,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### VisualStudioMarketplaceMetrics<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### VisualStudioMarketplaceMetrics<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -165,7 +174,8 @@
 [![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)
 [![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)
 [![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)
-[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo/reviews)<!--BadgesEND-->#### VsixFootie<!--BadgesSTART-->
+[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo/reviews)<!--BadgesEND-->
+#### VsixFootie<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -181,7 +191,8 @@
 [![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->#### VsixRatingChaser<!--BadgesSTART-->
+[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)<!--BadgesEND-->
+#### VsixRatingChaser<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -198,7 +209,8 @@
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)
-[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)<!--BadgesEND-->#### VsixTwitterWidget<!--BadgesSTART-->
+[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)<!--BadgesEND-->
+#### VsixTwitterWidget<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
@@ -217,7 +229,8 @@
 [![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)
 [![Visual Studio Marketplace downloads](https://img.shields.io/vscode-marketplace/d/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)
 [![Visual Studio Marketplace ratings](https://img.shields.io/vscode-marketplace/r/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor#review-details)
-[![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)<!--BadgesEND-->#### VstsDashboardWidgetProjectTemplate<!--BadgesSTART-->
+[![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)<!--BadgesEND-->
+#### VstsDashboardWidgetProjectTemplate<!--BadgesSTART-->
 
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
