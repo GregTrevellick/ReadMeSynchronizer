@@ -65,7 +65,7 @@ const oia: IRepoMeta = {
     isVstsExtension: false
 };
 
-export class RepoNames {
+export class RepoMetaData {
     public repoMetas: IRepoMeta[];
 
     constructor() {

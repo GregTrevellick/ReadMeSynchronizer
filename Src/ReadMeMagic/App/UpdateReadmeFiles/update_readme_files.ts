@@ -1,7 +1,7 @@
 //import { $enum } from "ts-enum-util";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { FileSystemUpdater } from './FileSystemUpdater';
-import { RepoNames } from "./MagicObjects";
+import { RepoMetaData } from "./RepoMetaData";
 import { IRepoMeta } from "./IRepoMeta";
 
 export class ReadMeUpdater {
@@ -13,16 +13,16 @@ export class ReadMeUpdater {
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
     private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
-    private rn: RepoNames;
+    private repoMetaData: RepoMetaData;
 
     constructor() {
         this.fsu = new FileSystemUpdater;
         this.mp = new MarkdownProvider;
-        this.rn = new RepoNames;
+        this.repoMetaData = new RepoMetaData;
     }
 
     public ReplaceBadgeComments() {
-        for (let repoMeta of this.rn.repoMetas) {
+        for (let repoMeta of this.repoMetaData.repoMetas) {
             var badgesMarkdown = this.GetBadgesMarkdown(repoMeta);
             this.fsu.ReplaceBadgeCommentOnDisc(repoMeta.repoLocalDiscName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
