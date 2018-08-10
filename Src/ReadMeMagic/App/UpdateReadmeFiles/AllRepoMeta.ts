@@ -6,12 +6,20 @@ export class AllRepoMeta {
 
     constructor() {
         this.repoMetaDatas = [
+            myRepos.autoFindReplace,
             myRepos.badgesPlayground,
             myRepos.dotNetFlags,
-            myRepos.oia,
+            myRepos.filesForEveryExtensionCreator,
+            myRepos.openInAppLauncher,
+            myRepos.quickLaunchButtons,
+            myRepos.quizLauncher,
+            myRepos.solutionOpenPopUp,
+            myRepos.trivialApisForIDE,
+            myRepos.visualStudioMarketplaceMetrics,
+            myRepos.vsixFootie,
             myRepos.vsixRatingChaser,
-            myRepos.vsmm,
+            myRepos.vsixTwitterWidget,
+            myRepos.vstsDashboardWidgetProjectTemplate,
         ];
     }
 }
-

@@ -7,6 +7,7 @@ import { AllRepoMeta } from "./AllRepoMeta";
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
     public prefix: string = "Badges";
+    private lineBreak: string = '\n';
     public htmlCommentStart: string = "<!--" + this.prefix;
     public htmlCommentEnd: string = "-->";
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
@@ -29,10 +30,9 @@ export class ReadMeUpdater {
     }
 
     private GetBadgesMarkdown(repoMeta: IRepoMetaData) {
-        let lineBreak = '\n';
         let multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMeta);
-        let badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
-        return badgesMarkdownFull;
+        return `${this.badgeCommentStart}${this.lineBreak}${multipleBadgesMarkdown}${this.badgeCommentEnd}`;
+        //return this.badgeCommentStart + this.lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
     }
 
     private GetMultipleBadgesMarkdown(repoMeta: IRepoMetaData) {

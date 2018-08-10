@@ -1,8 +1,7 @@
 import { IRepoMetaData } from "./IRepoMetaData";
 
-export const vsmm: IRepoMetaData = {
+export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     appNickName: 'VisualStudioMarketplaceMetrics',
-    //repoRemoteName: 'VisualStudioMarketplaceMetrics',
     repoLocalDiscName: 'VisualStudioMarketplaceMetrics',
     isChromeExtension: true,
     isMiscellaneousRepo: false,
@@ -15,7 +14,6 @@ export const vsmm: IRepoMetaData = {
 
 export const dotNetFlags: IRepoMetaData = {
     appNickName: 'DotNetFlags',
-    //repoRemoteName: 'DotNetFlags',
     repoLocalDiscName: 'DotNetFlags',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -28,7 +26,6 @@ export const dotNetFlags: IRepoMetaData = {
 
 export const vsixRatingChaser: IRepoMetaData = {
     appNickName: 'VsixRatingChaser',
-    //repoRemoteName: 'VsixRatingChaser',
     repoLocalDiscName: 'VsixRatingChaser',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -41,7 +38,6 @@ export const vsixRatingChaser: IRepoMetaData = {
 
 export const badgesPlayground: IRepoMetaData = {
     appNickName: 'BadgesPlayground',
-    //repoRemoteName: 'Badges-playground',
     repoLocalDiscName: 'Badges-playground',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -52,9 +48,8 @@ export const badgesPlayground: IRepoMetaData = {
     isVstsExtension: false
 };
 
-export const oia: IRepoMetaData = {
+export const openInAppLauncher: IRepoMetaData = {
     appNickName: 'OpenInAppLauncher',
-    //repoRemoteName: 'OpenInApp.Launcher',
     repoLocalDiscName: 'OpenInApp.Launcher',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -65,21 +60,113 @@ export const oia: IRepoMetaData = {
     isVstsExtension: false
 };
 
+export const filesForEveryExtensionCreator: IRepoMetaData = {
+    appNickName: 'FilesForEveryExtensionCreator',
+    repoLocalDiscName: 'FilesForEveryExtensionCreator',
+    isChromeExtension: false,
+    isMiscellaneousRepo: true,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
 
+export const quizLauncher: IRepoMetaData = {
+    appNickName: 'QuizLauncher',
+    repoLocalDiscName: 'Quiz.Launcher',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
 
-//export enum MiscellaneousRepos {
-//    FilesForEveryExtensionCreator = "FilesForEveryExtensionCreator",
-//}
+export const autoFindReplace: IRepoMetaData = {
+    appNickName: 'AutoFindReplace',
+    repoLocalDiscName: 'AutoFindReplace',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
 
-//export enum VsIdeExtensions {
-//    AutoFindReplace = "AutoFindReplace",
-//    QuickLaunchButtons = "QuickLaunchButtons",
-//    QuizLauncher = "Quiz.Launcher",
-//    SolutionOpenPopUp = "SolutionOpenPopUp",
-//    TrivialApisForIDE = "TrivialApisForIDE",
-//    VsixFootie = "VsixFootie",
-//    VstsDashboardWidgetProjectTemplate = "VstsDashboardWidgetProjectTemplate",
-//}
+export const quickLaunchButtons: IRepoMetaData = {
+    appNickName: 'QuickLaunchButtons',
+    repoLocalDiscName: 'QuickLaunchButtons',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
+
+export const solutionOpenPopUp: IRepoMetaData = {
+    appNickName: 'SolutionOpenPopUp',
+    repoLocalDiscName: 'SolutionOpenPopUp',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
+
+export const trivialApisForIDE: IRepoMetaData = {
+    appNickName: 'TrivialApisForIDE',
+    repoLocalDiscName: 'TrivialApisForIDE',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
+
+export const vsixFootie: IRepoMetaData = {
+    appNickName: 'VsixFootie',
+    repoLocalDiscName: 'VsixFootie',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
+
+export const vstsDashboardWidgetProjectTemplate: IRepoMetaData = {
+    appNickName: 'VstsDashboardWidgetProjectTemplate',
+    repoLocalDiscName: 'VstsDashboardWidgetProjectTemplate',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: false
+};
+
+export const vsixTwitterWidget: IRepoMetaData = {
+    appNickName: 'VsixTwitterWidget',
+    repoLocalDiscName: 'VsixTwitterWidget',
+    isChromeExtension: false,
+    isMiscellaneousRepo: false,
+    isNugetPackage: false,
+    isSpecialRepo: false,
+    isVsIdeExtension: false,
+    isVsixHelloWorld: false,
+    isVstsExtension: true
+};
 
 //export enum VsixHelloWorlds {
 //    HelloWorldVstsExtension = "HelloWorldVstsExtension",
@@ -88,8 +175,4 @@ export const oia: IRepoMetaData = {
 //    VsixHelloWorldToolBar = "VsixHelloWorldToolBar",
 //    VsixToolWindowAsyncPackageExample = "VsixToolWindowAsyncPackageExample",
 //    WpfAsyncBindingPropertyExample = "WpfAsyncBindingPropertyExample",
-//}
-
-//export enum VstsExtensions {
-//    VsixTwitterWidget = "VsixTwitterWidget",
 //}
