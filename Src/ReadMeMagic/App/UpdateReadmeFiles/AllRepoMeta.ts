@@ -1,6 +1,20 @@
-import { IRepoMeta } from "./IRepoMeta";
+import { IRepoMetaData } from "./IRepoMetaData";
 
-const vsmm: IRepoMeta = {
+export class AllRepoMeta {
+    public repoMetaDatas: IRepoMetaData[];
+
+    constructor() {
+        this.repoMetaDatas = [
+            badgesPlayground,
+            dotNetFlags,
+            oia,
+            vsixRatingChaser,
+            vsmm,
+        ];
+    }
+}
+
+const vsmm: IRepoMetaData = {
     appNickName: 'VisualStudioMarketplaceMetrics',
     //repoRemoteName: 'VisualStudioMarketplaceMetrics',
     repoLocalDiscName: 'VisualStudioMarketplaceMetrics',
@@ -13,7 +27,7 @@ const vsmm: IRepoMeta = {
     isVstsExtension: false
 };
 
-const dotNetFlags: IRepoMeta = {
+const dotNetFlags: IRepoMetaData = {
     appNickName: 'DotNetFlags',
     //repoRemoteName: 'DotNetFlags',
     repoLocalDiscName: 'DotNetFlags',
@@ -26,7 +40,7 @@ const dotNetFlags: IRepoMeta = {
     isVstsExtension: false
 };
 
-const vsixRatingChaser: IRepoMeta = {
+const vsixRatingChaser: IRepoMetaData = {
     appNickName: 'VsixRatingChaser',
     //repoRemoteName: 'VsixRatingChaser',
     repoLocalDiscName: 'VsixRatingChaser',
@@ -39,7 +53,7 @@ const vsixRatingChaser: IRepoMeta = {
     isVstsExtension: false
 };
 
-const badgesPlayground: IRepoMeta = {
+const badgesPlayground: IRepoMetaData = {
     appNickName: 'BadgesPlayground',
     //repoRemoteName: 'Badges-playground',
     repoLocalDiscName: 'Badges-playground',
@@ -52,7 +66,7 @@ const badgesPlayground: IRepoMeta = {
     isVstsExtension: false
 };
 
-const oia: IRepoMeta = {
+const oia: IRepoMetaData = {
     appNickName: 'OpenInAppLauncher',
     //repoRemoteName: 'OpenInApp.Launcher',
     repoLocalDiscName: 'OpenInApp.Launcher',
@@ -65,19 +79,7 @@ const oia: IRepoMeta = {
     isVstsExtension: false
 };
 
-export class RepoMetaData {
-    public repoMetas: IRepoMeta[];
 
-    constructor() {
-        this.repoMetas = [
-            badgesPlayground,
-            dotNetFlags,
-            vsixRatingChaser,
-            vsmm,
-            oia
-        ];
-    }
-}
 
 //export enum MiscellaneousRepos {
 //    FilesForEveryExtensionCreator = "FilesForEveryExtensionCreator",

@@ -1,8 +1,8 @@
 //import { $enum } from "ts-enum-util";
 import { FileSystemUpdater } from './FileSystemUpdater';
-import { IRepoMeta } from "./IRepoMeta";
+import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
-import { RepoMetaData } from "./RepoMetaData";
+import { AllRepoMeta } from "./AllRepoMeta";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -13,29 +13,29 @@ export class ReadMeUpdater {
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
     private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
-    private repoMetaData: RepoMetaData;
+    private allRepoMeta: AllRepoMeta;
 
     constructor() {
         this.fsu = new FileSystemUpdater;
         this.mp = new MarkdownProvider;
-        this.repoMetaData = new RepoMetaData;
+        this.allRepoMeta = new AllRepoMeta;
     }
 
     public ReplaceBadgeComments() {
-        for (let repoMeta of this.repoMetaData.repoMetas) {
-            let badgesMarkdown = this.GetBadgesMarkdown(repoMeta);
-            this.fsu.ReplaceBadgeCommentOnDisc(repoMeta.repoLocalDiscName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
+        for (let repoMetaData of this.allRepoMeta.repoMetaDatas) {
+            let badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
+            this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.repoLocalDiscName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
     }
 
-    private GetBadgesMarkdown(repoMeta: IRepoMeta) {
+    private GetBadgesMarkdown(repoMeta: IRepoMetaData) {
         let lineBreak = '\n';
         let multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMeta);
         let badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
         return badgesMarkdownFull;
     }
 
-    private GetMultipleBadgesMarkdown(repoMeta: IRepoMeta) {
+    private GetMultipleBadgesMarkdown(repoMeta: IRepoMetaData) {
         let badgesMarkdownFinal: string = "";
 
         let sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMeta.appNickName);

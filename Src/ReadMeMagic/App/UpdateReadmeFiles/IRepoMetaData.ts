@@ -1,4 +1,4 @@
-export interface IRepoMeta {
+export interface IRepoMetaData {
     appNickName: string;
     //repoRemoteName: string;
     repoLocalDiscName: string;
