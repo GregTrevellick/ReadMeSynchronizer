@@ -6,10 +6,11 @@ export class RepoNames {
         const chromeExtensions = Object.keys(ChromeExtensions);
         const miscellaneousRepos = Object.keys(MiscellaneousRepos);
         const nugetPackages = Object.keys(NugetPackages);
+        const specialRepos = Object.keys(SpecialRepos);
         const vstsExtensions = Object.keys(VstsExtensions);
         const vsIdeExtensions = Object.keys(VsIdeExtensions);
         const vsixHelloWorlds = Object.keys(VsixHelloWorlds);
-        var allRepoNames = chromeExtensions.concat(miscellaneousRepos, nugetPackages, vstsExtensions, vsIdeExtensions, vsixHelloWorlds);
+        var allRepoNames = chromeExtensions.concat(miscellaneousRepos, nugetPackages, specialRepos, vstsExtensions, vsIdeExtensions, vsixHelloWorlds);
         return allRepoNames;
     }
 }
@@ -19,7 +20,6 @@ export enum ChromeExtensions {
 }
 
 export enum MiscellaneousRepos {
-    BadgesPlayground = "Badges-playground",
     FilesForEveryExtensionCreator = "FilesForEveryExtensionCreator",
 }
 
@@ -28,8 +28,8 @@ export enum NugetPackages {
     VsixRatingChaser = "VsixRatingChaser",
 }
 
-export enum VstsExtensions {
-    VsixTwitterWidget = "VsixTwitterWidget",
+export enum SpecialRepos {
+    BadgesPlayground = "Badges-playground",
 }
 
 export enum VsIdeExtensions {
@@ -50,4 +50,8 @@ export enum VsixHelloWorlds {
     VsixHelloWorldToolBar = "VsixHelloWorldToolBar",
     VsixToolWindowAsyncPackageExample = "VsixToolWindowAsyncPackageExample",
     WpfAsyncBindingPropertyExample = "WpfAsyncBindingPropertyExample",
+}
+
+export enum VstsExtensions {
+    VsixTwitterWidget = "VsixTwitterWidget",
 }
