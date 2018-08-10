@@ -1,7 +1,8 @@
 //import { $enum } from "ts-enum-util";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { FileSystemUpdater } from './FileSystemUpdater';
-import { RepoNames, RepoMeta, IRepoMeta } from "./MagicObjects";
+import { RepoNames } from "./MagicObjects";
+import { IRepoMeta } from "./IRepoMeta";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');

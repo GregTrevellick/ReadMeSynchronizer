@@ -1,15 +1,17 @@
-export interface IRepoMeta {
-    appNickName: string;
-    repoRemoteName: string;
-    repoLocalDiscName: string;
-    isChromeExtension: boolean;
-    isMiscellaneousRepo: boolean;
-    isNugetPackage: boolean;
-    isSpecialRepo: boolean;
-    isVsIdeExtension: boolean;
-    isVsixHelloWorld: boolean;
-    isVstsExtension: boolean;
-}
+import { IRepoMeta } from "./IRepoMeta";
+
+//export interface IRepoMeta {
+//    appNickName: string;
+//    repoRemoteName: string;
+//    repoLocalDiscName: string;
+//    isChromeExtension: boolean;
+//    isMiscellaneousRepo: boolean;
+//    isNugetPackage: boolean;
+//    isSpecialRepo: boolean;
+//    isVsIdeExtension: boolean;
+//    isVsixHelloWorld: boolean;
+//    isVstsExtension: boolean;
+//}
 
 const vsmm: IRepoMeta = {
     appNickName: 'VisualStudioMarketplaceMetrics',
