@@ -123,9 +123,9 @@ ${badgeMarkdown}`;
     }
 
     private GetSpecialReposBadgesMarkdown(appNickName: string) {
-        //set 'sharedBadgesMarkdown' to the pull requests, code quality, download counts for all repos
         return [
-            //TODO
+            //for each repo return the following 
+            //    "###" + repo name + line break + all badges
         ];
     }
 
