@@ -1,109 +1,17 @@
 import { IRepoMetaData } from "./IRepoMetaData";
+import * as myRepos from "./Repos";
 
 export class AllRepoMeta {
     public repoMetaDatas: IRepoMetaData[];
 
     constructor() {
         this.repoMetaDatas = [
-            badgesPlayground,
-            dotNetFlags,
-            oia,
-            vsixRatingChaser,
-            vsmm,
+            myRepos.badgesPlayground,
+            myRepos.dotNetFlags,
+            myRepos.oia,
+            myRepos.vsixRatingChaser,
+            myRepos.vsmm,
         ];
     }
 }
 
-const vsmm: IRepoMetaData = {
-    appNickName: 'VisualStudioMarketplaceMetrics',
-    //repoRemoteName: 'VisualStudioMarketplaceMetrics',
-    repoLocalDiscName: 'VisualStudioMarketplaceMetrics',
-    isChromeExtension: true,
-    isMiscellaneousRepo: false,
-    isNugetPackage: false,
-    isSpecialRepo: false,
-    isVsIdeExtension: false,
-    isVsixHelloWorld: false,
-    isVstsExtension: false
-};
-
-const dotNetFlags: IRepoMetaData = {
-    appNickName: 'DotNetFlags',
-    //repoRemoteName: 'DotNetFlags',
-    repoLocalDiscName: 'DotNetFlags',
-    isChromeExtension: false,
-    isMiscellaneousRepo: false,
-    isNugetPackage: true,
-    isSpecialRepo: false,
-    isVsIdeExtension: false,
-    isVsixHelloWorld: false,
-    isVstsExtension: false
-};
-
-const vsixRatingChaser: IRepoMetaData = {
-    appNickName: 'VsixRatingChaser',
-    //repoRemoteName: 'VsixRatingChaser',
-    repoLocalDiscName: 'VsixRatingChaser',
-    isChromeExtension: false,
-    isMiscellaneousRepo: false,
-    isNugetPackage: true,
-    isSpecialRepo: false,
-    isVsIdeExtension: false,
-    isVsixHelloWorld: false,
-    isVstsExtension: false
-};
-
-const badgesPlayground: IRepoMetaData = {
-    appNickName: 'BadgesPlayground',
-    //repoRemoteName: 'Badges-playground',
-    repoLocalDiscName: 'Badges-playground',
-    isChromeExtension: false,
-    isMiscellaneousRepo: false,
-    isNugetPackage: false,
-    isSpecialRepo: true,
-    isVsIdeExtension: false,
-    isVsixHelloWorld: false,
-    isVstsExtension: false
-};
-
-const oia: IRepoMetaData = {
-    appNickName: 'OpenInAppLauncher',
-    //repoRemoteName: 'OpenInApp.Launcher',
-    repoLocalDiscName: 'OpenInApp.Launcher',
-    isChromeExtension: false,
-    isMiscellaneousRepo: false,
-    isNugetPackage: false,
-    isSpecialRepo: true,
-    isVsIdeExtension: false,
-    isVsixHelloWorld: false,
-    isVstsExtension: false
-};
-
-
-
-//export enum MiscellaneousRepos {
-//    FilesForEveryExtensionCreator = "FilesForEveryExtensionCreator",
-//}
-
-//export enum VsIdeExtensions {
-//    AutoFindReplace = "AutoFindReplace",
-//    QuickLaunchButtons = "QuickLaunchButtons",
-//    QuizLauncher = "Quiz.Launcher",
-//    SolutionOpenPopUp = "SolutionOpenPopUp",
-//    TrivialApisForIDE = "TrivialApisForIDE",
-//    VsixFootie = "VsixFootie",
-//    VstsDashboardWidgetProjectTemplate = "VstsDashboardWidgetProjectTemplate",
-//}
-
-//export enum VsixHelloWorlds {
-//    HelloWorldVstsExtension = "HelloWorldVstsExtension",
-//    VsixHelloWorldCommandButton = "VsixHelloWorldCommandButton",
-//    VsixHelloWorldPopUp = "VsixHelloWorldPopUp",
-//    VsixHelloWorldToolBar = "VsixHelloWorldToolBar",
-//    VsixToolWindowAsyncPackageExample = "VsixToolWindowAsyncPackageExample",
-//    WpfAsyncBindingPropertyExample = "WpfAsyncBindingPropertyExample",
-//}
-
-//export enum VstsExtensions {
-//    VsixTwitterWidget = "VsixTwitterWidget",
-//}
