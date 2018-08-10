@@ -19,7 +19,7 @@ export class MarkdownProvider {
     }
 
     public GetGitHubPullRequests(hostedRepoName: string) {
-        return "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/" + hostedRepoName + ".svg)](" + this.GetGitHubUrlForRepo(hostedRepoName) + ")";
+        return "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/" + hostedRepoName + ".svg)](" + this.GetGitHubUrlForRepo(hostedRepoName) + "/pulls)";
     }
 
     private GetGitHubUrlForRepo(hostedRepoName: string) {
@@ -93,7 +93,7 @@ export class MarkdownProvider {
     }
 
     public GetNugetDownloads(hostedRepoName: string) {
-        return "[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)";
+        return "[![Nuget downloads](https://img.shields.io/nuget/dt/" + hostedRepoName + ".svg)](https://www.nuget.org/packages/" + hostedRepoName + "/)";
     }
 
     public GetChromeWebstoreVersion(hostedRepoName: string) {
