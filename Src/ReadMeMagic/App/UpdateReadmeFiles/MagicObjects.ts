@@ -1,4 +1,4 @@
-export interface RepoMeta {
+export interface IRepoMeta {
     appNickName: string;
     repoRemoteName: string;
     repoLocalDiscName: string;
@@ -11,7 +11,7 @@ export interface RepoMeta {
     isVstsExtension: boolean;
 }
 
-const vsmm: RepoMeta = {
+const vsmm: IRepoMeta = {
     appNickName: 'VisualStudioMarketplaceMetrics',
     repoRemoteName: 'VisualStudioMarketplaceMetrics',
     repoLocalDiscName: 'VisualStudioMarketplaceMetrics',
@@ -24,7 +24,7 @@ const vsmm: RepoMeta = {
     isVstsExtension: false
 };
 
-const dotNetFlags: RepoMeta = {
+const dotNetFlags: IRepoMeta = {
     appNickName: 'DotNetFlags',
     repoRemoteName: 'DotNetFlags',
     repoLocalDiscName: 'DotNetFlags',
@@ -37,7 +37,7 @@ const dotNetFlags: RepoMeta = {
     isVstsExtension: false
 };
 
-const vsixRatingChaser: RepoMeta = {
+const vsixRatingChaser: IRepoMeta = {
     appNickName: 'VsixRatingChaser',
     repoRemoteName: 'VsixRatingChaser',
     repoLocalDiscName: 'VsixRatingChaser',
@@ -50,7 +50,7 @@ const vsixRatingChaser: RepoMeta = {
     isVstsExtension: false
 };
 
-const badgesPlayground: RepoMeta = {
+const badgesPlayground: IRepoMeta = {
     appNickName: 'BadgesPlayground',
     repoRemoteName: 'Badges-playground',
     repoLocalDiscName: 'Badges-playground',
@@ -63,7 +63,7 @@ const badgesPlayground: RepoMeta = {
     isVstsExtension: false
 };
 
-const oia: RepoMeta = {
+const oia: IRepoMeta = {
     appNickName: 'OpenInAppLauncher',
     repoRemoteName: 'OpenInApp.Launcher',
     repoLocalDiscName: 'OpenInApp.Launcher',
@@ -77,7 +77,7 @@ const oia: RepoMeta = {
 };
 
 export class RepoNames {
-    public repoMetas: RepoMeta[];
+    public repoMetas: IRepoMeta[];
 
     constructor() {
         this.repoMetas = [

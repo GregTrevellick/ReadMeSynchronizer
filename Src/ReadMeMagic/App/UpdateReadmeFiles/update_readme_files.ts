@@ -1,7 +1,7 @@
 //import { $enum } from "ts-enum-util";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { FileSystemUpdater } from './FileSystemUpdater';
-import { RepoNames, RepoMeta } from "./MagicObjects";
+import { RepoNames, RepoMeta, IRepoMeta } from "./MagicObjects";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -27,14 +27,14 @@ export class ReadMeUpdater {
         }
     }
 
-    private GetBadgesMarkdown(repoMeta: RepoMeta) {
+    private GetBadgesMarkdown(repoMeta: IRepoMeta) {
         var lineBreak = '\n';
         var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMeta);
         var badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
         return badgesMarkdownFull;
     }
 
-    private GetMultipleBadgesMarkdown(repoMeta: RepoMeta) {
+    private GetMultipleBadgesMarkdown(repoMeta: IRepoMeta) {
         let badgesMarkdownFinal: string = "";
 
         var sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMeta.appNickName);
