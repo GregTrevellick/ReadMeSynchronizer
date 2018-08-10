@@ -52,29 +52,29 @@ ${badgeMarkdown}`;
 
     private GetRepoBadgesMarkdown(repoMeta: IRepoMetaData) {
 
-        let sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMeta.appNickName);
+        let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMeta.appNickName);
 
         if (repoMeta.isChromeExtension) {
             let chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMeta.appNickName);
-            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(chromeExtensionsBadgesMarkdown);
+            repoBadgesMarkdown = repoBadgesMarkdown.concat(chromeExtensionsBadgesMarkdown);
         }
 
         if (repoMeta.isNugetPackage) {
             let nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMeta.appNickName);
-            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(nugetBadgesMarkdown);
+            repoBadgesMarkdown = repoBadgesMarkdown.concat(nugetBadgesMarkdown);
         }
 
         if (repoMeta.isSpecialRepo) {
             let specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMeta.appNickName);
-            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(specialReposBadgesMarkdown);
+            repoBadgesMarkdown = repoBadgesMarkdown.concat(specialReposBadgesMarkdown);
         }
 
         if (repoMeta.isVstsExtension) {
             let vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMeta.appNickName);
-            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(vstsExtensionsBadgesMarkdown);
+            repoBadgesMarkdown = repoBadgesMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
 
-        return sharedBadgesMarkdown;
+        return repoBadgesMarkdown;
     }
 
     private GetChromeExtensionsBadgesMarkdown(repoFolderName: string) {
