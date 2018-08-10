@@ -43,11 +43,13 @@ export class MarkdownProvider {
     }
 
     public GetAppveyorBuildStatus(hostedRepoName: string) {
-        return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/openinapp-launcher)";
+        var appVeyorRepoName = hostedRepoName.replace(".", "-");//gregt dedupe
+        return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/" + appVeyorRepoName + ")";
     }
 
     public GetAppveyorUnitTests(hostedRepoName: string) {
-        return "[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/OpenInApp-Launcher.svg)](https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher/build/tests)";
+        var appVeyorRepoName = hostedRepoName.replace(".", "-");//gregt dedupe
+        return "[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/GregTrevellick/" + appVeyorRepoName + "/build/tests)";
     }
 
     public GetTravisBuildStatus(hostedRepoName: string) {
