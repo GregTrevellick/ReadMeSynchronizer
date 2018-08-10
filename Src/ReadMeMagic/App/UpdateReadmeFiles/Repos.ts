@@ -2,7 +2,7 @@ import { IRepoMetaData } from "./IRepoMetaData";
 
 export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     hostedRepoName: 'VisualStudioMarketplaceMetrics',
-    repoLocalDiscName: 'VisualStudioMarketplaceMetrics',
+    localRepoName: 'VisualStudioMarketplaceMetrics',
     isChromeExtension: true,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -14,7 +14,7 @@ export const visualStudioMarketplaceMetrics: IRepoMetaData = {
 
 export const dotNetFlags: IRepoMetaData = {
     hostedRepoName: 'DotNetFlags',
-    repoLocalDiscName: 'DotNetFlags',
+    localRepoName: 'DotNetFlags',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: true,
@@ -26,7 +26,7 @@ export const dotNetFlags: IRepoMetaData = {
 
 export const vsixRatingChaser: IRepoMetaData = {
     hostedRepoName: 'VsixRatingChaser',
-    repoLocalDiscName: 'VsixRatingChaser',
+    localRepoName: 'VsixRatingChaser',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: true,
@@ -38,7 +38,7 @@ export const vsixRatingChaser: IRepoMetaData = {
 
 export const badgesPlayground: IRepoMetaData = {
     hostedRepoName: 'BadgesPlayground',
-    repoLocalDiscName: 'Badges-playground',
+    localRepoName: 'Badges-playground',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -50,7 +50,7 @@ export const badgesPlayground: IRepoMetaData = {
 
 export const openInAppLauncher: IRepoMetaData = {
     hostedRepoName: 'OpenInAppLauncher',
-    repoLocalDiscName: 'OpenInApp.Launcher',
+    localRepoName: 'OpenInApp.Launcher',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -62,7 +62,7 @@ export const openInAppLauncher: IRepoMetaData = {
 
 export const filesForEveryExtensionCreator: IRepoMetaData = {
     hostedRepoName: 'FilesForEveryExtensionCreator',
-    repoLocalDiscName: 'FilesForEveryExtensionCreator',
+    localRepoName: 'FilesForEveryExtensionCreator',
     isChromeExtension: false,
     isMiscellaneousRepo: true,
     isNugetPackage: false,
@@ -74,7 +74,7 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
 
 export const quizLauncher: IRepoMetaData = {
     hostedRepoName: 'QuizLauncher',
-    repoLocalDiscName: 'Quiz.Launcher',
+    localRepoName: 'Quiz.Launcher',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -86,7 +86,7 @@ export const quizLauncher: IRepoMetaData = {
 
 export const autoFindReplace: IRepoMetaData = {
     hostedRepoName: 'AutoFindReplace',
-    repoLocalDiscName: 'AutoFindReplace',
+    localRepoName: 'AutoFindReplace',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -98,7 +98,7 @@ export const autoFindReplace: IRepoMetaData = {
 
 export const quickLaunchButtons: IRepoMetaData = {
     hostedRepoName: 'QuickLaunchButtons',
-    repoLocalDiscName: 'QuickLaunchButtons',
+    localRepoName: 'QuickLaunchButtons',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -110,7 +110,7 @@ export const quickLaunchButtons: IRepoMetaData = {
 
 export const solutionOpenPopUp: IRepoMetaData = {
     hostedRepoName: 'SolutionOpenPopUp',
-    repoLocalDiscName: 'SolutionOpenPopUp',
+    localRepoName: 'SolutionOpenPopUp',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -122,7 +122,7 @@ export const solutionOpenPopUp: IRepoMetaData = {
 
 export const trivialApisForIDE: IRepoMetaData = {
     hostedRepoName: 'TrivialApisForIDE',
-    repoLocalDiscName: 'TrivialApisForIDE',
+    localRepoName: 'TrivialApisForIDE',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -134,7 +134,7 @@ export const trivialApisForIDE: IRepoMetaData = {
 
 export const vsixFootie: IRepoMetaData = {
     hostedRepoName: 'VsixFootie',
-    repoLocalDiscName: 'VsixFootie',
+    localRepoName: 'VsixFootie',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -146,7 +146,7 @@ export const vsixFootie: IRepoMetaData = {
 
 export const vstsDashboardWidgetProjectTemplate: IRepoMetaData = {
     hostedRepoName: 'VstsDashboardWidgetProjectTemplate',
-    repoLocalDiscName: 'VstsDashboardWidgetProjectTemplate',
+    localRepoName: 'VstsDashboardWidgetProjectTemplate',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,
@@ -158,7 +158,7 @@ export const vstsDashboardWidgetProjectTemplate: IRepoMetaData = {
 
 export const vsixTwitterWidget: IRepoMetaData = {
     hostedRepoName: 'VsixTwitterWidget',
-    repoLocalDiscName: 'VsixTwitterWidget',
+    localRepoName: 'VsixTwitterWidget',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
     isNugetPackage: false,

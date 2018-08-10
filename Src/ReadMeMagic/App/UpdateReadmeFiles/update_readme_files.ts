@@ -25,7 +25,7 @@ export class ReadMeUpdater {
     public ReplaceBadgeComments() {
         for (let repoMetaData of this.allRepoMeta.repoMetaDatas) {
             let badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
-            this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.repoLocalDiscName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
+            this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
     }
 
