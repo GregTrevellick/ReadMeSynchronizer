@@ -1,6 +1,6 @@
 export interface IRepoMeta {
     appNickName: string;
-    repoRemoteName: string;
+    //repoRemoteName: string;
     repoLocalDiscName: string;
     isChromeExtension: boolean;
     isMiscellaneousRepo: boolean;

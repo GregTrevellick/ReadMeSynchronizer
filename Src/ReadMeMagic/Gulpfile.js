@@ -3,9 +3,9 @@
 //"use strict";
 
 //Requires
-var gulp = require('gulp');
+let gulp = require('gulp');
 const run = require("gulp-run");
-var Server = require('karma').Server;
+let Server = require('karma').Server;
 
 //Tasks
 require('./GulpTasks/update_readme_files_task.ts');

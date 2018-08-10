@@ -2,7 +2,7 @@ import { IRepoMeta } from "./IRepoMeta";
 
 const vsmm: IRepoMeta = {
     appNickName: 'VisualStudioMarketplaceMetrics',
-    repoRemoteName: 'VisualStudioMarketplaceMetrics',
+    //repoRemoteName: 'VisualStudioMarketplaceMetrics',
     repoLocalDiscName: 'VisualStudioMarketplaceMetrics',
     isChromeExtension: true,
     isMiscellaneousRepo: false,
@@ -15,7 +15,7 @@ const vsmm: IRepoMeta = {
 
 const dotNetFlags: IRepoMeta = {
     appNickName: 'DotNetFlags',
-    repoRemoteName: 'DotNetFlags',
+    //repoRemoteName: 'DotNetFlags',
     repoLocalDiscName: 'DotNetFlags',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -28,7 +28,7 @@ const dotNetFlags: IRepoMeta = {
 
 const vsixRatingChaser: IRepoMeta = {
     appNickName: 'VsixRatingChaser',
-    repoRemoteName: 'VsixRatingChaser',
+    //repoRemoteName: 'VsixRatingChaser',
     repoLocalDiscName: 'VsixRatingChaser',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -41,7 +41,7 @@ const vsixRatingChaser: IRepoMeta = {
 
 const badgesPlayground: IRepoMeta = {
     appNickName: 'BadgesPlayground',
-    repoRemoteName: 'Badges-playground',
+    //repoRemoteName: 'Badges-playground',
     repoLocalDiscName: 'Badges-playground',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -54,7 +54,7 @@ const badgesPlayground: IRepoMeta = {
 
 const oia: IRepoMeta = {
     appNickName: 'OpenInAppLauncher',
-    repoRemoteName: 'OpenInApp.Launcher',
+    //repoRemoteName: 'OpenInApp.Launcher',
     repoLocalDiscName: 'OpenInApp.Launcher',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
