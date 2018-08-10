@@ -126,10 +126,10 @@ ${badgeMarkdown}`;
 
         let badgesMarkdown = "";
 
-        var allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.appNickName != appNickName);
+        let allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.appNickName != "BadgesPlayground");
 
         for (let repoMetaData of allReposExceptSpecials) {
-            badgesMarkdown = "#### " + repoMetaData.appNickName + this.GetBadgesMarkdown(repoMetaData);
+            badgesMarkdown = badgesMarkdown + "#### " + repoMetaData.appNickName + this.GetBadgesMarkdown(repoMetaData);
         }
 
         return badgesMarkdown;
