@@ -29,13 +29,28 @@ export class ReadMeUpdater {
         }
     }
 
-    private GetBadgesMarkdown(repoMeta: IRepoMetaData) {
-        let multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMeta);
+    private GetBadgesMarkdown(repoMetaData: IRepoMetaData) {
+        let multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMetaData);
         return `${this.badgeCommentStart}${this.lineBreak}${multipleBadgesMarkdown}${this.badgeCommentEnd}`;
     }
 
-    private GetMultipleBadgesMarkdown(repoMeta: IRepoMetaData) {
+    private GetMultipleBadgesMarkdown(repoMetaData: IRepoMetaData) {
         let badgesMarkdownFinal: string = "";
+
+        let repoBadgesMarkdown = this.GetRepoBadgesMarkdown(repoMetaData);
+
+        //TODO: VsIdeExtensions
+
+        //combine all badges, with line breaks
+        repoBadgesMarkdown.forEach(function (badgeMarkdown) {
+            badgesMarkdownFinal += `
+${badgeMarkdown}`;
+        });
+
+        return badgesMarkdownFinal;
+    }
+
+    private GetRepoBadgesMarkdown(repoMeta: IRepoMetaData) {
 
         let sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMeta.appNickName);
 
@@ -59,15 +74,7 @@ export class ReadMeUpdater {
             sharedBadgesMarkdown = sharedBadgesMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
 
-        //TODO: VsIdeExtensions
-
-        //combine all badges, with line breaks
-        sharedBadgesMarkdown.forEach(function (badgeMarkdown) {
-            badgesMarkdownFinal += `
-${badgeMarkdown}`;
-        });
-
-        return badgesMarkdownFinal;
+        return sharedBadgesMarkdown;
     }
 
     private GetChromeExtensionsBadgesMarkdown(repoFolderName: string) {
