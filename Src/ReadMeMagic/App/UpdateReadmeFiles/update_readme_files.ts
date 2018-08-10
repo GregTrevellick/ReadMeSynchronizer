@@ -1,5 +1,5 @@
 import { MarkdownProvider } from "./MarkdownProvider";
-import { RepoNames, ChromeExtensions, NugetPackages, VstsExtensions } from './MagicStrings';
+import { RepoNames, ChromeExtensions, NugetPackages, VstsExtensions, SpecialRepos } from './MagicStrings';
 import { FileSystemUpdater } from './FileSystemUpdater';
 import { $enum } from "ts-enum-util";
 
@@ -50,14 +50,17 @@ export class ReadMeUpdater {
             sharedBadgesMarkdown = sharedBadgesMarkdown.concat(nugetBadgesMarkdown);
         }
 
+        if ($enum(SpecialRepos).isValue(repoFolderName)) {
+            var specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoFolderName);
+            sharedBadgesMarkdown = sharedBadgesMarkdown.concat(specialReposBadgesMarkdown);
+        }
+
         if ($enum(VstsExtensions).isValue(repoFolderName)) {
             var vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoFolderName);
             sharedBadgesMarkdown = sharedBadgesMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
 
-        //if repoFolderName exists in VsIdeExtensions then append 'sharedBadgesMarkdown' with ide badges
-
-        //if repoFolderName = BadgePlayground then set 'sharedBadgesMarkdown' to 'sharedBadgesMarkdownBadgePlayground' where 'sharedBadgesMarkdownBadgePlayground' is the pull requests, code quality, download counts for all repos
+        //TODO: VsIdeExtensions
 
         //combine all badges, with line breaks
         sharedBadgesMarkdown.forEach(function (badgeMarkdown) {
@@ -66,6 +69,20 @@ ${badgeMarkdown}`;
         });
 
         return badgesMarkdownFinal;
+    }
+
+    private GetChromeExtensionsBadgesMarkdown(repoFolderName: string) {
+        return [
+            this.mp.GetChromeWebstoreVersion(repoFolderName),
+            this.mp.GetChromeWebstoreUsers(repoFolderName),
+            this.mp.GetChromeWebstoreRating(repoFolderName),
+        ];
+    }
+
+    private GetNugetBadgesMarkdown(repoFolderName: string) {
+        return [
+            this.mp.GetNugetDownloads(repoFolderName),
+        ];
     }
 
     private GetSharedBadgesMarkdown(repoFolderName: string) {
@@ -88,17 +105,10 @@ ${badgeMarkdown}`;
         ];
     }
 
-    private GetChromeExtensionsBadgesMarkdown(repoFolderName: string) {
+    private GetSpecialReposBadgesMarkdown(repoFolderName: string) {
+        //set 'sharedBadgesMarkdown' to the pull requests, code quality, download counts for all repos
         return [
-            this.mp.GetChromeWebstoreVersion(repoFolderName),
-            this.mp.GetChromeWebstoreUsers(repoFolderName),
-            this.mp.GetChromeWebstoreRating(repoFolderName),
-        ];
-    }
-
-    private GetNugetBadgesMarkdown(repoFolderName: string) {
-        return [
-            this.mp.GetNugetDownloads(repoFolderName),
+            //TODO
         ];
     }
 
