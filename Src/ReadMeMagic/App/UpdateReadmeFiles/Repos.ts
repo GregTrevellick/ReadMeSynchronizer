@@ -1,7 +1,7 @@
 import { IRepoMetaData } from "./IRepoMetaData";
 
 export const visualStudioMarketplaceMetrics: IRepoMetaData = {
-    appNickName: 'VisualStudioMarketplaceMetrics',
+    hostedRepoName: 'VisualStudioMarketplaceMetrics',
     repoLocalDiscName: 'VisualStudioMarketplaceMetrics',
     isChromeExtension: true,
     isMiscellaneousRepo: false,
@@ -13,7 +13,7 @@ export const visualStudioMarketplaceMetrics: IRepoMetaData = {
 };
 
 export const dotNetFlags: IRepoMetaData = {
-    appNickName: 'DotNetFlags',
+    hostedRepoName: 'DotNetFlags',
     repoLocalDiscName: 'DotNetFlags',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -25,7 +25,7 @@ export const dotNetFlags: IRepoMetaData = {
 };
 
 export const vsixRatingChaser: IRepoMetaData = {
-    appNickName: 'VsixRatingChaser',
+    hostedRepoName: 'VsixRatingChaser',
     repoLocalDiscName: 'VsixRatingChaser',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -37,7 +37,7 @@ export const vsixRatingChaser: IRepoMetaData = {
 };
 
 export const badgesPlayground: IRepoMetaData = {
-    appNickName: 'BadgesPlayground',
+    hostedRepoName: 'BadgesPlayground',
     repoLocalDiscName: 'Badges-playground',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -49,7 +49,7 @@ export const badgesPlayground: IRepoMetaData = {
 };
 
 export const openInAppLauncher: IRepoMetaData = {
-    appNickName: 'OpenInAppLauncher',
+    hostedRepoName: 'OpenInAppLauncher',
     repoLocalDiscName: 'OpenInApp.Launcher',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -61,7 +61,7 @@ export const openInAppLauncher: IRepoMetaData = {
 };
 
 export const filesForEveryExtensionCreator: IRepoMetaData = {
-    appNickName: 'FilesForEveryExtensionCreator',
+    hostedRepoName: 'FilesForEveryExtensionCreator',
     repoLocalDiscName: 'FilesForEveryExtensionCreator',
     isChromeExtension: false,
     isMiscellaneousRepo: true,
@@ -73,7 +73,7 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
 };
 
 export const quizLauncher: IRepoMetaData = {
-    appNickName: 'QuizLauncher',
+    hostedRepoName: 'QuizLauncher',
     repoLocalDiscName: 'Quiz.Launcher',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -85,7 +85,7 @@ export const quizLauncher: IRepoMetaData = {
 };
 
 export const autoFindReplace: IRepoMetaData = {
-    appNickName: 'AutoFindReplace',
+    hostedRepoName: 'AutoFindReplace',
     repoLocalDiscName: 'AutoFindReplace',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -97,7 +97,7 @@ export const autoFindReplace: IRepoMetaData = {
 };
 
 export const quickLaunchButtons: IRepoMetaData = {
-    appNickName: 'QuickLaunchButtons',
+    hostedRepoName: 'QuickLaunchButtons',
     repoLocalDiscName: 'QuickLaunchButtons',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -109,7 +109,7 @@ export const quickLaunchButtons: IRepoMetaData = {
 };
 
 export const solutionOpenPopUp: IRepoMetaData = {
-    appNickName: 'SolutionOpenPopUp',
+    hostedRepoName: 'SolutionOpenPopUp',
     repoLocalDiscName: 'SolutionOpenPopUp',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -121,7 +121,7 @@ export const solutionOpenPopUp: IRepoMetaData = {
 };
 
 export const trivialApisForIDE: IRepoMetaData = {
-    appNickName: 'TrivialApisForIDE',
+    hostedRepoName: 'TrivialApisForIDE',
     repoLocalDiscName: 'TrivialApisForIDE',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -133,7 +133,7 @@ export const trivialApisForIDE: IRepoMetaData = {
 };
 
 export const vsixFootie: IRepoMetaData = {
-    appNickName: 'VsixFootie',
+    hostedRepoName: 'VsixFootie',
     repoLocalDiscName: 'VsixFootie',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -145,7 +145,7 @@ export const vsixFootie: IRepoMetaData = {
 };
 
 export const vstsDashboardWidgetProjectTemplate: IRepoMetaData = {
-    appNickName: 'VstsDashboardWidgetProjectTemplate',
+    hostedRepoName: 'VstsDashboardWidgetProjectTemplate',
     repoLocalDiscName: 'VstsDashboardWidgetProjectTemplate',
     isChromeExtension: false,
     isMiscellaneousRepo: false,
@@ -157,7 +157,7 @@ export const vstsDashboardWidgetProjectTemplate: IRepoMetaData = {
 };
 
 export const vsixTwitterWidget: IRepoMetaData = {
-    appNickName: 'VsixTwitterWidget',
+    hostedRepoName: 'VsixTwitterWidget',
     repoLocalDiscName: 'VsixTwitterWidget',
     isChromeExtension: false,
     isMiscellaneousRepo: false,

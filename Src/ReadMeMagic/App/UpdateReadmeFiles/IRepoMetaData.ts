@@ -1,5 +1,5 @@
 export interface IRepoMetaData {
-    appNickName: string;//gregt rename to repoName
+    hostedRepoName: string;//gregt rename to hostedRepoName
     repoLocalDiscName: string;
     isChromeExtension: boolean;
     isMiscellaneousRepo: boolean;

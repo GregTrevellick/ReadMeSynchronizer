@@ -52,7 +52,7 @@ ${badgeMarkdown}`;
 
     private GetRepoBadgesMarkdown(repoMetaData: IRepoMetaData) {
 
-        let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData.appNickName);
+        let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData.hostedRepoName);
 
         let repoTypeSpecificMarkdown: string[] = this.GetRepoTypeSpecificMarkdown(repoMetaData);
 
@@ -66,80 +66,80 @@ ${badgeMarkdown}`;
         let repoTypeSpecificMarkdown: string[] = [];
 
         if (repoMetaData.isChromeExtension) {
-            let chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.appNickName);
+            let chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(chromeExtensionsBadgesMarkdown);
         }
 
         if (repoMetaData.isNugetPackage) {
-            let nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.appNickName);
+            let nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(nugetBadgesMarkdown);
         }
 
         if (repoMetaData.isSpecialRepo) {
-            let specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.appNickName);
+            let specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(specialReposBadgesMarkdown);
         }
 
         if (repoMetaData.isVstsExtension) {
-            let vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.appNickName);
+            let vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
 
         return repoTypeSpecificMarkdown;
     }
 
-    private GetChromeExtensionsBadgesMarkdown(appNickName: string) {
+    private GetChromeExtensionsBadgesMarkdown(hostedRepoName: string) {
         return [
-            this.mp.GetChromeWebstoreVersion(appNickName),
-            this.mp.GetChromeWebstoreUsers(appNickName),
-            this.mp.GetChromeWebstoreRating(appNickName),
+            this.mp.GetChromeWebstoreVersion(hostedRepoName),
+            this.mp.GetChromeWebstoreUsers(hostedRepoName),
+            this.mp.GetChromeWebstoreRating(hostedRepoName),
         ];
     }
 
-    private GetNugetBadgesMarkdown(appNickName: string) {
+    private GetNugetBadgesMarkdown(hostedRepoName: string) {
         return [
-            this.mp.GetNugetDownloads(appNickName),
+            this.mp.GetNugetDownloads(hostedRepoName),
         ];
     }
 
-    private GetSharedBadgesMarkdown(appNickName: string) {
+    private GetSharedBadgesMarkdown(hostedRepoName: string) {
         return [
             this.mp.GetLicenceBadgeMarkdown(),
             this.mp.GetAccessLintBadgeMarkdown(),
-            this.mp.GetGitHubTopLanguage(appNickName),
-            this.mp.GetGitHubLanguageCount(appNickName),
-            this.mp.GetGitHubPullRequests(appNickName),
-            this.mp.GetBetterCodeHubCompliance(appNickName),
-            this.mp.GetCodacyBadge(appNickName),
-            this.mp.GetCodeCov(appNickName),
-            this.mp.GetCodeFactor(appNickName),
-            this.mp.GetAppveyorBuildStatus(appNickName),
-            this.mp.GetAppveyorUnitTests(appNickName),
-            this.mp.GetTravisBuildStatus(appNickName),
-            this.mp.GetImgBot(appNickName),
-            this.mp.GetCharityWare(appNickName),
-            this.mp.GetAccessLintSocial(appNickName),
+            this.mp.GetGitHubTopLanguage(hostedRepoName),
+            this.mp.GetGitHubLanguageCount(hostedRepoName),
+            this.mp.GetGitHubPullRequests(hostedRepoName),
+            this.mp.GetBetterCodeHubCompliance(hostedRepoName),
+            this.mp.GetCodacyBadge(hostedRepoName),
+            this.mp.GetCodeCov(hostedRepoName),
+            this.mp.GetCodeFactor(hostedRepoName),
+            this.mp.GetAppveyorBuildStatus(hostedRepoName),
+            this.mp.GetAppveyorUnitTests(hostedRepoName),
+            this.mp.GetTravisBuildStatus(hostedRepoName),
+            this.mp.GetImgBot(hostedRepoName),
+            this.mp.GetCharityWare(hostedRepoName),
+            this.mp.GetAccessLintSocial(hostedRepoName),
         ];
     }
 
-    private GetSpecialReposBadgesMarkdown(appNickName: string) {
+    private GetSpecialReposBadgesMarkdown(hostedRepoName: string) {
 
         let badgesMarkdown = "";
 
-        let allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.appNickName != "BadgesPlayground");
+        let allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.hostedRepoName != "BadgesPlayground");
 
         for (let repoMetaData of allReposExceptSpecials) {
-            badgesMarkdown = badgesMarkdown + '\n' + "#### " + repoMetaData.appNickName + this.GetBadgesMarkdown(repoMetaData);
+            badgesMarkdown = badgesMarkdown + '\n' + "#### " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
         }
 
         return badgesMarkdown;
     }
 
-    private GetVstsExtensionsBadgesMarkdown(appNickName: string) {
+    private GetVstsExtensionsBadgesMarkdown(hostedRepoName: string) {
         return [
-            this.mp.GetVisualStudioMarketplaceVSTSDownloads(appNickName),
-            this.mp.GetVisualStudioMarketplaceVSTSRatings(appNickName),
-            this.mp.GetVisualStudioMarketplaceVSTSVersion(appNickName),
+            this.mp.GetVisualStudioMarketplaceVSTSDownloads(hostedRepoName),
+            this.mp.GetVisualStudioMarketplaceVSTSRatings(hostedRepoName),
+            this.mp.GetVisualStudioMarketplaceVSTSVersion(hostedRepoName),
         ];
     }
 }
