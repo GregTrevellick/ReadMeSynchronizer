@@ -19,7 +19,7 @@ export class MarkdownProvider {
     }
 
     public GetGitHubPullRequests(repoFolderName: string) {
-        return "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
+        return "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/" + repoFolderName + ".svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
     }
 
     private GetGitHubUrlForRepo(repoFolderName: string) {
