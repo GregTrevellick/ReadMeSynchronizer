@@ -1,7 +1,7 @@
+//import { $enum } from "ts-enum-util";
 import { MarkdownProvider } from "./MarkdownProvider";
-import { RepoNames, ChromeExtensions, NugetPackages, VstsExtensions, SpecialRepos } from './MagicStrings';
 import { FileSystemUpdater } from './FileSystemUpdater';
-import { $enum } from "ts-enum-util";
+import { RepoNames, RepoMeta } from "./MagicObjects";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -21,42 +21,41 @@ export class ReadMeUpdater {
     }
 
     public ReplaceBadgeComments() {
-        const repoNamesValues = this.rn.GetRepoNames();//gregt put in ctor ?
-        for (let repoFolderName of repoNamesValues) {
-            var badgesMarkdown = this.GetBadgesMarkdown(repoFolderName);
-            this.fsu.ReplaceBadgeCommentOnDisc(repoFolderName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
+        for (let repoMeta of this.rn.repoMetas) {
+            var badgesMarkdown = this.GetBadgesMarkdown(repoMeta);
+            this.fsu.ReplaceBadgeCommentOnDisc(repoMeta.repoLocalDiscName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
     }
 
-    private GetBadgesMarkdown(repoFolderName: string) {
+    private GetBadgesMarkdown(repoMeta: RepoMeta) {
         var lineBreak = '\n';
-        var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoFolderName);
+        var multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMeta);
         var badgesMarkdownFull = this.badgeCommentStart + lineBreak + multipleBadgesMarkdown + this.badgeCommentEnd;
         return badgesMarkdownFull;
     }
 
-    private GetMultipleBadgesMarkdown(repoFolderName: string) {
+    private GetMultipleBadgesMarkdown(repoMeta: RepoMeta) {
         let badgesMarkdownFinal: string = "";
 
-        var sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoFolderName);
+        var sharedBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMeta.appNickName);
 
-        if ($enum(ChromeExtensions).isValue(repoFolderName)) {
-            var chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoFolderName);
+        if (repoMeta.isChromeExtension) {
+            var chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMeta.appNickName);
             sharedBadgesMarkdown = sharedBadgesMarkdown.concat(chromeExtensionsBadgesMarkdown);
         }
 
-        if ($enum(NugetPackages).isValue(repoFolderName)) {
-            var nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoFolderName);
+        if (repoMeta.isNugetPackage) {
+            var nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMeta.appNickName);
             sharedBadgesMarkdown = sharedBadgesMarkdown.concat(nugetBadgesMarkdown);
         }
 
-        if ($enum(SpecialRepos).isValue(repoFolderName)) {
-            var specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoFolderName);
+        if (repoMeta.isSpecialRepo) {
+            var specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMeta.appNickName);
             sharedBadgesMarkdown = sharedBadgesMarkdown.concat(specialReposBadgesMarkdown);
         }
 
-        if ($enum(VstsExtensions).isValue(repoFolderName)) {
-            var vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoFolderName);
+        if (repoMeta.isVstsExtension) {
+            var vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMeta.appNickName);
             sharedBadgesMarkdown = sharedBadgesMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
 
