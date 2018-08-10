@@ -11,11 +11,11 @@ export class MarkdownProvider {
     }
 
     public GetGitHubTopLanguage(repoFolderName: string) {
-        return "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
+        return "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/" + repoFolderName + ".svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
     }
 
     public GetGitHubLanguageCount(repoFolderName: string) {
-        return "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/OpenInApp.Launcher.svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
+        return "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/" + repoFolderName + ".svg)](" + this.GetGitHubUrlForRepo(repoFolderName) + ")";
     }
 
     public GetGitHubPullRequests(repoFolderName: string) {
@@ -27,19 +27,19 @@ export class MarkdownProvider {
     }
 
     public GetBetterCodeHubCompliance(repoFolderName: string) {
-        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/OpenInApp.Launcher?branch=master)](https://bettercodehub.com/results/GregTrevellick/OpenInApp.Launcher)";
+        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/" + repoFolderName + "?branch=master)](https://bettercodehub.com/results/GregTrevellick/" + repoFolderName + ")";
     }
 
     public GetCodacyBadge(repoFolderName: string) {
-        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/OpenInApp.Launcher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/OpenInApp.Launcher&amp;utm_campaign=Badge_Grade_Dashboard)";
+        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/" + repoFolderName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/" + repoFolderName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
     }
 
     public GetCodeCov(repoFolderName: string) {
-        return "[![codecov](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/OpenInApp.Launcher)";
+        return "[![codecov](https://codecov.io/gh/GregTrevellick/" + repoFolderName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/GregTrevellick/" + repoFolderName + ")";
     }
 
     public GetCodeFactor(repoFolderName: string) {
-        return "[![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/OpenInApp.Launcher/badge)](https://www.codefactor.io/repository/github/gregtrevellick/OpenInApp.Launcher)";
+        return "[![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/" + repoFolderName + "/badge)](https://www.codefactor.io/repository/github/gregtrevellick/" + repoFolderName + ")";
     }
 
     public GetAppveyorBuildStatus(repoFolderName: string) {
@@ -51,7 +51,7 @@ export class MarkdownProvider {
     }
 
     public GetTravisBuildStatus(repoFolderName: string) {
-        return "[![Travis Build Status](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher.svg?branch=master)](https://travis-ci.org/GregTrevellick/OpenInApp.Launcher)";
+        return "[![Travis Build Status](https://travis-ci.org/GregTrevellick/" + repoFolderName + ".svg?branch=master)](https://travis-ci.org/GregTrevellick/" + repoFolderName + ")";
     }
 
     public GetImgBot(repoFolderName: string) {
@@ -79,15 +79,15 @@ export class MarkdownProvider {
     }
 
     public GetVisualStudioMarketplaceIDEVersion(repoFolderName: string) {
-        return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.OpenInApp.Launcher.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInApp.Launcher)";
+        return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick." + repoFolderName + ".svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick." + repoFolderName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(repoFolderName: string) {
-        return "[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.OpenInApp.Launcher.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInApp.Launcher)";
+        return "[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick." + repoFolderName + ".svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick." + repoFolderName + ")";
     }
 
     public GetVisualStudioMarketplaceIDERatings(repoFolderName: string) {
-        return "[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick.OpenInApp.Launcher.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OpenInApp.Launcher)";
+        return "[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/GregTrevellick." + repoFolderName + ".svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick." + repoFolderName + ")";
     }
 
     public GetNugetDownloads(repoFolderName: string) {
