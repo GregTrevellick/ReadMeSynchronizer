@@ -3,7 +3,6 @@ import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { AllRepoMeta } from "./AllRepoMeta";
 import { RepoCategory } from './RepoCategory';
-//import { $enum } from "ts-enum-util";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -130,9 +129,7 @@ ${badgeMarkdown}`;
         let allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.hostedRepoName != "BadgesPlayground");
 
         for (let repoMetaData of allReposExceptSpecials) {
-            //let repoCategoryDescription = $enum(repoMetaData.repoCategory).getValueOrThrow();
             let repoCategoryDescription = RepoCategory[repoMetaData.repoCategory]; // "A"
-
             badgesMarkdown = badgesMarkdown + '\n' + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
         }
 
