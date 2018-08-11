@@ -30,8 +30,8 @@ export class MarkdownProvider {
         return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/" + hostedRepoName + "?branch=master)](https://bettercodehub.com/results/GregTrevellick/" + hostedRepoName + ")";
     }
 
-    public GetCodacyBadge(hostedRepoName: string) {
-        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/" + hostedRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/" + hostedRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
+    public GetCodacyBadge(hostedRepoName: string, codacyId: string) {
+        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")](https://www.codacy.com/project/gtrevellick/" + hostedRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/" + hostedRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
     }
 
     public GetCodeCov(hostedRepoName: string) {

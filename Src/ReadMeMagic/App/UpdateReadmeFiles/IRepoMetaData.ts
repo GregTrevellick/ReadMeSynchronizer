@@ -8,4 +8,5 @@ export interface IRepoMetaData {
     isVsIdeExtension: boolean;
     isVsixHelloWorld: boolean;
     isVstsExtension: boolean;
+    codacyId: string;
 }
