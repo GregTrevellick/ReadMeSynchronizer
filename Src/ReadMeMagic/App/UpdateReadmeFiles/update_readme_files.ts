@@ -1,8 +1,9 @@
-//import { $enum } from "ts-enum-util";
 import { FileSystemUpdater } from './FileSystemUpdater';
 import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { AllRepoMeta } from "./AllRepoMeta";
+import { RepoCategory } from './RepoCategory';
+//import { $enum } from "ts-enum-util";
 
 export class ReadMeUpdater {
     public replace = require('gulp-string-replace');
@@ -52,7 +53,7 @@ ${badgeMarkdown}`;
 
     private GetRepoBadgesMarkdown(repoMetaData: IRepoMetaData) {
 
-        let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData.hostedRepoName);
+        let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData);
 
         let repoTypeSpecificMarkdown: string[] = this.GetRepoTypeSpecificMarkdown(repoMetaData);
 
@@ -65,22 +66,22 @@ ${badgeMarkdown}`;
 
         let repoTypeSpecificMarkdown: string[] = [];
 
-        if (repoMetaData.isChromeExtension) {
+        if (repoMetaData.repoCategory === RepoCategory.ChromeExtension) {
             let chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(chromeExtensionsBadgesMarkdown);
         }
 
-        if (repoMetaData.isNugetPackage) {
+        if (repoMetaData.repoCategory === RepoCategory.NugetPackage) {
             let nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(nugetBadgesMarkdown);
         }
 
-        if (repoMetaData.isSpecialRepo) {
+        if (repoMetaData.repoCategory === RepoCategory.SpecialRepo) {
             let specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(specialReposBadgesMarkdown);
         }
 
-        if (repoMetaData.isVstsExtension) {
+        if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
             let vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
@@ -102,23 +103,23 @@ ${badgeMarkdown}`;
         ];
     }
 
-    private GetSharedBadgesMarkdown(hostedRepoName: string) {
+    private GetSharedBadgesMarkdown(repoMetaData: IRepoMetaData) {
         return [
             this.mp.GetLicenceBadgeMarkdown(),
             this.mp.GetAccessLintBadgeMarkdown(),
-            this.mp.GetGitHubTopLanguage(hostedRepoName),
-            this.mp.GetGitHubLanguageCount(hostedRepoName),
-            this.mp.GetGitHubPullRequests(hostedRepoName),
-            this.mp.GetBetterCodeHubCompliance(hostedRepoName),
-            this.mp.GetCodacyBadge(hostedRepoName),
-            this.mp.GetCodeCov(hostedRepoName),
-            this.mp.GetCodeFactor(hostedRepoName),
-            this.mp.GetAppveyorBuildStatus(hostedRepoName),
-            this.mp.GetAppveyorUnitTests(hostedRepoName),
-            this.mp.GetTravisBuildStatus(hostedRepoName),
-            this.mp.GetImgBot(hostedRepoName),
-            this.mp.GetCharityWare(hostedRepoName),
-            this.mp.GetAccessLintSocial(hostedRepoName),
+            this.mp.GetGitHubTopLanguage(repoMetaData.hostedRepoName),
+            this.mp.GetGitHubLanguageCount(repoMetaData.hostedRepoName),
+            this.mp.GetGitHubPullRequests(repoMetaData.hostedRepoName),
+            this.mp.GetBetterCodeHubCompliance(repoMetaData.hostedRepoName),
+            this.mp.GetCodacyBadge(repoMetaData.hostedRepoName, repoMetaData.codacyId),
+            this.mp.GetCodeCov(repoMetaData.hostedRepoName),
+            this.mp.GetCodeFactor(repoMetaData.hostedRepoName),
+            this.mp.GetAppveyorBuildStatus(repoMetaData.hostedRepoName),
+            this.mp.GetAppveyorUnitTests(repoMetaData.hostedRepoName),
+            this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
+            this.mp.GetImgBot(repoMetaData.hostedRepoName),
+            this.mp.GetCharityWare(repoMetaData.hostedRepoName),
+            this.mp.GetAccessLintSocial(repoMetaData.hostedRepoName),
         ];
     }
 
@@ -129,7 +130,10 @@ ${badgeMarkdown}`;
         let allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.hostedRepoName != "BadgesPlayground");
 
         for (let repoMetaData of allReposExceptSpecials) {
-            badgesMarkdown = badgesMarkdown + '\n' + "#### " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
+            //let repoCategoryDescription = $enum(repoMetaData.repoCategory).getValueOrThrow();
+            let repoCategoryDescription = RepoCategory[repoMetaData.repoCategory]; // "A"
+
+            badgesMarkdown = badgesMarkdown + '\n' + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
         }
 
         return badgesMarkdown;
