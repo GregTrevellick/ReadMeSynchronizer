@@ -103,6 +103,7 @@ ${badgeMarkdown}`;
     }
 
     private GetSharedBadgesMarkdown(repoMetaData: IRepoMetaData) {
+        //Do not alpha sort these
         return [
             this.mp.GetLicenceBadgeMarkdown(),
             this.mp.GetAccessLintBadgeMarkdown(),
@@ -118,7 +119,7 @@ ${badgeMarkdown}`;
             this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
             this.mp.GetImgBot(repoMetaData.hostedRepoName),
             this.mp.GetCharityWare(repoMetaData.hostedRepoName),
-            this.mp.GetAccessLintSocial(repoMetaData.hostedRepoName),
+            //this.mp.GetAccessLintSocial(repoMetaData.hostedRepoName),
         ];
     }
 

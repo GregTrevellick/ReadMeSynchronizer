@@ -64,9 +64,9 @@ export class MarkdownProvider {
         return "[![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)";
     }
 
-    public GetAccessLintSocial(hostedRepoName: string) {
-        return "[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)";
-    }
+    //public GetAccessLintSocial(hostedRepoName: string) {
+    //    return "[![Access Lint social](https://img.shields.io/badge/a11y-accesslint-green.svg?style=social&label=a11y)](https://twitter.com/accesslint)";
+    //}
 
     public GetVisualStudioMarketplaceVSTSVersion(hostedRepoName: string) {
         return "[![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)";

@@ -1,8 +1,8 @@
 import { RepoCategory } from "./RepoCategory";
 
 export interface IRepoMetaData {
+    codacyId: string;
     hostedRepoName: string;
     localRepoName: string;
-    codacyId: string;
     repoCategory: RepoCategory;
 }
