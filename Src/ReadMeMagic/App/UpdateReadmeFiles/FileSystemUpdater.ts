@@ -9,7 +9,7 @@ export class FileSystemUpdater {
 
         let destination: string = "../../../" + repoFolderName;
 
-        let source: string = destination + "/ReadMe.md";
+        let source: string = destination + "/README.md";
 
         let matchAnyCharacter: string = '[^]+';//"don't match no characters" i.e. a double negative that can re-read as "match any character" i.e. even including line breaks
 
