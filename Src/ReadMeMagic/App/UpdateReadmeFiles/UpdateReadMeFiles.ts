@@ -5,13 +5,14 @@ import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoCategory } from "./RepoCategory";
 
 export class ReadMeUpdater {
+    private lineBreak: string = "\n";
     public replace = require("gulp-string-replace");
     public prefix: string = "Badges";
     public htmlCommentStart: string = "<!--" + this.prefix;
     public htmlCommentEnd: string = "-->";
+    public badgeCommentStartSuffix: string = "<!-- Powered by https://github.com/GregTrevellick/Badges-playground -->";
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
-    private lineBreak: string = "\n";
     private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
     private allRepoMeta: AllRepoMeta;
@@ -31,7 +32,7 @@ export class ReadMeUpdater {
 
     private GetBadgesMarkdown(repoMetaData: IRepoMetaData) {
         const multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMetaData);
-        return `${this.badgeCommentStart}${this.lineBreak}${multipleBadgesMarkdown}${this.badgeCommentEnd}`;
+        return `${this.badgeCommentStart}${this.lineBreak}${this.badgeCommentStartSuffix}${this.lineBreak}${multipleBadgesMarkdown}${this.badgeCommentEnd}${this.lineBreak}`;
     }
 
     private GetMultipleBadgesMarkdown(repoMetaData: IRepoMetaData) {
@@ -138,7 +139,7 @@ export class ReadMeUpdater {
 
         for (const repoMetaData of allReposExceptSpecials) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
-            badgesMarkdown = badgesMarkdown + "\n" + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
+            badgesMarkdown = badgesMarkdown + this.lineBreak + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
         }
 
         return badgesMarkdown;
