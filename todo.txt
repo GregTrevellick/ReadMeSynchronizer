@@ -1,10 +1,25 @@
-add coment about this to each reademe
+add comment about this to each readme
+
+
 
 get CodeCov working then re-instate this line
 
-get travis working for all repos then re-instate this line
+
+
+get travis working for all repos then re-instate this line e.g. https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
+
+
+
+get vs ide badges working e.g. [![][VersionNumberBadgeURL]][VSMarketplaceUrl]
+[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg
+<!--![](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.SolutionOpenPopUp.svg)-->
+<!--![](https://vsmarketplacebadge.apphb.com/rating/)-->
+
+
 
 git.exe push --progress "origin" master:master
+
+
 
 credits
 https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/
