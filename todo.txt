@@ -29,7 +29,10 @@ https://codecraft.tv/courses/angular/es6-typescript/template-strings/
 
 
 badges
-renovate badge
+renovatebot badge
+
+https://greenkeeper.io/#pricing
+
 https://docs.travis-ci.com/user/browserstack/
 https://docs.travis-ci.com/user/coverity-scan/
 https://docs.travis-ci.com/user/sonarcloud/

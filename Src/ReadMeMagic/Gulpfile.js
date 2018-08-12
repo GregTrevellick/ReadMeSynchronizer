@@ -8,7 +8,7 @@ const run = require("gulp-run");
 let Server = require('karma').Server;
 
 //Tasks
-require('./GulpTasks/update_readme_files_task.ts');
+require('./GulpTasks/UpdateReadMeFilesTask.ts');
 gulp.task("lint", () => run("npm run lint").exec());
 gulp.task("lint_fix", () => run("npm run lint -- --fix").exec());
 

@@ -1,7 +1,7 @@
 import * as gulp from 'gulp';
-import { ReadMeUpdater } from '../App/UpdateReadmeFiles/update_readme_files';
+import { ReadMeUpdater } from '../App/UpdateReadmeFiles/UpdateReadMeFiles';
 
-gulp.task('update_badges_readmes', () => {
+gulp.task('UpdateReadMeBadges', () => {
     let readMeUpdater: ReadMeUpdater = new ReadMeUpdater;
     readMeUpdater.ReplaceBadgeComments();
 });
