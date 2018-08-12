@@ -107,17 +107,17 @@ ${badgeMarkdown}`;
         return [
             this.mp.GetLicenceBadgeMarkdown(),
             this.mp.GetAccessLintBadgeMarkdown(),
-            this.mp.GetGitHubTopLanguage(repoMetaData.hostedRepoName),
-            this.mp.GetGitHubLanguageCount(repoMetaData.hostedRepoName),
-            this.mp.GetGitHubPullRequests(repoMetaData.hostedRepoName),
-            this.mp.GetBetterCodeHubCompliance(repoMetaData.hostedRepoName),
+            this.mp.GetGitHubTopLanguage(repoMetaData.localRepoName),
+            this.mp.GetGitHubLanguageCount(repoMetaData.localRepoName),
+            this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
+            this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
             this.mp.GetCodacyBadge(repoMetaData.hostedRepoName, repoMetaData.codacyId),
 
             //TODO gregt get CodeCov working then re-instate this line
             //this.mp.GetCodeCov(repoMetaData.hostedRepoName),
 
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
-            this.mp.GetAppveyorBuildStatus(repoMetaData.hostedRepoName),
+            this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
             this.mp.GetAppveyorUnitTests(repoMetaData.hostedRepoName),
 
             //TODO gregt get travis working for all repos then re-instate this line

@@ -10,24 +10,24 @@ export class MarkdownProvider {
         return "[![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)";
     }
 
-    public GetGitHubTopLanguage(hostedRepoName: string) {
-        return "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/" + hostedRepoName + ".svg)](" + this.GetGitHubUrlForRepo(hostedRepoName) + ")";
+    public GetGitHubTopLanguage(localRepoName: string) {
+        return "[![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
-    public GetGitHubLanguageCount(hostedRepoName: string) {
-        return "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/" + hostedRepoName + ".svg)](" + this.GetGitHubUrlForRepo(hostedRepoName) + ")";
+    public GetGitHubLanguageCount(localRepoName: string) {
+        return "[![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
-    public GetGitHubPullRequests(hostedRepoName: string) {
-        return "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/" + hostedRepoName + ".svg)](" + this.GetGitHubUrlForRepo(hostedRepoName) + "/pulls)";
+    public GetGitHubPullRequests(localRepoName: string) {
+        return "[![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
-    private GetGitHubUrlForRepo(hostedRepoName: string) {
-        return "https://github.com/GregTrevellick/" + hostedRepoName;
+    private GetGitHubUrlForRepo(localRepoName: string) {
+        return "https://github.com/GregTrevellick/" + localRepoName;
     }
 
-    public GetBetterCodeHubCompliance(hostedRepoName: string) {
-        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/" + hostedRepoName + "?branch=master)](https://bettercodehub.com/results/GregTrevellick/" + hostedRepoName + ")";
+    public GetBetterCodeHubCompliance(localRepoName: string) {
+        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/GregTrevellick/" + localRepoName + ")";
     }
 
     public GetCodacyBadge(hostedRepoName: string, codacyId: string) {
@@ -42,14 +42,15 @@ export class MarkdownProvider {
         return "[![CodeFactor](https://www.codefactor.io/repository/github/gregtrevellick/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/gregtrevellick/" + localRepoName + ")";
     }
 
-    public GetAppveyorBuildStatus(hostedRepoName: string) {
-        var appVeyorRepoName = hostedRepoName.replace(".", "-");//gregt dedupe
+    public GetAppveyorBuildStatus(localRepoName: string) {
+        var appVeyorRepoName = localRepoName.replace(".", "-");//gregt dedupe
         return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/" + appVeyorRepoName + ")";
     }
 
-    public GetAppveyorUnitTests(hostedRepoName: string) {
-        var appVeyorRepoName = hostedRepoName.replace(".", "-");//gregt dedupe
+    public GetAppveyorUnitTests(localRepoName: string) {
+        var appVeyorRepoName = localRepoName.replace(".", "-");//gregt dedupe
         return "[![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/GregTrevellick/" + appVeyorRepoName + "/build/tests)";
+        ////////////////////////////////https://img.shields.io/appveyor/tests/GregTrevellick/OpenInApp-Launcher.svg         https://ci.appveyor.com/project/GregTrevellick/OpenInApp-Launcher/build/tests
     }
 
     public GetTravisBuildStatus(hostedRepoName: string) {
