@@ -1,12 +1,13 @@
-lint
-
 add comment about this to each readme
 
 add in VsixHelloWorlds apps & rename some github repos accordingly
 
 git commands - e.g. git.exe push --progress "origin" master:master
 
-vs ide extensions badges
+
+
+BADGES TO ADD
+=============
 
 renovatebot badge
 

@@ -5,5 +5,5 @@ export enum RepoCategory {
     SpecialRepo,
     VsIdeExtension,
     VsixHelloWorld,
-    VstsExtension
+    VstsExtension,
 }

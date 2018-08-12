@@ -1,17 +1,17 @@
-import { FileSystemUpdater } from './FileSystemUpdater';
+import { AllRepoMeta } from "./AllRepoMeta";
+import { FileSystemUpdater } from "./FileSystemUpdater";
 import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
-import { AllRepoMeta } from "./AllRepoMeta";
-import { RepoCategory } from './RepoCategory';
+import { RepoCategory } from "./RepoCategory";
 
 export class ReadMeUpdater {
-    public replace = require('gulp-string-replace');
+    public replace = require("gulp-string-replace");
     public prefix: string = "Badges";
-    private lineBreak: string = '\n';
     public htmlCommentStart: string = "<!--" + this.prefix;
     public htmlCommentEnd: string = "-->";
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
+    private lineBreak: string = "\n";
     private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
     private allRepoMeta: AllRepoMeta;
@@ -23,24 +23,24 @@ export class ReadMeUpdater {
     }
 
     public ReplaceBadgeComments() {
-        for (let repoMetaData of this.allRepoMeta.repoMetaDatas) {
-            let badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
+        for (const repoMetaData of this.allRepoMeta.repoMetaDatas) {
+            const badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
             this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
     }
 
     private GetBadgesMarkdown(repoMetaData: IRepoMetaData) {
-        let multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMetaData);
+        const multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMetaData);
         return `${this.badgeCommentStart}${this.lineBreak}${multipleBadgesMarkdown}${this.badgeCommentEnd}`;
     }
 
     private GetMultipleBadgesMarkdown(repoMetaData: IRepoMetaData) {
         let badgesMarkdownFinal: string = "";
 
-        let repoBadgesMarkdown = this.GetRepoBadgesMarkdown(repoMetaData);
+        const repoBadgesMarkdown = this.GetRepoBadgesMarkdown(repoMetaData);
 
         //combine all badges, with line breaks
-        repoBadgesMarkdown.forEach(function (badgeMarkdown) {
+        repoBadgesMarkdown.forEach(function(badgeMarkdown) {
             badgesMarkdownFinal += `${badgeMarkdown}
 `;
         });
@@ -52,7 +52,7 @@ export class ReadMeUpdater {
 
         let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData);
 
-        let repoTypeSpecificMarkdown: string[] = this.GetRepoTypeSpecificMarkdown(repoMetaData);
+        const repoTypeSpecificMarkdown: string[] = this.GetRepoTypeSpecificMarkdown(repoMetaData);
 
         repoBadgesMarkdown = repoBadgesMarkdown.concat(repoTypeSpecificMarkdown);
 
@@ -64,22 +64,22 @@ export class ReadMeUpdater {
         let repoTypeSpecificMarkdown: string[] = [];
 
         if (repoMetaData.repoCategory === RepoCategory.ChromeExtension) {
-            let chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
+            const chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(chromeExtensionsBadgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.NugetPackage) {
-            let nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.hostedRepoName);
+            const nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(nugetBadgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.SpecialRepo) {
-            let specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.hostedRepoName);
+            const specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(specialReposBadgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
-            let vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
+            const vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
 
@@ -134,11 +134,11 @@ export class ReadMeUpdater {
 
         let badgesMarkdown = "";
 
-        let allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.hostedRepoName != "BadgesPlayground");
+        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.hostedRepoName != "BadgesPlayground");
 
-        for (let repoMetaData of allReposExceptSpecials) {
-            let repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
-            badgesMarkdown = badgesMarkdown + '\n' + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
+        for (const repoMetaData of allReposExceptSpecials) {
+            const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
+            badgesMarkdown = badgesMarkdown + "\n" + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
         }
 
         return badgesMarkdown;

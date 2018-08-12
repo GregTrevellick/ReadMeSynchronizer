@@ -30,10 +30,6 @@ export class MarkdownProvider {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
-    private GetGitHubUrlForRepo(localRepoName: string) {
-        return "https://github.com/" + myUserName + "/" + localRepoName;
-    }
-
     public GetBetterCodeHubCompliance(localRepoName: string) {
         return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + myUserName + "/" + localRepoName + ")";
     }
@@ -52,17 +48,13 @@ export class MarkdownProvider {
     }
 
     public GetAppveyorBuildStatus(localRepoName: string) {
-        let appVeyorRepoName = this.DotSubstituion(localRepoName);
+        const appVeyorRepoName = this.DotSubstituion(localRepoName);
         return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + ")";
     }
 
     public GetAppveyorUnitTests(localRepoName: string) {
-        let appVeyorRepoName = this.DotSubstituion(localRepoName);
+        const appVeyorRepoName = this.DotSubstituion(localRepoName);
         return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + "/build/tests)";
-    }
-
-    private DotSubstituion(localreponame: string) {
-        return localreponame.replace(".", "-");
     }
 
     public GetTravisBuildStatus(hostedRepoName: string) {
@@ -115,5 +107,13 @@ export class MarkdownProvider {
 
     public GetChromeWebstoreRating(hostedRepoName: string) {
         return "[![Chrome webstore rating](" + shieldsDotIoUrl + chromeWebStore + "/rating/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + "/reviews)";
+    }
+
+    private GetGitHubUrlForRepo(localRepoName: string) {
+        return "https://github.com/" + myUserName + "/" + localRepoName;
+    }
+
+    private DotSubstituion(localreponame: string) {
+        return localreponame.replace(".", "-");
     }
 }
