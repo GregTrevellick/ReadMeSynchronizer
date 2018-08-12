@@ -1,8 +1,10 @@
 add coment about this to each reademe
 
-TODO get CodeCov working then re-instate this line
-TODO get travis working for all repos then re-instate this line
+get CodeCov working then re-instate this line
 
+get travis working for all repos then re-instate this line
+
+git.exe push --progress "origin" master:master
 
 credits
 https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/

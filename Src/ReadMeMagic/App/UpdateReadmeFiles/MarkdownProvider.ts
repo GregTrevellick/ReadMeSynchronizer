@@ -39,7 +39,8 @@ export class MarkdownProvider {
     }
 
     public GetCodacyBadge(hostedRepoName: string, codacyId: string) {
-        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")](https://www.codacy.com/project/gtrevellick/" + hostedRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + myUserName + "/" + hostedRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
+        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
+            "(https://www.codacy.com/project/gtrevellick/" + hostedRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + myUserName + "/" + hostedRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
     }
 
     public GetCodeCov(hostedRepoName: string) {
