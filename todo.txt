@@ -1,48 +1,29 @@
+lint
+
 add comment about this to each readme
 
+add in VsixHelloWorlds apps & rename some github repos accordingly
 
+git commands - e.g. git.exe push --progress "origin" master:master
 
-get CodeCov working then re-instate this line
+vs ide extensions badges
 
-
-
-get travis working for all repos then re-instate this line e.g. https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
-
-
-
-get vs ide badges working e.g. [![][VersionNumberBadgeURL]][VSMarketplaceUrl]
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg
-<!--![](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.SolutionOpenPopUp.svg)-->
-<!--![](https://vsmarketplacebadge.apphb.com/rating/)-->
-
-
-
-git.exe push --progress "origin" master:master
-
-
-
-credits
-https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/
-matt jeanes
-//??https://medium.com/@OlegVaraksin/how-to-set-up-and-run-fast-karma-tests-in-front-end-projects-61c17787615a
-https://codecraft.tv/courses/angular/es6-typescript/template-strings/
-
-
-badges
 renovatebot badge
 
-https://greenkeeper.io/#pricing
+greenkeeper badges https://greenkeeper.io/#pricing
 
+CodeCov badges
+
+travis badges e.g. https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
 https://docs.travis-ci.com/user/browserstack/
 https://docs.travis-ci.com/user/coverity-scan/
 https://docs.travis-ci.com/user/sonarcloud/
 https://docs.travis-ci.com/user/coveralls/
 https://docs.travis-ci.com/user/code-climate/
-https://www.codetriage.com/
 
+codetriage badges https://www.codetriage.com/
 
-
-
-https://github.com/TypeStrong/ts-node/issues/505
-https://github.com/TypeStrong/ts-node/issues/617
-
+vs ide badges working e.g. [![][VersionNumberBadgeURL]][VSMarketplaceUrl]
+[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg
+<!--![](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.SolutionOpenPopUp.svg)-->
+<!--![](https://vsmarketplacebadge.apphb.com/rating/)-->

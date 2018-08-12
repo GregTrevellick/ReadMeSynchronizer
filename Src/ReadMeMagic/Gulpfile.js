@@ -11,7 +11,3 @@ let Server = require('karma').Server;
 require('./GulpTasks/UpdateReadMeFilesTask.ts');
 gulp.task("lint", () => run("npm run lint").exec());
 gulp.task("lint_fix", () => run("npm run lint -- --fix").exec());
-
-//just in case...
-//var bower = require('gulp-bower');
-//var tsnode = require('ts-node');

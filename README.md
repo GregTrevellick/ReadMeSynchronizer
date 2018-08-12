@@ -1,7 +1,6 @@
 ## Badges-playground
 
 <!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/Badges-playground?branch=master)](https://bettercodehub.com/results/GregTrevellick/Badges-playground)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ae0ba4fe11b2442f9690a99245359f53)](https://www.codacy.com/project/gtrevellick/BadgesPlayground/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/BadgesPlayground&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/Badges-playground/badge)](https://www.codefactor.io/repository/github/GregTrevellick/Badges-playground)
@@ -16,7 +15,6 @@
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 
 #### ChromeExtension - VisualStudioMarketplaceMetrics<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VisualStudioMarketplaceMetrics?branch=master)](https://bettercodehub.com/results/GregTrevellick/VisualStudioMarketplaceMetrics)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/146ba12a4f0f4e97aab9692473d41076)](https://www.codacy.com/project/gtrevellick/VisualStudioMarketplaceMetrics/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/VisualStudioMarketplaceMetrics&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/VisualStudioMarketplaceMetrics/badge)](https://www.codefactor.io/repository/github/GregTrevellick/VisualStudioMarketplaceMetrics)
@@ -31,9 +29,9 @@
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Chrome webstore version](https://img.shields.io/chrome-web-store/v/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)
 [![Chrome webstore users](https://img.shields.io/chrome-web-store/users/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo)
-[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo/reviews)<!--BadgesEND-->
+[![Chrome webstore rating](https://img.shields.io/chrome-web-store/rating/fifncokofckhanlhmdacdnkbempmopbo.svg)](https://chrome.google.com/webstore/detail/visual-studio-marketplace/fifncokofckhanlhmdacdnkbempmopbo/reviews)
+<!--BadgesEND-->
 #### MiscellaneousRepo - FilesForEveryExtensionCreator<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/FilesForEveryExtensionCreator?branch=master)](https://bettercodehub.com/results/GregTrevellick/FilesForEveryExtensionCreator)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/35560f38029b47258343156a1866f349)](https://www.codacy.com/project/gtrevellick/FilesForEveryExtensionCreator/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/FilesForEveryExtensionCreator&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/FilesForEveryExtensionCreator/badge)](https://www.codefactor.io/repository/github/GregTrevellick/FilesForEveryExtensionCreator)
@@ -45,9 +43,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### NugetPackage - DotNetFlags<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/DotNetFlags?branch=master)](https://bettercodehub.com/results/GregTrevellick/DotNetFlags)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f3d3a599955b479dbe14f032bdec1be8)](https://www.codacy.com/project/gtrevellick/DotNetFlags/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/DotNetFlags&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/DotNetFlags/badge)](https://www.codefactor.io/repository/github/GregTrevellick/DotNetFlags)
@@ -60,9 +58,9 @@
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
-[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)<!--BadgesEND-->
+[![Nuget downloads](https://img.shields.io/nuget/dt/DotNetFlags.svg)](https://www.nuget.org/packages/DotNetFlags/)
+<!--BadgesEND-->
 #### NugetPackage - VsixRatingChaser<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixRatingChaser?branch=master)](https://bettercodehub.com/results/GregTrevellick/VsixRatingChaser)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/688c1d5a2ec547faa61230471639cb8f)](https://www.codacy.com/project/gtrevellick/VsixRatingChaser/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/VsixRatingChaser&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/VsixRatingChaser/badge)](https://www.codefactor.io/repository/github/GregTrevellick/VsixRatingChaser)
@@ -75,9 +73,9 @@
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
-[![Nuget downloads](https://img.shields.io/nuget/dt/VsixRatingChaser.svg)](https://www.nuget.org/packages/VsixRatingChaser/)<!--BadgesEND-->
+[![Nuget downloads](https://img.shields.io/nuget/dt/VsixRatingChaser.svg)](https://www.nuget.org/packages/VsixRatingChaser/)
+<!--BadgesEND-->
 #### VstsExtension - VsixTwitterWidget<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixTwitterWidget?branch=master)](https://bettercodehub.com/results/GregTrevellick/VsixTwitterWidget)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ec8f9a251ccc4862b40e2f8e60e432ef)](https://www.codacy.com/project/gtrevellick/VsixTwitterWidget/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/VsixTwitterWidget&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/VsixTwitterWidget/badge)](https://www.codefactor.io/repository/github/GregTrevellick/VsixTwitterWidget)
@@ -92,9 +90,9 @@
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Visual Studio Marketplace downloads](https://img.shields.io/vscode-marketplace/d/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)
 [![Visual Studio Marketplace ratings](https://img.shields.io/vscode-marketplace/r/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor#review-details)
-[![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)<!--BadgesEND-->
+[![Visual Studio Marketplace version](https://img.shields.io/vscode-marketplace/v/GregTrevellick.vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor)
+<!--BadgesEND-->
 #### VsIdeExtension - AutoFindReplace<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/AutoFindReplace?branch=master)](https://bettercodehub.com/results/GregTrevellick/AutoFindReplace)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e0cb8a23f42c4859aeb5c653b1a3d2b6)](https://www.codacy.com/project/gtrevellick/AutoFindReplace/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/AutoFindReplace&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace/badge)](https://www.codefactor.io/repository/github/GregTrevellick/AutoFindReplace)
@@ -106,9 +104,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### VsIdeExtension - OpenInAppLauncher<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/OpenInApp.Launcher?branch=master)](https://bettercodehub.com/results/GregTrevellick/OpenInApp.Launcher)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e61c4dba8261497fb447379730e97a25)](https://www.codacy.com/project/gtrevellick/OpenInAppLauncher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/OpenInAppLauncher&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher/badge)](https://www.codefactor.io/repository/github/GregTrevellick/OpenInApp.Launcher)
@@ -120,9 +118,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### VsIdeExtension - QuickLaunchButtons<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/QuickLaunchButtons?branch=master)](https://bettercodehub.com/results/GregTrevellick/QuickLaunchButtons)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/def29563a15940cda03af19faac0e006)](https://www.codacy.com/project/gtrevellick/QuickLaunchButtons/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/QuickLaunchButtons&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/QuickLaunchButtons/badge)](https://www.codefactor.io/repository/github/GregTrevellick/QuickLaunchButtons)
@@ -134,9 +132,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### VsIdeExtension - QuizLauncher<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/Quiz.Launcher?branch=master)](https://bettercodehub.com/results/GregTrevellick/Quiz.Launcher)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b1a2d4b9fd774d64ae56a8ffdd80b978)](https://www.codacy.com/project/gtrevellick/QuizLauncher/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/QuizLauncher&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/Quiz.Launcher/badge)](https://www.codefactor.io/repository/github/GregTrevellick/Quiz.Launcher)
@@ -148,9 +146,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### VsIdeExtension - SolutionOpenPopUp<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/SolutionOpenPopUp?branch=master)](https://bettercodehub.com/results/GregTrevellick/SolutionOpenPopUp)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/23dfefe3b5014fd8b8462b47a3f38c1c)](https://www.codacy.com/project/gtrevellick/SolutionOpenPopUp/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/SolutionOpenPopUp&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/SolutionOpenPopUp/badge)](https://www.codefactor.io/repository/github/GregTrevellick/SolutionOpenPopUp)
@@ -162,9 +160,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### VsIdeExtension - TrivialApisForIDE<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/TrivialApisForIDE?branch=master)](https://bettercodehub.com/results/GregTrevellick/TrivialApisForIDE)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/035ab76ee20d45c886d72be824507ab5)](https://www.codacy.com/project/gtrevellick/TrivialApisForIDE/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/TrivialApisForIDE&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/TrivialApisForIDE/badge)](https://www.codefactor.io/repository/github/GregTrevellick/TrivialApisForIDE)
@@ -176,9 +174,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### VsIdeExtension - VsixFootie<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VsixFootie?branch=master)](https://bettercodehub.com/results/GregTrevellick/VsixFootie)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/55911452f4154dd9a5599bd6fae3c725)](https://www.codacy.com/project/gtrevellick/VsixFootie/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/VsixFootie&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/VsixFootie/badge)](https://www.codefactor.io/repository/github/GregTrevellick/VsixFootie)
@@ -190,9 +188,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
 #### VsIdeExtension - VstsDashboardWidgetProjectTemplate<!--BadgesSTART-->
-
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/VstsDashboardWidgetProjectTemplate?branch=master)](https://bettercodehub.com/results/GregTrevellick/VstsDashboardWidgetProjectTemplate)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/be5d606604c64b81a1ed640a53c671f7)](https://www.codacy.com/project/gtrevellick/VstsDashboardWidgetProjectTemplate/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/VstsDashboardWidgetProjectTemplate&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/VstsDashboardWidgetProjectTemplate/badge)](https://www.codefactor.io/repository/github/GregTrevellick/VstsDashboardWidgetProjectTemplate)
@@ -204,7 +202,9 @@
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
-[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)<!--BadgesEND--><!--BadgesEND-->
+[![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
+<!--BadgesEND-->
+<!--BadgesEND-->
 
 <!--
 ## Overview 
@@ -228,3 +228,7 @@ edit the code in c:\git\readmebadges or c:\git\myreadmebadges to use the badges 
 commit everything
 
 -->
+
+### Credits
+
+[loune.net](https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/)

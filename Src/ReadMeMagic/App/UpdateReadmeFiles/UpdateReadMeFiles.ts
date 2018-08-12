@@ -39,12 +39,10 @@ export class ReadMeUpdater {
 
         let repoBadgesMarkdown = this.GetRepoBadgesMarkdown(repoMetaData);
 
-        //TODO: VsIdeExtensions
-
         //combine all badges, with line breaks
         repoBadgesMarkdown.forEach(function (badgeMarkdown) {
-            badgesMarkdownFinal += `
-${badgeMarkdown}`;
+            badgesMarkdownFinal += `${badgeMarkdown}
+`;
         });
 
         return badgesMarkdownFinal;
@@ -119,11 +117,9 @@ ${badgeMarkdown}`;
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //build / test coverage related
-            //TODO get CodeCov working then re-instate this line
             //this.mp.GetCodeCov(repoMetaData.hostedRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
             this.mp.GetAppveyorUnitTests(repoMetaData.hostedRepoName),
-            //TODO get travis working for all repos then re-instate this line
             //this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
 
             //less important stuff
