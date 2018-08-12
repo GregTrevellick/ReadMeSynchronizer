@@ -1,5 +1,8 @@
+const chromeWebStore = "chrome-web-store";
 const myUserName = "GregTrevellick";
 const shieldsDotIoUrl = "https://img.shields.io/";
+const tweetsDevHumor = "vsts-extensions-tweets-Dev-Humor";
+const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
 const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
 
@@ -48,14 +51,17 @@ export class MarkdownProvider {
     }
 
     public GetAppveyorBuildStatus(localRepoName: string) {
-        var appVeyorRepoName = localRepoName.replace(".", "-");//gregt dedupe
+        let appVeyorRepoName = this.DotSubstituion(localRepoName);
         return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + ")";
     }
 
     public GetAppveyorUnitTests(localRepoName: string) {
-        var appVeyorRepoName = localRepoName.replace(".", "-");//gregt dedupe
+        let appVeyorRepoName = this.DotSubstituion(localRepoName);
         return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + "/build/tests)";
-        ////////////////////////////////" + shieldsDotIoUrl + "appveyor/tests/" + myUserName + "/OpenInApp-Launcher.svg         https://ci.appveyor.com/project/" + myUserName + "/OpenInApp-Launcher/build/tests
+    }
+
+    private DotSubstituion(localreponame: string) {
+        return localreponame.replace(".", "-");
     }
 
     public GetTravisBuildStatus(hostedRepoName: string) {
@@ -71,27 +77,27 @@ export class MarkdownProvider {
     }
 
     public GetVisualStudioMarketplaceVSTSVersion(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + ".vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=" + myUserName + ".vsts-extensions-tweets-Dev-Humor)";
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
     }
 
     public GetVisualStudioMarketplaceVSTSDownloads(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + ".vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=" + myUserName + ".vsts-extensions-tweets-Dev-Humor)";
+        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
     }
 
     public GetVisualStudioMarketplaceVSTSRatings(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + ".vsts-extensions-tweets-Dev-Humor.svg)](https://marketplace.visualstudio.com/items?itemName=" + myUserName + ".vsts-extensions-tweets-Dev-Humor#review-details)";
+        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +"#review-details)";
     }
 
     public GetVisualStudioMarketplaceIDEVersion(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/" + myUserName + "." + hostedRepoName + ".svg)](https://marketplace.visualstudio.com/items?itemName=" + myUserName + "." + hostedRepoName + ")";
+        return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/" + myUserName + "." + hostedRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + hostedRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/" + myUserName + "." + hostedRepoName + ".svg)](https://marketplace.visualstudio.com/items?itemName=" + myUserName + "." + hostedRepoName + ")";
+        return "[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/" + myUserName + "." + hostedRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + hostedRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDERatings(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/" + myUserName + "." + hostedRepoName + ".svg)](https://marketplace.visualstudio.com/items?itemName=" + myUserName + "." + hostedRepoName + ")";
+        return "[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/" + myUserName + "." + hostedRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + hostedRepoName + ")";
     }
 
     public GetNugetDownloads(hostedRepoName: string) {
@@ -99,14 +105,14 @@ export class MarkdownProvider {
     }
 
     public GetChromeWebstoreVersion(hostedRepoName: string) {
-        return "[![Chrome webstore version](" + shieldsDotIoUrl + "chrome-web-store/v/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl +")";
+        return "[![Chrome webstore version](" + shieldsDotIoUrl + chromeWebStore + "/v/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl +")";
     }
 
     public GetChromeWebstoreUsers(hostedRepoName: string) {
-        return "[![Chrome webstore users](" + shieldsDotIoUrl + "chrome-web-store/users/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + ")";
+        return "[![Chrome webstore users](" + shieldsDotIoUrl + chromeWebStore + "/users/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + ")";
     }
 
     public GetChromeWebstoreRating(hostedRepoName: string) {
-        return "[![Chrome webstore rating](" + shieldsDotIoUrl + "chrome-web-store/rating/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + "/reviews)";
+        return "[![Chrome webstore rating](" + shieldsDotIoUrl + chromeWebStore + "/rating/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + "/reviews)";
     }
 }
