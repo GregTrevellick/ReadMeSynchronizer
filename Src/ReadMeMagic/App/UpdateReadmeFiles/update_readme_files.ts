@@ -105,26 +105,32 @@ ${badgeMarkdown}`;
     private GetSharedBadgesMarkdown(repoMetaData: IRepoMetaData) {
         //Do not alpha sort these
         return [
-            this.mp.GetLicenceBadgeMarkdown(),
-            this.mp.GetAccessLintBadgeMarkdown(),
-            this.mp.GetGitHubTopLanguage(repoMetaData.localRepoName),
-            this.mp.GetGitHubLanguageCount(repoMetaData.localRepoName),
-            this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
+
+            //code quality first
             this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
             this.mp.GetCodacyBadge(repoMetaData.hostedRepoName, repoMetaData.codacyId),
+            this.mp.GetCodeFactor(repoMetaData.localRepoName),
 
+            //lang info
+            this.mp.GetGitHubTopLanguage(repoMetaData.localRepoName),
+            this.mp.GetGitHubLanguageCount(repoMetaData.localRepoName),
+
+            //PRs
+            this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
+
+            //build / test coverage related
             //TODO gregt get CodeCov working then re-instate this line
             //this.mp.GetCodeCov(repoMetaData.hostedRepoName),
-
-            this.mp.GetCodeFactor(repoMetaData.localRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
             this.mp.GetAppveyorUnitTests(repoMetaData.hostedRepoName),
-
             //TODO gregt get travis working for all repos then re-instate this line
             //this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
 
+            //less important stuff
+            this.mp.GetAccessLintBadgeMarkdown(),
             this.mp.GetImgBot(repoMetaData.hostedRepoName),
             this.mp.GetCharityWare(repoMetaData.hostedRepoName),
+            this.mp.GetLicenceBadgeMarkdown(),
         ];
     }
 

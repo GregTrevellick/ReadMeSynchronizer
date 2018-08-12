@@ -13,6 +13,19 @@ export class AllRepoMeta {
             //special
             myRepos.badgesPlayground,
 
+            //chrome
+            myRepos.visualStudioMarketplaceMetrics,
+
+            //misc
+            myRepos.filesForEveryExtensionCreator,
+
+            //nuget
+            myRepos.dotNetFlags,
+            myRepos.vsixRatingChaser,
+
+            //vsts extensions
+            myRepos.vsixTwitterWidget,
+
             //vsix ide
             myRepos.autoFindReplace,
             myRepos.openInAppLauncher,
@@ -21,16 +34,8 @@ export class AllRepoMeta {
             myRepos.solutionOpenPopUp,
             myRepos.trivialApisForIDE,
             myRepos.vsixFootie,
-            myRepos.vsixTwitterWidget,
             myRepos.vstsDashboardWidgetProjectTemplate,
 
-            //nuget
-            myRepos.dotNetFlags,
-            myRepos.filesForEveryExtensionCreator,
-            myRepos.vsixRatingChaser,
-
-            //chrome
-            myRepos.visualStudioMarketplaceMetrics,
         ];
 
     }
