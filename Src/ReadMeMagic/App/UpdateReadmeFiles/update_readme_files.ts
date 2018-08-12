@@ -119,11 +119,11 @@ ${badgeMarkdown}`;
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //build / test coverage related
-            //TODO gregt get CodeCov working then re-instate this line
+            //TODO get CodeCov working then re-instate this line
             //this.mp.GetCodeCov(repoMetaData.hostedRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
             this.mp.GetAppveyorUnitTests(repoMetaData.hostedRepoName),
-            //TODO gregt get travis working for all repos then re-instate this line
+            //TODO get travis working for all repos then re-instate this line
             //this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
 
             //less important stuff

@@ -1,5 +1,7 @@
 add coment about this to each reademe
 
+TODO get CodeCov working then re-instate this line
+TODO get travis working for all repos then re-instate this line
 
 
 credits
