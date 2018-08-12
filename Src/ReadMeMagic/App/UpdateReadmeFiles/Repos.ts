@@ -11,14 +11,14 @@ export const autoFindReplace: IRepoMetaData = {
 export const badgesPlayground: IRepoMetaData = {
     hostedRepoName: 'BadgesPlayground',
     localRepoName: 'Badges-playground',
-    codacyId: "",
+    codacyId: "ae0ba4fe11b2442f9690a99245359f53",
     repoCategory: RepoCategory.SpecialRepo
 };
 
 export const dotNetFlags: IRepoMetaData = {
     hostedRepoName: 'DotNetFlags',
     localRepoName: 'DotNetFlags',
-    codacyId: "",
+    codacyId: "f3d3a599955b479dbe14f032bdec1be8",
     repoCategory: RepoCategory.NugetPackage
 };
 
@@ -39,7 +39,7 @@ export const openInAppLauncher: IRepoMetaData = {
 export const quickLaunchButtons: IRepoMetaData = {
     hostedRepoName: 'QuickLaunchButtons',
     localRepoName: 'QuickLaunchButtons',
-    codacyId: "",
+    codacyId: "def29563a15940cda03af19faac0e006",
     repoCategory: RepoCategory.VsIdeExtension
 };
 

@@ -112,14 +112,19 @@ ${badgeMarkdown}`;
             this.mp.GetGitHubPullRequests(repoMetaData.hostedRepoName),
             this.mp.GetBetterCodeHubCompliance(repoMetaData.hostedRepoName),
             this.mp.GetCodacyBadge(repoMetaData.hostedRepoName, repoMetaData.codacyId),
-            this.mp.GetCodeCov(repoMetaData.hostedRepoName),
-            this.mp.GetCodeFactor(repoMetaData.hostedRepoName),
+
+            //TODO gregt get CodeCov working then re-instate this line
+            //this.mp.GetCodeCov(repoMetaData.hostedRepoName),
+
+            this.mp.GetCodeFactor(repoMetaData.localRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.hostedRepoName),
             this.mp.GetAppveyorUnitTests(repoMetaData.hostedRepoName),
-            this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
+
+            //TODO gregt get travis working for all repos then re-instate this line
+            //this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
+
             this.mp.GetImgBot(repoMetaData.hostedRepoName),
             this.mp.GetCharityWare(repoMetaData.hostedRepoName),
-            //this.mp.GetAccessLintSocial(repoMetaData.hostedRepoName),
         ];
     }
 
@@ -130,7 +135,7 @@ ${badgeMarkdown}`;
         let allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.hostedRepoName != "BadgesPlayground");
 
         for (let repoMetaData of allReposExceptSpecials) {
-            let repoCategoryDescription = RepoCategory[repoMetaData.repoCategory]; // "A"
+            let repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             badgesMarkdown = badgesMarkdown + '\n' + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
         }
 

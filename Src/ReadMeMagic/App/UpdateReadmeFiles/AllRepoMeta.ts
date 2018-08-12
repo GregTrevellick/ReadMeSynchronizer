@@ -5,9 +5,14 @@ export class AllRepoMeta {
     public repoMetaDatas: IRepoMetaData[];
 
     constructor() {
+
+        //TODO: sort by category then name
+
         this.repoMetaDatas = [
+
             //special
             myRepos.badgesPlayground,
+
             //vsix ide
             myRepos.autoFindReplace,
             myRepos.openInAppLauncher,
@@ -18,14 +23,15 @@ export class AllRepoMeta {
             myRepos.vsixFootie,
             myRepos.vsixTwitterWidget,
             myRepos.vstsDashboardWidgetProjectTemplate,
+
             //nuget
             myRepos.dotNetFlags,
             myRepos.filesForEveryExtensionCreator,
             myRepos.vsixRatingChaser,
+
             //chrome
             myRepos.visualStudioMarketplaceMetrics,
         ];
 
-        //TODO: sort by category then name
     }
 }
