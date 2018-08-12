@@ -1,16 +1,17 @@
-rename some github repos accordingly
-	Badges-playground ==> 
+EASY rename Badges-playground ==> Badges
 
-add in VsixHelloWorlds apps
+EASY add in hello world apps
 	VsixHelloWorldToolBar ==> HelloWorldVsixToolBar
 	VsixHelloWorldCommandButton ==> HelloWorldVsixCommandButton
 	VsixHelloWorldPopUp ==> HelloWorldVsixPopUp
 	VsixToolWindowAsyncPackageExample ==> HelloWorldVsixToolWindowAsyncPackageExample
 	WpfAsyncBindingPropertyExample ==> HelloWorldWpfAsyncBindingPropertyExample 
 
-remove need for both hostedRepoName & localRepoName ?
+EASY remove need for both hostedRepoName & localRepoName ?
 
-git commands - e.g. git.exe push --progress "origin" master:master
+MEDIUM BUT WORTH IT git commands - e.g. git.exe push --progress "origin" master:master
+
+HARD add in unit tests
 
 
 
@@ -18,22 +19,24 @@ git commands - e.g. git.exe push --progress "origin" master:master
 BADGES TO ADD
 =============
 
-renovatebot badge
+EASY renovatebot 
 
-greenkeeper badges https://greenkeeper.io/#pricing
+EASY greenkeeper https://greenkeeper.io/#pricing
 
-CodeCov badges
+MEDIUM visual studio ide 
+[![][https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg]][VSMarketplaceUrl]
+[![](https://vsmarketplacebadge.apphb.com/rating/]][VSMarketplaceUrl]
 
-travis badges e.g. https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
-https://docs.travis-ci.com/user/browserstack/
-https://docs.travis-ci.com/user/coverity-scan/
-https://docs.travis-ci.com/user/sonarcloud/
-https://docs.travis-ci.com/user/coveralls/
-https://docs.travis-ci.com/user/code-climate/
+HARD CodeCov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
 
-codetriage badges https://www.codetriage.com/
+HARD travis https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
 
-vs ide badges working e.g. [![][VersionNumberBadgeURL]][VSMarketplaceUrl]
-[VersionNumberBadgeURL]: https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg
-<!--![](https://vsmarketplacebadge.apphb.com/installs/GregTrevellick.SolutionOpenPopUp.svg)-->
-<!--![](https://vsmarketplacebadge.apphb.com/rating/)-->
+HARD https://docs.travis-ci.com/user/browserstack/
+
+HARD https://docs.travis-ci.com/user/coverity-scan/
+
+HARD https://docs.travis-ci.com/user/sonarcloud/
+
+HARD https://docs.travis-ci.com/user/coveralls/
+
+HARD https://docs.travis-ci.com/user/code-climate/
