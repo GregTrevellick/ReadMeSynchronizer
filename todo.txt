@@ -1,6 +1,19 @@
-add in VsixHelloWorlds apps & rename some github repos accordingly
+rename some github repos accordingly
+	Badges-playground ==> 
+
+add in VsixHelloWorlds apps
+	VsixHelloWorldToolBar ==> HelloWorldVsixToolBar
+	VsixHelloWorldCommandButton ==> HelloWorldVsixCommandButton
+	VsixHelloWorldPopUp ==> HelloWorldVsixPopUp
+	VsixToolWindowAsyncPackageExample ==> HelloWorldVsixToolWindowAsyncPackageExample
+	WpfAsyncBindingPropertyExample ==> HelloWorldWpfAsyncBindingPropertyExample 
+
+remove need for both hostedRepoName & localRepoName ?
 
 git commands - e.g. git.exe push --progress "origin" master:master
+
+
+
 
 BADGES TO ADD
 =============
