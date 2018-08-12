@@ -9,7 +9,7 @@ EASY add in hello world apps
 
 EASY remove need for both hostedRepoName & localRepoName ?
 
-MEDIUM BUT WORTH IT git commands - e.g. git.exe push --progress "origin" master:master
+MEDIUM BUT WORTH IT git commands - fetch all, revert all, commit all, push all, pull all
 
 HARD add in unit tests
 
