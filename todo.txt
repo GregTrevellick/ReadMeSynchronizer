@@ -1,5 +1,3 @@
-add ReadMeSynchronizer
-
 proper explanation in ReadMeSynchronizer readme file
 
 MEDIUM BUT WORTH IT git commands - fetch all, revert all, commit all, push all, pull all
@@ -10,6 +8,10 @@ all PRs in one place
 renovatebot 
 
 vside - diff & multiple url from repo name
+
+
+
+
 
 
 BADGES TO ADD
