@@ -1,5 +1,10 @@
 ## Badges-playground
 
+[![vsmp](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg)](http://www.bbc.co.uk)
+
+
+
+
 <!--BadgesSTART-->
 <!-- Powered by https://github.com/GregTrevellick/Badges-playground -->
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/Badges-playground?branch=master)](https://bettercodehub.com/results/GregTrevellick/Badges-playground)
