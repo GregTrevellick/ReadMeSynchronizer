@@ -1,6 +1,6 @@
-EASY rename Badges-playground ==> ReadMeSynchronizer
-repo for my badges / repo for ReadMeSynchronizer
-EASY proper explanation in readme file
+add ReadMeSynchronizer
+
+proper explanation in ReadMeSynchronizer readme file
 
 MEDIUM BUT WORTH IT git commands - fetch all, revert all, commit all, push all, pull all
 

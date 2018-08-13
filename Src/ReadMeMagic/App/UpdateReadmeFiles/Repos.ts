@@ -25,6 +25,12 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
+export const readMeSynchronizer: IRepoMetaData = {
+    localRepoName: "ReadMeSynchronizer",
+    codacyId: "todo",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+};
+
 export const openInAppLauncher: IRepoMetaData = {
     localRepoName: "OpenInApp.Launcher",
     codacyId: "e61c4dba8261497fb447379730e97a25",

@@ -18,6 +18,7 @@ export class AllRepoMeta {
 
             //misc
             myRepos.filesForEveryExtensionCreator,
+            myRepos.readMeSynchronizer,
 
             //nuget
             myRepos.dotNetFlags,
