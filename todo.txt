@@ -2,8 +2,6 @@ EASY rename Badges-playground ==> ReadMeSynchronizer
 
 EASY add in hello world apps
 
-EASY remove need for both hostedRepoName & localRepoName ?
-
 EASY proper explanation in readme file
 
 MEDIUM BUT WORTH IT git commands - fetch all, revert all, commit all, push all, pull all

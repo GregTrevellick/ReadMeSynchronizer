@@ -88,17 +88,17 @@ export class ReadMeUpdater {
         return repoTypeSpecificMarkdown;
     }
 
-    private GetChromeExtensionsBadgesMarkdown(hostedRepoName: string) {
+    private GetChromeExtensionsBadgesMarkdown(localRepoName: string) {
         return [
-            this.mp.GetChromeWebstoreVersion(hostedRepoName),
-            this.mp.GetChromeWebstoreUsers(hostedRepoName),
-            this.mp.GetChromeWebstoreRating(hostedRepoName),
+            this.mp.GetChromeWebstoreVersion(localRepoName),
+            this.mp.GetChromeWebstoreUsers(localRepoName),
+            this.mp.GetChromeWebstoreRating(localRepoName),
         ];
     }
 
-    private GetNugetBadgesMarkdown(hostedRepoName: string) {
+    private GetNugetBadgesMarkdown(localRepoName: string) {
         return [
-            this.mp.GetNugetDownloads(hostedRepoName),
+            this.mp.GetNugetDownloads(localRepoName),
         ];
     }
 
@@ -119,10 +119,10 @@ export class ReadMeUpdater {
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //build / test coverage related
-            //this.mp.GetCodeCov(repoMetaData.hostedRepoName),
+            //this.mp.GetCodeCov(repoMetaData.localRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
             this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName),
-            //this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
+            //this.mp.GetTravisBuildStatus(repoMetaData.localRepoName),
 
             //less important stuff
             this.mp.GetAccessLintBadgeMarkdown(),
@@ -132,7 +132,7 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetSpecialReposBadgesMarkdown(hostedRepoName: string) {
+    private GetSpecialReposBadgesMarkdown(localRepoName: string) {
 
         let badgesMarkdown = "";
 
@@ -146,11 +146,11 @@ export class ReadMeUpdater {
         return badgesMarkdown;
     }
 
-    private GetVstsExtensionsBadgesMarkdown(hostedRepoName: string) {
+    private GetVstsExtensionsBadgesMarkdown(localRepoName: string) {
         return [
-            this.mp.GetVisualStudioMarketplaceVSTSDownloads(hostedRepoName),
-            this.mp.GetVisualStudioMarketplaceVSTSRatings(hostedRepoName),
-            this.mp.GetVisualStudioMarketplaceVSTSVersion(hostedRepoName),
+            this.mp.GetVisualStudioMarketplaceVSTSDownloads(localRepoName),
+            this.mp.GetVisualStudioMarketplaceVSTSRatings(localRepoName),
+            this.mp.GetVisualStudioMarketplaceVSTSVersion(localRepoName),
         ];
     }
 }

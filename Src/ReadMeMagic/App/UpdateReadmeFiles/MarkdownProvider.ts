@@ -34,13 +34,13 @@ export class MarkdownProvider {
         return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + myUserName + "/" + localRepoName + ")";
     }
 
-    public GetCodacyBadge(hostedRepoName: string, codacyId: string) {
+    public GetCodacyBadge(localRepoName: string, codacyId: string) {
         return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
-            "(https://www.codacy.com/project/gtrevellick/" + hostedRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + myUserName + "/" + hostedRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
+            "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
     }
 
-    public GetCodeCov(hostedRepoName: string) {
-        return "[![codecov](https://codecov.io/gh/" + myUserName + "/" + hostedRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + myUserName + "/" + hostedRepoName + ")";
+    public GetCodeCov(localRepoName: string) {
+        return "[![codecov](https://codecov.io/gh/" + myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + myUserName + "/" + localRepoName + ")";
     }
 
     public GetCodeFactor(localRepoName: string) {
@@ -57,55 +57,55 @@ export class MarkdownProvider {
         return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + "/build/tests)";
     }
 
-    public GetTravisBuildStatus(hostedRepoName: string) {
-        return "[![Travis Build Status](https://travis-ci.org/" + myUserName + "/" + hostedRepoName + ".svg?branch=master)](https://travis-ci.org/" + myUserName + "/" + hostedRepoName + ")";
+    public GetTravisBuildStatus(localRepoName: string) {
+        return "[![Travis Build Status](https://travis-ci.org/" + myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + myUserName + "/" + localRepoName + ")";
     }
 
-    public GetImgBot(hostedRepoName: string) {
+    public GetImgBot(localRepoName: string) {
         return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-green.svg)](https://imgbot.net/)";
     }
 
-    public GetCharityWare(hostedRepoName: string) {
+    public GetCharityWare(localRepoName: string) {
         return "[![Charity Ware](" + shieldsDotIoUrl + "badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/" + myUserName + "/MiscellaneousArtefacts/wiki/Charity-Ware)";
     }
 
-    public GetVisualStudioMarketplaceVSTSVersion(hostedRepoName: string) {
+    public GetVisualStudioMarketplaceVSTSVersion(localRepoName: string) {
         return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
     }
 
-    public GetVisualStudioMarketplaceVSTSDownloads(hostedRepoName: string) {
+    public GetVisualStudioMarketplaceVSTSDownloads(localRepoName: string) {
         return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
     }
 
-    public GetVisualStudioMarketplaceVSTSRatings(hostedRepoName: string) {
+    public GetVisualStudioMarketplaceVSTSRatings(localRepoName: string) {
         return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +"#review-details)";
     }
 
-    public GetVisualStudioMarketplaceIDEVersion(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/" + myUserName + "." + hostedRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + hostedRepoName + ")";
+    public GetVisualStudioMarketplaceIDEVersion(localRepoName: string) {
+        return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
-    public GetVisualStudioMarketplaceIDEDownloads(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/" + myUserName + "." + hostedRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + hostedRepoName + ")";
+    public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
+        return "[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
-    public GetVisualStudioMarketplaceIDERatings(hostedRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/" + myUserName + "." + hostedRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + hostedRepoName + ")";
+    public GetVisualStudioMarketplaceIDERatings(localRepoName: string) {
+        return "[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
-    public GetNugetDownloads(hostedRepoName: string) {
-        return "[![Nuget downloads](" + shieldsDotIoUrl + "nuget/dt/" + hostedRepoName + ".svg)](https://www.nuget.org/packages/" + hostedRepoName + "/)";
+    public GetNugetDownloads(localRepoName: string) {
+        return "[![Nuget downloads](" + shieldsDotIoUrl + "nuget/dt/" + localRepoName + ".svg)](https://www.nuget.org/packages/" + localRepoName + "/)";
     }
 
-    public GetChromeWebstoreVersion(hostedRepoName: string) {
+    public GetChromeWebstoreVersion(localRepoName: string) {
         return "[![Chrome webstore version](" + shieldsDotIoUrl + chromeWebStore + "/v/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl +")";
     }
 
-    public GetChromeWebstoreUsers(hostedRepoName: string) {
+    public GetChromeWebstoreUsers(localRepoName: string) {
         return "[![Chrome webstore users](" + shieldsDotIoUrl + chromeWebStore + "/users/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + ")";
     }
 
-    public GetChromeWebstoreRating(hostedRepoName: string) {
+    public GetChromeWebstoreRating(localRepoName: string) {
         return "[![Chrome webstore rating](" + shieldsDotIoUrl + chromeWebStore + "/rating/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + "/reviews)";
     }
 
