@@ -10,6 +10,8 @@ vside - diff & multiple url from repo name
 
 greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)
 
+rename sln & proj
+
 BADGES TO ADD
 =============
 HARD CodeCov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
