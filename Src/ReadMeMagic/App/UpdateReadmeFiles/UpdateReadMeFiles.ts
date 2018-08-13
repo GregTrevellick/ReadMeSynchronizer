@@ -65,22 +65,22 @@ export class ReadMeUpdater {
         let repoTypeSpecificMarkdown: string[] = [];
 
         if (repoMetaData.repoCategory === RepoCategory.ChromeExtension) {
-            const chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
+            const chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.localRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(chromeExtensionsBadgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.NugetPackage) {
-            const nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.hostedRepoName);
+            const nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.localRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(nugetBadgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.SpecialRepo) {
-            const specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.hostedRepoName);
+            const specialReposBadgesMarkdown = this.GetSpecialReposBadgesMarkdown(repoMetaData.localRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(specialReposBadgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
-            const vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.hostedRepoName);
+            const vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.localRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(vstsExtensionsBadgesMarkdown);
         }
 
@@ -107,7 +107,7 @@ export class ReadMeUpdater {
 
             //code quality first
             this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
-            this.mp.GetCodacyBadge(repoMetaData.hostedRepoName, repoMetaData.codacyId),
+            this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
 
             //lang info
@@ -120,13 +120,13 @@ export class ReadMeUpdater {
             //build / test coverage related
             //this.mp.GetCodeCov(repoMetaData.hostedRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
-            this.mp.GetAppveyorUnitTests(repoMetaData.hostedRepoName),
+            this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName),
             //this.mp.GetTravisBuildStatus(repoMetaData.hostedRepoName),
 
             //less important stuff
             this.mp.GetAccessLintBadgeMarkdown(),
-            this.mp.GetImgBot(repoMetaData.hostedRepoName),
-            this.mp.GetCharityWare(repoMetaData.hostedRepoName),
+            this.mp.GetImgBot(repoMetaData.localRepoName),
+            this.mp.GetCharityWare(repoMetaData.localRepoName),
             this.mp.GetLicenceBadgeMarkdown(),
         ];
     }
@@ -135,11 +135,13 @@ export class ReadMeUpdater {
 
         let badgesMarkdown = "";
 
-        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.hostedRepoName != "BadgesPlayground");
+        const specialRepoToExclude = "Badges-playground";//badgesPlayground.localRepoName
+
+        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.localRepoName != specialRepoToExclude);
 
         for (const repoMetaData of allReposExceptSpecials) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
-            badgesMarkdown = badgesMarkdown + this.lineBreak + "#### " + repoCategoryDescription + " - " + repoMetaData.hostedRepoName + this.GetBadgesMarkdown(repoMetaData);
+            badgesMarkdown = badgesMarkdown + this.lineBreak + "#### " + repoCategoryDescription + " - " + repoMetaData.localRepoName + this.GetBadgesMarkdown(repoMetaData);
         }
 
         return badgesMarkdown;
