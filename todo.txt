@@ -1,12 +1,16 @@
 EASY rename Badges-playground ==> ReadMeSynchronizer
 
-EASY add in hello world apps
-
 EASY proper explanation in readme file
 
 MEDIUM BUT WORTH IT git commands - fetch all, revert all, commit all, push all, pull all
 
-HARD add in unit tests (jest ? cypress ?)
+all issues in one place
+
+all PRs in one place
+
+repo for my badges / repo for ReadMeSynchronizer
+
+EASY renovatebot 
 
 
 
@@ -14,9 +18,7 @@ HARD add in unit tests (jest ? cypress ?)
 BADGES TO ADD
 =============
 
-EASY renovatebot 
-
-EASY greenkeeper https://account.greenkeeper.io/account/GregTrevellick
+MEDIUM greenkeeper https://account.greenkeeper.io/account/GregTrevellick
 
 MEDIUM visual studio ide 
 [![][https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg]][VSMarketplaceUrl]
@@ -35,3 +37,13 @@ HARD https://docs.travis-ci.com/user/sonarcloud/
 HARD https://docs.travis-ci.com/user/coveralls/
 
 HARD https://docs.travis-ci.com/user/code-climate/
+
+
+
+
+
+
+
+HARD add in unit tests (jest ? cypress ?)
+
+LOW PTY BUT EASY add in hello world apps
