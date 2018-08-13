@@ -1,44 +1,23 @@
 proper explanation in ReadMeSynchronizer readme file
 
-MEDIUM BUT WORTH IT git commands - fetch all, revert all, commit all, push all, pull all
+git commands - fetch all, revert all, commit all, push all, pull all, clone all
 
-all issues in one place
-all PRs in one place
+all PRs/issues in one place
 
 renovatebot 
 
 vside - diff & multiple url from repo name
 
-
-
-
-
+greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)
 
 BADGES TO ADD
 =============
-
-MEDIUM greenkeeper https://account.greenkeeper.io/account/GregTrevellick
-
 HARD CodeCov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
-
 HARD travis https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
-
 HARD https://docs.travis-ci.com/user/browserstack/
-
 HARD https://docs.travis-ci.com/user/coverity-scan/
-
 HARD https://docs.travis-ci.com/user/sonarcloud/
-
 HARD https://docs.travis-ci.com/user/coveralls/
-
 HARD https://docs.travis-ci.com/user/code-climate/
-
-
-
-
-
-
-
 HARD add in unit tests (jest ? cypress ?)
-
-LOW PTY BUT EASY add in hello world apps
+LOW PTY add in hello world apps
