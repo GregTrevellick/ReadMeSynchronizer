@@ -3,6 +3,7 @@ import { FileSystemUpdater } from "./FileSystemUpdater";
 import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoCategory } from "./RepoCategory";
+import { badgesPlayground } from "./Repos";
 
 export class ReadMeUpdater {
     private lineBreak: string = "\n";
@@ -135,9 +136,7 @@ export class ReadMeUpdater {
 
         let badgesMarkdown = "";
 
-        const specialRepoToExclude = "Badges-playground";//badgesPlayground.localRepoName
-
-        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.localRepoName != specialRepoToExclude);
+        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.localRepoName != badgesPlayground.localRepoName);
 
         for (const repoMetaData of allReposExceptSpecials) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
