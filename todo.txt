@@ -1,11 +1,6 @@
-EASY rename Badges-playground ==> Badges
+EASY rename Badges-playground ==> ReadMeSynchronizer
 
 EASY add in hello world apps
-	VsixHelloWorldToolBar ==> HelloWorldVsixToolBar
-	VsixHelloWorldCommandButton ==> HelloWorldVsixCommandButton
-	VsixHelloWorldPopUp ==> HelloWorldVsixPopUp
-	VsixToolWindowAsyncPackageExample ==> HelloWorldVsixToolWindowAsyncPackageExample
-	WpfAsyncBindingPropertyExample ==> HelloWorldWpfAsyncBindingPropertyExample 
 
 EASY remove need for both hostedRepoName & localRepoName ?
 
@@ -13,7 +8,7 @@ EASY proper explanation in readme file
 
 MEDIUM BUT WORTH IT git commands - fetch all, revert all, commit all, push all, pull all
 
-HARD add in unit tests
+HARD add in unit tests (jest ? cypress ?)
 
 
 
