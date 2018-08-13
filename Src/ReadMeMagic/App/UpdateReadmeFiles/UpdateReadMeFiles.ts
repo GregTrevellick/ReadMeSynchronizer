@@ -153,6 +153,8 @@ export class ReadMeUpdater {
 
     private GetVsIdeExtensionsBadgesMarkdown(localRepoName: string) {
         return [
+            this.mp.GetVisualStudioMarketplaceIDEDownloads(localRepoName),
+            this.mp.GetVisualStudioMarketplaceIDERatings(localRepoName),
             this.mp.GetVisualStudioMarketplaceIDEVersion(localRepoName),
         ];
     }

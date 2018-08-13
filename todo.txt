@@ -12,17 +12,13 @@ repo for my badges / repo for ReadMeSynchronizer
 
 EASY renovatebot 
 
-
+vside - diff & multiple url from repo name
 
 
 BADGES TO ADD
 =============
 
 MEDIUM greenkeeper https://account.greenkeeper.io/account/GregTrevellick
-
-MEDIUM visual studio ide 
-[![][https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg]][VSMarketplaceUrl]
-[![](https://vsmarketplacebadge.apphb.com/rating/]][VSMarketplaceUrl]
 
 HARD CodeCov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
 
