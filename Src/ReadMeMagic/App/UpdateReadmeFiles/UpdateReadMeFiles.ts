@@ -80,6 +80,11 @@ export class ReadMeUpdater {
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(specialReposBadgesMarkdown);
         }
 
+        if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
+            const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(repoMetaData.localRepoName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
+        }
+
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
             const vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.localRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(vstsExtensionsBadgesMarkdown);
@@ -144,6 +149,12 @@ export class ReadMeUpdater {
         }
 
         return badgesMarkdown;
+    }
+
+    private GetVsIdeExtensionsBadgesMarkdown(localRepoName: string) {
+        return [
+            this.mp.GetVisualStudioMarketplaceIDEVersion(localRepoName),
+        ];
     }
 
     private GetVstsExtensionsBadgesMarkdown(localRepoName: string) {

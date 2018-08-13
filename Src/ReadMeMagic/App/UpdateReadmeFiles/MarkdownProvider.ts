@@ -81,6 +81,7 @@ export class MarkdownProvider {
         return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +"#review-details)";
     }
 
+    //          [![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/GregTrevellick.SolutionOpenPopUp.svg)](http://www.bbc.co.uk)
     public GetVisualStudioMarketplaceIDEVersion(localRepoName: string) {
         return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
