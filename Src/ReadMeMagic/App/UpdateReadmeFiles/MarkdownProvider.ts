@@ -5,6 +5,7 @@ const tweetsDevHumor = "vsts-extensions-tweets-Dev-Humor";
 const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
 const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
+const vsmarketplacebadgeAppHarborUrl = "https://vsmarketplacebadge.apphb.com/";
 
 export class MarkdownProvider {
 
@@ -82,15 +83,15 @@ export class MarkdownProvider {
     }
 
     public GetVisualStudioMarketplaceIDEVersion(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](https://vsmarketplacebadge.apphb.com/version/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+        return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](https://vsmarketplacebadge.apphb.com/installs/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+        return "[![Visual Studio Marketplace downloads](" + vsmarketplacebadgeAppHarborUrl + "installs/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDERatings(localRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](https://vsmarketplacebadge.apphb.com/rating/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+        return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
     public GetNugetDownloads(localRepoName: string) {
