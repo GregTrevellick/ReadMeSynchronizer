@@ -3,7 +3,7 @@ import { FileSystemUpdater } from "./FileSystemUpdater";
 import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoCategory } from "./RepoCategory";
-import { badgesPlayground } from "./Repos";
+import { badges } from "./Repos";
 
 export class ReadMeUpdater {
     private lineBreak: string = "\n";
@@ -11,7 +11,7 @@ export class ReadMeUpdater {
     public prefix: string = "Badges";
     public htmlCommentStart: string = "<!--" + this.prefix;
     public htmlCommentEnd: string = "-->";
-    public badgeCommentStartSuffix: string = "<!-- Powered by https://github.com/GregTrevellick/Badges-playground -->";
+    public badgeCommentStartSuffix: string = "<!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->";
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
     private fsu: FileSystemUpdater;
@@ -141,7 +141,7 @@ export class ReadMeUpdater {
 
         let badgesMarkdown = "";
 
-        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.localRepoName != badgesPlayground.localRepoName);
+        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.localRepoName != badges.localRepoName);
 
         for (const repoMetaData of allReposExceptSpecials) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];

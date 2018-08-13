@@ -7,8 +7,8 @@ export const autoFindReplace: IRepoMetaData = {
     repoCategory:RepoCategory.VsIdeExtension,
 };
 
-export const badgesPlayground: IRepoMetaData = {
-    localRepoName: "Badges-playground",
+export const badges: IRepoMetaData = {
+    localRepoName: "Badges",
     codacyId: "ae0ba4fe11b2442f9690a99245359f53",
     repoCategory: RepoCategory.SpecialRepo,
 };

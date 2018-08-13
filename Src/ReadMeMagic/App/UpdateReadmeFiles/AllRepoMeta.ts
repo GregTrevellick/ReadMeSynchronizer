@@ -11,7 +11,7 @@ export class AllRepoMeta {
         this.repoMetaDatas = [
 
             //special
-            myRepos.badgesPlayground,
+            myRepos.badges,
 
             //chrome
             myRepos.visualStudioMarketplaceMetrics,
