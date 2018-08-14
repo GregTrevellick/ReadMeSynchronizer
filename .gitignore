@@ -246,4 +246,4 @@ ModelManifest.xml
 
 # Open cover test results
 CodeCoverageReports/
-/Src/ReadMeMagic/*.user
+/Src/ReadMeSynchronizer/*.user

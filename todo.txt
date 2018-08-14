@@ -1,6 +1,9 @@
 proper explanation in ReadMeSynchronizer readme file
 
 git commands - fetch all, revert all, commit all, push all, pull all, clone all
+git.exe fetch -v --progress "origin"
+
+get rid of karma packages
 
 all PRs/issues in one place
 
