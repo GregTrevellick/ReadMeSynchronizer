@@ -1,22 +1,18 @@
-proper explanation in ReadMeSynchronizer readme file
-
-git commands - fetch all, revert all, commit all, push all, pull all, clone all
-git.exe fetch -v --progress "origin"
+git commands - fetch all, revert all, commit all, push all, pull all, clone all     git.exe fetch -v --progress "origin"
 
 get rid of karma packages
 
 all PRs/issues in one place
 
-renovatebot 
-
 vside - diff & multiple url from repo name
 
-greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)
-
-rename sln & proj
+(low priority) add in hello world apps
+(low priority) add a video demo to ReadMeSynchronizer readme file
 
 BADGES TO ADD
 =============
+EASY renovatebot 
+EASY greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)
 HARD CodeCov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
 HARD travis https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
 HARD https://docs.travis-ci.com/user/browserstack/
@@ -25,4 +21,3 @@ HARD https://docs.travis-ci.com/user/sonarcloud/
 HARD https://docs.travis-ci.com/user/coveralls/
 HARD https://docs.travis-ci.com/user/code-climate/
 HARD add in unit tests (jest ? cypress ?)
-LOW PTY add in hello world apps

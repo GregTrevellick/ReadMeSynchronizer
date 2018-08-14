@@ -16,36 +16,22 @@
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 <!--BadgesEND-->
 
-
-
-
-
-
 ## Overview 
 
-todo 
+A typescript app containing gulp tasks that will update the badges in your local README.md files within your local git repositories.
 
-<!--
+This means the repo-owner can :
+  - manually test all their badges, both cosmetically & functionally, quickly from one place rather than the slow process of checking each repo individually
+  - ensure badge consistency across many repos
+  - easily spot problems (failing builds, failing tests, long running branches, etc) with any of their repos all in one place 
 
-A code repo, not an app per se, that adds/updates badges to your other repos' readme files
+##### Why ?
 
-- handy for multiple repos, especially with multiple integrations
-- any badges, proprietary via 3rd party or 100% your own
-- bonus will also update this badge repo
+Well, the act of creating this repo allowed me to create my first from-scratch typescript app, and learn more about typescript, gulp & npm along the way.
 
-### Usage
+##### What next ?
 
-fork this repo remotely e.g. to github.com/myname/readmebadges or bitbucket.com/myothername/myreadmebadges
-
-clone your fork locally e.g. to c:\git\readmebadges or c:\git\myreadmebadges
-
-clone some/all your repos (regardless of host e.g. github, bitbucket, vsts, other) locally
-
-edit the code in c:\git\readmebadges or c:\git\myreadmebadges to use the badges you want & to target your repos in the same folder as this repo
-
-commit everything
-
--->
+At some point I may try to make a generic scaffold app from this repo, and publish it as a template on [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) and/or [Yeoman](http://yeoman.io/).
 
 ### Credits
 
