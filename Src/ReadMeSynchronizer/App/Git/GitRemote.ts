@@ -42,7 +42,6 @@ export class GitCommit {
                     break;
                 }
                 case GitCommand.UndoReadMe: {
-                    //git --git-dir=../VsixFootie/.git --work-tree=../VsixFootie checkout -- README.md
                     const checkoutReadMeCommand = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " checkout  -- README.md";
                     var exec = require('child_process').exec;
                     exec(checkoutReadMeCommand);

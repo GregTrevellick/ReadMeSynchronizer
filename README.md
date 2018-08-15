@@ -16,6 +16,10 @@
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 <!--BadgesEND-->
 
+
+
+
+
 ## Overview 
 
 A typescript app containing gulp tasks that will update the badges in your local README.md files within your local git repositories.
