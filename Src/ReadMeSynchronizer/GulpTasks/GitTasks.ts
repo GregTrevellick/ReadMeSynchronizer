@@ -1,19 +1,33 @@
 import * as gulp from "gulp";
 import { GitCommit } from "../App/Git/GitRemote";
+import { GitCommand } from "../App/Git/GitCommand";
+
+gulp.task("Git_Clean_Repo", () => {
+    const gitCommand: GitCommit = new GitCommit;
+    gitCommand.GitExe(GitCommand.CleanRepo);
+});
 
 gulp.task("Git_Commit_ReadMe", () => {
     const gitCommand: GitCommit = new GitCommit;
-    gitCommand.CommitReadMes();
+    gitCommand.GitExe(GitCommand.CommitReadMe);
 });
 
-//////////var gulp = require('gulp');
-//////////var git = require('gulp-git');
-//////////import { GitCommit } from "../App/Git/GitRemote";
-//////////gulp.task("Git_Fetch", () => {
-//////////    const gitCommand: GitFetch = new GitFetch;
-//////////    gitCommand.FetchRepos();
-//////////});
-//////////gulp.task("Git_Pull", () => {
-//////////    const gitCommand: GitPull = new GitPull;
-//////////    gitCommand.PullRepos();
-//////////});
+gulp.task("Git_Fetch_Repo", () => {
+    const gitCommand: GitCommit = new GitCommit;
+    gitCommand.GitExe(GitCommand.FetchRepo);
+});
+
+gulp.task("Git_Pull_Repo", () => {
+    const gitCommand: GitCommit = new GitCommit;
+    gitCommand.GitExe(GitCommand.PullRepo);
+});
+
+gulp.task("Git_Push_ReadMe", () => {
+    const gitCommand: GitCommit = new GitCommit;
+    gitCommand.GitExe(GitCommand.PushReadMe);
+});
+
+gulp.task("Git_Revert_ReadMe", () => {
+    const gitCommand: GitCommit = new GitCommit;
+    gitCommand.GitExe(GitCommand.RevertReadMe);
+});

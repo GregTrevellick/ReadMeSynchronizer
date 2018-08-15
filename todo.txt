@@ -1,5 +1,4 @@
-git commands - fetch all, revert all, commit all, push all, pull all, clone all     git.exe fetch -v --progress "origin"
-
+git commands - 
 get rid of karma packages
 
 all PRs/issues in one place
