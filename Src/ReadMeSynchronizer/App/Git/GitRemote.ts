@@ -1,5 +1,5 @@
-import { GitCommand } from "./GitCommand";
 import { AllRepoMeta } from "../UpdateReadmeFiles/AllRepoMeta";
+import { GitCommand } from "./GitCommand";
 
 const simpleGit = require('simple-git');//('../../../VsixFootie');
 
@@ -39,12 +39,14 @@ export class GitCommit {
                     break;
                 }
                 case GitCommand.PushReadMe: {
-                    simpleGit(workingDirPath).push(commitMessage, specificTargetFile)
+                    //push
+                    //simpleGit(workingDirPath).push(commitMessage, specificTargetFile)
                     break;
                 }
-                case GitCommand.RevertReadMe: {
-                    //simpleGit(workingDirPath).revert(commitMessage, specificTargetFile)
-                    console.error("gfhgfhgfhgf");
+                case GitCommand.UndoReadMe: {
+                    //simpleGit(workingDirPath).revert('HEAD~1', { '--no-rebase': null })
+                    //git checkout -- README.md
+                    simpleGit(workingDirPath).checkout("-- README.md");
                     break;
                 }
                 default: {
@@ -52,7 +54,6 @@ export class GitCommit {
                     break;
                 }
             }
-
         }
     }
 }

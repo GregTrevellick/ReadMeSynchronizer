@@ -27,7 +27,7 @@ gulp.task("Git_Push_ReadMe", () => {
     gitCommand.GitExe(GitCommand.PushReadMe);
 });
 
-gulp.task("Git_Revert_ReadMe", () => {
+gulp.task("Git_Undo_ReadMe", () => {
     const gitCommand: GitCommit = new GitCommit;
-    gitCommand.GitExe(GitCommand.RevertReadMe);
+    gitCommand.GitExe(GitCommand.UndoReadMe);
 });

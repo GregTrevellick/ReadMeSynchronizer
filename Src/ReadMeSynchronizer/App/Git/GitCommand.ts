@@ -4,5 +4,5 @@ export enum GitCommand {
     FetchRepo,
     PullRepo,
     PushReadMe,
-    RevertReadMe,
+    UndoReadMe,
 }
