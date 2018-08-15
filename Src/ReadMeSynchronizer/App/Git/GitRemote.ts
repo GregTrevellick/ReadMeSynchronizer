@@ -1,6 +1,5 @@
 import { AllRepoMeta } from "../UpdateReadmeFiles/AllRepoMeta";
 import { GitCommand } from "./GitCommand";
-//import * as myGulp from "gulp";
 
 export class GitCommit {
 
@@ -18,7 +17,7 @@ export class GitCommit {
         for (const repoMetaData of this.allRepoMeta.repoMetaDatas) {
 
             const workingDirPath : string = "../../../" + repoMetaData.localRepoName;
-            const simpleGit = require('simple-git');//(workingDirPath);//('../../../VsixFootie');
+            const simpleGit = require('simple-git');//////////////////////(workingDirPath);//('../../../VsixFootie');
 
             //gregt extract below to equiv of "FileSystemUpdater.ts"
             switch (gitCommand) {
@@ -43,37 +42,10 @@ export class GitCommit {
                     break;
                 }
                 case GitCommand.UndoReadMe: {
-
                     //git --git-dir=../VsixFootie/.git --work-tree=../VsixFootie checkout -- README.md
-                   // const cwd2 = workingDirPath + "/.git";
-                    const cwd = " --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " ";
-                    //const rmfilename = " -- " + workingDirPath + "/README.md ";
-                    const rmfilename = " -- README.md ";
-                    //const source: string = workingDirPath + "/README.md";
-         //           var gitoptions = cwd + rmfilename;
-                    //var gitoptions = rmfilename;
-                    //console.log(gitoptions);
-          //          simpleGit(workingDirPath).checkout(gitoptions);
-//                    simpleGit(workingDirPath).raw(
-//                        [
-//                            'git ' + cwd + ' checkout ' + rmfilename
-//                        ]);
-
-                    //myGulp.src([source]).pipe(simpleGit(workingDirPath).checkout(rmfilename));
-
+                    const checkoutReadMeCommand = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " checkout  -- README.md";
                     var exec = require('child_process').exec;
-                    exec('git ' + cwd + ' checkout ' + rmfilename);
-                    //myGulp.task('task', function (cb) {
-                    //    exec('ping localhost', function (err, stdout, stderr) {
-                    //        console.log(stdout);
-                    //        console.log(stderr);
-                    //        cb(err);
-                    //    });
-                    //});
-                    //myGulp.src('./**/**')
-                    //    .pipe(exec('git checkout <%= file.path %> <%= options.customTemplatingThing %>', options))
-                    //    .pipe(exec.reporter(reportOptions));
-
+                    exec(checkoutReadMeCommand);
                     break;
                 }
                 default: {
