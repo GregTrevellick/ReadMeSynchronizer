@@ -7,6 +7,7 @@ vside - diff & multiple url from repo name
 (low priority) add in hello world apps
 (low priority) add a video demo to ReadMeSynchronizer readme file
 
+
 BADGES TO ADD
 =============
 EASY renovatebot 

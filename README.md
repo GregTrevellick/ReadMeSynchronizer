@@ -30,11 +30,20 @@ This means the repo-owner can :
   - ensure badge consistency across many repos
   - easily spot problems (failing builds, failing tests, long running branches, etc) with any of their repos all in one place 
 
-##### Why ?
+#### Bonus Feature 
+
+Given this app will cause changes to multiple repos, I added gulp tasks to do the following:
+
+  - Undo all the README.md files at once
+  - Commit all the README.md files at once
+  - Pull all the repos at once
+  - Push all the repos at once
+
+#### Why ?
 
 Well, the act of creating this repo allowed me to create my first from-scratch typescript app, and learn more about typescript, gulp & npm along the way.
 
-##### What next ?
+#### What Next ?
 
 At some point I may try to make a generic scaffold app from this repo, and publish it as a template on [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) and/or [Yeoman](http://yeoman.io/).
 
