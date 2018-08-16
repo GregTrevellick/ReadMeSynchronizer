@@ -3,6 +3,7 @@ import { GitCommand } from "./GitCommand";
 
 export class GitCommit {
 
+    private targetReadMeFileName = "README.md";
     private allRepoMeta: AllRepoMeta;
 
     constructor() {
@@ -12,7 +13,6 @@ export class GitCommit {
     public GitExe(gitCommand: GitCommand) {
 
         const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
-        const specificTargetFile = 'README.md';
         const simpleGit = require('simple-git');//require('simple-git')(workingDirPath);
 
         for (const repoMetaData of this.allRepoMeta.repoMetaDatas) {
@@ -26,34 +26,36 @@ export class GitCommit {
                 //    break;
                 //}
                 case GitCommand.CommitReadMe: {
-                    simpleGit(workingDirPath).commit(commitMessage, specificTargetFile)
+                    simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)
                     break;
                 }
                 //case GitCommand.FetchRepo: {
                 //    break;
                 //}
                 case GitCommand.PullRepo: {
-                    console.log(workingDirPath);
-                    simpleGit(workingDirPath).pull('origin', 'master');
+                    simpleGit(workingDirPath).pull("origin", "master");
                     break;
                 }
                 case GitCommand.PushReadMe: {
-                    const checkoutReadMeCommand = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " push  -- README.md";
-                    var exec = require('child_process').exec;
-                    exec(checkoutReadMeCommand);
+                    this.RunGitCommandForReadMeFile(workingDirPath, "push");
                     break;
                 }
                 case GitCommand.UndoReadMe: {
-                    const checkoutReadMeCommand = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " checkout  -- README.md";
-                    var exec = require('child_process').exec;
-                    exec(checkoutReadMeCommand);
+                    this.RunGitCommandForReadMeFile(workingDirPath, "checkout");
                     break;
                 }
                 default: {
-                    //error
+                    //TODO: error scenario
                     break;
                 }
             }
         }
+    }
+
+    private RunGitCommandForReadMeFile(workingDirPath: string, gitCommand: string) {
+        const gitCommandExec = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " " + gitCommand + " -- " + this.targetReadMeFileName;
+        //e.g. "git --git-dir=../../../VsixFootie/.git --work-tree=../../../VsixFootie checkout -- README.md"
+        var exec = require('child_process').exec;
+        exec(gitCommandExec);
     }
 }
