@@ -12,40 +12,41 @@ export class GitExecutioner {
 
     public GitExecute(gitCommand: GitCommand) {
 
-        const simpleGit = require('simple-git');//require('simple-git')(workingDirPath);
-
         for (const repoMetaData of this.repoMetaDatas.repoMetaDatas) {
 
             if (repoMetaData.repoCategory != RepoCategory.SpecialRepo) {
+                this.GitProcessRepo(repoMetaData.localRepoName, gitCommand);
+            }
+        }
+    }
 
-                //gregt extract below to equiv of "FileSystemUpdater.ts"
+    private GitProcessRepo(localRepoName: string, gitCommand: GitCommand) {
 
-                const targetReadMeFileName = "README.md";
-                const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
+        const simpleGit = require('simple-git');//require('simple-git')(workingDirPath);
+        const targetReadMeFileName = "README.md";
+        const workingDirPath: string = "../../../" + localRepoName;
 
-                switch (gitCommand) {
-                    case GitCommand.CommitReadMe: {
-                        const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
-                        simpleGit(workingDirPath).commit(commitMessage, targetReadMeFileName)
-                        break;
-                    }
-                    case GitCommand.PullRepo: {
-                        simpleGit(workingDirPath).pull("origin", "master");
-                        break;
-                    }
-                    case GitCommand.PushRepo: {
-                        this.RunGitCommand(workingDirPath, "push origin master");
-                        break;
-                    }
-                    case GitCommand.UndoReadMe: {
-                        this.RunGitCommand(workingDirPath, "checkout -- " + targetReadMeFileName);
-                        break;
-                    }
-                    default: {
-                        //TODO: error scenario
-                        break;
-                    }
-                }
+        switch (gitCommand) {
+            case GitCommand.CommitReadMe: {
+                const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
+                simpleGit(workingDirPath).commit(commitMessage, targetReadMeFileName)
+                break;
+            }
+            case GitCommand.PullRepo: {
+                simpleGit(workingDirPath).pull("origin", "master");
+                break;
+            }
+            case GitCommand.PushRepo: {
+                this.RunGitCommand(workingDirPath, "push origin master");
+                break;
+            }
+            case GitCommand.UndoReadMe: {
+                this.RunGitCommand(workingDirPath, "checkout -- " + targetReadMeFileName);
+                break;
+            }
+            default: {
+                //TODO: error scenario
+                break;
             }
         }
     }
