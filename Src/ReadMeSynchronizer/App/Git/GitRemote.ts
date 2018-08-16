@@ -1,14 +1,14 @@
-import { AllRepoMeta } from "../UpdateReadmeFiles/AllRepoMeta";
+import { RepoMetaDatas } from "../UpdateReadmeFiles/RepoMetaDatas";
 import { GitCommand } from "./GitCommand";
 import { RepoCategory } from "../UpdateReadmeFiles/RepoCategory";
 
 export class GitCommit {
 
     private targetReadMeFileName = "README.md";
-    private allRepoMeta: AllRepoMeta;
+    private repoMetaDatas: RepoMetaDatas;
 
     constructor() {
-        this.allRepoMeta = new AllRepoMeta;
+        this.repoMetaDatas = new RepoMetaDatas;
     }
 
     public GitExe(gitCommand: GitCommand) {
@@ -16,7 +16,7 @@ export class GitCommit {
         const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
         const simpleGit = require('simple-git');//require('simple-git')(workingDirPath);
 
-        for (const repoMetaData of this.allRepoMeta.repoMetaDatas) {
+        for (const repoMetaData of this.repoMetaDatas.repoMetaDatas) {
 
             if (repoMetaData.repoCategory != RepoCategory.SpecialRepo) {
 

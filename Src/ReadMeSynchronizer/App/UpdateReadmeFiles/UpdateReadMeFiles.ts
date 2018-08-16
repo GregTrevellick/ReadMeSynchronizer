@@ -1,4 +1,4 @@
-import { AllRepoMeta } from "./AllRepoMeta";
+import { RepoMetaDatas } from "./RepoMetaDatas";
 import { FileSystemUpdater } from "./FileSystemUpdater";
 import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
@@ -16,16 +16,16 @@ export class ReadMeUpdater {
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
     private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
-    private allRepoMeta: AllRepoMeta;
+    private repoMetaDatas: RepoMetaDatas;
 
     constructor() {
         this.fsu = new FileSystemUpdater;
         this.mp = new MarkdownProvider;
-        this.allRepoMeta = new AllRepoMeta;
+        this.repoMetaDatas = new RepoMetaDatas;
     }
 
     public ReplaceBadgeComments() {
-        for (const repoMetaData of this.allRepoMeta.repoMetaDatas) {
+        for (const repoMetaData of this.repoMetaDatas.repoMetaDatas) {
             const badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
             this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
@@ -141,7 +141,7 @@ export class ReadMeUpdater {
 
         let badgesMarkdown = "";
 
-        const allReposExceptSpecials = this.allRepoMeta.repoMetaDatas.filter(x => x.localRepoName != badges.localRepoName);
+        const allReposExceptSpecials = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != badges.localRepoName);
 
         for (const repoMetaData of allReposExceptSpecials) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];

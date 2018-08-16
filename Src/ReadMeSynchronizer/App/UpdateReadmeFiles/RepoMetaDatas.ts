@@ -1,7 +1,7 @@
 import { IRepoMetaData } from "./IRepoMetaData";
 import * as myRepos from "./Repos";
 
-export class AllRepoMeta {
+export class RepoMetaDatas {
     public repoMetaDatas: IRepoMetaData[];
 
     constructor() {
