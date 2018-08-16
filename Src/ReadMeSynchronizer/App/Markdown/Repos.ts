@@ -10,7 +10,7 @@ export const autoFindReplace: IRepoMetaData = {
 export const badges: IRepoMetaData = {
     localRepoName: "Badges",
     codacyId: "ae0ba4fe11b2442f9690a99245359f53",
-    repoCategory: RepoCategory.MiscellaneousRepo,
+    repoCategory: RepoCategory.SpecialRepo,
 };
 
 export const dotNetFlags: IRepoMetaData = {

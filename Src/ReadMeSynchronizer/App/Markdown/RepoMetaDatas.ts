@@ -18,9 +18,9 @@ export class RepoMetaDatas {
 
             //misc
             myRepos.badges,
-            myRepos.gitPlayground1,
-            myRepos.gitPlayground2,
-            myRepos.gitPlayground3,
+            //myRepos.gitPlayground1,
+            //myRepos.gitPlayground2,
+            //myRepos.gitPlayground3,
             myRepos.filesForEveryExtensionCreator,
 
             //nuget
