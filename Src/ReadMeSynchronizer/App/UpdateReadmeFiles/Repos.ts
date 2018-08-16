@@ -1,25 +1,6 @@
 import { IRepoMetaData } from "./IRepoMetaData";
 import { RepoCategory } from "./RepoCategory";
 
-export const gitPlayground1: IRepoMetaData = {
-    localRepoName: "GitPlayground1",
-    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-};
-
-export const gitPlayground2: IRepoMetaData = {
-    localRepoName: "GitPlayground2",
-    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-};
-
-export const gitPlayground3: IRepoMetaData = {
-    localRepoName: "Git-Playground3",
-    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-};
-
-
 export const autoFindReplace: IRepoMetaData = {
     localRepoName: "AutoFindReplace",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
@@ -44,9 +25,21 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
-export const readMeSynchronizer: IRepoMetaData = {
-    localRepoName: "ReadMeSynchronizer",
-    codacyId: "todo",
+export const gitPlayground1: IRepoMetaData = {
+    localRepoName: "GitPlayground1",
+    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+};
+
+export const gitPlayground2: IRepoMetaData = {
+    localRepoName: "GitPlayground2",
+    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+};
+
+export const gitPlayground3: IRepoMetaData = {
+    localRepoName: "Git-Playground3",
+    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
@@ -66,6 +59,12 @@ export const quizLauncher: IRepoMetaData = {
     localRepoName: "Quiz.Launcher",
     codacyId: "b1a2d4b9fd774d64ae56a8ffdd80b978",
     repoCategory: RepoCategory.VsIdeExtension,
+};
+
+export const readMeSynchronizer: IRepoMetaData = {
+    localRepoName: "ReadMeSynchronizer",
+    codacyId: "todo",
+    repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
 export const solutionOpenPopUp: IRepoMetaData = {
