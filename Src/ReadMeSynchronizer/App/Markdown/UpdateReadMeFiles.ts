@@ -1,12 +1,11 @@
-import { RepoMetaDatas } from "./RepoMetaDatas";
 import { FileSystemUpdater } from "./FileSystemUpdater";
 import { IRepoMetaData } from "./IRepoMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoCategory } from "./RepoCategory";
+import { RepoMetaDatas } from "./RepoMetaDatas";
 import { badges } from "./Repos";
 
 export class ReadMeUpdater {
-    private lineBreak: string = "\n";
     public replace = require("gulp-string-replace");
     public prefix: string = "Badges";
     public htmlCommentStart: string = "<!--" + this.prefix;
@@ -14,6 +13,7 @@ export class ReadMeUpdater {
     public badgeCommentStartSuffix: string = "<!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->";
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
+    private lineBreak: string = "\n";
     private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;

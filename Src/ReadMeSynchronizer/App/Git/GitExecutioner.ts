@@ -1,6 +1,6 @@
-import { GitCommand } from "./GitCommand";
 import { RepoCategory } from "../Markdown/RepoCategory";
 import { RepoMetaDatas } from "../Markdown/RepoMetaDatas";
+import { GitCommand } from "./GitCommand";
 
 export class GitExecutioner {
 
@@ -22,14 +22,14 @@ export class GitExecutioner {
 
     private GitProcessRepo(localRepoName: string, gitCommand: GitCommand) {
 
-        const simpleGit = require('simple-git');//require('simple-git')(workingDirPath);
+        const simpleGit = require("simple-git");//require('simple-git')(workingDirPath);
         const targetReadMeFileName = "README.md";
         const workingDirPath: string = "../../../" + localRepoName;
 
         switch (gitCommand) {
             case GitCommand.CommitReadMe: {
                 const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
-                simpleGit(workingDirPath).commit(commitMessage, targetReadMeFileName)
+                simpleGit(workingDirPath).commit(commitMessage, targetReadMeFileName);
                 break;
             }
             case GitCommand.PullRepo: {
@@ -55,7 +55,7 @@ export class GitExecutioner {
         const gitCommandExec = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " " + gitCommand;
         //e.g. "git --git-dir=../../../VsixFootie/.git --work-tree=../../../VsixFootie checkout -- README.md"
         //e.g. "git --git-dir=../../../VsixFootie/.git --work-tree=../../../VsixFootie push origin master"
-        var exec = require('child_process').exec;
+        const exec = require("child_process").exec;
         exec(gitCommandExec);
     }
 }

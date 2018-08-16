@@ -11,4 +11,4 @@ export enum RepoCategory {
 //VsixHelloWorldCommandButton ==> HelloWorldVsixCommandButton
 //VsixHelloWorldPopUp ==> HelloWorldVsixPopUp
 //VsixToolWindowAsyncPackageExample ==> HelloWorldVsixToolWindowAsyncPackageExample
-//WpfAsyncBindingPropertyExample ==> HelloWorldWpfAsyncBindingPropertyExample 
+//WpfAsyncBindingPropertyExample ==> HelloWorldWpfAsyncBindingPropertyExample
