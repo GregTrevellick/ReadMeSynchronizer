@@ -1,4 +1,3 @@
-git commands - 
 get rid of karma packages
 
 all PRs/issues in one place
