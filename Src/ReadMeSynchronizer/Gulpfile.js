@@ -2,7 +2,7 @@
 
 "use strict";
 
-const gulp = require('gulp');
+const gulp = require("gulp");
 const run = require("gulp-run");
 const Server = require('karma').Server;
 
