@@ -1,6 +1,6 @@
 ﻿/// <binding AfterBuild='default' ProjectOpened='default' />
 
-//"use strict";
+"use strict";
 
 const gulp = require('gulp');
 const run = require("gulp-run");
