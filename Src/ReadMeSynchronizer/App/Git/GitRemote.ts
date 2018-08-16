@@ -26,22 +26,22 @@ export class GitCommit {
                 //    break;
                 //}
                 case GitCommand.CommitReadMe: {
-                    simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)
+                    simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)//TESTED OKAY
                     break;
                 }
                 //case GitCommand.FetchRepo: {
                 //    break;
                 //}
                 case GitCommand.PullRepo: {
-                    simpleGit(workingDirPath).pull("origin", "master");
+                    simpleGit(workingDirPath).pull("origin", "master");//TESTED OKAY
                     break;
                 }
                 case GitCommand.PushReadMe: {
-                    this.RunGitCommandForReadMeFile(workingDirPath, "push");
+                    this.RunGitCommandForReadMeFile(workingDirPath, "push");//TO BE TESTED
                     break;
                 }
                 case GitCommand.UndoReadMe: {
-                    this.RunGitCommandForReadMeFile(workingDirPath, "checkout");
+                    this.RunGitCommandForReadMeFile(workingDirPath, "checkout");//TESTED OKAY
                     break;
                 }
                 default: {
