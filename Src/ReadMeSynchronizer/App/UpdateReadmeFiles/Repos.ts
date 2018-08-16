@@ -1,6 +1,25 @@
 import { IRepoMetaData } from "./IRepoMetaData";
 import { RepoCategory } from "./RepoCategory";
 
+export const gitPlayground1: IRepoMetaData = {
+    localRepoName: "GitPlayground1",
+    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+};
+
+export const gitPlayground2: IRepoMetaData = {
+    localRepoName: "GitPlayground2",
+    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+};
+
+export const gitPlayground3: IRepoMetaData = {
+    localRepoName: "Git-Playground3",
+    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+};
+
+
 export const autoFindReplace: IRepoMetaData = {
     localRepoName: "AutoFindReplace",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",

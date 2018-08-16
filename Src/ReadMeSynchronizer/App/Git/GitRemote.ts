@@ -26,22 +26,22 @@ export class GitCommit {
                 //    break;
                 //}
                 case GitCommand.CommitReadMe: {
-                    simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)//TESTED OKAY
+                    simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)
                     break;
                 }
                 //case GitCommand.FetchRepo: {
                 //    break;
                 //}
                 case GitCommand.PullRepo: {
-                    simpleGit(workingDirPath).pull("origin", "master");//TESTED OKAY
+                    simpleGit(workingDirPath).pull("origin", "master");
                     break;
                 }
                 case GitCommand.PushReadMe: {
-                    this.RunGitCommandForReadMeFile(workingDirPath, "push");//TO BE TESTED
+                    this.RunGitCommandForReadMeFile(workingDirPath, "push origin master");
                     break;
                 }
                 case GitCommand.UndoReadMe: {
-                    this.RunGitCommandForReadMeFile(workingDirPath, "checkout");//TESTED OKAY
+                    this.RunGitCommandForReadMeFile(workingDirPath, "checkout -- " + this.targetReadMeFileName);
                     break;
                 }
                 default: {
@@ -53,8 +53,9 @@ export class GitCommit {
     }
 
     private RunGitCommandForReadMeFile(workingDirPath: string, gitCommand: string) {
-        const gitCommandExec = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " " + gitCommand + " -- " + this.targetReadMeFileName;
+        const gitCommandExec = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " " + gitCommand;
         //e.g. "git --git-dir=../../../VsixFootie/.git --work-tree=../../../VsixFootie checkout -- README.md"
+        //e.g. "git --git-dir=../../../VsixFootie/.git --work-tree=../../../VsixFootie push origin master"
         var exec = require('child_process').exec;
         exec(gitCommandExec);
     }
