@@ -1,5 +1,6 @@
 import { AllRepoMeta } from "../UpdateReadmeFiles/AllRepoMeta";
 import { GitCommand } from "./GitCommand";
+import { RepoCategory } from "../UpdateReadmeFiles/RepoCategory";
 
 export class GitCommit {
 
@@ -17,42 +18,46 @@ export class GitCommit {
 
         for (const repoMetaData of this.allRepoMeta.repoMetaDatas) {
 
-            //gregt extract below to equiv of "FileSystemUpdater.ts"
+            if (repoMetaData.repoCategory != RepoCategory.SpecialRepo) {
 
-            const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
+                //gregt extract below to equiv of "FileSystemUpdater.ts"
 
-            switch (gitCommand) {
-                //case GitCommand.CleanRepo: {
-                //    break;
-                //}
-                case GitCommand.CommitReadMe: {
-                    simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)
-                    break;
-                }
-                //case GitCommand.FetchRepo: {
-                //    break;
-                //}
-                case GitCommand.PullRepo: {
-                    simpleGit(workingDirPath).pull("origin", "master");
-                    break;
-                }
-                case GitCommand.PushReadMe: {
-                    this.RunGitCommandForReadMeFile(workingDirPath, "push origin master");
-                    break;
-                }
-                case GitCommand.UndoReadMe: {
-                    this.RunGitCommandForReadMeFile(workingDirPath, "checkout -- " + this.targetReadMeFileName);
-                    break;
-                }
-                default: {
-                    //TODO: error scenario
-                    break;
+                const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
+
+                switch (gitCommand) {
+                    //case GitCommand.CleanRepo: {
+                    //    break;
+                    //}
+                    case GitCommand.CommitReadMe: {
+                        simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)
+                        break;
+                    }
+                    //case GitCommand.FetchRepo: {
+                    //    break;
+                    //}
+                    case GitCommand.PullRepo: {
+                        console.log(workingDirPath);
+                        simpleGit(workingDirPath).pull("origin", "master");
+                        break;
+                    }
+                    case GitCommand.PushRepo: {
+                        this.RunGitCommand(workingDirPath, "push origin master");
+                        break;
+                    }
+                    case GitCommand.UndoReadMe: {
+                        this.RunGitCommand(workingDirPath, "checkout -- " + this.targetReadMeFileName);
+                        break;
+                    }
+                    default: {
+                        //TODO: error scenario
+                        break;
+                    }
                 }
             }
         }
     }
 
-    private RunGitCommandForReadMeFile(workingDirPath: string, gitCommand: string) {
+    private RunGitCommand(workingDirPath: string, gitCommand: string) {
         const gitCommandExec = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " " + gitCommand;
         //e.g. "git --git-dir=../../../VsixFootie/.git --work-tree=../../../VsixFootie checkout -- README.md"
         //e.g. "git --git-dir=../../../VsixFootie/.git --work-tree=../../../VsixFootie push origin master"

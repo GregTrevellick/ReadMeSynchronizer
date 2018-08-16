@@ -3,6 +3,6 @@ export enum GitCommand {
     CommitReadMe,
     //FetchRepo,
     PullRepo,
-    PushReadMe,
+    PushRepo,
     UndoReadMe,
 }
