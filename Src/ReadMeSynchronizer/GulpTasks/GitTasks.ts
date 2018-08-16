@@ -22,9 +22,9 @@ gulp.task("Git_Pull_Repo", () => {
     gitCommand.GitExe(GitCommand.PullRepo);
 });
 
-gulp.task("Git_Push_ReadMe", () => {
+gulp.task("Git_Push_Repo", () => {
     const gitCommand: GitCommit = new GitCommit;
-    gitCommand.GitExe(GitCommand.PushReadMe);
+    gitCommand.GitExe(GitCommand.PushRepo);
 });
 
 gulp.task("Git_Undo_ReadMe", () => {

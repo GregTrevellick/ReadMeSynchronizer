@@ -1,11 +1,11 @@
-import { RepoMetaDatas } from "../UpdateReadmeFiles/RepoMetaDatas";
 import { GitCommand } from "./GitCommand";
-import { RepoCategory } from "../UpdateReadmeFiles/RepoCategory";
+import { RepoCategory } from "../Markdown/RepoCategory";
+import { RepoMetaDatas } from "../Markdown/RepoMetaDatas";
 
 export class GitCommit {
 
-    private targetReadMeFileName = "README.md";
     private repoMetaDatas: RepoMetaDatas;
+    private targetReadMeFileName = "README.md";
 
     constructor() {
         this.repoMetaDatas = new RepoMetaDatas;

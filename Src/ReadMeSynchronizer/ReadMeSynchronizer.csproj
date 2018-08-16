@@ -28,10 +28,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="App\UpdateReadmeFiles\helloworld.spec.ts" />
-    <None Remove="App\UpdateReadmeFiles\helloworld.ts" />
-    <None Remove="App\UpdateReadmeFiles\update_readme_files.spec.ts" />
-    <None Remove="App\UpdateReadmeFiles\zMagicStrings.ts" />
+    <None Remove="App\Markdown\helloworld.spec.ts" />
+    <None Remove="App\Markdown\helloworld.ts" />
+    <None Remove="App\Markdown\update_readme_files.spec.ts" />
+    <None Remove="App\Markdown\zMagicStrings.ts" />
     <None Remove="Gulpfile.js.BAK" />
     <None Remove="GulpfileTest.js" />
     <None Remove="GulpTasks\run_tests_task.ts" />

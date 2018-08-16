@@ -2,13 +2,11 @@
 
 //"use strict";
 
-//Requires
 let gulp = require('gulp');
 const run = require("gulp-run");
 let Server = require('karma').Server;
 
-//Tasks
-require('./GulpTasks/UpdateReadMeFilesTask.ts');
 require('./GulpTasks/GitTasks.ts');
-gulp.task("lint", () => run("npm run lint").exec());
-gulp.task("lint_fix", () => run("npm run lint -- --fix").exec());
+gulp.task("Lint", () => run("npm run lint").exec());
+gulp.task("Lint_Fix", () => run("npm run lint -- --fix").exec());
+require('./GulpTasks/MarkdownTasks.ts');
