@@ -10,7 +10,7 @@ export const autoFindReplace: IRepoMetaData = {
 export const badges: IRepoMetaData = {
     localRepoName: "Badges",
     codacyId: "ae0ba4fe11b2442f9690a99245359f53",
-    repoCategory: RepoCategory.SpecialRepo,
+    repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
 export const dotNetFlags: IRepoMetaData = {
@@ -63,7 +63,7 @@ export const quizLauncher: IRepoMetaData = {
 
 export const readMeSynchronizer: IRepoMetaData = {
     localRepoName: "ReadMeSynchronizer",
-    codacyId: "todo",
+    codacyId: "47d41dfc5df74ceba32dc53ddfd00b28",
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
