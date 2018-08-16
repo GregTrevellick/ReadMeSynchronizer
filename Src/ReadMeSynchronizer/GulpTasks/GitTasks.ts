@@ -1,33 +1,21 @@
 import * as gulp from "gulp";
-import { GitCommit } from "../App/Git/GitRemote";
 import { GitCommand } from "../App/Git/GitCommand";
+import { GitExecutioner } from "../App/Git/GitExecutioner";
 
-//gulp.task("Git_Clean_Repo", () => {
-//    const gitCommand: GitCommit = new GitCommit;
-//    gitCommand.GitExe(GitCommand.CleanRepo);
-//});
+const gitExecutioner: GitExecutioner = new GitExecutioner;
 
 gulp.task("Git_Commit_ReadMe", () => {
-    const gitCommand: GitCommit = new GitCommit;
-    gitCommand.GitExe(GitCommand.CommitReadMe);
+    gitExecutioner.GitExecute(GitCommand.CommitReadMe);
 });
 
-//gulp.task("Git_Fetch_Repo", () => {
-//    const gitCommand: GitCommit = new GitCommit;
-//    gitCommand.GitExe(GitCommand.FetchRepo);
-//});
-
 gulp.task("Git_Pull_Repo", () => {
-    const gitCommand: GitCommit = new GitCommit;
-    gitCommand.GitExe(GitCommand.PullRepo);
+    gitExecutioner.GitExecute(GitCommand.PullRepo);
 });
 
 gulp.task("Git_Push_Repo", () => {
-    const gitCommand: GitCommit = new GitCommit;
-    gitCommand.GitExe(GitCommand.PushRepo);
+    gitExecutioner.GitExecute(GitCommand.PushRepo);
 });
 
 gulp.task("Git_Undo_ReadMe", () => {
-    const gitCommand: GitCommit = new GitCommit;
-    gitCommand.GitExe(GitCommand.UndoReadMe);
+    gitExecutioner.GitExecute(GitCommand.UndoReadMe);
 });

@@ -2,18 +2,16 @@ import { GitCommand } from "./GitCommand";
 import { RepoCategory } from "../Markdown/RepoCategory";
 import { RepoMetaDatas } from "../Markdown/RepoMetaDatas";
 
-export class GitCommit {
+export class GitExecutioner {
 
     private repoMetaDatas: RepoMetaDatas;
-    private targetReadMeFileName = "README.md";
 
     constructor() {
         this.repoMetaDatas = new RepoMetaDatas;
     }
 
-    public GitExe(gitCommand: GitCommand) {
+    public GitExecute(gitCommand: GitCommand) {
 
-        const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
         const simpleGit = require('simple-git');//require('simple-git')(workingDirPath);
 
         for (const repoMetaData of this.repoMetaDatas.repoMetaDatas) {
@@ -22,21 +20,16 @@ export class GitCommit {
 
                 //gregt extract below to equiv of "FileSystemUpdater.ts"
 
+                const targetReadMeFileName = "README.md";
                 const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
 
                 switch (gitCommand) {
-                    //case GitCommand.CleanRepo: {
-                    //    break;
-                    //}
                     case GitCommand.CommitReadMe: {
-                        simpleGit(workingDirPath).commit(commitMessage, this.targetReadMeFileName)
+                        const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
+                        simpleGit(workingDirPath).commit(commitMessage, targetReadMeFileName)
                         break;
                     }
-                    //case GitCommand.FetchRepo: {
-                    //    break;
-                    //}
                     case GitCommand.PullRepo: {
-                        console.log(workingDirPath);
                         simpleGit(workingDirPath).pull("origin", "master");
                         break;
                     }
@@ -45,7 +38,7 @@ export class GitCommit {
                         break;
                     }
                     case GitCommand.UndoReadMe: {
-                        this.RunGitCommand(workingDirPath, "checkout -- " + this.targetReadMeFileName);
+                        this.RunGitCommand(workingDirPath, "checkout -- " + targetReadMeFileName);
                         break;
                     }
                     default: {
