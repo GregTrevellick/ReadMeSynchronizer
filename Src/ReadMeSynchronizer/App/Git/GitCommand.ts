@@ -1,7 +1,7 @@
 export enum GitCommand {
-    CleanRepo,
+    //CleanRepo,
     CommitReadMe,
-    FetchRepo,
+    //FetchRepo,
     PullRepo,
     PushReadMe,
     UndoReadMe,

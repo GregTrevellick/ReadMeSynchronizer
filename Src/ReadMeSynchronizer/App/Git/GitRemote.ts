@@ -13,32 +13,34 @@ export class GitCommit {
 
         const commitMessage = `ReadMeSynchronizer_${gitCommand}`;
         const specificTargetFile = 'README.md';
+        const simpleGit = require('simple-git');//require('simple-git')(workingDirPath);
 
         for (const repoMetaData of this.allRepoMeta.repoMetaDatas) {
 
-            const workingDirPath : string = "../../../" + repoMetaData.localRepoName;
-            const simpleGit = require('simple-git');//////////////////////(workingDirPath);//('../../../VsixFootie');
-
             //gregt extract below to equiv of "FileSystemUpdater.ts"
+
+            const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
+
             switch (gitCommand) {
-                case GitCommand.CleanRepo: {
-                    //clean
-                    break;
-                }
+                //case GitCommand.CleanRepo: {
+                //    break;
+                //}
                 case GitCommand.CommitReadMe: {
                     simpleGit(workingDirPath).commit(commitMessage, specificTargetFile)
                     break;
                 }
-                case GitCommand.FetchRepo: {
-                    //fetch
-                    break;
-                }
+                //case GitCommand.FetchRepo: {
+                //    break;
+                //}
                 case GitCommand.PullRepo: {
-                    //pull
+                    console.log(workingDirPath);
+                    simpleGit(workingDirPath).pull('origin', 'master');
                     break;
                 }
                 case GitCommand.PushReadMe: {
-                    //push
+                    const checkoutReadMeCommand = "git --git-dir=" + workingDirPath + "/.git --work-tree=" + workingDirPath + " push  -- README.md";
+                    var exec = require('child_process').exec;
+                    exec(checkoutReadMeCommand);
                     break;
                 }
                 case GitCommand.UndoReadMe: {
