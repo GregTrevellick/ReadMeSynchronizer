@@ -66,7 +66,7 @@ export class ReadMeUpdater {
         let repoTypeSpecificMarkdown: string[] = [];
 
         if (repoMetaData.repoCategory === RepoCategory.AllBadges) {
-            const allBadgesMarkdown = this.GetAllBadgesMarkdown(repoMetaData.localRepoName);
+            const allBadgesMarkdown = this.GetAllBadgesRepoMarkdown(repoMetaData.localRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(allBadgesMarkdown);
         }
 
@@ -97,16 +97,37 @@ export class ReadMeUpdater {
         return repoTypeSpecificMarkdown;
     }
 
-    private GetAllBadgesMarkdown(localRepoName: string) {
+    private GetAllBadgesRepoMarkdown(localRepoName: string) {
+
+        //TODO avoid repeatedly looping through allReposExceptTheAllBadgesRepo below
 
         let badgesMarkdown = "";
 
         const allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
+        const titleHtag = "#### ";
 
+        //Add badges for every repo, with a title containing category & repo name
         for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
-            badgesMarkdown = badgesMarkdown + this.lineBreak + "#### " + repoCategoryDescription + " - " + repoMetaData.localRepoName + this.GetBadgesMarkdown(repoMetaData);
+            //badgesMarkdown = badgesMarkdown + this.lineBreak + "#### " + repoCategoryDescription + " - " + repoMetaData.localRepoName + this.GetBadgesMarkdown(repoMetaData);
+            const markdown = this.GetBadgesMarkdown(repoMetaData);
+            const title = `${titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
+            badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;//DEDUPE
         }
+
+        ////Add all build badges for every repo
+        //for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
+        //    const markdown = this.GetAllBuildsMarkdown(repoMetaData);
+        //    const title = `${titleHtag}Builds`;
+        //    badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;//DEDUPE
+        //}
+
+        ////Add all PR badges for every repo
+        //for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
+        //    const markdown = this.GetAllPullRequestsMarkdown(repoMetaData);
+        //    const title = `${titleHtag}PRs`;
+        //    badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;//DEDUPE
+        //}
 
         return badgesMarkdown;
     }
