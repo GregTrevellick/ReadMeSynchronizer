@@ -119,11 +119,6 @@ export class ReadMeUpdater {
         return badgesMarkdown;
     }
 
-    private GetTitleAndBadges(badgesMarkdown: string, title: string, markdown: string) {
-        badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;
-        return badgesMarkdown;
-    }
-
     private GetChromeExtensionsBadgesMarkdown(localRepoName: string) {
         return [
             this.mp.GetChromeWebstoreVersion(localRepoName),
@@ -223,4 +218,10 @@ export class ReadMeUpdater {
         }
         return result;
     }
+
+    private GetTitleAndBadges(badgesMarkdown: string, title: string, markdown: string) {
+        badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;
+        return badgesMarkdown;
+    }
+
 }
