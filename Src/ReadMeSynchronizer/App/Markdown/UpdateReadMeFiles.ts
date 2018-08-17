@@ -185,6 +185,10 @@ export class ReadMeUpdater {
         let badgesByTypeMarkdown = "";
 
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorBuildStatus);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorUnitTests);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.BetterCodeHubCompliance);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodacyBadge);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
 
         return badgesByTypeMarkdown;
@@ -200,6 +204,26 @@ export class ReadMeUpdater {
                 case GroupedBadgeType.AppveyorBuildStatus: {
                     title = `${this.titleHtag}Appveyor Builds`;
                     badgesMarkdown += this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.AppveyorUnitTests: {
+                    title = `${this.titleHtag}Appveyor Tests`;
+                    badgesMarkdown += this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.BetterCodeHubCompliance: {
+                    title = `${this.titleHtag}Better Code`;
+                    badgesMarkdown += this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.CodacyBadge: {
+                    title = `${this.titleHtag}Codacy`;
+                    badgesMarkdown += this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId);
+                    break;
+                }
+                case GroupedBadgeType.CodeFactor: {
+                    title = `${this.titleHtag}CodeFactor`;
+                    badgesMarkdown += this.mp.GetCodeFactor(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.GitHubPullRequests: {
