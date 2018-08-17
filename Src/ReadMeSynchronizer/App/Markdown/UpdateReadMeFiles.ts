@@ -152,9 +152,11 @@ export class ReadMeUpdater {
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //build / test coverage related
+            //TODO gregt
             //this.mp.GetCodeCov(repoMetaData.localRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
             this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName),
+            //TODO gregt
             //this.mp.GetTravisBuildStatus(repoMetaData.localRepoName),
 
             //less important stuff
@@ -166,6 +168,10 @@ export class ReadMeUpdater {
     }
 
     private GetVsIdeExtensionsBadgesMarkdown(localRepoName: string) {
+        //TODO gregt
+        //if oia.launcher add 20x3 badges for oia apps
+        //if trivial api add 5x3 badges for trivial apps
+        //else
         return [
             this.mp.GetVisualStudioMarketplaceIDEDownloads(localRepoName),
             this.mp.GetVisualStudioMarketplaceIDERatings(localRepoName),
