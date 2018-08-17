@@ -1,3 +1,6 @@
+??? set default codefactor url to https://www.codefactor.io/repository/github/gregtrevellick/vstsdashboardwidgetprojecttemplate/files ?
+
+
 get rid of karma packages
 
 (low priority) add in hello world apps
