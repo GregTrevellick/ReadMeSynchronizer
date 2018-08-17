@@ -1,10 +1,16 @@
 ??? set default codefactor url to https://www.codefactor.io/repository/github/gregtrevellick/vstsdashboardwidgetprojecttemplate/files ?
 
+rename vsixfootie repo to vssportsdesk
 
 get rid of karma packages
 
 (low priority) add in hello world apps
 (low priority) add a video demo to ReadMeSynchronizer readme file
+
+dependabot
+https://github.com/marketplace/sider
+https://github.com/marketplace/crowdin
+https://github.com/marketplace/backhub
 
 
 BADGES TO ADD
