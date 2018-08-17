@@ -237,7 +237,7 @@ export class ReadMeUpdater {
                     break;
                 }
                 case GroupedBadgeType.GitHubPullRequests: {
-                    title = `${this.titleHtag}PRs`;
+                    title = `${this.titleHtag}Pull Requests`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetGitHubPullRequests(repoMetaData.localRepoName)}`;
                     break;
                 }
