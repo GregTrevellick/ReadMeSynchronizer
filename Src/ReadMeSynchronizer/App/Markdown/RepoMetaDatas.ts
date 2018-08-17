@@ -11,13 +11,12 @@ export class RepoMetaDatas {
         this.repoMetaDatas = [
 
             //special
-            myRepos.readMeSynchronizer,
+            myRepos.allBadges,
 
             //chrome
             myRepos.visualStudioMarketplaceMetrics,
 
             //misc
-            myRepos.badges,
             //myRepos.gitPlayground1,
             //myRepos.gitPlayground2,
             //myRepos.gitPlayground3,
@@ -26,6 +25,9 @@ export class RepoMetaDatas {
             //nuget
             myRepos.dotNetFlags,
             myRepos.vsixRatingChaser,
+
+            //readMeSynchronizer
+            myRepos.readMeSynchronizer,
 
             //vsts extensions
             myRepos.vsixTwitterWidget,

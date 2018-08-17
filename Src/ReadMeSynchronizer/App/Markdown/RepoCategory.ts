@@ -1,8 +1,9 @@
 export enum RepoCategory {
+    AllBadges,
     ChromeExtension,
     MiscellaneousRepo,
     NugetPackage,
-    SpecialRepo,
+    ReadMeSynchronizer,
     VsIdeExtension,
     VsixHelloWorld,
     VstsExtension,

@@ -1,16 +1,16 @@
 import { IRepoMetaData } from "./IRepoMetaData";
 import { RepoCategory } from "./RepoCategory";
 
+export const allBadges: IRepoMetaData = {
+    localRepoName: "AllBadges",
+    codacyId: "ae0ba4fe11b2442f9690a99245359f53",
+    repoCategory: RepoCategory.AllBadges,
+};
+
 export const autoFindReplace: IRepoMetaData = {
     localRepoName: "AutoFindReplace",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
     repoCategory:RepoCategory.VsIdeExtension,
-};
-
-export const badges: IRepoMetaData = {
-    localRepoName: "Badges",
-    codacyId: "ae0ba4fe11b2442f9690a99245359f53",
-    repoCategory: RepoCategory.SpecialRepo,
 };
 
 export const dotNetFlags: IRepoMetaData = {
@@ -64,7 +64,7 @@ export const quizLauncher: IRepoMetaData = {
 export const readMeSynchronizer: IRepoMetaData = {
     localRepoName: "ReadMeSynchronizer",
     codacyId: "47d41dfc5df74ceba32dc53ddfd00b28",
-    repoCategory: RepoCategory.MiscellaneousRepo,
+    repoCategory: RepoCategory.ReadMeSynchronizer,
 };
 
 export const solutionOpenPopUp: IRepoMetaData = {
