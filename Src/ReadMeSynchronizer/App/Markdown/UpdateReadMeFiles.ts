@@ -26,7 +26,12 @@ export class ReadMeUpdater {
 
     public ReplaceBadgeComments() {
         for (const repoMetaData of this.repoMetaDatas.repoMetaDatas) {
-            const badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
+            let badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
+
+            if (repoMetaData.localRepoName === allBadges.localRepoName) {
+                badgesMarkdown +=  this.GetBadgesByType(this.repoMetaDatas.repoMetaDatas);
+            }
+
             this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
     }
@@ -66,18 +71,18 @@ export class ReadMeUpdater {
         let repoTypeSpecificMarkdown: string[] = [];
 
         if (repoMetaData.repoCategory === RepoCategory.AllBadges) {
-            const allBadgesMarkdown = this.GetAllBadgesRepoMarkdown(repoMetaData.localRepoName);
-            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(allBadgesMarkdown);
+            const badgesMarkdown = this.GetAllBadgesRepoMarkdown(repoMetaData.localRepoName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.ChromeExtension) {
-            const chromeExtensionsBadgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.localRepoName);
-            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(chromeExtensionsBadgesMarkdown);
+            const badgesMarkdown = this.GetChromeExtensionsBadgesMarkdown(repoMetaData.localRepoName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.NugetPackage) {
-            const nugetBadgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.localRepoName);
-            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(nugetBadgesMarkdown);
+            const badgesMarkdown = this.GetNugetBadgesMarkdown(repoMetaData.localRepoName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.ReadMeSynchronizer) {
@@ -90,8 +95,8 @@ export class ReadMeUpdater {
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
-            const vstsExtensionsBadgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.localRepoName);
-            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(vstsExtensionsBadgesMarkdown);
+            const badgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.localRepoName);
+            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         return repoTypeSpecificMarkdown;
@@ -99,35 +104,29 @@ export class ReadMeUpdater {
 
     private GetAllBadgesRepoMarkdown(localRepoName: string) {
 
-        //TODO avoid repeatedly looping through allReposExceptTheAllBadgesRepo below
-
         let badgesMarkdown = "";
-
         const allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
         const titleHtag = "#### ";
 
         //Add badges for every repo, with a title containing category & repo name
         for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
-            //badgesMarkdown = badgesMarkdown + this.lineBreak + "#### " + repoCategoryDescription + " - " + repoMetaData.localRepoName + this.GetBadgesMarkdown(repoMetaData);
             const markdown = this.GetBadgesMarkdown(repoMetaData);
             const title = `${titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
             badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
         }
 
-        //Add all build badges for every repo
-        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
-            const markdown = "builds" + repoMetaData.localRepoName;//this.GetAllBuildsMarkdown(repoMetaData);
-            const title = `${titleHtag}Builds`;
-            badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
-        }
+        ////Add all build badges for every repo
+        //const buildsTitle = `${titleHtag}Builds`;
+        //const buildStatusesMarkdown = this.GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo);
+        //const buildStatusesBadgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, buildsTitle, buildStatusesMarkdown);
+        //badgesMarkdown += buildStatusesBadgesMarkdown;
 
-        //Add all PR badges for every repo
-        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
-            const markdown = "PRs" + repoMetaData.localRepoName;//this.GetAllPullRequestsMarkdown(repoMetaData);
-            const title = `${titleHtag}PRs`;
-            badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
-        }
+        ////Add all PR badges for every repo
+        //const pullRequestsTitle = `${titleHtag}PRs`;
+        //const pullRequestsMarkdown = this.GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo);
+        //const pullRequestsBadgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, pullRequestsTitle, pullRequestsMarkdown);
+        //badgesMarkdown += pullRequestsBadgesMarkdown;
 
         return badgesMarkdown;
     }
@@ -195,5 +194,42 @@ export class ReadMeUpdater {
             this.mp.GetVisualStudioMarketplaceVSTSRatings(localRepoName),
             this.mp.GetVisualStudioMarketplaceVSTSVersion(localRepoName),
         ];
+    }
+
+    private GetBadgesByType(repoMetaDatas: IRepoMetaData[]): string {
+
+        let badgesMarkdown = "";
+        const allReposExceptTheAllBadgesRepo = repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
+        const titleHtag = "#### ";
+
+        //Add all build badges for every repo
+        const buildsTitle = `${titleHtag}Builds`;
+        const buildStatusesMarkdown = this.GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo);
+        const buildStatusesBadgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, buildsTitle, buildStatusesMarkdown);
+        badgesMarkdown += buildStatusesBadgesMarkdown;
+
+        //Add all PR badges for every repo
+        const pullRequestsTitle = `${titleHtag}PRs`;
+        const pullRequestsMarkdown = this.GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo);
+        const pullRequestsBadgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, pullRequestsTitle, pullRequestsMarkdown);
+        badgesMarkdown += pullRequestsBadgesMarkdown;
+
+        return badgesMarkdown;
+    }
+
+    private GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[]) {
+        let result = "";
+        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
+            result += ` bbb${repoMetaData.localRepoName} `;
+        }
+        return result;
+    }
+
+    private GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[]) {
+        let result = "";
+        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
+            result += ` PRPRPR${repoMetaData.localRepoName} `;
+        }
+        return result;
     }
 }
