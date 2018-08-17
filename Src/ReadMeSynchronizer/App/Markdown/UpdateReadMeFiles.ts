@@ -112,23 +112,28 @@ export class ReadMeUpdater {
             //badgesMarkdown = badgesMarkdown + this.lineBreak + "#### " + repoCategoryDescription + " - " + repoMetaData.localRepoName + this.GetBadgesMarkdown(repoMetaData);
             const markdown = this.GetBadgesMarkdown(repoMetaData);
             const title = `${titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
-            badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;//DEDUPE
+            badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
         }
 
-        ////Add all build badges for every repo
-        //for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
-        //    const markdown = this.GetAllBuildsMarkdown(repoMetaData);
-        //    const title = `${titleHtag}Builds`;
-        //    badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;//DEDUPE
-        //}
+        //Add all build badges for every repo
+        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
+            const markdown = "builds" + repoMetaData.localRepoName;//this.GetAllBuildsMarkdown(repoMetaData);
+            const title = `${titleHtag}Builds`;
+            badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
+        }
 
-        ////Add all PR badges for every repo
-        //for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
-        //    const markdown = this.GetAllPullRequestsMarkdown(repoMetaData);
-        //    const title = `${titleHtag}PRs`;
-        //    badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;//DEDUPE
-        //}
+        //Add all PR badges for every repo
+        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
+            const markdown = "PRs" + repoMetaData.localRepoName;//this.GetAllPullRequestsMarkdown(repoMetaData);
+            const title = `${titleHtag}PRs`;
+            badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
+        }
 
+        return badgesMarkdown;
+    }
+
+    private GetTitleAndBadges(badgesMarkdown: string, title: string, markdown: string) {
+        badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;
         return badgesMarkdown;
     }
 
