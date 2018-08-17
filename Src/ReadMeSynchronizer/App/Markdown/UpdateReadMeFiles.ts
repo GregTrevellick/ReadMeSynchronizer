@@ -158,7 +158,7 @@ export class ReadMeUpdater {
             //build / test coverage related
             //TODO gregt
             //this.mp.GetCodeCov(repoMetaData.localRepoName),
-            this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName),
+            this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId),
             this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName),
             //TODO gregt
             //this.mp.GetTravisBuildStatus(repoMetaData.localRepoName),
@@ -213,7 +213,7 @@ export class ReadMeUpdater {
             {
                 case GroupedBadgeType.AppveyorBuildStatus: {
                     title = `${this.titleHtag}Appveyor Builds`;
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName)}`;
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId)}`;
                     break;
                 }
                 case GroupedBadgeType.AppveyorUnitTests: {

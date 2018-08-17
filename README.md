@@ -8,13 +8,14 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/pulls)
-[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/GregTrevellick/ReadMeSynchronizer)
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/uy4igyamwjq51gx4?svg=true)](https://ci.appveyor.com/project/GregTrevellick/ReadMeSynchronizer)
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/ReadMeSynchronizer.svg)](https://ci.appveyor.com/project/GregTrevellick/ReadMeSynchronizer/build/tests)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 <!--BadgesEND-->
+
 
 
 

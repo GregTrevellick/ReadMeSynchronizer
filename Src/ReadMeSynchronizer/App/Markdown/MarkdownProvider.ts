@@ -49,9 +49,9 @@ export class MarkdownProvider {
         return "[![CodeFactor](https://www.codefactor.io/repository/github/" + myUserName + "/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/" + myUserName + "/" + localRepoName + ")";
     }
 
-    public GetAppveyorBuildStatus(localRepoName: string) {
+    public GetAppveyorBuildStatus(localRepoName: string, appVeyorId: string) {
         const appVeyorRepoName = this.DotSubstituion(localRepoName);
-        return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/0vwmtcboontemltq?svg=true)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + ")";
+        return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/" + appVeyorId + "?svg=true)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + ")";
     }
 
     public GetAppveyorUnitTests(localRepoName: string) {
