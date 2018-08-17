@@ -14,15 +14,15 @@ export class ReadMeUpdater {
     public badgeCommentStartSuffix: string = "<!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->";
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
+    private allReposExceptTheAllBadgesRepo: IRepoMetaData[];
+    private fileSystemUpdater: FileSystemUpdater;
     private lineBreak: string = "\n";
-    private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;
     private titleHtag = "#### ";
-    private allReposExceptTheAllBadgesRepo: IRepoMetaData[];
 
     constructor() {
-        this.fsu = new FileSystemUpdater;
+        this.fileSystemUpdater = new FileSystemUpdater;
         this.mp = new MarkdownProvider;
         this.repoMetaDatas = new RepoMetaDatas;
         this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
@@ -30,19 +30,23 @@ export class ReadMeUpdater {
 
     public ReplaceBadgeComments() {
         for (const repoMetaData of this.repoMetaDatas.repoMetaDatas) {
-            let badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
+
+            let baseBadgesMarkdown = "";
 
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
-                badgesMarkdown += this.GetBadgesByType();
+                baseBadgesMarkdown += this.GetBadgesByType();
             }
 
-            this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
+            baseBadgesMarkdown += this.GetMultipleBadgesMarkdown(repoMetaData);
+
+            const surroundedBadgesMarkdown = this.GetSurroundedBadgesMarkdown(baseBadgesMarkdown);
+
+            this.fileSystemUpdater.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, surroundedBadgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
     }
 
-    private GetBadgesMarkdown(repoMetaData: IRepoMetaData) {
-        const multipleBadgesMarkdown = this.GetMultipleBadgesMarkdown(repoMetaData);
-        return `${this.badgeCommentStart}${this.lineBreak}${this.badgeCommentStartSuffix}${this.lineBreak}${multipleBadgesMarkdown}${this.badgeCommentEnd}${this.lineBreak}`;
+    private GetSurroundedBadgesMarkdown(baseBadgesMarkdown: string) {
+        return `${this.badgeCommentStart}${this.lineBreak}${this.badgeCommentStartSuffix}${this.lineBreak}${baseBadgesMarkdown}${this.badgeCommentEnd}${this.lineBreak}`;
     }
 
     private GetMultipleBadgesMarkdown(repoMetaData: IRepoMetaData) {
@@ -113,7 +117,7 @@ export class ReadMeUpdater {
         //Add badges for every repo, with a title containing category & repo name
         for (const repoMetaData of this.allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
-            const markdown = this.GetBadgesMarkdown(repoMetaData);
+            const markdown = this.GetMultipleBadgesMarkdown(repoMetaData);
             const title = `${this.titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
             badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
