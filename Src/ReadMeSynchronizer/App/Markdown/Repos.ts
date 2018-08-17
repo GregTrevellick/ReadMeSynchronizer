@@ -65,7 +65,7 @@ export const quickLaunchButtons: IRepoMetaData = {
 };
 
 export const quizLauncher: IRepoMetaData = {
-    appVeyorId: "jqxgkp5agw1seyxo",
+    appVeyorId: "i3u8gbuxoql23t9i",
     localRepoName: "Quiz.Launcher",
     codacyId: "b1a2d4b9fd774d64ae56a8ffdd80b978",
     repoCategory: RepoCategory.VsIdeExtension,
