@@ -116,18 +116,6 @@ export class ReadMeUpdater {
             badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
         }
 
-        ////Add all build badges for every repo
-        //const buildsTitle = `${titleHtag}Builds`;
-        //const buildStatusesMarkdown = this.GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo);
-        //const buildStatusesBadgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, buildsTitle, buildStatusesMarkdown);
-        //badgesMarkdown += buildStatusesBadgesMarkdown;
-
-        ////Add all PR badges for every repo
-        //const pullRequestsTitle = `${titleHtag}PRs`;
-        //const pullRequestsMarkdown = this.GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo);
-        //const pullRequestsBadgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, pullRequestsTitle, pullRequestsMarkdown);
-        //badgesMarkdown += pullRequestsBadgesMarkdown;
-
         return badgesMarkdown;
     }
 
