@@ -220,7 +220,7 @@ export class ReadMeUpdater {
     }
 
     private GetTitleAndBadges(title: string, markdown: string) {
-        return `${this.lineBreak}${title}${markdown}`;
+        return `${title}${this.lineBreak}${markdown}${this.lineBreak}`;
     }
 
 }
