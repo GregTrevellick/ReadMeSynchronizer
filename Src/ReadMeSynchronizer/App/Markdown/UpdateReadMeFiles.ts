@@ -37,7 +37,7 @@ export class ReadMeUpdater {
                 baseBadgesMarkdown += this.GetBadgesByType();
             }
 
-            baseBadgesMarkdown += this.GetMultipleBadgesMarkdown(repoMetaData);
+            baseBadgesMarkdown += `${this.lineBreak}${this.GetMultipleBadgesMarkdown(repoMetaData)}`;
 
             const surroundedBadgesMarkdown = this.GetSurroundedBadgesMarkdown(baseBadgesMarkdown);
 
