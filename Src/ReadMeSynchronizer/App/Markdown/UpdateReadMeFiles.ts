@@ -113,7 +113,8 @@ export class ReadMeUpdater {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetBadgesMarkdown(repoMetaData);
             const title = `${titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
-            badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
+            //badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
+            badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
 
         return badgesMarkdown;
@@ -191,13 +192,13 @@ export class ReadMeUpdater {
         //Add all build badges for every repo
         title = `${titleHtag}Builds`;
         badgesMarkdown = this.GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo);
-        titleAndBadges = this.GetTitleAndBadges(badgesByTypeMarkdown, title, badgesMarkdown);//gregt DEDUPE
+        titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
         //Add all PR badges for every repo
         title = `${titleHtag}PRs`;
         badgesMarkdown = this.GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo);
-        titleAndBadges = this.GetTitleAndBadges(badgesByTypeMarkdown, title, badgesMarkdown);//gregt DEDUPE
+        titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
         return badgesByTypeMarkdown;
@@ -219,9 +220,8 @@ export class ReadMeUpdater {
         return result;
     }
 
-    private GetTitleAndBadges(badgesMarkdown: string, title: string, markdown: string) {
-        badgesMarkdown = `${badgesMarkdown}${this.lineBreak}${title}${markdown}`;
-        return badgesMarkdown;
+    private GetTitleAndBadges(title: string, markdown: string) {
+        return `${this.lineBreak}${title}${markdown}`;
     }
 
 }
