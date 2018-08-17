@@ -1,7 +1,5 @@
 get rid of karma packages
 
-all PRs/issues in one place
-
 vside - diff & multiple url from repo name
 
 (low priority) add in hello world apps

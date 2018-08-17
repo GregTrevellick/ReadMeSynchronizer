@@ -4,6 +4,7 @@ import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoCategory } from "./RepoCategory";
 import { RepoMetaDatas } from "./RepoMetaDatas";
 import { allBadges } from "./Repos";
+import { GroupedBadgeType } from "./GroupedBadgeType";
 
 export class ReadMeUpdater {
     public replace = require("gulp-string-replace");
@@ -187,39 +188,44 @@ export class ReadMeUpdater {
         let title = "";
         let titleAndBadges = "";
 
+        //repeat the below for all entries in GroupedBadgeType
+
         //Add all build badges for every repo
         title = `${this.titleHtag}Appveyor Builds`;
-        badgesMarkdown = this.GetAllAppveyorBuildStatusesMarkdown(this.allReposExceptTheAllBadgesRepo);
+        badgesMarkdown = this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorBuildStatus);
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
         //Add all PR badges for every repo
         title = `${this.titleHtag}PRs`;
-        badgesMarkdown = this.GetAllPullRequestsMarkdown(this.allReposExceptTheAllBadgesRepo);
+        badgesMarkdown = this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
         return badgesByTypeMarkdown;
     }
 
-    private GetAllAppveyorBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[]) {
+    private GetGroupedBadgeTypeMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[], groupedBadgeType: GroupedBadgeType) {
         let result = "";
-        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
-            result += this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName);
-        }
-        return result;
-    }
 
-    private GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[]) {
-        let result = "";
         for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
-            result += this.mp.GetGitHubPullRequests(repoMetaData.localRepoName);
+            switch (groupedBadgeType)
+            {
+                case GroupedBadgeType.AppveyorBuildStatus: {
+                    result += this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.GitHubPullRequests: {
+                    result += this.mp.GetGitHubPullRequests(repoMetaData.localRepoName);
+                    break;
+                }
+            }
         }
+
         return result;
     }
 
     private GetTitleAndBadges(title: string, markdown: string) {
         return `${title}${this.lineBreak}${markdown}${this.lineBreak}`;
     }
-
 }
