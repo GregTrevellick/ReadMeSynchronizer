@@ -199,6 +199,11 @@ export class ReadMeUpdater {
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
+        //GetAppveyorUnitTests
+        //GetCodeFactor
+        //GetCodacyBadge
+        //GetBetterCodeHubCompliance
+
         return badgesByTypeMarkdown;
     }
 

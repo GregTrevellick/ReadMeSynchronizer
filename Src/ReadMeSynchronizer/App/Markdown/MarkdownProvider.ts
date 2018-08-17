@@ -40,6 +40,7 @@ export class MarkdownProvider {
             "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
     }
 
+    //codecov temporarily disabled
     public GetCodeCov(localRepoName: string) {
         return "[![codecov](https://codecov.io/gh/" + myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + myUserName + "/" + localRepoName + ")";
     }
@@ -58,6 +59,7 @@ export class MarkdownProvider {
         return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + "/build/tests)";
     }
 
+    //travis build temporarily disabled
     public GetTravisBuildStatus(localRepoName: string) {
         return "[![Travis Build Status](https://travis-ci.org/" + myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + myUserName + "/" + localRepoName + ")";
     }
