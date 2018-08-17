@@ -1,9 +1,9 @@
 version: 1.0.{build}
 image: Visual Studio 2017
 before_build:
-- cmd: nuget restore FilesForEveryExtensionCreator.sln
+- cmd: nuget restore Src/ReadMeSynchronizer.sln
 build:
-  project: FilesForEveryExtensionCreator.sln
+  project: Src/ReadMeSynchronizer.sln
   verbosity: minimal
 notifications:
 - provider: Email
