@@ -18,11 +18,13 @@ export class ReadMeUpdater {
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;
     private titleHtag = "#### ";
+    private allReposExceptTheAllBadgesRepo: IRepoMetaData[];
 
     constructor() {
         this.fsu = new FileSystemUpdater;
         this.mp = new MarkdownProvider;
         this.repoMetaDatas = new RepoMetaDatas;
+        this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
     }
 
     public ReplaceBadgeComments() {
@@ -30,7 +32,7 @@ export class ReadMeUpdater {
             let badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
 
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
-                badgesMarkdown += this.GetBadgesByType(this.repoMetaDatas.repoMetaDatas);
+                badgesMarkdown += this.GetBadgesByType();
             }
 
             this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
@@ -106,10 +108,9 @@ export class ReadMeUpdater {
     private GetAllBadgesRepoMarkdown(localRepoName: string) {
 
         let badgesMarkdown = "";
-        const allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);//gregt DEDUPE
 
         //Add badges for every repo, with a title containing category & repo name
-        for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
+        for (const repoMetaData of this.allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetBadgesMarkdown(repoMetaData);
             const title = `${this.titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
@@ -179,9 +180,8 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetBadgesByType(repoMetaDatas: IRepoMetaData[]): string {
+    private GetBadgesByType(): string {
 
-        const allReposExceptTheAllBadgesRepo = repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);//gregt DEDUPE
         let badgesMarkdown = "";
         let badgesByTypeMarkdown = "";
         let title = "";
@@ -189,13 +189,13 @@ export class ReadMeUpdater {
 
         //Add all build badges for every repo
         title = `${this.titleHtag}Builds`;
-        badgesMarkdown = this.GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo);
+        badgesMarkdown = this.GetAllBuildStatusesMarkdown(this.allReposExceptTheAllBadgesRepo);
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
         //Add all PR badges for every repo
         title = `${this.titleHtag}PRs`;
-        badgesMarkdown = this.GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo);
+        badgesMarkdown = this.GetAllPullRequestsMarkdown(this.allReposExceptTheAllBadgesRepo);
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
