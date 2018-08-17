@@ -188,8 +188,8 @@ export class ReadMeUpdater {
         let titleAndBadges = "";
 
         //Add all build badges for every repo
-        title = `${this.titleHtag}Builds`;
-        badgesMarkdown = this.GetAllBuildStatusesMarkdown(this.allReposExceptTheAllBadgesRepo);
+        title = `${this.titleHtag}Appveyor Builds`;
+        badgesMarkdown = this.GetAllAppveyorBuildStatusesMarkdown(this.allReposExceptTheAllBadgesRepo);
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
@@ -199,15 +199,10 @@ export class ReadMeUpdater {
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
-        //GetAppveyorUnitTests
-        //GetCodeFactor
-        //GetCodacyBadge
-        //GetBetterCodeHubCompliance
-
         return badgesByTypeMarkdown;
     }
 
-    private GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[]) {
+    private GetAllAppveyorBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[]) {
         let result = "";
         for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
             result += this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName);
