@@ -29,7 +29,7 @@ export class ReadMeUpdater {
             let badgesMarkdown = this.GetBadgesMarkdown(repoMetaData);
 
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
-                badgesMarkdown +=  this.GetBadgesByType(this.repoMetaDatas.repoMetaDatas);
+                badgesMarkdown += this.GetBadgesByType(this.repoMetaDatas.repoMetaDatas);
             }
 
             this.fsu.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, badgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
@@ -113,7 +113,6 @@ export class ReadMeUpdater {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetBadgesMarkdown(repoMetaData);
             const title = `${titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
-            //badgesMarkdown = this.GetTitleAndBadges(badgesMarkdown, title, markdown);
             badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
 
