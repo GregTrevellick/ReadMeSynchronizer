@@ -182,24 +182,10 @@ export class ReadMeUpdater {
     }
 
     private GetBadgesByType(): string {
-
-      //  let badgesMarkdown = "";
         let badgesByTypeMarkdown = "";
-//        let title = "";
-        let titleAndBadges = "";
 
-        //repeat the below for all entries in GroupedBadgeType
-
-        //Add all build badges for every repo
-        titleAndBadges = this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorBuildStatus);
-        //titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
-        badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
-
-        //Add all PR badges for every repo
-//        title = `${this.titleHtag}PRs`;
-        titleAndBadges = this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
-        //titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
-        badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorBuildStatus);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
 
         return badgesByTypeMarkdown;
     }
@@ -225,7 +211,6 @@ export class ReadMeUpdater {
         }
 
         const titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);
-
         return titleAndBadges;
     }
 
