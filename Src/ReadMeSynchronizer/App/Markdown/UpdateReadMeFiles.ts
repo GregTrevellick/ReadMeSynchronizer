@@ -17,6 +17,7 @@ export class ReadMeUpdater {
     private fsu: FileSystemUpdater;
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;
+    private titleHtag = "#### ";
 
     constructor() {
         this.fsu = new FileSystemUpdater;
@@ -106,13 +107,12 @@ export class ReadMeUpdater {
 
         let badgesMarkdown = "";
         const allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);//gregt DEDUPE
-        const titleHtag = "#### ";//gregt DEDUPE
 
         //Add badges for every repo, with a title containing category & repo name
         for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetBadgesMarkdown(repoMetaData);
-            const title = `${titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
+            const title = `${this.titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
             badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
 
@@ -186,16 +186,15 @@ export class ReadMeUpdater {
         let badgesByTypeMarkdown = "";
         let title = "";
         let titleAndBadges = "";
-        const titleHtag = "#### ";//gregt DEDUPE
 
         //Add all build badges for every repo
-        title = `${titleHtag}Builds`;
+        title = `${this.titleHtag}Builds`;
         badgesMarkdown = this.GetAllBuildStatusesMarkdown(allReposExceptTheAllBadgesRepo);
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
 
         //Add all PR badges for every repo
-        title = `${titleHtag}PRs`;
+        title = `${this.titleHtag}PRs`;
         badgesMarkdown = this.GetAllPullRequestsMarkdown(allReposExceptTheAllBadgesRepo);
         titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);//gregt DEDUPE
         badgesByTypeMarkdown += titleAndBadges;//gregt DEDUPE
