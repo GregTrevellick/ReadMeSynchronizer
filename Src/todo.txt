@@ -1,8 +1,10 @@
-??? set default codefactor url to https://www.codefactor.io/repository/github/gregtrevellick/vstsdashboardwidgetprojecttemplate/files ?
-
 extra blank lines keep appearing in .md
 
 rename vsixfootie repo to vssportsdesk
+
+
+
+??? set default codefactor url to https://www.codefactor.io/repository/github/gregtrevellick/vstsdashboardwidgetprojecttemplate/files ?
 
 get rid of karma packages
 
@@ -10,13 +12,10 @@ add in hello world apps
 
 add a video demo to ReadMeSynchronizer readme file
 
-dependabot
-https://github.com/marketplace/sider
-https://github.com/marketplace/crowdin
-https://github.com/marketplace/backhub
+unit tests (jest ? cypress ?)
 
-credits - https://stackoverflow.com/questions/34211004/how-can-i-debug-gulp-tasks-using-node-tools-for-visual-studio
-convert to proper node app
+
+
 
 BADGES TO ADD
 =============
@@ -29,4 +28,8 @@ HARD https://docs.travis-ci.com/user/coverity-scan/
 HARD https://docs.travis-ci.com/user/sonarcloud/
 HARD https://docs.travis-ci.com/user/coveralls/
 HARD https://docs.travis-ci.com/user/code-climate/
-HARD add in unit tests (jest ? cypress ?)
+
+dependabot
+https://github.com/marketplace/sider
+https://github.com/marketplace/crowdin
+https://github.com/marketplace/backhub
