@@ -72,6 +72,10 @@ export class MarkdownProvider {
         return "[![Charity Ware](" + shieldsDotIoUrl + "badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/" + myUserName + "/MiscellaneousArtefacts/wiki/Charity-Ware)";
     }
 
+    public GetVisualStudioMarketplaceVSTSItemBadge(localRepoName: string) {
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
+    }
+
     public GetVisualStudioMarketplaceVSTSVersion(localRepoName: string) {
         return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
     }
@@ -84,6 +88,10 @@ export class MarkdownProvider {
         return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +"#review-details)";
     }
 
+    public GetVisualStudioMarketplaceIDEItemBadge(localRepoName: string) {
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+    }
+
     public GetVisualStudioMarketplaceIDEVersion(localRepoName: string) {
         return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
@@ -94,10 +102,6 @@ export class MarkdownProvider {
 
     public GetVisualStudioMarketplaceIDERatings(localRepoName: string) {
         return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
-    }
-
-    public GetVisualStudioMarketplaceItemBadge(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
     public GetNugetDownloads(localRepoName: string) {

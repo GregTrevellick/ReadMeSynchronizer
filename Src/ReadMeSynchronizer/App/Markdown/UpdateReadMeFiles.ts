@@ -184,7 +184,7 @@ export class ReadMeUpdater {
 
         for (const vsmpItemName of vsmpItemNames) {
             if (vsmpItemNames.length > 1) {
-                result.push(`${this.mp.GetVisualStudioMarketplaceItemBadge(vsmpItemName)}`);
+                result.push(`${this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName)}`);
             }
             result.push(`${this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName)}`);
             result.push(`${this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName)}`);
@@ -201,7 +201,7 @@ export class ReadMeUpdater {
 
         for (const vsmpItemName of vsmpItemNames) {
             if (vsmpItemNames.length > 1) {
-                result.push(`${this.mp.GetVisualStudioMarketplaceItemBadge(vsmpItemName)}`);
+                result.push(`${this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName)}`);
             }
             result.push(`${this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName)}`);
             result.push(`${this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName)}`);
