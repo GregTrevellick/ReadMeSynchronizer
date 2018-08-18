@@ -104,13 +104,13 @@ export class ReadMeUpdater {
 
         if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
             const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
-            const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(vsmpMetaData.vsmpItemNames);
+            const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(vsmpMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
             const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
-            const badgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(vsmpMetaData.vsmpItemNames);
+            const badgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(vsmpMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
@@ -178,28 +178,29 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetVsIdeExtensionsBadgesMarkdown(vsmpItemNames: string[]) {
+    private GetVsIdeExtensionsBadgesMarkdown(vsmpMetaDatas: IVsmpMetaData) {
         let result: string[] = [""];
-        for (const vsmpItemName of vsmpItemNames) {
-            result.push(this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName));
-            result.push(this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName));
-            result.push(this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName));
-            result.push(this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName));
-            result.push(this.lineBreak);
-        }
-        return result;
-    }
 
-    private GetVstsExtensionsBadgesMarkdown(vsmpItemNames: string[]) {
-        let result: string[] = [""];
-        for (const vsmpItemName of vsmpItemNames) {
-            const itemName = "vsts-extensions-tweets-" + vsmpItemName.replace("@","");
-            result.push(this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, itemName));
-            result.push(this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, itemName));
-            result.push(this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName, itemName));
-            result.push(this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, itemName));
+        for (const vsmpItemName of vsmpMetaDatas.vsmpItemNames) {
+
+            if (vsmpMetaDatas.repoCategory === RepoCategory.VsIdeExtension) {
+                result.push(this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName));
+                result.push(this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName));
+                result.push(this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName));
+                result.push(this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName));
+            }
+
+            if (vsmpMetaDatas.repoCategory === RepoCategory.VstsExtension) {
+                const itemName = "vsts-extensions-tweets-" + vsmpItemName.replace("@", "");
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, itemName));
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, itemName));
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName, itemName));
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, itemName));
+            }
+
             result.push(this.lineBreak);
         }
+
         return result;
     }
 
