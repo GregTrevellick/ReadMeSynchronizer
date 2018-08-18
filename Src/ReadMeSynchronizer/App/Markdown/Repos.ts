@@ -4,7 +4,7 @@ import { RepoCategory } from "./RepoCategory";
 export const allBadges: IRepoMetaData = {
     appVeyorId: "74r2vafgxpf9hee2",
     localRepoName: "AllBadges",
-    codacyId: "ae0ba4fe11b2442f9690a99245359f53",
+    codacyId: "5382464b5e5a47a2a67c3504142869d3",
     repoCategory: RepoCategory.AllBadges,
 };
 
