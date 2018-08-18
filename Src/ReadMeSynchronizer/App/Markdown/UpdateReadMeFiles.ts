@@ -104,13 +104,13 @@ export class ReadMeUpdater {
 
         if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
             const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
-            const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(vsmpMetaData);
+            const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(vsmpMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
             const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
-            const badgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(vsmpMetaData);
+            const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(vsmpMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
@@ -178,7 +178,7 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetVsIdeExtensionsBadgesMarkdown(vsmpMetaDatas: IVsmpMetaData) {
+    private GetVsmpExtensionsBadgesMarkdown(vsmpMetaDatas: IVsmpMetaData) {
         let result: string[] = [""];
 
         for (const vsmpItemName of vsmpMetaDatas.vsmpItemNames) {
