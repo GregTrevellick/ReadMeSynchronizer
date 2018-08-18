@@ -104,8 +104,6 @@ export class ReadMeUpdater {
 
         if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
             const vsmpMetaData = repoMetaData as IVsmpMetaData;
-            //console.log("vsmpMetaData" + vsmpMetaData[0] + vsmpMetaData[1] + vsmpMetaData[2]);
-            console.log("vsmpMetaData.vsmpItemNames" + vsmpMetaData.vsmpItemNames);
             const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(vsmpMetaData.vsmpItemNames);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
@@ -190,12 +188,6 @@ export class ReadMeUpdater {
         }
 
         return result;
-
-        //return [
-        //    this.mp.GetVisualStudioMarketplaceIDEDownloads(repoMetaData.localRepoName),
-        //    this.mp.GetVisualStudioMarketplaceIDERatings(repoMetaData.localRepoName),
-        //    this.mp.GetVisualStudioMarketplaceIDEVersion(repoMetaData.localRepoName),
-        //];
     }
 
     private GetVstsExtensionsBadgesMarkdown(localRepoName: string) {
