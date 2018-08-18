@@ -35,6 +35,8 @@ export class ReadMeUpdater {
 
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
                 baseBadgesMarkdown += this.GetBadgesByType();
+                baseBadgesMarkdown += `${this.lineBreak}## Per Repo${this.lineBreak}`;
+                baseBadgesMarkdown += `${this.titleHtag}Parent - ${repoMetaData.localRepoName}`;//DEDUPE
             }
 
             baseBadgesMarkdown += `${this.lineBreak}${this.GetMultipleBadgesMarkdown(repoMetaData)}`;
@@ -78,6 +80,8 @@ export class ReadMeUpdater {
 
         let repoTypeSpecificMarkdown: string[] = [];
 
+        //TODO convert to switch statement
+
         if (repoMetaData.repoCategory === RepoCategory.AllBadges) {
             const badgesMarkdown = this.GetAllBadgesRepoMarkdown(repoMetaData.localRepoName);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
@@ -118,7 +122,7 @@ export class ReadMeUpdater {
         for (const repoMetaData of this.allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetMultipleBadgesMarkdown(repoMetaData);
-            const title = `${this.titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;
+            const title = `${this.titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;//DEDUPE
             badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
 
