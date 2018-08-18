@@ -1,6 +1,6 @@
 import { IRepoMetaData } from "./IRepoMetaData";
-import { RepoCategory } from "./RepoCategory";
 import { IVsmpMetaData } from "./IVsmpMetaData";
+import { RepoCategory } from "./RepoCategory";
 
 export const allBadges: IRepoMetaData = {
     appVeyorId: "74r2vafgxpf9hee2",
@@ -57,7 +57,32 @@ export const openInAppLauncher: IVsmpMetaData = {
     localRepoName: "OpenInApp.Launcher",
     codacyId: "e61c4dba8261497fb447379730e97a25",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["OpeninEmacs", "OpeninPaintNET", "OpeninXamarinStudio"],
+    vsmpItemNames: [
+         'OpenInAltovaXmlSpy'
+        , 'OpenInAndroidStudio'
+        , 'OpenInAtom'
+        , 'OpenInChromeCanary'
+        , 'OpenInEmacs'
+        , 'OpenInFirefoxDeveloperEdition'
+        , 'OpenInGimp'
+        , 'OpenInMarkdownMonster'
+        , 'OpenInMSPaint'
+        , 'OpenInOpera'
+        , 'OpenInOperaDeveloper'
+        , 'OpenInPaintDotNet'
+        , 'OpenInSQLServerManagementStudio'
+        , 'OpenInTreeSizeFree'
+        , 'OpenInTreeSizeProfessional'
+        , 'OpenInVivaldi'
+        , 'OpenInVS2012'
+        , 'OpenInVS2013'
+        , 'OpenInVS2015'
+        , 'OpenInVS2017Community'
+        , 'OpenInVS2017Enterprise'
+        , 'OpenInVS2017Professional'
+        , 'OpenInWinDirStat'
+        , 'OpenInXamarinStudio'
+    ],
 };
 
 export const quickLaunchButtons: IVsmpMetaData = {
@@ -65,7 +90,10 @@ export const quickLaunchButtons: IVsmpMetaData = {
     localRepoName: "QuickLaunchButtons",
     codacyId: "def29563a15940cda03af19faac0e006",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["QuickLaunchButtons"],
+    vsmpItemNames: [
+        "QuickLaunchFiddler",
+        "QuickLaunchWireshark"
+    ],
 };
 
 export const quizLauncher: IVsmpMetaData = {
@@ -73,7 +101,7 @@ export const quizLauncher: IVsmpMetaData = {
     localRepoName: "Quiz.Launcher",
     codacyId: "b1a2d4b9fd774d64ae56a8ffdd80b978",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["Quiz.Launcher"],
+    vsmpItemNames: ["MusicQuiz"],
 };
 
 export const readMeSynchronizer: IRepoMetaData = {
@@ -96,7 +124,11 @@ export const trivialApisForIDE: IVsmpMetaData = {
     localRepoName: "TrivialApisForIDE",
     codacyId: "035ab76ee20d45c886d72be824507ab5",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["TrivialApisForIDE"],
+    vsmpItemNames: [
+        "DrainTheSwamp",
+        "Jeopardy",
+        "NumericTrivia"
+    ],
 };
 
 export const visualStudioMarketplaceMetrics: IRepoMetaData = {
@@ -111,7 +143,7 @@ export const vsixFootie: IVsmpMetaData = {
     localRepoName: "VsixFootie",
     codacyId: "55911452f4154dd9a5599bd6fae3c725",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["VsixFootie"],
+    vsmpItemNames: ["VSSportsDesk"],
 };
 
 export const vsixRatingChaser: IRepoMetaData = {
@@ -126,7 +158,29 @@ export const vsixTwitterWidget: IVsmpMetaData = {
     localRepoName: "VsixTwitterWidget",
     codacyId: "ec8f9a251ccc4862b40e2f8e60e432ef",
     repoCategory: RepoCategory.VstsExtension,
-    vsmpItemNames: ["VsixTwitterWidget"],
+    vsmpItemNames: [
+        "@azure",
+        "@ch9",
+        "@code",
+        "@codeproject",
+        "@dailydotnettips",
+        "@dev_humor",
+        "@dotnet",
+        "@dotnetcurry",
+        "@dotnetfdn",
+        "@dotnetkicks",
+        "@mscloud",
+        "@newsycombinator",
+        "@nodejs",
+        "@octopusdeploy",
+        "@reddittech",
+        "@thelivesoccer_",
+        "@theregister",
+        "@visualstudio",
+        "@vsmdev",
+        "@vsts",
+        "@xamarinhq"
+    ],
 };
 
 export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
@@ -136,12 +190,3 @@ export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: ["VstsDashboardWidgetProjectTemplate"],
 };
-
-//export enum VsixHelloWorlds {
-//    HelloWorldVstsExtension = "HelloWorldVstsExtension",
-//    VsixHelloWorldCommandButton = "VsixHelloWorldCommandButton",
-//    VsixHelloWorldPopUp = "VsixHelloWorldPopUp",
-//    VsixHelloWorldToolBar = "VsixHelloWorldToolBar",
-//    VsixToolWindowAsyncPackageExample = "VsixToolWindowAsyncPackageExample",
-//    WpfAsyncBindingPropertyExample = "WpfAsyncBindingPropertyExample",
-//}
