@@ -182,9 +182,9 @@ export class ReadMeUpdater {
         let result: string[] = [""];
 
         for (const vsmpItemName of vsmpItemNames) {
-            result.push(this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName));
-            result.push(this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName));
-            result.push(this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName));
+            result.push(`${this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName)}`);
+            result.push(`${this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName)}`);
+            result.push(`${this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName)}${this.lineBreak}`);
         }
 
         return result;
