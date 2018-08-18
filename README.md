@@ -1,7 +1,7 @@
 ## Read Me Sychchronizer
 
 <!--BadgesSTART-->
-[![Read Me Synchronizer](https://img.shields.io/badge/-PoweredByReadMeSynchronizer-%23e2165e.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
+[![Read Me Synchronizer](https://img.shields.io/badge/-badges%20powered%20by%20Read%20Me%20Synchronizer-green.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 <!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->
 
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/ReadMeSynchronizer?branch=master)](https://bettercodehub.com/results/GregTrevellick/ReadMeSynchronizer)
