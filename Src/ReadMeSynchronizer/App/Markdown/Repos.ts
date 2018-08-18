@@ -91,8 +91,8 @@ export const quickLaunchButtons: IVsmpMetaData = {
     codacyId: "def29563a15940cda03af19faac0e006",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "QuickLaunchFiddler",
-        "QuickLaunchWireshark"
+        "OpenFiddler",
+        "OpenWireshark"
     ],
 };
 
