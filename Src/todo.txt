@@ -1,17 +1,22 @@
 ??? set default codefactor url to https://www.codefactor.io/repository/github/gregtrevellick/vstsdashboardwidgetprojecttemplate/files ?
 
+extra blank lines keep appearing in .md
+
 rename vsixfootie repo to vssportsdesk
 
 get rid of karma packages
 
-(low priority) add in hello world apps
-(low priority) add a video demo to ReadMeSynchronizer readme file
+add in hello world apps
+
+add a video demo to ReadMeSynchronizer readme file
 
 dependabot
 https://github.com/marketplace/sider
 https://github.com/marketplace/crowdin
 https://github.com/marketplace/backhub
 
+credits - https://stackoverflow.com/questions/34211004/how-can-i-debug-gulp-tasks-using-node-tools-for-visual-studio
+convert to proper node app
 
 BADGES TO ADD
 =============
