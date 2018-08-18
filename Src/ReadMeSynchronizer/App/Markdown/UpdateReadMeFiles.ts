@@ -200,12 +200,14 @@ export class ReadMeUpdater {
         let result: string[] = [""];
 
         for (const vsmpItemName of vsmpItemNames) {
+            const itemName = "vsts-extensions-tweets-" + vsmpItemName.replace("@","");
+
             if (vsmpItemNames.length > 1) {
-                result.push(`${this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName)}`);
+                result.push(`${this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, itemName)}`);
             }
-            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName)}`);
-            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName)}`);
-            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName)}`);
+            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, itemName)}`);
+            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName, itemName)}`);
+            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, itemName)}`);
             result.push(this.lineBreak);
         }
 

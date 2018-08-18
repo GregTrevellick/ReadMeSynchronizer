@@ -1,7 +1,6 @@
 const chromeWebStore = "chrome-web-store";
 const myUserName = "GregTrevellick";
 const shieldsDotIoUrl = "https://img.shields.io/";
-const tweetsDevHumor = "vsts-extensions-tweets-Dev-Humor";
 const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
 const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
@@ -72,20 +71,20 @@ export class MarkdownProvider {
         return "[![Charity Ware](" + shieldsDotIoUrl + "badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/" + myUserName + "/MiscellaneousArtefacts/wiki/Charity-Ware)";
     }
 
-    public GetVisualStudioMarketplaceVSTSItemBadge(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
+    public GetVisualStudioMarketplaceVSTSItemBadge(localRepoName: string, itemName: string) {
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName + ")";//GREGT DEDUPE
     }
 
-    public GetVisualStudioMarketplaceVSTSVersion(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
+    public GetVisualStudioMarketplaceVSTSVersion(localRepoName: string, itemName: string) {
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + itemName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName +")";//GREGT DEDUPE
     }
 
-    public GetVisualStudioMarketplaceVSTSDownloads(localRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +")";
+    public GetVisualStudioMarketplaceVSTSDownloads(localRepoName: string, itemName: string) {
+        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + "." + itemName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName + ")";//GREGT DEDUPE
     }
 
-    public GetVisualStudioMarketplaceVSTSRatings(localRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + tweetsDevHumor + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + tweetsDevHumor +"#review-details)";
+    public GetVisualStudioMarketplaceVSTSRatings(localRepoName: string, itemName: string) {
+        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + itemName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName + "#review-details)";//GREGT DEDUPE
     }
 
     public GetVisualStudioMarketplaceIDEItemBadge(localRepoName: string) {
