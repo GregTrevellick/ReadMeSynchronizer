@@ -20,7 +20,6 @@ export class GitExecutioner {
 
     private GitProcessRepo(repoMetaData: IRepoMetaData, gitCommand: GitCommand) {
 
-        //const simpleGit = require('simple-git')(workingDirPath);
         const simpleGit = require("simple-git");
         const targetReadMeFileName = "README.md";
         const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
