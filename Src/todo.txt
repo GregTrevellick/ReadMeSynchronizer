@@ -1,9 +1,3 @@
-handle diff repo name to vsix app name e.g. vsixfootie repo, vssportsdesk vsix
-badges for VS IDE extensions
-
-
-
-
 
 
 BADGES TO ADD
