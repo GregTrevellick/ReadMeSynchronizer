@@ -20,7 +20,7 @@ export class ReadMeUpdater {
     private lineBreak: string = "\n";
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;
-    private titleHtag = "#### ";
+    private titleHtag = "##### ";
 
     constructor() {
         this.fileSystemUpdater = new FileSystemUpdater;
@@ -36,7 +36,7 @@ export class ReadMeUpdater {
 
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
                 baseBadgesMarkdown += this.GetBadgesByType();
-                baseBadgesMarkdown += `${this.lineBreak}## Per Repo${this.lineBreak}`;
+                baseBadgesMarkdown += `${this.lineBreak}### Per Repo${this.lineBreak}`;
                 baseBadgesMarkdown += `${this.titleHtag}Parent - ${repoMetaData.localRepoName}`;//DEDUPE
             }
 
@@ -183,9 +183,9 @@ export class ReadMeUpdater {
         let result: string[] = [""];
 
         for (const vsmpItemName of vsmpItemNames) {
-            if (vsmpItemNames.length > 1) {
+            //if (vsmpItemNames.length > 1) {
                 result.push(`${this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName)}`);
-            }
+            //}
             result.push(`${this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName)}`);
             result.push(`${this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName)}`);
             result.push(`${this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName)}`);
@@ -202,9 +202,9 @@ export class ReadMeUpdater {
         for (const vsmpItemName of vsmpItemNames) {
             const itemName = "vsts-extensions-tweets-" + vsmpItemName.replace("@","");
 
-            if (vsmpItemNames.length > 1) {
+            //if (vsmpItemNames.length > 1) {
                 result.push(`${this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, itemName)}`);
-            }
+            //}
             result.push(`${this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, itemName)}`);
             result.push(`${this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName, itemName)}`);
             result.push(`${this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, itemName)}`);
