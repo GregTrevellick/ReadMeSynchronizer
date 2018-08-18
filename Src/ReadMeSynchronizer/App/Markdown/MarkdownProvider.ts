@@ -72,35 +72,39 @@ export class MarkdownProvider {
     }
 
     public GetVisualStudioMarketplaceVSTSItemBadge(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName + ")";//GREGT DEDUPE
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSVersion(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + itemName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName +")";//GREGT DEDUPE
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSDownloads(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + "." + itemName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName + ")";//GREGT DEDUPE
+        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSRatings(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + itemName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + itemName + "#review-details)";//GREGT DEDUPE
+        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + "#review-details)";
     }
 
     public GetVisualStudioMarketplaceIDEItemBadge(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEVersion(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+        return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](" + vsmarketplacebadgeAppHarborUrl + "installs/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+        return "[![Visual Studio Marketplace downloads](" + vsmarketplacebadgeAppHarborUrl + "installs/" + myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDERatings(localRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+        return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+    }
+
+    private GetVisualStudioMarketplaceUrlPrefix() {
+        return `${visualStudioMarketplaceUrl}${myUserName}.`;
     }
 
     public GetNugetDownloads(localRepoName: string) {
