@@ -178,39 +178,28 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetVsIdeExtensionsBadgesMarkdown(vsmpItemNames: string[]) {//GREGT DEDUPE
-
+    private GetVsIdeExtensionsBadgesMarkdown(vsmpItemNames: string[]) {
         let result: string[] = [""];
-
         for (const vsmpItemName of vsmpItemNames) {
-            //if (vsmpItemNames.length > 1) {
-                result.push(`${this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName)}`);
-            //}
-            result.push(`${this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName)}`);
-            result.push(`${this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName)}`);
-            result.push(`${this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName)}`);
+            result.push(this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName));
+            result.push(this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName));
+            result.push(this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName));
+            result.push(this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName));
             result.push(this.lineBreak);
         }
-
         return result;
     }
 
-    private GetVstsExtensionsBadgesMarkdown(vsmpItemNames: string[]) {//GREGT DEDUPE
-
+    private GetVstsExtensionsBadgesMarkdown(vsmpItemNames: string[]) {
         let result: string[] = [""];
-
         for (const vsmpItemName of vsmpItemNames) {
             const itemName = "vsts-extensions-tweets-" + vsmpItemName.replace("@","");
-
-            //if (vsmpItemNames.length > 1) {
-                result.push(`${this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, itemName)}`);
-            //}
-            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, itemName)}`);
-            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName, itemName)}`);
-            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, itemName)}`);
+            result.push(this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, itemName));
+            result.push(this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, itemName));
+            result.push(this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName, itemName));
+            result.push(this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, itemName));
             result.push(this.lineBreak);
         }
-
         return result;
     }
 
