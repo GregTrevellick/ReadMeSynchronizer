@@ -1,3 +1,7 @@
+.resx il8n https://github.com/marketplace/crowdin   "No localization status yet. Badges will appear when there is progress in your project."   https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges
+
+
+
 
 
 BADGES TO ADD
@@ -12,13 +16,7 @@ HARD https://docs.travis-ci.com/user/sonarcloud/
 HARD https://docs.travis-ci.com/user/coveralls/
 HARD https://docs.travis-ci.com/user/code-climate/
 
-dependabot
-https://github.com/marketplace/sider
-https://github.com/marketplace/crowdin
-https://github.com/marketplace/backhub
-
-
-
+dependabot https://app.dependabot.com/accounts/GregTrevellick/repos
 
 
 
