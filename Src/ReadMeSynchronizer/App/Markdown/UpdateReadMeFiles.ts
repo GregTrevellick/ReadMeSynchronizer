@@ -48,7 +48,7 @@ export class ReadMeUpdater {
     }
 
     private GetSurroundedBadgesMarkdown(baseBadgesMarkdown: string) {
-        return `${this.badgeCommentStart}${this.lineBreak}${this.badgeCommentStartSuffix}${this.lineBreak}${baseBadgesMarkdown}${this.badgeCommentEnd}${this.lineBreak}`;
+        return `${this.badgeCommentStart}${this.lineBreak}${this.badgeCommentStartSuffix}${this.lineBreak}${baseBadgesMarkdown}${this.badgeCommentEnd}`;
     }
 
     private GetMultipleBadgesMarkdown(repoMetaData: IRepoMetaData) {
