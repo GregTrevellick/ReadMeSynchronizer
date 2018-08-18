@@ -1,16 +1,7 @@
-rename vsixfootie repo to vssportsdesk
+handle diff repo name to vsix app name e.g. vsixfootie repo, vssportsdesk vsix
+badges for VS IDE extensions
 
 
-
-??? set default codefactor url to https://www.codefactor.io/repository/github/gregtrevellick/vstsdashboardwidgetprojecttemplate/files ?
-
-get rid of karma packages
-
-add in hello world apps
-
-add a video demo to ReadMeSynchronizer readme file
-
-unit tests (jest ? cypress ?)
 
 
 
@@ -31,3 +22,11 @@ dependabot
 https://github.com/marketplace/sider
 https://github.com/marketplace/crowdin
 https://github.com/marketplace/backhub
+
+
+
+
+
+
+get rid of karma packages
+unit tests (jest?)
