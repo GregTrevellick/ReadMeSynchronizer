@@ -1,5 +1,3 @@
-extra blank lines keep appearing in .md
-
 rename vsixfootie repo to vssportsdesk
 
 
