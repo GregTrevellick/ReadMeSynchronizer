@@ -17,30 +17,6 @@
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 <!--BadgesEND-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Overview 
 
 A typescript app containing gulp tasks that will update the badges in your local README.md files within your local git repositories.
@@ -61,7 +37,7 @@ Given this app will cause changes to multiple repos, I added gulp tasks to do th
 
 #### Why ?
 
-Well, the act of creating this repo allowed me to create my first from-scratch typescript app, and learn more about typescript, gulp & npm along the way.
+The act of creating this repo allowed me to create my first from-scratch typescript app, and learn more about typescript, gulp & npm along the way.
 
 #### What Next ?
 
