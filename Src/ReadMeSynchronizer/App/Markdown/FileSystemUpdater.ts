@@ -15,8 +15,14 @@ export class FileSystemUpdater {
 
         const badgesRegex = new RegExp(badgeCommentStart + matchAnyCharacter + badgeCommentEnd, "g");
 
+        const options = {
+            logs: {
+                enabled: false
+            }
+        };
+
         myGulp.src([source])
-            .pipe(this.replace(badgesRegex, badgesMarkdown))
+            .pipe(this.replace(badgesRegex, badgesMarkdown, options))
             .pipe(myGulp.dest(destination));
     }
 }
