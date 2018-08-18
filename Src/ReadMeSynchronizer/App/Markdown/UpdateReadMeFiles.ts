@@ -103,14 +103,12 @@ export class ReadMeUpdater {
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
-            const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
-            const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(vsmpMetaData);
+            const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(repoMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
-            const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
-            const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(vsmpMetaData);
+            const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(repoMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
@@ -178,19 +176,20 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetVsmpExtensionsBadgesMarkdown(vsmpMetaDatas: IVsmpMetaData) {
+    private GetVsmpExtensionsBadgesMarkdown(repoMetaData: IRepoMetaData) {
         let result: string[] = [""];
+        const vsmpMetaData = repoMetaData as IVsmpMetaData;
 
-        for (const vsmpItemName of vsmpMetaDatas.vsmpItemNames) {
+        for (const vsmpItemName of vsmpMetaData.vsmpItemNames) {
 
-            if (vsmpMetaDatas.repoCategory === RepoCategory.VsIdeExtension) {
+            if (vsmpMetaData.repoCategory === RepoCategory.VsIdeExtension) {
                 result.push(this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName));
                 result.push(this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName));
                 result.push(this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName));
                 result.push(this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName));
             }
 
-            if (vsmpMetaDatas.repoCategory === RepoCategory.VstsExtension) {
+            if (vsmpMetaData.repoCategory === RepoCategory.VstsExtension) {
                 const itemName = "vsts-extensions-tweets-" + vsmpItemName.replace("@", "");
                 result.push(this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, itemName));
                 result.push(this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, itemName));
