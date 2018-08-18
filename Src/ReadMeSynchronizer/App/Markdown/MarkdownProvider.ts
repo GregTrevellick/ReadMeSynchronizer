@@ -10,6 +10,10 @@ export class MarkdownProvider {
 
     constructor() { }
 
+    public GetPoweredByReadMeSynchronizerBadgeMarkdown() {
+        return "[![Read Me Synchronizer](" + shieldsDotIoUrl + "badge/-PoweredByReadMeSynchronizer-%23e2165e.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)";
+    }
+
     public GetLicenceBadgeMarkdown() {
         return "[![License](" + shieldsDotIoUrl + "github/license/gittools/gitlink.svg)](/LICENSE.txt)";
     }

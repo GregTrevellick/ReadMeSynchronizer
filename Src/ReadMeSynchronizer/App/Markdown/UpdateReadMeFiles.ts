@@ -12,7 +12,8 @@ export class ReadMeUpdater {
     public prefix: string = "Badges";
     public htmlCommentStart: string = "<!--" + this.prefix;
     public htmlCommentEnd: string = "-->";
-    public badgeCommentStartSuffix: string = "<!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->";
+    public badgeCommentStartSuffixBadgeMarkdown: string;
+    public badgeCommentStartSuffix: string;
     public badgeCommentStart: string = this.htmlCommentStart + "START" + this.htmlCommentEnd;
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
     private allReposExceptTheAllBadgesRepo: IRepoMetaData[];
@@ -27,6 +28,8 @@ export class ReadMeUpdater {
         this.mp = new MarkdownProvider;
         this.repoMetaDatas = new RepoMetaDatas;
         this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
+        this.badgeCommentStartSuffixBadgeMarkdown = this.mp.GetPoweredByReadMeSynchronizerBadgeMarkdown();
+        this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.lineBreak}<!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->`;
     }
 
     public ReplaceBadgeComments() {
