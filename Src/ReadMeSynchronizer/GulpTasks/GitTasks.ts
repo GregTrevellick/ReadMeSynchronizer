@@ -8,11 +8,11 @@ gulp.task("Git_Commit_ReadMe", () => {
     gitExecutioner.GitExecute(GitCommand.CommitReadMe);
 });
 
-gulp.task("Git_Pull_Repo", () => {
+gulp.task("Git_Pull_Repos", () => {
     gitExecutioner.GitExecute(GitCommand.PullRepo);
 });
 
-gulp.task("Git_Push_Repo", () => {
+gulp.task("Git_Push_Repos", () => {
     gitExecutioner.GitExecute(GitCommand.PushRepo);
 });
 
