@@ -103,13 +103,14 @@ export class ReadMeUpdater {
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
-            const vsmpMetaData = repoMetaData as IVsmpMetaData;
+            const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
             const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(vsmpMetaData.vsmpItemNames);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
-            const badgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(repoMetaData.localRepoName);
+            const vsmpMetaData = repoMetaData as IVsmpMetaData;//GREGT DEDUPE
+            const badgesMarkdown = this.GetVstsExtensionsBadgesMarkdown(vsmpMetaData.vsmpItemNames);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
@@ -177,7 +178,7 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetVsIdeExtensionsBadgesMarkdown(vsmpItemNames: string[]) {
+    private GetVsIdeExtensionsBadgesMarkdown(vsmpItemNames: string[]) {//GREGT DEDUPE
 
         let result: string[] = [""];
 
@@ -190,12 +191,22 @@ export class ReadMeUpdater {
         return result;
     }
 
-    private GetVstsExtensionsBadgesMarkdown(localRepoName: string) {
-        return [
-            this.mp.GetVisualStudioMarketplaceVSTSDownloads(localRepoName),
-            this.mp.GetVisualStudioMarketplaceVSTSRatings(localRepoName),
-            this.mp.GetVisualStudioMarketplaceVSTSVersion(localRepoName),
-        ];
+    private GetVstsExtensionsBadgesMarkdown(vsmpItemNames: string[]) {//GREGT DEDUPE
+
+        let result: string[] = [""];
+
+        for (const vsmpItemName of vsmpItemNames) {
+            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName)}`);
+            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName)}`);
+            result.push(`${this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName)}${this.lineBreak}`);
+        }
+
+        return result;
+        //return [
+        //    this.mp.GetVisualStudioMarketplaceVSTSDownloads(localRepoName),
+        //    this.mp.GetVisualStudioMarketplaceVSTSRatings(localRepoName),
+        //    this.mp.GetVisualStudioMarketplaceVSTSVersion(localRepoName),
+        //];
     }
 
     private GetBadgesByType(): string {
