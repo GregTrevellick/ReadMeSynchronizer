@@ -96,6 +96,10 @@ export class MarkdownProvider {
         return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + myUserName + "." + localRepoName + ".svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
     }
 
+    public GetVisualStudioMarketplaceItemBadge(localRepoName: string) {
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + visualStudioMarketplaceUrl + myUserName + "." + localRepoName + ")";
+    }
+
     public GetNugetDownloads(localRepoName: string) {
         return "[![Nuget downloads](" + shieldsDotIoUrl + "nuget/dt/" + localRepoName + ".svg)](https://www.nuget.org/packages/" + localRepoName + "/)";
     }
