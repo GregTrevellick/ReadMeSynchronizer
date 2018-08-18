@@ -33,6 +33,7 @@ export class GitExecutioner {
                 break;
             }
             case GitCommand.PullRepo: {
+                console.log(workingDirPath);
                 simpleGit(workingDirPath).pull("origin", "master");
                 break;
             }
