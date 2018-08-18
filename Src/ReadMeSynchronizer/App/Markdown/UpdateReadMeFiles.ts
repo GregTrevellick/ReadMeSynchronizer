@@ -5,6 +5,7 @@ import { RepoCategory } from "./RepoCategory";
 import { RepoMetaDatas } from "./RepoMetaDatas";
 import { allBadges } from "./Repos";
 import { GroupedBadgeType } from "./GroupedBadgeType";
+import { IVsmpMetaData } from "./IVsmpMetaData";
 
 export class ReadMeUpdater {
     public replace = require("gulp-string-replace");
@@ -102,7 +103,10 @@ export class ReadMeUpdater {
         }
 
         if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
-            const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(repoMetaData.localRepoName);
+            const vsmpMetaData = repoMetaData as IVsmpMetaData;
+            //console.log("vsmpMetaData" + vsmpMetaData[0] + vsmpMetaData[1] + vsmpMetaData[2]);
+            console.log("vsmpMetaData.vsmpItemNames" + vsmpMetaData.vsmpItemNames);
+            const badgesMarkdown = this.GetVsIdeExtensionsBadgesMarkdown(vsmpMetaData.vsmpItemNames);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
@@ -175,16 +179,23 @@ export class ReadMeUpdater {
         ];
     }
 
-    private GetVsIdeExtensionsBadgesMarkdown(localRepoName: string) {
-        //TODO gregt
-        //if oia.launcher add 20x3 badges for oia apps
-        //if trivial api add 5x3 badges for trivial apps
-        //else
-        return [
-            this.mp.GetVisualStudioMarketplaceIDEDownloads(localRepoName),
-            this.mp.GetVisualStudioMarketplaceIDERatings(localRepoName),
-            this.mp.GetVisualStudioMarketplaceIDEVersion(localRepoName),
-        ];
+    private GetVsIdeExtensionsBadgesMarkdown(vsmpItemNames: string[]) {
+
+        let result: string[] = [""];
+
+        for (const vsmpItemName of vsmpItemNames) {
+            result.push(this.mp.GetVisualStudioMarketplaceIDEDownloads(vsmpItemName));
+            result.push(this.mp.GetVisualStudioMarketplaceIDERatings(vsmpItemName));
+            result.push(this.mp.GetVisualStudioMarketplaceIDEVersion(vsmpItemName));
+        }
+
+        return result;
+
+        //return [
+        //    this.mp.GetVisualStudioMarketplaceIDEDownloads(repoMetaData.localRepoName),
+        //    this.mp.GetVisualStudioMarketplaceIDERatings(repoMetaData.localRepoName),
+        //    this.mp.GetVisualStudioMarketplaceIDEVersion(repoMetaData.localRepoName),
+        //];
     }
 
     private GetVstsExtensionsBadgesMarkdown(localRepoName: string) {

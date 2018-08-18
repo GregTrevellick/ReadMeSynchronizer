@@ -1,5 +1,6 @@
 import { IRepoMetaData } from "./IRepoMetaData";
 import { RepoCategory } from "./RepoCategory";
+import { IVsmpMetaData } from "./IVsmpMetaData";
 
 export const allBadges: IRepoMetaData = {
     appVeyorId: "74r2vafgxpf9hee2",
@@ -8,11 +9,12 @@ export const allBadges: IRepoMetaData = {
     repoCategory: RepoCategory.AllBadges,
 };
 
-export const autoFindReplace: IRepoMetaData = {
+export const autoFindReplace: IVsmpMetaData = {
     appVeyorId: "2iy2c8ucrn5mc96o",
     localRepoName: "AutoFindReplace",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
-    repoCategory:RepoCategory.VsIdeExtension,
+    repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["AutoFindReplace"],
 };
 
 export const dotNetFlags: IRepoMetaData = {
@@ -50,25 +52,28 @@ export const gitPlayground3: IRepoMetaData = {
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
-export const openInAppLauncher: IRepoMetaData = {
+export const openInAppLauncher: IVsmpMetaData = {
     appVeyorId: "0vwmtcboontemltq",
     localRepoName: "OpenInApp.Launcher",
     codacyId: "e61c4dba8261497fb447379730e97a25",
     repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["OpeninEmacs", "OpeninPaintNET", "OpeninXamarinStudio"],
 };
 
-export const quickLaunchButtons: IRepoMetaData = {
+export const quickLaunchButtons: IVsmpMetaData = {
     appVeyorId: "e8fq3ang07ahq8yf",
     localRepoName: "QuickLaunchButtons",
     codacyId: "def29563a15940cda03af19faac0e006",
     repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["QuickLaunchButtons"],
 };
 
-export const quizLauncher: IRepoMetaData = {
+export const quizLauncher: IVsmpMetaData = {
     appVeyorId: "i3u8gbuxoql23t9i",
     localRepoName: "Quiz.Launcher",
     codacyId: "b1a2d4b9fd774d64ae56a8ffdd80b978",
     repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["Quiz.Launcher"],
 };
 
 export const readMeSynchronizer: IRepoMetaData = {
@@ -78,18 +83,20 @@ export const readMeSynchronizer: IRepoMetaData = {
     repoCategory: RepoCategory.ReadMeSynchronizer,
 };
 
-export const solutionOpenPopUp: IRepoMetaData = {
+export const solutionOpenPopUp: IVsmpMetaData = {
     appVeyorId: "89c8gp1t0rua9fiw",
     localRepoName: "SolutionOpenPopUp",
     codacyId: "23dfefe3b5014fd8b8462b47a3f38c1c",
     repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["SolutionOpenPopUp"],
 };
 
-export const trivialApisForIDE: IRepoMetaData = {
+export const trivialApisForIDE: IVsmpMetaData = {
     appVeyorId: "iapcrndog6fvdd9l",
     localRepoName: "TrivialApisForIDE",
     codacyId: "035ab76ee20d45c886d72be824507ab5",
     repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["TrivialApisForIDE"],
 };
 
 export const visualStudioMarketplaceMetrics: IRepoMetaData = {
@@ -99,11 +106,12 @@ export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     repoCategory: RepoCategory.ChromeExtension,
 };
 
-export const vsixFootie: IRepoMetaData = {
+export const vsixFootie: IVsmpMetaData = {
     appVeyorId: "i7kxey89fewvjkac",
     localRepoName: "VsixFootie",
     codacyId: "55911452f4154dd9a5599bd6fae3c725",
     repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["VsixFootie"],
 };
 
 export const vsixRatingChaser: IRepoMetaData = {
@@ -113,18 +121,20 @@ export const vsixRatingChaser: IRepoMetaData = {
     repoCategory: RepoCategory.NugetPackage,
 };
 
-export const vsixTwitterWidget: IRepoMetaData = {
+export const vsixTwitterWidget: IVsmpMetaData = {
     appVeyorId: "s07rrwscpefb5k6h",
     localRepoName: "VsixTwitterWidget",
     codacyId: "ec8f9a251ccc4862b40e2f8e60e432ef",
     repoCategory: RepoCategory.VstsExtension,
+    vsmpItemNames: ["VsixTwitterWidget"],
 };
 
-export const vstsDashboardWidgetProjectTemplate: IRepoMetaData = {
+export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     appVeyorId: "9uoctpmaj9wj6gjc",
     localRepoName: "VstsDashboardWidgetProjectTemplate",
     codacyId: "be5d606604c64b81a1ed640a53c671f7",
     repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["VstsDashboardWidgetProjectTemplate"],
 };
 
 //export enum VsixHelloWorlds {
