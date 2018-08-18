@@ -1,3 +1,5 @@
+auto-kick off better code hub upon checkin ?
+
 ??? set default codefactor url to https://www.codefactor.io/repository/github/gregtrevellick/vstsdashboardwidgetprojecttemplate/files ?
 
 extra blank lines keep appearing in .md
