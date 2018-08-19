@@ -4,13 +4,12 @@ YES greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick
 YES sonarcloud (add some ci scripts needed) https://sonarcloud.io/projects
 YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
 YES crowdin .resx ==> vsixfootie ==> https://github.com/marketplace/crowdin "No localization status yet. Badges will appear when there is progress in your project." https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges
+YES codecov (need to add yaml file) https://codecov.io/gh 
 
-??? codecov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
-???https://github.com/marketplace/category/code-quality
+??? https://github.com/marketplace/category/code-quality
 
+NOT YET convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
 
-
-YES (at some point...) convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
 NAH codeship (ci, not free) https://codeship.com/pricing
 NAH semaphore (linux CI, free for oss) https://semaphoreci.com/pricing https://github.com/marketplace/semaphore
 NAH circleci (linux CI, free for oss) https://circleci.com/pricing/ https://github.com/marketplace/circleci
