@@ -14,6 +14,7 @@
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/ReadMeSynchronizer.svg)](https://ci.appveyor.com/project/GregTrevellick/ReadMeSynchronizer/build/tests)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)
 [![ImgBot](https://img.shields.io/badge/images-optimized-green.svg)](https://imgbot.net/)
+[![Renovate Bot github](https://img.shields.io/badge/renovatebot-checked-green.svg)](https://renovatebot.com/)
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 <!--BadgesEND-->

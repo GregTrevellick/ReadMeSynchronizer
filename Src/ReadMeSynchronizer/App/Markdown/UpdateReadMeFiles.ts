@@ -174,6 +174,7 @@ export class ReadMeUpdater {
             //less important stuff
             this.mp.GetAccessLintBadgeMarkdown(),
             this.mp.GetImgBot(repoMetaData.localRepoName),
+            this.mp.GetRenovateBotBadgeMarkdown(),
             this.mp.GetCharityWare(repoMetaData.localRepoName),
             this.mp.GetLicenceBadgeMarkdown(),
         ];

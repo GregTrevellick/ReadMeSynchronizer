@@ -22,6 +22,10 @@ export class MarkdownProvider {
         return "[![Access Lint github](" + shieldsDotIoUrl + "badge/a11y-checked-green.svg)](https://www.accesslint.com)";
     }
 
+    public GetRenovateBotBadgeMarkdown() {
+        return "[![Renovate Bot github](" + shieldsDotIoUrl + "badge/renovatebot-checked-green.svg)](https://renovatebot.com/)";
+    }
+
     public GetGitHubTopLanguage(localRepoName: string) {
         return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }

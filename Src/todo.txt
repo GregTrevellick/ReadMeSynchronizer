@@ -1,10 +1,10 @@
-YES renovatebot static badge
-YES codeclimate for non-c# repos https://codeclimate.com/
-YES greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
-YES sonarcloud (add some ci scripts needed) https://sonarcloud.io/projects
+YES renovatebot (static badge) https://renovatebot.com/
+YES codeclimate (for non-c# repos) https://codeclimate.com/
+YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
 YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
-YES crowdin .resx ==> vsixfootie ==> https://github.com/marketplace/crowdin "No localization status yet. Badges will appear when there is progress in your project." https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges
+YES sonarcloud (need some ci scripts) https://sonarcloud.io/projects
 YES codecov (need to add yaml file) https://codecov.io/gh 
+YES crowdin (need resx files) https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges Badges will appear when there is progress in your project
 
 ??? https://github.com/marketplace/category/code-quality
 
