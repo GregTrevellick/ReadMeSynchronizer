@@ -1,10 +1,18 @@
 version: 1.0.{build}
 image: Visual Studio 2017
+environment:
+  SonarCloudGitHubAppVeyorTrevellickQwaszx1962600606byzqsgaibdtjxuilof:
+    secure: LXz2lIEeX0qKZL6bGifEHA==
 before_build:
 - cmd: nuget restore Src/ReadMeSynchronizer.sln
+# Begin SonarScanner
+- dotnet sonarscanner begin /k:"system.linq.dynamic.core" /d:sonar.organization="gregtrevellick-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%SONAR_TOKEN%" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
 build:
   project: Src/ReadMeSynchronizer.sln
   verbosity: minimal
+after_build:
+# End SonarScanner
+- dotnet sonarscanner end /d:sonar.login="%SONAR_TOKEN%"
 notifications:
 - provider: Email
   to:
