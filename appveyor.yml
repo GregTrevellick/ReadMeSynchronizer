@@ -5,14 +5,14 @@ environment:
     secure: LXz2lIEeX0qKZL6bGifEHA==
 before_build:
 - cmd: nuget restore Src/ReadMeSynchronizer.sln
-# Begin SonarScanner
-- dotnet sonarscanner begin /k:"system.linq.dynamic.core" /d:sonar.organization="gregtrevellick-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%SONAR_TOKEN%" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
+build_script:
+  - choco install "msbuild-sonarqube-runner" -y
+  - MSBuild.SonarQube.Runner.exe begin /k:"Src/ReadMeSynchronizer.sln" /d:sonar.organization="gregtrevellick-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%SONAR_TOKEN%" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
+  - msbuild "Src/ReadMeSynchronizer.sln"
+  - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=%SONAR_TOKEN%"
 build:
   project: Src/ReadMeSynchronizer.sln
   verbosity: minimal
-after_build:
-# End SonarScanner
-- dotnet sonarscanner end /d:sonar.login="%SONAR_TOKEN%"
 notifications:
 - provider: Email
   to:
