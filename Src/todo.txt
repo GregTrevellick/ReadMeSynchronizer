@@ -1,6 +1,7 @@
 YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
-Greenkeeper will open an Initial Pull Request to update all dependencies at once, so you’re up to date. In addition, it will add the Greenkeeper badge to your project’s readme.md. The initial PR will not be opened if all dependencies are already up to date, and the readme.md already has a badge. In this case, Greenkeeper is silently enabled.
-
+   Greenkeeper will open an Initial Pull Request to update all dependencies at once
+   It will add the Greenkeeper badge to your project’s readme.md
+   The initial PR will not be opened if all dependencies are already up to date and the readme.md already has a badge (in this case Greenkeeper is silently enabled)
 YES codeclimate (for non-c# repos) https://codeclimate.com/
 YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
 YES sonarcloud (need some ci scripts) https://sonarcloud.io/projects
