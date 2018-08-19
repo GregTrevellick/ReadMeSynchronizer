@@ -4,18 +4,15 @@ environment:
   SonarCloudGitHubAppVeyorTrevellickQwaszx1962600606byzqsgaibdtjxuilof:
     secure: LXz2lIEeX0qKZL6bGifEHA==
 install:
-  #Install msbuild SonarQube runner
   - choco install "msbuild-sonarqube-runner" -y
 before_build:
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     #Start SonarQube runner
     - MSBuild.SonarQube.Runner.exe begin /k:"Src/ReadMeSynchronizer.sln" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%sonar_token%" /d:"sonar.organization=gregtrevellick-github" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
-    - msbuild "Src/ReadMeSynchronizer.sln"
 build:
   project: Src/ReadMeSynchronizer.sln
   verbosity: minimal
 after_build:
-  #Stop SonarQube runner
   - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=%SONAR_TOKEN%"
 notifications:
 - provider: Email
