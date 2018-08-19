@@ -1,24 +1,20 @@
-.resx ==> vsixfootie ==> https://github.com/marketplace/crowdin "No localization status yet. Badges will appear when there is progress in your project." https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges
+YES renovatebot static badge
+YES codeclimate for non-c# repos https://codeclimate.com/
+YES greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
+YES sonarcloud (add some ci scripts needed) https://sonarcloud.io/projects
+YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
+YES crowdin .resx ==> vsixfootie ==> https://github.com/marketplace/crowdin "No localization status yet. Badges will appear when there is progress in your project." https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges
+
+??? codecov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
+???https://github.com/marketplace/category/code-quality
 
 
 
-
-
-BADGES TO ADD
-=============
-EASY renovatebot 
-EASY greenkeeper [Greenkeeper badge](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)
-HARD CodeCov https://codecov.io/gh (fails login using github credentials - need to reset somehow)
-HARD travis https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
-HARD https://docs.travis-ci.com/user/browserstack/
-HARD https://docs.travis-ci.com/user/coverity-scan/
-HARD https://docs.travis-ci.com/user/sonarcloud/
-HARD https://docs.travis-ci.com/user/coveralls/
-HARD https://docs.travis-ci.com/user/code-climate/
-
-dependabot https://app.dependabot.com/accounts/GregTrevellick/repos
-
-
-
-get rid of karma packages
-unit tests (jest?)
+YES (at some point...) convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
+NAH codeship (ci, not free) https://codeship.com/pricing
+NAH semaphore (linux CI, free for oss) https://semaphoreci.com/pricing https://github.com/marketplace/semaphore
+NAH circleci (linux CI, free for oss) https://circleci.com/pricing/ https://github.com/marketplace/circleci
+NAH coveralls (bit complicated for now) https://www.nuget.org/packages/coveralls.io https://github.com/csmacnz/coveralls.net
+NAH travis (fails mono build using msbuild or xbuild - see SolutionOpenPopUp repo) https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
+NAH coverity (depends on travis working) https://docs.travis-ci.com/user/coverity-scan/
+NAH dependabot (erroneously says i haven't got a .csproj file in repos) https://app.dependabot.com/accounts/GregTrevellick/repos
