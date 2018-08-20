@@ -8,12 +8,12 @@ install:
 before_build:
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     #Start SonarQube runner
-    - MSBuild.SonarQube.Runner.exe begin /k:"Src/ReadMeSynchronizer.sln" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%SONAR_TOKEN%" /d:"sonar.organization=gregtrevellick-github" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
+    - MSBuild.SonarQube.Runner.exe begin /k:"Src/ReadMeSynchronizer.sln" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=$env:SONAR_TOKEN" /d:"sonar.organization=gregtrevellick-github" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
 build:
   project: Src/ReadMeSynchronizer.sln
   verbosity: minimal
 after_build:
-  - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=%SONAR_TOKEN%"
+  - MSBuild.SonarQube.Runner.exe end /d:"sonar.login=$env:SONAR_TOKEN"
 notifications:
 - provider: Email
   to:
