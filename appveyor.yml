@@ -16,7 +16,7 @@ build:
     project: Src/ReadMeSynchronizer.sln
     verbosity: minimal
 after_build:
-    - MSBuild.SonarQube.Runner.exe end /d:sonar.login=$env:my_encrypted_sonarqube_token
+    - SonarScanner.MSBuild.exe end /d:"sonar.login=%my_encrypted_sonarqube_token%"
 notifications:
 - provider: Email
   to:
