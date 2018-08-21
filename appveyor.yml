@@ -10,7 +10,7 @@ install:
 before_build:
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     #- MSBuild.SonarQube.Runner.exe begin /k:"TrevellickProject001" /d:"sonar.host.url=https://sonarqube.com" /d:sonar.login=$env:my_encrypted_sonarqube_token /d:"sonar.organization=gregtrevellick-github" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
-    - SonarScanner.MSBuild.exe begin /k:"TrevellickProject001" /d:"sonar.host.url=https://sonarqube.com" /d:sonar.login=$env:my_encrypted_sonarqube_token /d:"sonar.organization=gregtrevellick-github" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
+    - SonarScanner.MSBuild.exe begin /k:"TrevellickProject001" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=$env:my_encrypted_sonarqube_token" /d:"sonar.organization=gregtrevellick-github" /v:"%APPVEYOR_BUILD_NUMBER%" /d:sonar.cs.opencover.reportsPaths="%CD%\coverage.xml"
         
 build:
     project: Src/ReadMeSynchronizer.sln
