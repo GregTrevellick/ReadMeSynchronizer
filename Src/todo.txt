@@ -1,14 +1,3 @@
-CREDITS?
-https://medium.com/@stef.heyenrath/how-to-fix-sonarcloud-issue-in-a-github-pr-when-using-appveyor-integration-8909b49406b4
-https://www.appveyor.com/blog/2016/12/23/sonarqube/
-https://sagittarius.agency/blog/cicd-for-your-sitecore-pet-project-using-appveyor
-https://www.appveyor.com/docs/build-configuration/#secure-variables
-
-
-
-
-
-
 YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
    Greenkeeper will open an Initial Pull Request to update all dependencies at once
    It will add the Greenkeeper badge to your project’s readme.md

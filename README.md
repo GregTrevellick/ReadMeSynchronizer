@@ -47,6 +47,12 @@ At some point I may try to make a generic scaffold app from this repo, and publi
 
 ### Credits
 
+[Anton Tishchenko](https://sagittarius.agency/blog/cicd-for-your-sitecore-pet-project-using-appveyor)
+
 [loune.net](https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/)
 
 [Shields.io](https://shields.io/#/)
+
+
+[Stef Heyenrath](https://medium.com/@stef.heyenrath/how-to-fix-sonarcloud-issue-in-a-github-pr-when-using-appveyor-integration-8909b49406b4)
+
