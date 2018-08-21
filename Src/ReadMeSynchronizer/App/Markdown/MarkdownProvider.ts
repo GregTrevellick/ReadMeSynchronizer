@@ -38,6 +38,14 @@ export class MarkdownProvider {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
+    public GetSonarSonarCodeSmells(localRepoName: string) {
+        const sonarUrl = "https://sonarcloud.io/api/project_badges/measure?project=";
+        const repoSonarProjName = "TrevellickProject001";
+        const repoSonarType = "&metric=code_smells";
+        const repoSonarTypeUrl = "https://sonarcloud.io/project/issues?id=" + repoSonarProjName + "&resolved=false&types=CODE_SMELL";
+        return "[![Sonar code smells](" + sonarUrl + repoSonarProjName + repoSonarType + ")](" + repoSonarTypeUrl + ")";
+    }
+
     public GetBetterCodeHubCompliance(localRepoName: string) {
         return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + myUserName + "/" + localRepoName + ")";
     }

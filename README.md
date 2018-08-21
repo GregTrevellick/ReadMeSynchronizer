@@ -10,6 +10,7 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/pulls)
+[![Sonar code smells](https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=code_smells)](https://sonarcloud.io/project/issues?id=TrevellickProject001&resolved=false&types=CODE_SMELL)
 [![Appveyor Build status](https://ci.appveyor.com/api/projects/status/uy4igyamwjq51gx4?svg=true)](https://ci.appveyor.com/project/GregTrevellick/ReadMeSynchronizer)
 [![Appveyor unit tests](https://img.shields.io/appveyor/tests/GregTrevellick/ReadMeSynchronizer.svg)](https://ci.appveyor.com/project/GregTrevellick/ReadMeSynchronizer/build/tests)
 [![Access Lint github](https://img.shields.io/badge/a11y-checked-green.svg)](https://www.accesslint.com)

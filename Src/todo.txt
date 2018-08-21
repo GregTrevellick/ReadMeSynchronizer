@@ -1,13 +1,13 @@
+https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=alert_status
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=bugs
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=code_smells
+DONE https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=code_smells
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=coverage
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=duplicated_lines_density
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=ncloc
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=sqale_rating
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=alert_status
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=reliability_rating
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=security_rating
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=sqale_index
+https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=sqale_rating
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=vulnerabilities
 
 
