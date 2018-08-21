@@ -1,6 +1,9 @@
 const chromeWebStore = "chrome-web-store";
 const myUserName = "GregTrevellick";
+const repoSonarTypeUrlPrefix = "https://sonarcloud.io/project/issues?id=";
 const shieldsDotIoUrl = "https://img.shields.io/";
+const sonarUrl = "https://sonarcloud.io/api/project_badges/measure?project=";
+const sonarMetricQueryStringParam = "&metric=";
 const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
 const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
@@ -38,11 +41,26 @@ export class MarkdownProvider {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
-    public GetSonarSonarCodeSmells(localRepoName: string) {
-        const sonarUrl = "https://sonarcloud.io/api/project_badges/measure?project=";
+    public GetSonarAlertStatus(localRepoName: string) {
         const repoSonarProjName = "TrevellickProject001";
-        const repoSonarType = "&metric=code_smells";
-        const repoSonarTypeUrl = "https://sonarcloud.io/project/issues?id=" + repoSonarProjName + "&resolved=false&types=CODE_SMELL";
+        const repoSonarType = sonarMetricQueryStringParam + "alert_status";
+        const repoBadgeTargetSuffix = "&resolved=false&types=CODE_SMELL";
+        const repoSonarTypeUrl = repoSonarTypeUrlPrefix + repoSonarProjName + repoBadgeTargetSuffix;
+        return "[![Sonar alert status](" + sonarUrl + repoSonarProjName + repoSonarType + ")](" + repoSonarTypeUrl + ")";
+    }
+
+    public GetSonarBugs(localRepoName: string) {
+        const repoSonarProjName = "TrevellickProject001";
+        const repoSonarType = sonarMetricQueryStringParam + "bugs";
+        const repoSonarTypeUrl = "https://sonarcloud.io/component_measures?id=TrevellickProject001&metric=bugs";
+        return "[![Sonar bugs](" + sonarUrl + repoSonarProjName + repoSonarType + ")](" + repoSonarTypeUrl + ")";
+    }
+
+    public GetSonarCodeSmells(localRepoName: string) {
+        const repoSonarProjName = "TrevellickProject001";
+        const repoSonarType = sonarMetricQueryStringParam + "code_smells";
+        const repoBadgeTargetSuffix = "&resolved=false&types=CODE_SMELL";
+        const repoSonarTypeUrl = repoSonarTypeUrlPrefix + repoSonarProjName + repoBadgeTargetSuffix;
         return "[![Sonar code smells](" + sonarUrl + repoSonarProjName + repoSonarType + ")](" + repoSonarTypeUrl + ")";
     }
 

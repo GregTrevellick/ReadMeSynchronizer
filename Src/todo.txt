@@ -1,6 +1,6 @@
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=alert_status
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=bugs
-DONE https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=code_smells
+https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=code_smells
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=coverage
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=duplicated_lines_density
 https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=ncloc
