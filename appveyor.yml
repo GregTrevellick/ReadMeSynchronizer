@@ -9,8 +9,9 @@ install:
     ###- npm install -g typescript
     ###- npm --prefix ./ReadMeSynchronizer install ./ReadMeSynchronizer
   
-    - yarn install --production=false --no-lockfile --modules-folder ReadMeSynchronizer/node_modules
-    ###- SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\ReadMeSynchronizer\node_modules;%NODE_PATH%
+    #- yarn install --production=false --no-lockfile --modules-folder ReadMeSynchronizer/node_modules
+    ###- cmd: SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\ReadMeSynchronizer\node_modules;%NODE_PATH%
+    - cmd: SET NODE_PATH=%AppData%\npm\node_modules
 
     # Output useful info for debugging.
     - cmd: node --version
