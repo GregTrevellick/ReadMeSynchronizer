@@ -1,13 +1,13 @@
 export enum SonarCategory {
-    AlertStatus,//quality gate sts
+    AlertStatus,//QualityGateStatus
     Bugs,
     CodeSmells,
     Coverage,
     DuplicatedLinesDensity,
-    Ncloc,//Nbr lines of code
+    Ncloc,//NumberOfLinesOfCode
     ReliabilityRating,
     SecurityRating,
-    SqaleIndex,//technical debt
-    SqaleRating,//maintainability
+    SqaleIndex,//TechnicalDebt
+    SqaleRating,//Maintainability
     Vulnerabilities,
 }
