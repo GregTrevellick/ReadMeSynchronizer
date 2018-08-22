@@ -6,17 +6,18 @@ environment:
 install:
     - choco install "sonarscanner-msbuild-net46" -y
     ###- npm install -g typescript
-    - npm --prefix ./ReadMeSynchronizer install ./ReadMeSynchronizer
+    #- npm --prefix ./ReadMeSynchronizer install ./ReadMeSynchronizer
   
+    - yarn install
     #- yarn install --production=false --no-lockfile --modules-folder ReadMeSynchronizer/node_modules
     ###- SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\ReadMeSynchronizer\node_modules;%NODE_PATH%
 
-    ### Output useful info for debugging.
+    # Output useful info for debugging.
     - cmd: node --version
     - cmd: yarn --version
 
-###cache:
-    ###- packages
+cache:
+    #- packages
 
 before_build:
     - cmd: nuget restore ReadMeSynchronizer.sln
