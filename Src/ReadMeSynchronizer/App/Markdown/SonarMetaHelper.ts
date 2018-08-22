@@ -5,7 +5,6 @@ export class SonarMetaHelper {
 
     private prefixComponentMeasures = "https://sonarcloud.io/component_measures?id=";
     private prefixDashboard = "https://sonarcloud.io/dashboard?id=";
-    //////////////////////////////////////////////////////////////////////////////////////////////private prefixProject = "https://sonarcloud.io/project/issues?id=";
     private sonarMetaData: SonarMetaData;
 
     constructor() {
