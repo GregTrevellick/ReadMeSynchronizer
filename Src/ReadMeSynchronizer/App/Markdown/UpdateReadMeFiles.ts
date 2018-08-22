@@ -6,6 +6,7 @@ import { RepoMetaDatas } from "./RepoMetaDatas";
 import { allBadges } from "./Repos";
 import { GroupedBadgeType } from "./GroupedBadgeType";
 import { IVsmpMetaData } from "./IVsmpMetaData";
+//import { $enum } from "ts-enum-util";
 
 export class ReadMeUpdater {
     public replace = require("gulp-string-replace");
@@ -163,7 +164,7 @@ export class ReadMeUpdater {
             //PRs
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
-            //Sonar (all of them)
+            //Sonar
             this.mp.GetSonarAlertStatus(repoMetaData.localRepoName),
             this.mp.GetSonarBugs(repoMetaData.localRepoName),
             this.mp.GetSonarCodeSmells(repoMetaData.localRepoName),
@@ -287,7 +288,7 @@ export class ReadMeUpdater {
                     break;
                 }
                 case GroupedBadgeType.SonarBugs: {
-                    title = `${this.titleHtag}SonarBugs`;
+                    title = `${this.titleHtag}${GroupedBadgeType[GroupedBadgeType.SonarBugs]}`;///////////////////////////////////////repeat this for the other magic strings (extract to a function ???)
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBugs(repoMetaData.localRepoName)}`;
                     break;
                 }
