@@ -5,7 +5,7 @@ environment:
         secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le
 install:
     - choco install "sonarscanner-msbuild-net46" -y
-    - npm --prefix ./Src/ReadMeSynchronizer install
+    - npm --prefix ./Src/ReadMeSynchronizer install ./Src/ReadMeSynchronizer
 
 before_build:
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
