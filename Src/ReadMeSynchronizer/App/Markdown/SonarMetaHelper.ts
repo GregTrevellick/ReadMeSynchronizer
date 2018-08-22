@@ -12,17 +12,17 @@ export class SonarMetaHelper {
     public GetSonarMetaData(sonarCategory: SonarCategory): SonarMetaData {
 
         switch (sonarCategory) {
-            case SonarCategory.SonarAlertStatus: {
+            case SonarCategory.AlertStatus: {
                 this.sonarMetaData.sonarBadgeQueryStringParam = "alert_status";
                 this.sonarMetaData.sonarTargetUrlSuffix = "&resolved=false&types=ALERT_STATUS";
                 break;
             }
-            case SonarCategory.SonarBugs: {
+            case SonarCategory.Bugs: {
                 this.sonarMetaData.sonarBadgeQueryStringParam = "bugs";
                 this.sonarMetaData.sonarTargetUrlSuffix = "&resolved=false&types=BUGS";
                 break;
             }
-            case SonarCategory.SonarCodeSmells: {
+            case SonarCategory.CodeSmells: {
                 this.sonarMetaData.sonarBadgeQueryStringParam = "code_smells";
                 this.sonarMetaData.sonarTargetUrlSuffix = "&resolved=false&types=CODE_SMELLS";
                 break;

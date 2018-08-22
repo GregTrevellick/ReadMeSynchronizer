@@ -294,7 +294,7 @@ export class ReadMeUpdater {
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
                     break;
                 }
-
+                //gregt more sonar here
             }
         }
 
