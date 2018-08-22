@@ -13,7 +13,7 @@ install:
     #- packages
 before_build:
   # Output useful info for debugging.
-- cmd: node --version
+#- cmd: node --version
 #- cmd: yarn --version
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     - SonarScanner.MSBuild.exe begin /k:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
