@@ -7,10 +7,9 @@ install:
     - choco install "sonarscanner-msbuild-net46" -y
 
     ###- cmd: SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\ReadMeSynchronizer\node_modules;%NODE_PATH%
-    - cmd: %AppData%
     - cmd: SET NODE_PATH=%AppData%\npm\node_modules
     
-    ###- npm install -g typescript
+    - npm install -g typescript
     ###- npm --prefix ./ReadMeSynchronizer install ./ReadMeSynchronizer
   
     #- yarn install --production=false --no-lockfile --modules-folder ReadMeSynchronizer/node_modules
