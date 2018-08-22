@@ -11,10 +11,10 @@ install:
     - cmd: node --version
     - cmd: yarn --version
 before_build:
-    - cmd: nuget restore ReadMeSynchronizer.sln
+    - cmd: nuget restore Src/ReadMeSynchronizer.sln
     - SonarScanner.MSBuild.exe begin /k:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
 build:
-    project: ReadMeSynchronizer.sln
+    project: Src/ReadMeSynchronizer.sln
     verbosity: minimal
 after_build:
     - SonarScanner.MSBuild.exe end /d:"sonar.login=%my_encrypted_sonarqube_token%"

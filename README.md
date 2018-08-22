@@ -66,4 +66,3 @@ At some point I may try to make a generic scaffold app from this repo, and publi
 
 
 [Stef Heyenrath](https://medium.com/@stef.heyenrath/how-to-fix-sonarcloud-issue-in-a-github-pr-when-using-appveyor-integration-8909b49406b4)
-
