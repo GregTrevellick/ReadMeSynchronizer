@@ -280,18 +280,15 @@ export class ReadMeUpdater {
                     break;
                 }
                 case GroupedBadgeType.SonarAlertStatus: {
-                    const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.AlertStatus);
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.AlertStatus);
                     break;
                 }
                 case GroupedBadgeType.SonarBugs: {
-                    const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Bugs);
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Bugs);
                     break;
                 }
                 case GroupedBadgeType.SonarCodeSmells: {
-                    const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.CodeSmells);
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.CodeSmells);
                     break;
                 }
                 //gregt more sonar here
@@ -301,6 +298,11 @@ export class ReadMeUpdater {
         title = this.GetTitle(groupedBadgeType);
         const titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);
         return titleAndBadges;
+    }
+
+    private GetSonarBadgesMarkdown(repoMetaData: IRepoMetaData, sonarCategory: SonarCategory) {
+        const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(sonarCategory);
+        return `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;
     }
 
     private GetTitle(groupedBadgeType: GroupedBadgeType) {
