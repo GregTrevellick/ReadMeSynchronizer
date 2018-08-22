@@ -44,7 +44,7 @@ export class ReadMeUpdater {
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
                 baseBadgesMarkdown += this.GetBadgesByType();
                 baseBadgesMarkdown += `${this.lineBreak}### Per Repo${this.lineBreak}`;
-                baseBadgesMarkdown += `${this.titleHtag}Parent - ${repoMetaData.localRepoName}`;//DEDUPE
+                baseBadgesMarkdown += `${this.titleHtag} [Parent - ${repoMetaData.localRepoName}](https://github.com/${this.mp.myUserName}/${repoMetaData.localRepoName})`;//DEDUPE
             }
 
             baseBadgesMarkdown += `${this.lineBreak}${this.GetMultipleBadgesMarkdown(repoMetaData)}`;
