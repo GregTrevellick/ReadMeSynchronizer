@@ -6,6 +6,8 @@ import { RepoMetaDatas } from "./RepoMetaDatas";
 import { allBadges } from "./Repos";
 import { GroupedBadgeType } from "./GroupedBadgeType";
 import { IVsmpMetaData } from "./IVsmpMetaData";
+import { SonarCategory } from "./SonarCategory";
+import { SonarMetaHelper } from "./SonarMetaHelper";
 
 export class ReadMeUpdater {
     public replace = require("gulp-string-replace");
@@ -21,12 +23,14 @@ export class ReadMeUpdater {
     private lineBreak: string = "\n";
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;
+    private sonarMetaHelper: SonarMetaHelper;
     private titleHtag = "##### ";
 
     constructor() {
         this.fileSystemUpdater = new FileSystemUpdater;
         this.mp = new MarkdownProvider;
         this.repoMetaDatas = new RepoMetaDatas;
+        this.sonarMetaHelper = new SonarMetaHelper;
         this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
         this.badgeCommentStartSuffixBadgeMarkdown = this.mp.GetPoweredByReadMeSynchronizerBadgeMarkdown();
         this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.lineBreak}<!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->`;
@@ -164,9 +168,9 @@ export class ReadMeUpdater {
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //Sonar
-            this.mp.GetSonarAlertStatus(repoMetaData.localRepoName),
-            this.mp.GetSonarBugs(repoMetaData.localRepoName),
-            this.mp.GetSonarCodeSmells(repoMetaData.localRepoName),
+            this.mp.GetSonarAlertStatus(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarAlertStatus)),
+            this.mp.GetSonarBugs(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarBugs)),
+            this.mp.GetSonarCodeSmells(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarCodeSmells)),
             //this.mp.GetSonarCoverage(repoMetaData.localRepoName),
             //this.mp.GetSonarDuplicatedLinesDensity(repoMetaData.localRepoName),
             //this.mp.GetSonarNcloc(repoMetaData.localRepoName),
@@ -276,15 +280,18 @@ export class ReadMeUpdater {
                     break;
                 }
                 case GroupedBadgeType.SonarAlertStatus: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarAlertStatus(repoMetaData.localRepoName)}`;
+                    const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarAlertStatus);
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarAlertStatus(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
                     break;
                 }
                 case GroupedBadgeType.SonarBugs: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBugs(repoMetaData.localRepoName)}`;
+                    const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarBugs);
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBugs(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
                     break;
                 }
                 case GroupedBadgeType.SonarCodeSmells: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarCodeSmells(repoMetaData.localRepoName)}`;
+                    const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarCodeSmells);
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarCodeSmells(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
                     break;
                 }
 

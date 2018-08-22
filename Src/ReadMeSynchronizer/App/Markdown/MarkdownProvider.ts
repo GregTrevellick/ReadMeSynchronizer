@@ -1,8 +1,10 @@
+import { SonarMetaData } from "./SonarMetaData";
+
 const chromeWebStore = "chrome-web-store";
 const myUserName = "GregTrevellick";
 const repoSonarTypeUrlPrefix = "https://sonarcloud.io/project/issues?id=";
 const shieldsDotIoUrl = "https://img.shields.io/";
-const sonarUrl = "https://sonarcloud.io/api/project_badges/measure?project=";
+const sonarUrlAddress = "https://sonarcloud.io/api/project_badges/measure?project=";
 const sonarMetricQueryStringParam = "&metric=";
 const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
 const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
@@ -41,27 +43,24 @@ export class MarkdownProvider {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
-    public GetSonarAlertStatus(localRepoName: string) {
-        const repoSonarProjName = "TrevellickProject001";
-        const repoSonarType = sonarMetricQueryStringParam + "alert_status";
-        const repoBadgeTargetSuffix = "&resolved=false&types=CODE_SMELL";
-        const repoSonarTypeUrl = repoSonarTypeUrlPrefix + repoSonarProjName + repoBadgeTargetSuffix;
-        return "[![Sonar alert status](" + sonarUrl + repoSonarProjName + repoSonarType + ")](" + repoSonarTypeUrl + ")";
+    public GetSonarAlertStatus(localRepoName: string, sonarMetaData: SonarMetaData) {//sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string ) {
+        return this.GetSonarBadge("Sonar" + sonarMetaData.sonarBadgeQueryStringParam, sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
     }
 
-    public GetSonarBugs(localRepoName: string) {
-        const repoSonarProjName = "TrevellickProject001";
-        const repoSonarType = sonarMetricQueryStringParam + "bugs";
-        const repoSonarTypeUrl = "https://sonarcloud.io/component_measures?id=TrevellickProject001&metric=bugs";
-        return "[![Sonar bugs](" + sonarUrl + repoSonarProjName + repoSonarType + ")](" + repoSonarTypeUrl + ")";
+    public GetSonarBugs(localRepoName: string, sonarMetaData: SonarMetaData) {// sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string) {
+        return this.GetSonarBadge("Sonar" + sonarMetaData.sonarBadgeQueryStringParam, sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
     }
 
-    public GetSonarCodeSmells(localRepoName: string) {
-        const repoSonarProjName = "TrevellickProject001";
-        const repoSonarType = sonarMetricQueryStringParam + "code_smells";
-        const repoBadgeTargetSuffix = "&resolved=false&types=CODE_SMELL";
-        const repoSonarTypeUrl = repoSonarTypeUrlPrefix + repoSonarProjName + repoBadgeTargetSuffix;
-        return "[![Sonar code smells](" + sonarUrl + repoSonarProjName + repoSonarType + ")](" + repoSonarTypeUrl + ")";
+    public GetSonarCodeSmells(localRepoName: string, sonarMetaData: SonarMetaData) {// sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string) {
+        return this.GetSonarBadge("Sonar" + sonarMetaData.sonarBadgeQueryStringParam, sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
+    }
+
+    private GetSonarBadge(sonarDescr: string, sonarUrlAddress: string, localRepoName: string, sonarMetaData: SonarMetaData) {// sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string) {
+        const repoSonarType = sonarMetricQueryStringParam + sonarMetaData.sonarBadgeQueryStringParam;
+        const repoBadgeTargetSuffix = sonarMetaData.sonarTargetUrlSuffix;
+        const repoSonarTypeUrl = repoSonarTypeUrlPrefix + localRepoName + repoBadgeTargetSuffix;
+        const sonarUrl = sonarUrlAddress + localRepoName + repoSonarType;
+        return `[![${sonarDescr}](${sonarUrl})](${repoSonarTypeUrl})`;
     }
 
     public GetBetterCodeHubCompliance(localRepoName: string) {

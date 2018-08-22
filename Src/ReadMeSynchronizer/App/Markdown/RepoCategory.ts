@@ -8,8 +8,3 @@ export enum RepoCategory {
     VsixHelloWorld,
     VstsExtension,
 }
-//VsixHelloWorldToolBar ==> HelloWorldVsixToolBar
-//VsixHelloWorldCommandButton ==> HelloWorldVsixCommandButton
-//VsixHelloWorldPopUp ==> HelloWorldVsixPopUp
-//VsixToolWindowAsyncPackageExample ==> HelloWorldVsixToolWindowAsyncPackageExample
-//WpfAsyncBindingPropertyExample ==> HelloWorldWpfAsyncBindingPropertyExample
