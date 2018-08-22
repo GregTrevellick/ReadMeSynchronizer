@@ -14,7 +14,7 @@ export class MarkdownProvider {
     constructor() { }
 
     public GetPoweredByReadMeSynchronizerBadgeMarkdown() {
-        return "[![Read Me Synchronizer](" + shieldsDotIoUrl + "badge/-badges%20powered%20by%20Read%20Me%20Synchronizer-green.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)";
+        return "[![Read Me Synchronizer](" + shieldsDotIoUrl + "badge/-powered%20by%20read%20me%20synchronizer-brightgreen.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)";
     }
 
     public GetLicenceBadgeMarkdown() {
@@ -22,11 +22,11 @@ export class MarkdownProvider {
     }
 
     public GetAccessLintBadgeMarkdown() {
-        return "[![Access Lint github](" + shieldsDotIoUrl + "badge/a11y-checked-green.svg)](https://www.accesslint.com)";
+        return "[![Access Lint github](" + shieldsDotIoUrl + "badge/a11y-checked-brightgreen.svg)](https://www.accesslint.com)";
     }
 
     public GetRenovateBotBadgeMarkdown() {
-        return "[![Renovate Bot github](" + shieldsDotIoUrl + "badge/renovatebot-checked-green.svg)](https://renovatebot.com/)";
+        return "[![Renovate Bot github](" + shieldsDotIoUrl + "badge/renovatebot-checked-brightgreen.svg)](https://renovatebot.com/)";
     }
 
     public GetGitHubTopLanguage(localRepoName: string) {
@@ -82,7 +82,7 @@ export class MarkdownProvider {
     }
 
     public GetImgBot(localRepoName: string) {
-        return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-green.svg)](https://imgbot.net/)";
+        return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-brightgreen.svg)](https://imgbot.net/)";
     }
 
     public GetCharityWare(localRepoName: string) {
