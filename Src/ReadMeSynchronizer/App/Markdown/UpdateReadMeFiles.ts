@@ -6,7 +6,6 @@ import { RepoMetaDatas } from "./RepoMetaDatas";
 import { allBadges } from "./Repos";
 import { GroupedBadgeType } from "./GroupedBadgeType";
 import { IVsmpMetaData } from "./IVsmpMetaData";
-//import { $enum } from "ts-enum-util";
 
 export class ReadMeUpdater {
     public replace = require("gulp-string-replace");
@@ -253,47 +252,38 @@ export class ReadMeUpdater {
             switch (groupedBadgeType)
             {
                 case GroupedBadgeType.AppveyorBuildStatus: {
-                    title = `${this.titleHtag}Appveyor Builds`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId)}`;
                     break;
                 }
                 case GroupedBadgeType.AppveyorUnitTests: {
-                    title = `${this.titleHtag}Appveyor Tests`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName)}`;
                     break;
                 }
                 case GroupedBadgeType.BetterCodeHubCompliance: {
-                    title = `${this.titleHtag}Better Code`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName)}`;
                     break;
                 }
                 case GroupedBadgeType.CodacyBadge: {
-                    title = `${this.titleHtag}Codacy`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId)}`;
                     break;
                 }
                 case GroupedBadgeType.CodeFactor: {
-                    title = `${this.titleHtag}CodeFactor`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetCodeFactor(repoMetaData.localRepoName)}`;
                     break;
                 }
                 case GroupedBadgeType.GitHubPullRequests: {
-                    title = `${this.titleHtag}Pull Requests`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetGitHubPullRequests(repoMetaData.localRepoName)}`;
                     break;
                 }
                 case GroupedBadgeType.SonarAlertStatus: {
-                    title = `${this.titleHtag}SonarAlertStatus`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarAlertStatus(repoMetaData.localRepoName)}`;
                     break;
                 }
                 case GroupedBadgeType.SonarBugs: {
-                    title = `${this.titleHtag}${GroupedBadgeType[GroupedBadgeType.SonarBugs]}`;///////////////////////////////////////repeat this for the other magic strings (extract to a function ???)
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBugs(repoMetaData.localRepoName)}`;
                     break;
                 }
                 case GroupedBadgeType.SonarCodeSmells: {
-                    title = `${this.titleHtag}SonarCodeSmells`;
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarCodeSmells(repoMetaData.localRepoName)}`;
                     break;
                 }
@@ -301,8 +291,13 @@ export class ReadMeUpdater {
             }
         }
 
+        title = this.GetTitle(groupedBadgeType);
         const titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);
         return titleAndBadges;
+    }
+
+    private GetTitle(groupedBadgeType: GroupedBadgeType) {
+        return `${this.titleHtag}${GroupedBadgeType[groupedBadgeType]}`;
     }
 
     private GetTitleAndBadges(title: string, markdown: string) {
