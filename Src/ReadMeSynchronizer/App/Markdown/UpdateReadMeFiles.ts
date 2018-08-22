@@ -130,7 +130,7 @@ export class ReadMeUpdater {
         for (const repoMetaData of this.allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetMultipleBadgesMarkdown(repoMetaData);
-            const title = `${this.titleHtag}${repoCategoryDescription} - ${repoMetaData.localRepoName}`;//DEDUPE
+            const title = `${this.titleHtag} [${repoCategoryDescription} - ${repoMetaData.localRepoName}](https://github.com/${this.mp.myUserName}/${repoMetaData.localRepoName})`;//DEDUPE
             badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
 

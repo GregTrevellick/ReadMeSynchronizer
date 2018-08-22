@@ -1,3 +1,5 @@
+make repo headers into hyperlinks
+
 convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
 
 

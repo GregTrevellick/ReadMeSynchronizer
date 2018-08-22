@@ -1,7 +1,6 @@
 import { SonarMetaData } from "./SonarMetaData";
 
 const chromeWebStore = "chrome-web-store";
-const myUserName = "GregTrevellick";
 const shieldsDotIoUrl = "https://img.shields.io/";
 const sonarBadgesUrlAddress = "https://sonarcloud.io/api/project_badges/measure?project=";
 const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
@@ -10,6 +9,8 @@ const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
 
 export class MarkdownProvider {
+
+    public myUserName = "GregTrevellick";
 
     constructor() { }
 
@@ -30,15 +31,15 @@ export class MarkdownProvider {
     }
 
     public GetGitHubTopLanguage(localRepoName: string) {
-        return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
     public GetGitHubLanguageCount(localRepoName: string) {
-        return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
     public GetGitHubPullRequests(localRepoName: string) {
-        return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
+        return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
     public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData) {
@@ -49,36 +50,36 @@ export class MarkdownProvider {
     }
 
     public GetBetterCodeHubCompliance(localRepoName: string) {
-        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + myUserName + "/" + localRepoName + ")";
+        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + this.myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + this.myUserName + "/" + localRepoName + ")";
     }
 
     public GetCodacyBadge(localRepoName: string, codacyId: string) {
         return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
-            "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
+            "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + this.myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
     }
 
     //codecov temporarily disabled
     public GetCodeCov(localRepoName: string) {
-        return "[![codecov](https://codecov.io/gh/" + myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + myUserName + "/" + localRepoName + ")";
+        return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
     }
 
     public GetCodeFactor(localRepoName: string) {
-        return "[![CodeFactor](https://www.codefactor.io/repository/github/" + myUserName + "/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/" + myUserName + "/" + localRepoName + ")";
+        return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
     }
 
     public GetAppveyorBuildStatus(localRepoName: string, appVeyorId: string) {
         const appVeyorRepoName = this.DotSubstituion(localRepoName);
-        return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/" + appVeyorId + "?svg=true)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + ")";
+        return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/" + appVeyorId + "?svg=true)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + ")";
     }
 
     public GetAppveyorUnitTests(localRepoName: string) {
         const appVeyorRepoName = this.DotSubstituion(localRepoName);
-        return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + myUserName + "/" + appVeyorRepoName + "/build/tests)";
+        return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + this.myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + "/build/tests)";
     }
 
     //travis build temporarily disabled
     public GetTravisBuildStatus(localRepoName: string) {
-        return "[![Travis Build Status](https://travis-ci.org/" + myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + myUserName + "/" + localRepoName + ")";
+        return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";
     }
 
     public GetImgBot(localRepoName: string) {
@@ -86,7 +87,7 @@ export class MarkdownProvider {
     }
 
     public GetCharityWare(localRepoName: string) {
-        return "[![Charity Ware](" + shieldsDotIoUrl + "badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/" + myUserName + "/MiscellaneousArtefacts/wiki/Charity-Ware)";
+        return "[![Charity Ware](" + shieldsDotIoUrl + "badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/" + this.myUserName + "/MiscellaneousArtefacts/wiki/Charity-Ware)";
     }
 
     public GetVisualStudioMarketplaceVSTSItemBadge(localRepoName: string, itemName: string) {
@@ -94,15 +95,15 @@ export class MarkdownProvider {
     }
 
     public GetVisualStudioMarketplaceVSTSVersion(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + this.myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSDownloads(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
+        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + this.myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSRatings(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + "#review-details)";
+        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + this.myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + "#review-details)";
     }
 
     public GetVisualStudioMarketplaceIDEItemBadge(localRepoName: string) {
@@ -110,19 +111,19 @@ export class MarkdownProvider {
     }
 
     public GetVisualStudioMarketplaceIDEVersion(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+        return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + this.myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](" + vsmarketplacebadgeAppHarborUrl + "installs/" + myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+        return "[![Visual Studio Marketplace downloads](" + vsmarketplacebadgeAppHarborUrl + "installs/" + this.myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDERatings(localRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+        return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + this.myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     private GetVisualStudioMarketplaceUrlPrefix() {
-        return `${visualStudioMarketplaceUrl}${myUserName}.`;
+        return `${visualStudioMarketplaceUrl}${this.myUserName}.`;
     }
 
     public GetNugetDownloads(localRepoName: string) {
@@ -142,7 +143,7 @@ export class MarkdownProvider {
     }
 
     private GetGitHubUrlForRepo(localRepoName: string) {
-        return "https://github.com/" + myUserName + "/" + localRepoName;
+        return "https://github.com/" + this.myUserName + "/" + localRepoName;
     }
 
     private DotSubstituion(localreponame: string) {
