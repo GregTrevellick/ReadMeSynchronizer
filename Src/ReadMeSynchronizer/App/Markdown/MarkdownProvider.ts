@@ -11,11 +11,12 @@ const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio
 export class MarkdownProvider {
 
     public myUserName = "GregTrevellick";
+    public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
 
     constructor() { }
 
     public GetPoweredByReadMeSynchronizerBadgeMarkdown() {
-        return "[![Read Me Synchronizer](" + shieldsDotIoUrl + "badge/-powered%20by%20read%20me%20synchronizer-brightgreen.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)";
+        return `[![Read Me Synchronizer](${shieldsDotIoUrl}badge/-powered%20by%20read%20me%20synchronizer-brightgreen.svg)](${this.gitHubReadMeSynchronizerUrl})`;
     }
 
     public GetLicenceBadgeMarkdown() {
@@ -58,10 +59,9 @@ export class MarkdownProvider {
             "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + this.myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
     }
 
-    //codecov temporarily disabled
-    public GetCodeCov(localRepoName: string) {
-        return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
-    }
+    //public GetCodeCov(localRepoName: string) {
+    //    return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
+    //}
 
     public GetCodeFactor(localRepoName: string) {
         return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
@@ -77,10 +77,9 @@ export class MarkdownProvider {
         return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + this.myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + "/build/tests)";
     }
 
-    //travis build temporarily disabled
-    public GetTravisBuildStatus(localRepoName: string) {
-        return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";
-    }
+    //public GetTravisBuildStatus(localRepoName: string) {
+    //    return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";
+    //}
 
     public GetImgBot(localRepoName: string) {
         return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-brightgreen.svg)](https://imgbot.net/)";

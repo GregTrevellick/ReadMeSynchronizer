@@ -33,7 +33,7 @@ export class ReadMeUpdater {
         this.sonarMetaHelper = new SonarMetaHelper;
         this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
         this.badgeCommentStartSuffixBadgeMarkdown = this.mp.GetPoweredByReadMeSynchronizerBadgeMarkdown();
-        this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.lineBreak}<!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->`;
+        this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.lineBreak}<!-- Powered by ${this.mp.gitHubReadMeSynchronizerUrl} -->`;
     }
 
     public ReplaceBadgeComments() {
@@ -185,12 +185,8 @@ export class ReadMeUpdater {
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Vulnerabilities)),
 
             //build / test coverage related
-            //TODO gregt
-            //this.mp.GetCodeCov(repoMetaData.localRepoName),
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId),
             this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName),
-            //TODO gregt
-            //this.mp.GetTravisBuildStatus(repoMetaData.localRepoName),
 
             //less important stuff
             this.mp.GetAccessLintBadgeMarkdown(),
