@@ -1,3 +1,7 @@
+convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
+
+
+
 YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
    Greenkeeper will open an Initial Pull Request to update all dependencies at once
    It will add the Greenkeeper badge to your project’s readme.md
@@ -6,11 +10,17 @@ YES codeclimate (for non-c# repos) https://codeclimate.com/
 YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
 YES codecov (need to add yaml file) https://codecov.io/gh 
 YES crowdin (need resx files) https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges Badges will appear when there is progress in your project
+YES testquality (free for oss) https://github.com/marketplace/testquality
+YES lgtm (free for oss) https://github.com/marketplace/lgtm
+YES codebeat (free for oss) https://github.com/marketplace/codebeat
 
-??? https://github.com/marketplace/category/code-quality
 
-NOT YET convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
 
+
+NAH gitlocalize (free for 1 oss repo only) https://github.com/marketplace/gitlocalize
+NAH snyk (free but aimed at node) https://github.com/marketplace/snyk
+NAH buddy (free, but for usage not for oss) https://github.com/marketplace/buddy
+NAH google cloud build (120 free build minutes a day, $0.003/minute after that) https://github.com/marketplace/google-cloud-build
 NAH codeship (ci, not free) https://codeship.com/pricing
 NAH semaphore (linux CI, free for oss) https://semaphoreci.com/pricing https://github.com/marketplace/semaphore
 NAH circleci (linux CI, free for oss) https://circleci.com/pricing/ https://github.com/marketplace/circleci
