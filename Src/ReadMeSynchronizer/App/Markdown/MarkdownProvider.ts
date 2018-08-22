@@ -43,19 +43,20 @@ export class MarkdownProvider {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
-    public GetSonarAlertStatus(localRepoName: string, sonarMetaData: SonarMetaData) {//sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string ) {
-        return this.GetSonarBadge("Sonar" + sonarMetaData.sonarBadgeQueryStringParam, sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
-    }
+    //////////////public GetSonarAlertStatus(localRepoName: string, sonarMetaData: SonarMetaData) {
+    //////////////    return this.GetSonarBadge(sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
+    //////////////}
 
-    public GetSonarBugs(localRepoName: string, sonarMetaData: SonarMetaData) {// sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string) {
-        return this.GetSonarBadge("Sonar" + sonarMetaData.sonarBadgeQueryStringParam, sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
-    }
+    //////////////public GetSonarBugs(localRepoName: string, sonarMetaData: SonarMetaData) {
+    //////////////    return this.GetSonarBadge(sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
+    //////////////}
 
-    public GetSonarCodeSmells(localRepoName: string, sonarMetaData: SonarMetaData) {// sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string) {
-        return this.GetSonarBadge("Sonar" + sonarMetaData.sonarBadgeQueryStringParam, sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
-    }
+    //////////////public GetSonarCodeSmells(localRepoName: string, sonarMetaData: SonarMetaData) {
+    //////////////    return this.GetSonarBadge(sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
+    //////////////}
 
-    private GetSonarBadge(sonarDescr: string, sonarUrlAddress: string, localRepoName: string, sonarMetaData: SonarMetaData) {// sonarTargetUrlSuffix: string, sonarBadgeQueryStringParam: string) {
+    public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData) {
+        const sonarDescr: string = "Sonar" + sonarMetaData.sonarBadgeQueryStringParam;
         const repoSonarType = sonarMetricQueryStringParam + sonarMetaData.sonarBadgeQueryStringParam;
         const repoBadgeTargetSuffix = sonarMetaData.sonarTargetUrlSuffix;
         const repoSonarTypeUrl = repoSonarTypeUrlPrefix + localRepoName + repoBadgeTargetSuffix;

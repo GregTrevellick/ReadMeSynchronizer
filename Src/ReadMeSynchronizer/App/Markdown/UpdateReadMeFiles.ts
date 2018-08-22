@@ -168,9 +168,9 @@ export class ReadMeUpdater {
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //Sonar
-            this.mp.GetSonarAlertStatus(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarAlertStatus)),
-            this.mp.GetSonarBugs(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarBugs)),
-            this.mp.GetSonarCodeSmells(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarCodeSmells)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarAlertStatus)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarBugs)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarCodeSmells)),
             //this.mp.GetSonarCoverage(repoMetaData.localRepoName),
             //this.mp.GetSonarDuplicatedLinesDensity(repoMetaData.localRepoName),
             //this.mp.GetSonarNcloc(repoMetaData.localRepoName),
@@ -281,17 +281,17 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.SonarAlertStatus: {
                     const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarAlertStatus);
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarAlertStatus(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
                     break;
                 }
                 case GroupedBadgeType.SonarBugs: {
                     const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarBugs);
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBugs(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
                     break;
                 }
                 case GroupedBadgeType.SonarCodeSmells: {
                     const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SonarCodeSmells);
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarCodeSmells(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;//gregt dedupe
                     break;
                 }
 
