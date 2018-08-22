@@ -44,7 +44,7 @@ export class ReadMeUpdater {
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
                 baseBadgesMarkdown += this.GetBadgesByType();
                 baseBadgesMarkdown += `${this.lineBreak}### Per Repo${this.lineBreak}`;
-                baseBadgesMarkdown += `${this.titleHtag} [Parent - ${repoMetaData.localRepoName}](https://github.com/${this.mp.myUserName}/${repoMetaData.localRepoName})`;//DEDUPE
+                baseBadgesMarkdown += this.GetFullTitle("Parent", repoMetaData.localRepoName);
             }
 
             baseBadgesMarkdown += `${this.lineBreak}${this.GetMultipleBadgesMarkdown(repoMetaData)}`;
@@ -53,6 +53,10 @@ export class ReadMeUpdater {
 
             this.fileSystemUpdater.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, surroundedBadgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
         }
+    }
+
+    private GetFullTitle(repoCategoryDescription:string, localRepoName: string) {
+        return `${this.titleHtag} [${repoCategoryDescription} - ${localRepoName}](https://github.com/${this.mp.myUserName}/${localRepoName})`;
     }
 
     private GetSurroundedBadgesMarkdown(baseBadgesMarkdown: string) {
@@ -130,7 +134,7 @@ export class ReadMeUpdater {
         for (const repoMetaData of this.allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetMultipleBadgesMarkdown(repoMetaData);
-            const title = `${this.titleHtag} [${repoCategoryDescription} - ${repoMetaData.localRepoName}](https://github.com/${this.mp.myUserName}/${repoMetaData.localRepoName})`;//DEDUPE
+            const title = this.GetFullTitle(repoCategoryDescription, repoMetaData.localRepoName);
             badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
 
