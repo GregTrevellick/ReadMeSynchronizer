@@ -5,16 +5,24 @@ environment:
         secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le
 install:
     - choco install "sonarscanner-msbuild-net46" -y
-    ##- npm install -g typescript
-    ##- npm --prefix ./Src/ReadMeSynchronizer install ./Src/ReadMeSynchronizer
-    #- yarn install --modules-folder $(Agent.BuildDirectory)\node_modules
-    ##- SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\src\ReadMeSynchronizer\node_modules;%NODE_PATH%
-#cache:
-    #- packages
+    ###- npm install -g typescript
+    ###- npm --prefix ./Src/ReadMeSynchronizer install ./Src/ReadMeSynchronizer
+    
+    ###- yarn install --modules-folder $(Agent.BuildDirectory)\node_modules
+    - yarn install --production=false --modules-folder Src/ReadMeSynchronizer/node_modules
+    #Yarn will not install any package listed in devDependencies if the NODE_ENV environment variable is set to production. 
+    #Use this flag to instruct Yarn to ignore NODE_ENV and take its production-or-not status from this flag instead.
+
+    ###- SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\src\ReadMeSynchronizer\node_modules;%NODE_PATH%
+
+    ### Output useful info for debugging.
+    ###- cmd: node --version
+    ###- cmd: yarn --version
+
+###cache:
+    ###- packages
+
 before_build:
-    # Output useful info for debugging.
-    #- cmd: node --version
-    #- cmd: yarn --version
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     - SonarScanner.MSBuild.exe begin /k:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
 build:
