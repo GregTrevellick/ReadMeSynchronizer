@@ -7,11 +7,14 @@ install:
     - choco install "sonarscanner-msbuild-net46" -y
     ###- npm install -g typescript
     ###- npm --prefix ./Src/ReadMeSynchronizer install ./Src/ReadMeSynchronizer
-    #- yarn install --modules-folder $(Agent.BuildDirectory)\node_modules
+   # - yarn install --modules-folder $(Agent.BuildDirectory)\node_modules
     ###- SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\src\ReadMeSynchronizer\node_modules;%NODE_PATH%
-cache:
+#cache:
     #- packages
 before_build:
+  # Output useful info for debugging.
+  - node --version
+  - yarn --version
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     - SonarScanner.MSBuild.exe begin /k:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
 build:
