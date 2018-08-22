@@ -1,4 +1,5 @@
 export class SonarMetaData {
-    sonarBadgeQueryStringParam: string;
-    sonarTargetUrlSuffix: string;
+    badgeQueryString: string;
+    badgeHyperlinkTargetUrlPrefix: string;
+    badgeHyperlinkTargetUrlSuffix: string;
 }

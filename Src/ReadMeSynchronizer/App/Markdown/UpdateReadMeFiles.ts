@@ -171,14 +171,14 @@ export class ReadMeUpdater {
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.AlertStatus)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Bugs)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.CodeSmells)),
-            //this.mp.GetSonarCoverage(repoMetaData.localRepoName),
-            //this.mp.GetSonarDuplicatedLinesDensity(repoMetaData.localRepoName),
-            //this.mp.GetSonarNcloc(repoMetaData.localRepoName),
-            //this.mp.GetSonarReliabilityRating(repoMetaData.localRepoName),
-            //this.mp.GetSonarSecurityRating(repoMetaData.localRepoName),
-            //this.mp.GetSonarSqaleIndex(repoMetaData.localRepoName),
-            //this.mp.GetSonarSqaleRating(repoMetaData.localRepoName),
-            //this.mp.GetSonarVulnerabilities(repoMetaData.localRepoName),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Coverage)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.DuplicatedLinesDensity)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Ncloc)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.ReliabilityRating)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SecurityRating)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SqaleIndex)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SqaleRating)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Vulnerabilities)),
 
             //build / test coverage related
             //TODO gregt
@@ -236,14 +236,14 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarAlertStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarBugs);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarCodeSmells);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarCoverage);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarDuplicatedLinesDensity);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarNcloc);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarReliabilityRating);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSecurityRating);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSqaleIndex);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSqaleRating);
-        //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarVulnerabilities);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarCoverage);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarDuplicatedLinesDensity);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarNcloc);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarReliabilityRating);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSecurityRating);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSqaleIndex);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSqaleRating);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarVulnerabilities);
 
         return badgesByTypeMarkdown;
     }
@@ -291,7 +291,39 @@ export class ReadMeUpdater {
                     badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.CodeSmells);
                     break;
                 }
-                //gregt more sonar here
+                case GroupedBadgeType.SonarCoverage: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Coverage);
+                    break;
+                }
+                case GroupedBadgeType.SonarDuplicatedLinesDensity: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.DuplicatedLinesDensity);
+                    break;
+                }
+                case GroupedBadgeType.SonarNcloc: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Ncloc);
+                    break;
+                }
+                case GroupedBadgeType.SonarReliabilityRating: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.ReliabilityRating);
+                    break;
+                }
+                case GroupedBadgeType.SonarSecurityRating: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SecurityRating);
+                    break;
+                }
+                case GroupedBadgeType.SonarSqaleIndex: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SqaleIndex);
+                    break;
+                }
+                case GroupedBadgeType.SonarSqaleRating: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SqaleRating);
+                    break;
+                }
+                case GroupedBadgeType.SonarVulnerabilities: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Vulnerabilities);
+                    break;
+                }
+
             }
         }
 

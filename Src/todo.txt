@@ -1,20 +1,7 @@
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=coverage
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=duplicated_lines_density
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=ncloc
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=reliability_rating
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=security_rating
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=sqale_index
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=sqale_rating
-https://sonarcloud.io/api/project_badges/measure?project=TrevellickProject001&metric=vulnerabilities
-
-
-
-
 YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
    Greenkeeper will open an Initial Pull Request to update all dependencies at once
    It will add the Greenkeeper badge to your project’s readme.md
    The initial PR will not be opened if all dependencies are already up to date and the readme.md already has a badge (in this case Greenkeeper is silently enabled)
-YES sonarcloud (need some ci scripts) https://sonarcloud.io/projects
 YES codeclimate (for non-c# repos) https://codeclimate.com/
 YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
 YES codecov (need to add yaml file) https://codecov.io/gh 

@@ -2,10 +2,8 @@ import { SonarMetaData } from "./SonarMetaData";
 
 const chromeWebStore = "chrome-web-store";
 const myUserName = "GregTrevellick";
-const repoSonarTypeUrlPrefix = "https://sonarcloud.io/project/issues?id=";
 const shieldsDotIoUrl = "https://img.shields.io/";
-const sonarMetricQueryStringParam = "&metric=";
-const sonarUrlAddress = "https://sonarcloud.io/api/project_badges/measure?project=";
+const sonarBadgesUrlAddress = "https://sonarcloud.io/api/project_badges/measure?project=";
 const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
 const vsmarketplacebadgeAppHarborUrl = "https://vsmarketplacebadge.apphb.com/";
 const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
@@ -44,12 +42,10 @@ export class MarkdownProvider {
     }
 
     public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData) {
-        const sonarDescr: string = "Sonar" + sonarMetaData.sonarBadgeQueryStringParam;
-        const repoSonarType = sonarMetricQueryStringParam + sonarMetaData.sonarBadgeQueryStringParam;
-        const repoBadgeTargetSuffix = sonarMetaData.sonarTargetUrlSuffix;
-        const repoSonarTypeUrl = repoSonarTypeUrlPrefix + localRepoName + repoBadgeTargetSuffix;
-        const sonarUrl = sonarUrlAddress + localRepoName + repoSonarType;
-        return `[![${sonarDescr}](${sonarUrl})](${repoSonarTypeUrl})`;
+        const sonarDescription: string = "Sonar" + sonarMetaData.badgeQueryString;
+        const badgeHyperlinkUrl = sonarMetaData.badgeHyperlinkTargetUrlPrefix + localRepoName + sonarMetaData.badgeHyperlinkTargetUrlSuffix;
+        const sonarBadgeUrl = sonarBadgesUrlAddress + localRepoName + sonarMetaData.badgeQueryString;
+        return `[![${sonarDescription}](${sonarBadgeUrl})](${badgeHyperlinkUrl})`;
     }
 
     public GetBetterCodeHubCompliance(localRepoName: string) {
