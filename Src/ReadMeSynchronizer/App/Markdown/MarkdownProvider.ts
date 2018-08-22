@@ -43,18 +43,6 @@ export class MarkdownProvider {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
-    //////////////public GetSonarAlertStatus(localRepoName: string, sonarMetaData: SonarMetaData) {
-    //////////////    return this.GetSonarBadge(sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
-    //////////////}
-
-    //////////////public GetSonarBugs(localRepoName: string, sonarMetaData: SonarMetaData) {
-    //////////////    return this.GetSonarBadge(sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
-    //////////////}
-
-    //////////////public GetSonarCodeSmells(localRepoName: string, sonarMetaData: SonarMetaData) {
-    //////////////    return this.GetSonarBadge(sonarUrlAddress, localRepoName, sonarMetaData);//gregt dedupe
-    //////////////}
-
     public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData) {
         const sonarDescr: string = "Sonar" + sonarMetaData.sonarBadgeQueryStringParam;
         const repoSonarType = sonarMetricQueryStringParam + sonarMetaData.sonarBadgeQueryStringParam;
