@@ -3,9 +3,10 @@ import { SonarMetaData } from "./SonarMetaData";
 
 export class SonarMetaHelper {
 
-    private sonarMetaData: SonarMetaData;
-    private prefixProject = "https://sonarcloud.io/project/issues?id=";
     private prefixComponentMeasures = "https://sonarcloud.io/component_measures?id=";
+    private prefixDashboard = "https://sonarcloud.io/dashboard?id=";
+    private prefixProject = "https://sonarcloud.io/project/issues?id=";
+    private sonarMetaData: SonarMetaData;
 
     constructor() {
         this.sonarMetaData = new SonarMetaData();
@@ -16,8 +17,8 @@ export class SonarMetaHelper {
         switch (sonarCategory) {
             case SonarCategory.QualityGateStatus: {
                 this.sonarMetaData.badgeQueryString = "&metric=alert_status";
-                this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixProject;
-                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=ALERT_STATUS";/////////////////////////////////not ok
+                this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixDashboard;
+                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=ALERT_STATUS";
                 break;
             }
             case SonarCategory.Bugs: {
