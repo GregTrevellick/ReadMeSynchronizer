@@ -5,13 +5,15 @@ environment:
         secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le
 install:
     - choco install "sonarscanner-msbuild-net46" -y
+
+    ###- cmd: SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\ReadMeSynchronizer\node_modules;%NODE_PATH%
+    - cmd: %AppData%
+    - cmd: SET NODE_PATH=%AppData%\npm\node_modules
     
     ###- npm install -g typescript
     ###- npm --prefix ./ReadMeSynchronizer install ./ReadMeSynchronizer
   
     #- yarn install --production=false --no-lockfile --modules-folder ReadMeSynchronizer/node_modules
-    ###- cmd: SET NODE_PATH=%CD%\node_modules;%CD%\src\node_modules;%CD%\ReadMeSynchronizer\node_modules;%NODE_PATH%
-    - cmd: SET NODE_PATH=%AppData%\npm\node_modules
 
     # Output useful info for debugging.
     - cmd: node --version
