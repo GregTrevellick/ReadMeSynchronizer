@@ -14,28 +14,28 @@ export class SonarMetaHelper {
     public GetSonarMetaData(sonarCategory: SonarCategory): SonarMetaData {
 
         switch (sonarCategory) {
-            case SonarCategory.AlertStatus: {
+            case SonarCategory.QualityGateStatus: {
                 this.sonarMetaData.badgeQueryString = "&metric=alert_status";
                 this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixProject;
-                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=ALERT_STATUS";
+                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=ALERT_STATUS";/////////////////////////////////not ok
                 break;
             }
             case SonarCategory.Bugs: {
                 this.sonarMetaData.badgeQueryString = "&metric=bugs";
                 this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixComponentMeasures;
-                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=BUG";
+                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=BUG";   
                 break;
             }
             case SonarCategory.CodeSmells: {
                 this.sonarMetaData.badgeQueryString = "&metric=code_smells";
                 this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixProject;
-                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=CODE_SMELL";
+                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=CODE_SMELL"; 
                 break;
             }
             case SonarCategory.Coverage: {
-                this.sonarMetaData.badgeQueryString = "&metric=coverage"; 
+                this.sonarMetaData.badgeQueryString = "&metric=coverage";
                 this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixComponentMeasures;
-                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=COVERAGE";
+                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=COVERAGE"; 
                 break;
             }
             case SonarCategory.DuplicatedLinesDensity: {
@@ -44,7 +44,7 @@ export class SonarMetaHelper {
                 this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=DUPLICATED_LINES_DENSITY";
                 break;
             }
-            case SonarCategory.Ncloc: {
+            case SonarCategory.NumberOfLinesOfCode: {
                 this.sonarMetaData.badgeQueryString = "&metric=ncloc";
                 this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixComponentMeasures;
                 this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=NCLOC";
@@ -62,16 +62,16 @@ export class SonarMetaHelper {
                 this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=SECURITY_RATING";
                 break;
             }
-            case SonarCategory.SqaleIndex: {
+            case SonarCategory.TechnicalDebt: {
                 this.sonarMetaData.badgeQueryString = "&metric=sqale_index";
                 this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixProject;
-                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=SQALE_INDEX";
+                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=SQALE_INDEX";/////////////////////////////////not ok
                 break;
             }
-            case SonarCategory.SqaleRating: {
+            case SonarCategory.Maintainability: {
                 this.sonarMetaData.badgeQueryString = "&metric=sqale_rating";
                 this.sonarMetaData.badgeHyperlinkTargetUrlPrefix = this.prefixProject;
-                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=SQALE_RATING";
+                this.sonarMetaData.badgeHyperlinkTargetUrlSuffix = "&resolved=false&types=SQALE_RATING";////////////////////////////////not ok
                 break;
             }
             case SonarCategory.Vulnerabilities: {

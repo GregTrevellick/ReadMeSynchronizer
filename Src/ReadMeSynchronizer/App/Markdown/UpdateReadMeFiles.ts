@@ -152,8 +152,8 @@ export class ReadMeUpdater {
     }
 
     private GetSharedBadgesMarkdown(repoMetaData: IRepoMetaData) {
-        //Do not alpha sort these
         return [
+            //DO NOT ALPHA SORT THESE - THIS IS UI SEQUENCE (rubbish I know!)
 
             //code quality first
             this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
@@ -168,16 +168,16 @@ export class ReadMeUpdater {
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //Sonar
-            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.AlertStatus)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.QualityGateStatus)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Bugs)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.CodeSmells)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Coverage)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.DuplicatedLinesDensity)),
-            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Ncloc)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.NumberOfLinesOfCode)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.ReliabilityRating)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SecurityRating)),
-            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SqaleIndex)),
-            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.SqaleRating)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.TechnicalDebt)),
+            this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Maintainability)),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Vulnerabilities)),
 
             //build / test coverage related
@@ -227,22 +227,23 @@ export class ReadMeUpdater {
     private GetBadgesByType(): string {
         let badgesByTypeMarkdown = "";
 
+        //DO NOT ALPHA SORT THESE - THIS IS UI SEQUENCE (rubbish I know!)
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorBuildStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorUnitTests);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.BetterCodeHubCompliance);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodacyBadge);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
-        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarAlertStatus);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarQualityGateStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarBugs);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarCodeSmells);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarCoverage);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarDuplicatedLinesDensity);
-        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarNcloc);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarNumberOfLinesOfCode);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarReliabilityRating);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSecurityRating);
-        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSqaleIndex);
-        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarSqaleRating);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarTechnicalDebt);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarMaintainability);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarVulnerabilities);
 
         return badgesByTypeMarkdown;
@@ -279,10 +280,6 @@ export class ReadMeUpdater {
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetGitHubPullRequests(repoMetaData.localRepoName)}`;
                     break;
                 }
-                case GroupedBadgeType.SonarAlertStatus: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.AlertStatus);
-                    break;
-                }
                 case GroupedBadgeType.SonarBugs: {
                     badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Bugs);
                     break;
@@ -299,8 +296,16 @@ export class ReadMeUpdater {
                     badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.DuplicatedLinesDensity);
                     break;
                 }
-                case GroupedBadgeType.SonarNcloc: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Ncloc);
+                case GroupedBadgeType.SonarMaintainability: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Maintainability);
+                    break;
+                }
+                case GroupedBadgeType.SonarNumberOfLinesOfCode: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.NumberOfLinesOfCode);
+                    break;
+                }
+                case GroupedBadgeType.SonarQualityGateStatus: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.QualityGateStatus);
                     break;
                 }
                 case GroupedBadgeType.SonarReliabilityRating: {
@@ -311,12 +316,8 @@ export class ReadMeUpdater {
                     badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SecurityRating);
                     break;
                 }
-                case GroupedBadgeType.SonarSqaleIndex: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SqaleIndex);
-                    break;
-                }
-                case GroupedBadgeType.SonarSqaleRating: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SqaleRating);
+                case GroupedBadgeType.SonarTechnicalDebt: {
+                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.TechnicalDebt);
                     break;
                 }
                 case GroupedBadgeType.SonarVulnerabilities: {
