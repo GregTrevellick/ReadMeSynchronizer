@@ -6,13 +6,14 @@ YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launch
    Greenkeeper will open an Initial Pull Request to update all dependencies at once
    It will add the Greenkeeper badge to your project’s readme.md
    The initial PR will not be opened if all dependencies are already up to date and the readme.md already has a badge (in this case Greenkeeper is silently enabled)
-YES codeclimate (for non-c# repos) https://codeclimate.com/
-YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
 YES codecov (need to add yaml file) https://codecov.io/gh 
-YES crowdin (need resx files) https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges Badges will appear when there is progress in your project
-YES testquality (free for oss) https://github.com/marketplace/testquality
 YES lgtm (free for oss) https://github.com/marketplace/lgtm
 YES codebeat (free for oss) https://github.com/marketplace/codebeat
+
+YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
+YES codeclimate (for non-c# repos) https://codeclimate.com/
+YES testquality (free for oss) https://github.com/marketplace/testquality
+YES crowdin (need resx files) https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges Badges will appear when there is progress in your project
 
 
 
