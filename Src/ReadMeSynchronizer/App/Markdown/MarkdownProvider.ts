@@ -4,12 +4,12 @@ const chromeWebStore = "chrome-web-store";
 const myUserName = "GregTrevellick";
 const repoSonarTypeUrlPrefix = "https://sonarcloud.io/project/issues?id=";
 const shieldsDotIoUrl = "https://img.shields.io/";
-const sonarUrlAddress = "https://sonarcloud.io/api/project_badges/measure?project=";
 const sonarMetricQueryStringParam = "&metric=";
+const sonarUrlAddress = "https://sonarcloud.io/api/project_badges/measure?project=";
 const visualStudioMarketplaceUrl = "https://marketplace.visualstudio.com/items?itemName=";
+const vsmarketplacebadgeAppHarborUrl = "https://vsmarketplacebadge.apphb.com/";
 const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
-const vsmarketplacebadgeAppHarborUrl = "https://vsmarketplacebadge.apphb.com/";
 
 export class MarkdownProvider {
 
