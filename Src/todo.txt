@@ -1,13 +1,31 @@
+exclusions quick wins for 3rd party code
+   VsixTwitterWidget app/Scripts/SDK/VSS.SDK.js
+   VstsDashboardWidgetProjectTemplate app/Scripts/SDK/VSS.SDK.js
+
 convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
+
+
+
+
+
+
+
+
+
+
 YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
    Greenkeeper will open an Initial Pull Request to update all dependencies at once
    It will add the Greenkeeper badge to your project’s readme.md
    The initial PR will not be opened if all dependencies are already up to date and the readme.md already has a badge (in this case Greenkeeper is silently enabled)
+
 YES codecov (need to add yaml file) https://codecov.io/gh 
+   https://github.com/codecov/example-csharp
+   https://github.com/codecov/example-typescript
 
 
 
-
+Low priority in future
+======================
 YES lgtm (JS & TS only, free for oss) https://github.com/marketplace/lgtm
 YES codebeat (JS & TS only, free for oss) https://github.com/marketplace/codebeat
 YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
