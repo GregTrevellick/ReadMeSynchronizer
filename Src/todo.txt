@@ -1,16 +1,4 @@
-exclusions quick wins for 3rd party code
-   VsixTwitterWidget app/Scripts/SDK/VSS.SDK.js
-   VstsDashboardWidgetProjectTemplate app/Scripts/SDK/VSS.SDK.js
-
 convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
-
-
-
-
-
-
-
-
 
 
 YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
