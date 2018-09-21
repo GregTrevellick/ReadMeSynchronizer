@@ -138,6 +138,14 @@ export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     repoCategory: RepoCategory.ChromeExtension,
 };
 
+export const vsixFootball: IVsmpMetaData = {
+    appVeyorId: "wg65x8dnr41whrpi",
+    localRepoName: "VsixFootball",
+    codacyId: "55911452f4154dd9a5599bd6fae3c725",
+    repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: ["Football"],
+};
+
 export const vsixFootie: IVsmpMetaData = {
     appVeyorId: "i7kxey89fewvjkac",
     localRepoName: "VsixFootie",

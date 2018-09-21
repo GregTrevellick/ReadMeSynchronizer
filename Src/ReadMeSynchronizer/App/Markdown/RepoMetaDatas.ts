@@ -39,6 +39,7 @@ export class RepoMetaDatas {
             myRepos.quizLauncher,
             myRepos.solutionOpenPopUp,
             myRepos.trivialApisForIDE,
+            myRepos.vsixFootball,
             myRepos.vsixFootie,
             myRepos.vstsDashboardWidgetProjectTemplate,
 
