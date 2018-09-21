@@ -134,7 +134,7 @@ export const trivialApisForIDE: IVsmpMetaData = {
 export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     appVeyorId: "6sbejo44yn8ckbc0",
     localRepoName: "VisualStudioMarketplaceMetrics",
-    codacyId: "146ba12a4f0f4e97aab9692473d41076",
+    codacyId: "7e6f7c8bd4d240398affcd2202b84fd8",
     repoCategory: RepoCategory.ChromeExtension,
 };
 
