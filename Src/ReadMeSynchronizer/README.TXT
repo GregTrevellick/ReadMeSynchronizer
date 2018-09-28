@@ -54,6 +54,13 @@ Then edit the repo's appveyor.yml as follows:
 Sonar
 =====
 1) Add project 
-2) Provide a token > switch to Use ExistingToken > c......................................a
-3) Run analysis on your project > Specify primary lingo but no need to download or copy anything as the appveyor.yml file doesn't need editing
-Note: No 'Save' or 'Submit' button - because it gets setup/defined by AppVeyor which invokes Sonar
+--2) Provide a token > switch to Use ExistingToken > c......................................a
+--3) Run analysis on your project > Specify primary lingo but no need to download or copy anything as the appveyor.yml file doesn't need editing
+--Note1: No 'Save' or 'Submit' button - because it gets setup/defined by AppVeyor which invokes Sonar
+2) Note2: 
+This fails:
+https://sonarcloud.io/dashboard?id=GregTrevellick_VsixBlazorMinimalProjectTemplate
+https://sonarcloud.io/component_measures?id=GregTrevellick_VsixBlazorMinimalProjectTemplate
+This works:
+https://sonarcloud.io/dashboard?id=VsixBlazorMinimalProjectTemplate
+https://sonarcloud.io/component_measures?id=VsixBlazorMinimalProjectTemplate
