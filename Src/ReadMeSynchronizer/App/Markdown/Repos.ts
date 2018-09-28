@@ -14,7 +14,9 @@ export const autoFindReplace: IVsmpMetaData = {
     localRepoName: "AutoFindReplace",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["AutoFindReplace"],
+    vsmpItemNames: [
+        "AutoFindReplace"
+    ],
 };
 
 export const dotNetFlags: IRepoMetaData = {
@@ -101,7 +103,9 @@ export const quizLauncher: IVsmpMetaData = {
     localRepoName: "Quiz.Launcher",
     codacyId: "b1a2d4b9fd774d64ae56a8ffdd80b978",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["MusicQuiz"],
+    vsmpItemNames: [
+        "MusicQuiz"
+    ],
 };
 
 export const readMeSynchronizer: IRepoMetaData = {
@@ -116,7 +120,9 @@ export const solutionOpenPopUp: IVsmpMetaData = {
     localRepoName: "SolutionOpenPopUp",
     codacyId: "23dfefe3b5014fd8b8462b47a3f38c1c",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["SolutionOpenPopUp"],
+    vsmpItemNames: [
+        "SolutionOpenPopUp"
+    ],
 };
 
 export const trivialApisForIDE: IVsmpMetaData = {
@@ -141,9 +147,11 @@ export const visualStudioMarketplaceMetrics: IRepoMetaData = {
 export const vsixFootball: IVsmpMetaData = {
     appVeyorId: "wg65x8dnr41whrpi",
     localRepoName: "VsixFootball",
-    codacyId: "55911452f4154dd9a5599bd6fae3c725",
+    codacyId: "7e6f7c8bd4d240398affcd2202b84fd8",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["Football"],
+    vsmpItemNames: [
+        "Football"
+    ],
 };
 
 export const vsixFootie: IVsmpMetaData = {
@@ -151,7 +159,9 @@ export const vsixFootie: IVsmpMetaData = {
     localRepoName: "VsixFootie",
     codacyId: "55911452f4154dd9a5599bd6fae3c725",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["VSSportsDesk"],
+    vsmpItemNames: [
+        "VSSportsDesk"
+    ],
 };
 
 export const vsixRatingChaser: IRepoMetaData = {
@@ -168,6 +178,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
     repoCategory: RepoCategory.VstsExtension,
     vsmpItemNames: [
         "@azure",
+        "@azuredevops",
         "@ch9",
         "@code",
         "@codeproject",
@@ -177,6 +188,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
         "@dotnetcurry",
         "@dotnetfdn",
         "@dotnetkicks",
+        "@livesoccer",
         "@mscloud",
         "@newsycombinator",
         "@nodejs",
@@ -196,5 +208,27 @@ export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     localRepoName: "VstsDashboardWidgetProjectTemplate",
     codacyId: "be5d606604c64b81a1ed640a53c671f7",
     repoCategory: RepoCategory.VsIdeExtension,
-    vsmpItemNames: ["VstsDashboardWidgetProjectTemplate"],
+    vsmpItemNames: [
+        "VstsDashboardWidgetProjectTemplate"
+    ],
+};
+
+export const azureDevOpsRotaWidget: IVsmpMetaData = {
+    appVeyorId: "01islyin3t8bsxoe",
+    localRepoName: "AzureDevOpsRotaWidget",
+    codacyId: "0adfce1b3ab043b79c8283a8f68ca671",
+    repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: [
+        "AzureDevOpsRotaWidget"
+    ],
+};
+
+export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
+    appVeyorId: "kje6fcd2r5ng44p1",
+    localRepoName: "VsixBlazorMinimalProjectTemplate",
+    codacyId: "40dfe21f31da4c15b679bb586776a9b3",
+    repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: [
+        "VsixBlazorMinimalProjectTemplate"
+    ],
 };

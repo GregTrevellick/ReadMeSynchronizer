@@ -17,9 +17,6 @@ export class RepoMetaDatas {
             myRepos.visualStudioMarketplaceMetrics,
 
             //misc
-            //myRepos.gitPlayground1,
-            //myRepos.gitPlayground2,
-            //myRepos.gitPlayground3,
             myRepos.filesForEveryExtensionCreator,
 
             //nuget
@@ -30,6 +27,7 @@ export class RepoMetaDatas {
             myRepos.readMeSynchronizer,
 
             //vsts extensions
+            myRepos.azureDevOpsRotaWidget,
             myRepos.vsixTwitterWidget,
 
             //vsix ide
@@ -39,10 +37,10 @@ export class RepoMetaDatas {
             myRepos.quizLauncher,
             myRepos.solutionOpenPopUp,
             myRepos.trivialApisForIDE,
+            myRepos.vsixBlazorMinimalProjectTemplate,
             myRepos.vsixFootball,
             myRepos.vsixFootie,
             myRepos.vstsDashboardWidgetProjectTemplate,
-
         ];
 
     }
