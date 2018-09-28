@@ -18,6 +18,7 @@ export class RepoMetaDatas {
 
             //misc
             myRepos.filesForEveryExtensionCreator,
+            myRepos.gregtSideWaffleV2,
 
             //nuget
             myRepos.dotNetFlags,

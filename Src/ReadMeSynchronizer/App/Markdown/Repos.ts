@@ -33,6 +33,13 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
+export const gregtSideWaffleV2: IRepoMetaData = {
+    appVeyorId: "53q1kagc0jsbfpik",
+    localRepoName: "Gregt.sidewafflev2",
+    codacyId: "64d3c825785c4398a4e0c0f3c0542865",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+};
+
 export const gitPlayground1: IRepoMetaData = {
     appVeyorId: "",
     localRepoName: "GitPlayground1",

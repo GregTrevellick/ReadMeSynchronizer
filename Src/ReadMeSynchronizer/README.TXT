@@ -1,4 +1,18 @@
-﻿New badges:
+﻿PreRequisite:
+=============
+
+Having created the repo in GitHub, add to...
+
+a) appveyor 
+b) bettercodehub 
+c) codacy 
+d) codefactor 
+e) sonar 
+
+
+
+New badges:
+===========
 
 1) Add repo to Repos.ts (one entry for OpenInAppLauncher & VsixTwitterWidget but with sub-properties)
     Primarily need thew following:
