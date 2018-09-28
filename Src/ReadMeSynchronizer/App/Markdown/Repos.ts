@@ -236,6 +236,6 @@ export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
     codacyId: "40dfe21f31da4c15b679bb586776a9b3",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "VsixBlazorMinimalProjectTemplate"
+        "BlazorMinimalProjectTemplate"
     ],
 };
