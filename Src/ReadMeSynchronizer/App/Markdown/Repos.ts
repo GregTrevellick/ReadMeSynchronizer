@@ -33,13 +33,6 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
-export const gregtSideWaffleV2: IRepoMetaData = {
-    appVeyorId: "53q1kagc0jsbfpik",
-    localRepoName: "Gregt.sidewafflev2",
-    codacyId: "64d3c825785c4398a4e0c0f3c0542865",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-};
-
 export const gitPlayground1: IRepoMetaData = {
     appVeyorId: "",
     localRepoName: "GitPlayground1",
@@ -237,5 +230,182 @@ export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
         "BlazorMinimalProjectTemplate"
+    ],
+};
+
+export const browserExtensionUsingAngularWorksInChromeNotInEdge: IVsmpMetaData = {
+    appVeyorId: "6hwmbbvub7vin7b2",
+    localRepoName: "BrowserExtensionUsingAngularWorksInChromeNotInEdge",
+    codacyId: "fbab92a148b146209eda380777abc7c5",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+    vsmpItemNames: [
+        "BrowserExtensionUsingAngularWorksInChromeNotInEdge"
+    ],
+};
+
+export const miscellaneousArtefacts: IVsmpMetaData = {
+    appVeyorId: "fl77g7npbyb91h8r",
+    localRepoName: "MiscellaneousArtefacts",
+    codacyId: "9bf237f7393d4c9ea544206278ff51a8",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+    vsmpItemNames: [
+        "MiscellaneousArtefacts"
+    ],
+};
+
+export const more: IVsmpMetaData = {
+    appVeyorId: "474xser6ddbk1u4t",
+    localRepoName: "More",
+    codacyId: "e7801c84e3d645859e668f1b6bd7af05",
+    repoCategory: RepoCategory.MiscellaneousRepo,
+    vsmpItemNames: [
+        "More"
+    ],
+};
+
+export const gregtSideWaffleV2: IRepoMetaData = {
+    appVeyorId: "53q1kagc0jsbfpik",
+    localRepoName: "Gregt.sidewafflev2",
+    codacyId: "64d3c825785c4398a4e0c0f3c0542865",
+    repoCategory: RepoCategory.Forks,
+};
+
+export const angularBasic: IVsmpMetaData = {
+    appVeyorId: "9u37xi3cuan7qxpa",
+    localRepoName: "AngularBasic",
+    codacyId: "6c528ee94ef349d2b9f3d548761e8617",
+    repoCategory: RepoCategory.Forks,
+    vsmpItemNames: [
+        "AngularBasic"
+    ],
+};
+
+export const awib: IVsmpMetaData = {
+    appVeyorId: "903t2c7smsutgf8e",
+    localRepoName: "awib",
+    codacyId: "9db6094d5fd342ee8a8740efd33526c9",
+    repoCategory: RepoCategory.Forks,
+    vsmpItemNames: [
+        "awib"
+    ],
+};
+
+export const meneesVsTools2017: IVsmpMetaData = {
+    appVeyorId: "403ut9uqnu4yv7ln",
+    localRepoName: "MeneesVsTools2017",
+    codacyId: "0f084189c9f94d619e3b5fe7052678c9",
+    repoCategory: RepoCategory.Forks,
+    vsmpItemNames: [
+        "MeneesVsTools2017"
+    ],
+};
+
+export const openCoverExample: IVsmpMetaData = {
+    appVeyorId: "eiso821168e15t9e",
+    localRepoName: "OpenCoverExample",
+    codacyId: "e9691ea13c68406c9a77447c243cbddb",
+    repoCategory: RepoCategory.Forks,
+    vsmpItemNames: [
+        "OpenCoverExample"
+    ],
+};
+
+export const renameProjectVsExtension: IVsmpMetaData = {
+    appVeyorId: "p304wa3aqlwir63f",
+    localRepoName: "RenameProjectVsExtension",
+    codacyId: "cf9d3266e9654def87d38c44300935c5",
+    repoCategory: RepoCategory.Forks,
+    vsmpItemNames: [
+        "RenameProjectVsExtension"
+    ],
+};
+
+export const helloWorldTypescriptParcel: IVsmpMetaData = {
+    appVeyorId: "u3s4x8kx4fo0ejog",
+    localRepoName: "HelloWorldTypescriptParcel",
+    codacyId: "f519d95563a64063a1d349b8c6252ec0",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldTypescriptParcel"
+    ],
+};
+
+export const helloWorldBlazor: IVsmpMetaData = {
+    appVeyorId: "9ik81ir38chjwcp9",
+    localRepoName: "HelloWorldBlazor",
+    codacyId: "52248629623c4b99b7039e7adb2a54c5",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldBlazor"
+    ],
+};
+
+export const helloWorldTypescriptWebpack: IVsmpMetaData = {
+    appVeyorId: "4pjmtgwdmqrpg1pl",
+    localRepoName: "HelloWorldTypescriptWebpack",
+    codacyId: "b8374c0381374e82828d292bbdbb85ef",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldTypescriptWebpack"
+    ],
+};
+
+export const helloWorldVstsExtension: IVsmpMetaData = {
+    appVeyorId: "ola9n1um34vha0x4",
+    localRepoName: "HelloWorldVstsExtension",
+    codacyId: "5c49e26432e541c5861195ed4a425ac8",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldVstsExtension"
+    ],
+};
+
+export const helloWorldVsixToolBar: IVsmpMetaData = {
+    appVeyorId: "kv8q5fajysjxdwur",
+    localRepoName: "HelloWorldVsixToolBar",
+    codacyId: "b397d57fb66841b0a4f67e9718840281",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldVsixToolBar"
+    ],
+};
+
+export const helloWorldVsixPopUp: IVsmpMetaData = {
+    appVeyorId: "j3hutqo41xv8xo06",
+    localRepoName: "HelloWorldVsixPopUp",
+    codacyId: "03868a22c8db486d85c5d0bd33637e41",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldVsixPopUp"
+    ],
+};
+
+export const helloWorldVsixToolWindowAsyncPackageExample: IVsmpMetaData = {
+    appVeyorId: "1fha75b06hpw2lip",
+    localRepoName: "HelloWorldVsixToolWindowAsyncPackageExample",
+    codacyId: "4d1ed9b21d9240cca47e314c1b06edda",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldVsixToolWindowAsyncPackageExample"
+    ],
+};
+
+export const helloWorldWpfAsyncBindingPropertyExample: IVsmpMetaData = {
+    appVeyorId: "eg1nxsm1a3c754al",
+    localRepoName: "HelloWorldWpfAsyncBindingPropertyExample",
+    codacyId: "e4580e8133e04b8aa209252e37f3d1c6",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldWpfAsyncBindingPropertyExample"
+    ],
+};
+
+export const vsixDotNetCorePoc: IVsmpMetaData = {
+    appVeyorId: "ktrqskiaastij4jd",
+    localRepoName: "VsixDotNetCorePoc",
+    codacyId: "e2fa50e29fea429897c304c79e9d9479",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "VsixDotNetCorePoc"
     ],
 };

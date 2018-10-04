@@ -6,7 +6,7 @@ export class RepoMetaDatas {
 
     constructor() {
 
-        //TODO: sort by category then name
+        //DO NOT ALPHA SORT THESE - THIS IS UI SEQUENCE (rubbish I know!)
 
         this.repoMetaDatas = [
 
@@ -17,8 +17,10 @@ export class RepoMetaDatas {
             myRepos.visualStudioMarketplaceMetrics,
 
             //misc
+            myRepos.browserExtensionUsingAngularWorksInChromeNotInEdge,
             myRepos.filesForEveryExtensionCreator,
-            myRepos.gregtSideWaffleV2,
+            myRepos.miscellaneousArtefacts,
+            myRepos.more,
 
             //nuget
             myRepos.dotNetFlags,
@@ -42,6 +44,26 @@ export class RepoMetaDatas {
             myRepos.vsixFootball,
             myRepos.vsixFootie,
             myRepos.vstsDashboardWidgetProjectTemplate,
+
+            //forks
+            myRepos.angularBasic,
+            myRepos.awib,
+            myRepos.gregtSideWaffleV2,
+            myRepos.meneesVsTools2017,
+            myRepos.openCoverExample,
+            myRepos.renameProjectVsExtension,
+
+            //hello world
+            myRepos.helloWorldBlazor,
+            myRepos.helloWorldTypescriptParcel,
+            myRepos.helloWorldTypescriptWebpack,
+            myRepos.helloWorldVsixPopUp,
+            myRepos.helloWorldVsixToolBar,
+            myRepos.helloWorldVsixToolWindowAsyncPackageExample,
+            myRepos.helloWorldVstsExtension,
+            myRepos.helloWorldWpfAsyncBindingPropertyExample,
+            myRepos.vsixDotNetCorePoc,
+
         ];
 
     }
