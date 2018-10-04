@@ -9,6 +9,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/ReadMeSynchronizer/badge)](https://www.codefactor.io/repository/github/GregTrevellick/ReadMeSynchronizer)
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
+[![GitHub issues](https://img.shields.io/github/issues-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/pulls)
 [![Sonar&metric=alert_status](https://sonarcloud.io/api/project_badges/measure?project=ReadMeSynchronizer&metric=alert_status)](https://sonarcloud.io/dashboard?id=ReadMeSynchronizer)
 [![Sonar&metric=bugs](https://sonarcloud.io/api/project_badges/measure?project=ReadMeSynchronizer&metric=bugs)](https://sonarcloud.io/component_measures?id=ReadMeSynchronizer&metric=bugs)

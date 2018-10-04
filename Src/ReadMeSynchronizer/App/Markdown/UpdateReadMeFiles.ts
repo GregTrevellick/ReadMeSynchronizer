@@ -168,7 +168,8 @@ export class ReadMeUpdater {
             this.mp.GetGitHubTopLanguage(repoMetaData.localRepoName),
             this.mp.GetGitHubLanguageCount(repoMetaData.localRepoName),
 
-            //PRs
+            //Issues & PRs
+            this.mp.GetGitHubIssues(repoMetaData.localRepoName),
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
             //Sonar
@@ -233,6 +234,7 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.BetterCodeHubCompliance);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodacyBadge);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarQualityGateStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarBugs);
@@ -274,6 +276,10 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.CodeFactor: {
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetCodeFactor(repoMetaData.localRepoName)}`;
+                    break;
+                }
+                case GroupedBadgeType.GitHubIssues: {
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetGitHubIssues(repoMetaData.localRepoName)}`;
                     break;
                 }
                 case GroupedBadgeType.GitHubPullRequests: {

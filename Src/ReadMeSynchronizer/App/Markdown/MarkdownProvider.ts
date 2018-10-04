@@ -41,6 +41,10 @@ export class MarkdownProvider {
         return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
+    public GetGitHubIssues(localRepoName: string) {
+        return "[![GitHub issues](" + shieldsDotIoUrl + "github/issues-raw/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/issues)";
+    }
+    
     public GetGitHubPullRequests(localRepoName: string) {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }

@@ -4,6 +4,7 @@ export enum GroupedBadgeType {
     BetterCodeHubCompliance,
     CodacyBadge,
     CodeFactor,
+    GitHubIssues,
     GitHubPullRequests,
     SonarBugs,
     SonarCodeSmells,
