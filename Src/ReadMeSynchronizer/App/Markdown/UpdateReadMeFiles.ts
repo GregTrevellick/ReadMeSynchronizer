@@ -109,10 +109,6 @@ export class ReadMeUpdater {
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
-        if (repoMetaData.repoCategory === RepoCategory.ReadMeSynchronizer) {
-            //Do nothing for now, in future potentially get badges for Yeoman, VSide, etc
-        }
-
         if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
             const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(repoMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
