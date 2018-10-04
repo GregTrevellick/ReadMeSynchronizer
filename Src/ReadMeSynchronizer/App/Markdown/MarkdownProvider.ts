@@ -44,7 +44,7 @@ export class MarkdownProvider {
     public GetGitHubIssues(localRepoName: string) {
         return "[![GitHub issues](" + shieldsDotIoUrl + "github/issues-raw/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/issues)";
     }
-    
+
     public GetGitHubPullRequests(localRepoName: string) {
         return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
