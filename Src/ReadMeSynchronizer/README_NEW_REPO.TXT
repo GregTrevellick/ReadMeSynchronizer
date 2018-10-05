@@ -6,8 +6,10 @@ Having created the repo in GitHub, add to...
  c) codacy (slower but more depth)
  d) codefactor (sweet)
 
-New badges:
-===========
+
+
+New Repos:
+==========
 1) Add repo to Repos.ts (one entry for OpenInAppLauncher & VsixTwitterWidget but with sub-properties)
     Primarily need the following:
      (a) appVeyorId
@@ -16,6 +18,8 @@ New badges:
 3) Run Gulp task to update markdown badges
 4) Commit/Push the AllBadges repo & check the new item on GitHub
 5) Commit/Push the ReadMeSynchronizer repo & the new repo with its updated ReadMe file
+
+
 
 AppVeyor
 ========
@@ -28,6 +32,8 @@ Edit the appveyor.yml as follows:
         	secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le                  --publicly safe
 	before_build:
 		/d:"sonar.login=$env:my_encrypted_sonarqube_token" 
+
+
 
 Sonar
 =====
