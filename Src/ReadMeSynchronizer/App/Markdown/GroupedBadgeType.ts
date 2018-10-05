@@ -1,6 +1,7 @@
 export enum GroupedBadgeType {
     AppveyorBuildStatus,
     AppveyorUnitTests,
+    AzurePipelineBuildStatus,
     BetterCodeHubCompliance,
     CodacyBadge,
     CodeFactor,

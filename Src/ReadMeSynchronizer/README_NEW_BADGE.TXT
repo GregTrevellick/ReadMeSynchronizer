@@ -1,11 +1,7 @@
-﻿hound & azure pipelines
+﻿TODO
+   hound
 
-
-
-[![Build Status](https://gregtrevellick.visualstudio.com/GitHubAzurePipeline/_apis/build/status/DotNetFlags)](https://gregtrevellick.visualstudio.com/GitHubAzurePipeline/_build/latest?definitionId=1)
-
-
-
-
-
-
+1) GroupedBadgeType.ts - add new enum entry
+1) GroupedBadgeType.ts - add new enum entry
+2) MarkdownProvider.ts - add new method
+3) UpdateReadMeFiles - add call to the new method

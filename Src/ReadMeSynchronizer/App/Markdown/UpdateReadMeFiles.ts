@@ -196,6 +196,7 @@ export class ReadMeUpdater {
             //build / test coverage related
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId),
             this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName),
+            this.mp.GetAzurePipelineBuildStatus(repoMetaData.localRepoName, repoMetaData.azureDefinitionId),
 
             //less important stuff
             this.mp.GetAccessLintBadgeMarkdown(),
@@ -239,6 +240,7 @@ export class ReadMeUpdater {
         //DO NOT ALPHA SORT THESE - THIS IS UI SEQUENCE (rubbish I know!)
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorBuildStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorUnitTests);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AzurePipelineBuildStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.BetterCodeHubCompliance);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodacyBadge);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
@@ -272,6 +274,10 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.AppveyorUnitTests: {
                     badgesMarkdown += `${this.lineBreak}${this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName)}`;
+                    break;
+                }
+                case GroupedBadgeType.AzurePipelineBuildStatus: {
+                    badgesMarkdown += `${this.lineBreak}${this.mp.GetAzurePipelineBuildStatus(repoMetaData.localRepoName, repoMetaData.azureDefinitionId)}`;
                     break;
                 }
                 case GroupedBadgeType.BetterCodeHubCompliance: {

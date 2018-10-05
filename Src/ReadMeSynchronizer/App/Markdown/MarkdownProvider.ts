@@ -83,6 +83,10 @@ export class MarkdownProvider {
         return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + this.myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + "/build/tests)";
     }
 
+    public GetAzurePipelineBuildStatus(localRepoName: string, azureDefinitionId: string) {
+        return "[![Azure Build Status](https://gregtrevellick.visualstudio.com/GitHubAzurePipeline/_apis/build/status/" + localRepoName + ")](https://gregtrevellick.visualstudio.com/GitHubAzurePipeline/_build/latest?definitionId=" + azureDefinitionId + ")";
+    }
+
     //public GetTravisBuildStatus(localRepoName: string) {
     //    return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";
     //}
