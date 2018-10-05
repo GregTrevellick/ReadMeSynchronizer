@@ -292,7 +292,7 @@ export const awib: IVsmpMetaData = {
 
 export const meneesVsTools2017: IVsmpMetaData = {
     appVeyorId: "403ut9uqnu4yv7ln",
-    localRepoName: "MeneesVsTools2017",
+    localRepoName: "Menees.VsTools.2017",
     codacyId: "0f084189c9f94d619e3b5fe7052678c9",
     repoCategory: RepoCategory.Forks,
     vsmpItemNames: [
