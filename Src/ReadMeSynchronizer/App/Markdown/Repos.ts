@@ -12,7 +12,7 @@ export const allBadges: IRepoMetaData = {
 
 export const autoFindReplace: IVsmpMetaData = {
     appVeyorId: "2iy2c8ucrn5mc96o",
-    azureDefinitionId: "",
+    azureDefinitionId: "4",
     localRepoName: "AutoFindReplace",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -245,7 +245,7 @@ export const azureDevOpsRotaWidget: IVsmpMetaData = {
 
 export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
     appVeyorId: "kje6fcd2r5ng44p1",
-    azureDefinitionId: "",
+    azureDefinitionId: "5",
     localRepoName: "VsixBlazorMinimalProjectTemplate",
     codacyId: "40dfe21f31da4c15b679bb586776a9b3",
     repoCategory: RepoCategory.VsIdeExtension,
