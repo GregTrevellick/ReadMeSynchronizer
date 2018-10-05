@@ -1,27 +1,4 @@
-﻿Add...
-	https://github.com/GregTrevellick/HelloWorldBlazor
-	https://github.com/GregTrevellick/Gregt.sidewafflev2
-	https://github.com/GregTrevellick/HelloWorldTypescriptParcel
-	https://github.com/GregTrevellick/MiscellaneousArtefacts
-	https://github.com/GregTrevellick/HelloWorldTypescriptWebpack
-	https://github.com/GregTrevellick/HelloWorldVstsExtension
-	https://github.com/GregTrevellick/HelloWorldVsixToolBar
-	https://github.com/GregTrevellick/HelloWorldVsixPopUp
-	https://github.com/GregTrevellick/HelloWorldVsixToolWindowAsyncPackageExample
-	https://github.com/GregTrevellick/HelloWorldWpfAsyncBindingPropertyExample
-	https://github.com/GregTrevellick/AngularBasic
-	https://github.com/GregTrevellick/VsixDotNetCorePoc
-	https://github.com/GregTrevellick/Menees.VsTools.2017
-	https://github.com/GregTrevellick/BrowserExtensionUsingAngularWorksInChromeNotInEdge
-	https://github.com/GregTrevellick/More
-	https://github.com/GregTrevellick/RenameProjectVsExtension
-	https://github.com/GregTrevellick/OpenCoverExample
-	https://github.com/GregTrevellick/awib
-
-
-
-
-PreRequisites:
+﻿PreRequisites:
 ==============
 Having created the repo in GitHub, add to...
  a) appveyor (see below - this will also add to sonar (see below))
