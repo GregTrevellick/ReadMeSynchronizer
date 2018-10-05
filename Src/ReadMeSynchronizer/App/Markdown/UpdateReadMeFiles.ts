@@ -43,7 +43,7 @@ export class ReadMeUpdater {
 
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
                 baseBadgesMarkdown += this.GetBadgesByType();
-                baseBadgesMarkdown += `${this.lineBreak}### Per Repo${this.lineBreak}`;
+                baseBadgesMarkdown += `${this.lineBreak}## Per Repo${this.lineBreak}`;
                 baseBadgesMarkdown += this.GetFullTitle("Parent", repoMetaData.localRepoName);
             }
 
@@ -55,8 +55,20 @@ export class ReadMeUpdater {
         }
     }
 
-    private GetFullTitle(repoCategoryDescription:string, localRepoName: string) {
+    private GetFullTitle(repoCategoryDescription: string, localRepoName: string) {
+
+        // Without expand/collapse...
         return `${this.titleHtag} [${repoCategoryDescription} - ${localRepoName}](https://github.com/${this.mp.myUserName}/${localRepoName})`;
+
+//////        // With expand/collapse...
+//////        return `
+//////<details>
+//////<summary>
+//////Click to expand or collapse
+//////</summary>
+//////${markdown}${this.lineBreak}
+//////</details>
+//////${this.lineBreak}`;
     }
 
     private GetSurroundedBadgesMarkdown(baseBadgesMarkdown: string) {
@@ -345,6 +357,20 @@ export class ReadMeUpdater {
     }
 
     private GetTitleAndBadges(title: string, markdown: string) {
-        return `${title}${this.lineBreak}${markdown}${this.lineBreak}`;
+
+        // Without expand/collapse...
+        //return `${title}${this.lineBreak}${markdown}${this.lineBreak}`;
+
+        // With expand/collapse...
+        return `
+${title}
+<details>
+<summary>
+Click to expand or collapse
+</summary>
+${this.lineBreak}${markdown}${this.lineBreak}
+</details>
+${this.lineBreak}`;
+
     }
 }
