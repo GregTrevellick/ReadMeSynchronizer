@@ -10,6 +10,7 @@ const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio
 
 export class MarkdownProvider {
 
+    private lineBreak: string = "\n";//gregt dedupe
     public myUserName = "GregTrevellick";
     public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
 
@@ -18,7 +19,7 @@ export class MarkdownProvider {
     //TODO convert all methods below to call a common method that returns the md, passing description + badge URL + hyperlink URL & returns square braces & curved brackets
 
     public GetSubscribeMarkdown(localRepoName: string) {
-        return "**[Subscribe](https://github.com/" + this.myUserName + "/" + localRepoName + "/subscription) to receive notificatons.**";
+        return "**[Subscribe](https://github.com/" + this.myUserName + "/" + localRepoName + "/subscription) to receive notificatons.**" + this.lineBreak;
     }
 
     public GetPoweredByReadMeSynchronizerBadgeMarkdown() {

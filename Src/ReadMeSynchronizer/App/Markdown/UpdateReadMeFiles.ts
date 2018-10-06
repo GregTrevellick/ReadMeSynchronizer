@@ -20,7 +20,7 @@ export class ReadMeUpdater {
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
     private allReposExceptTheAllBadgesRepo: IRepoMetaData[];
     private fileSystemUpdater: FileSystemUpdater;
-    private lineBreak: string = "\n";
+    private lineBreak: string = "\n";//gregt dedupe
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;
     private sonarMetaHelper: SonarMetaHelper;
