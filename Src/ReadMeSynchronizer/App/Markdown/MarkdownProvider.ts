@@ -17,6 +17,10 @@ export class MarkdownProvider {
 
     //TODO convert all methods below to call a common method that returns the md, passing description + badge URL + hyperlink URL & returns square braces & curved brackets
 
+    public GetSubscribeMarkdown(localRepoName: string) {
+        return "**[Subscribe](https://github.com/" + this.myUserName + "/" + localRepoName + "/subscription) to receive notificatons.**";
+    }
+
     public GetPoweredByReadMeSynchronizerBadgeMarkdown() {
         return `[![Read Me Synchronizer](${shieldsDotIoUrl}badge/-powered%20by%20read%20me%20synchronizer-brightgreen.svg)](${this.gitHubReadMeSynchronizerUrl})`;
     }

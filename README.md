@@ -4,6 +4,7 @@
 [![Read Me Synchronizer](https://img.shields.io/badge/-powered%20by%20read%20me%20synchronizer-brightgreen.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 <!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->
 
+**[Subscribe](https://github.com/GregTrevellick/ReadMeSynchronizer/subscription) to receive notificatons.**
 [![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/GregTrevellick/ReadMeSynchronizer?branch=master)](https://bettercodehub.com/results/GregTrevellick/ReadMeSynchronizer)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/47d41dfc5df74ceba32dc53ddfd00b28)](https://www.codacy.com/project/gtrevellick/ReadMeSynchronizer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=GregTrevellick/ReadMeSynchronizer&amp;utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/ReadMeSynchronizer/badge)](https://www.codefactor.io/repository/github/GregTrevellick/ReadMeSynchronizer)

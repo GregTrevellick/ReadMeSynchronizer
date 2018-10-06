@@ -167,6 +167,9 @@ export class ReadMeUpdater {
         return [
             //DO NOT ALPHA SORT THESE - THIS IS UI SEQUENCE (rubbish I know!)
 
+            //subscribe link
+            this.mp.GetSubscribeMarkdown(repoMetaData.localRepoName),
+
             //code quality first
             this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
             this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId),
