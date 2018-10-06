@@ -84,7 +84,8 @@ export class MarkdownProvider {
     }
 
     public GetAzurePipelineBuildStatus(localRepoName: string, azureDefinitionId: string) {
-        return "[![Azure Build Status](https://gregtrevellick.visualstudio.com/GitHubAzurePipeline/_apis/build/status/" + localRepoName + ")](https://gregtrevellick.visualstudio.com/GitHubAzurePipeline/_build/latest?definitionId=" + azureDefinitionId + ")";
+        return "[![Azure Build Status](https://gregtrevellick.visualstudio.com/" + localRepoName + "/_apis/build/status/" + localRepoName + ")]" +
+            "(https://gregtrevellick.visualstudio.com/" + localRepoName + "/_build/latest?definitionId=" + azureDefinitionId + ")";
     }
 
     //public GetTravisBuildStatus(localRepoName: string) {
