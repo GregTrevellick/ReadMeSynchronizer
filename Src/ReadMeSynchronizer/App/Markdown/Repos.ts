@@ -63,7 +63,7 @@ export const gitPlayground3: IRepoMetaData = {
 
 export const openInAppLauncher: IVsmpMetaData = {
     appVeyorId: "0vwmtcboontemltq",
-    azureDefinitionId: "",
+    azureDefinitionId: "10",
     localRepoName: "OpenInApp.Launcher",
     codacyId: "e61c4dba8261497fb447379730e97a25",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -97,7 +97,7 @@ export const openInAppLauncher: IVsmpMetaData = {
 
 export const quickLaunchButtons: IVsmpMetaData = {
     appVeyorId: "e8fq3ang07ahq8yf",
-    azureDefinitionId: "",
+    azureDefinitionId: "17",
     localRepoName: "QuickLaunchButtons",
     codacyId: "def29563a15940cda03af19faac0e006",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -109,7 +109,7 @@ export const quickLaunchButtons: IVsmpMetaData = {
 
 export const quizLauncher: IVsmpMetaData = {
     appVeyorId: "i3u8gbuxoql23t9i",
-    azureDefinitionId: "",
+    azureDefinitionId: "18",
     localRepoName: "Quiz.Launcher",
     codacyId: "b1a2d4b9fd774d64ae56a8ffdd80b978",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -120,7 +120,7 @@ export const quizLauncher: IVsmpMetaData = {
 
 export const readMeSynchronizer: IRepoMetaData = {
     appVeyorId: "uy4igyamwjq51gx4",
-    azureDefinitionId: "",
+    azureDefinitionId: "24",
     localRepoName: "ReadMeSynchronizer",
     codacyId: "47d41dfc5df74ceba32dc53ddfd00b28",
     repoCategory: RepoCategory.ReadMeSynchronizer,
@@ -128,7 +128,7 @@ export const readMeSynchronizer: IRepoMetaData = {
 
 export const solutionOpenPopUp: IVsmpMetaData = {
     appVeyorId: "89c8gp1t0rua9fiw",
-    azureDefinitionId: "",
+    azureDefinitionId: "20",
     localRepoName: "SolutionOpenPopUp",
     codacyId: "23dfefe3b5014fd8b8462b47a3f38c1c",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -139,7 +139,7 @@ export const solutionOpenPopUp: IVsmpMetaData = {
 
 export const trivialApisForIDE: IVsmpMetaData = {
     appVeyorId: "iapcrndog6fvdd9l",
-    azureDefinitionId: "",
+    azureDefinitionId: "21",
     localRepoName: "TrivialApisForIDE",
     codacyId: "035ab76ee20d45c886d72be824507ab5",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -152,7 +152,7 @@ export const trivialApisForIDE: IVsmpMetaData = {
 
 export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     appVeyorId: "6sbejo44yn8ckbc0",
-    azureDefinitionId: "",
+    azureDefinitionId: "23",
     localRepoName: "VisualStudioMarketplaceMetrics",
     codacyId: "7e6f7c8bd4d240398affcd2202b84fd8",
     repoCategory: RepoCategory.ChromeExtension,
@@ -171,7 +171,7 @@ export const vsixFootball: IVsmpMetaData = {
 
 export const vsixFootie: IVsmpMetaData = {
     appVeyorId: "i7kxey89fewvjkac",
-    azureDefinitionId: "",
+    azureDefinitionId: "19",
     localRepoName: "VsixFootie",
     codacyId: "55911452f4154dd9a5599bd6fae3c725",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -182,7 +182,7 @@ export const vsixFootie: IVsmpMetaData = {
 
 export const vsixRatingChaser: IRepoMetaData = {
     appVeyorId: "x7qcrnycboq55xgf",
-    azureDefinitionId: "",
+    azureDefinitionId: "30",
     localRepoName: "VsixRatingChaser",
     codacyId: "688c1d5a2ec547faa61230471639cb8f",
     repoCategory: RepoCategory.NugetPackage,
@@ -190,7 +190,7 @@ export const vsixRatingChaser: IRepoMetaData = {
 
 export const vsixTwitterWidget: IVsmpMetaData = {
     appVeyorId: "s07rrwscpefb5k6h",
-    azureDefinitionId: "",
+    azureDefinitionId: "29",
     localRepoName: "VsixTwitterWidget",
     codacyId: "ec8f9a251ccc4862b40e2f8e60e432ef",
     repoCategory: RepoCategory.VstsExtension,
@@ -223,7 +223,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
 
 export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     appVeyorId: "9uoctpmaj9wj6gjc",
-    azureDefinitionId: "",
+    azureDefinitionId: "15",
     localRepoName: "VstsDashboardWidgetProjectTemplate",
     codacyId: "be5d606604c64b81a1ed640a53c671f7",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -234,7 +234,7 @@ export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
 
 export const azureDevOpsRotaWidget: IVsmpMetaData = {
     appVeyorId: "01islyin3t8bsxoe",
-    azureDefinitionId: "",
+    azureDefinitionId: "13",
     localRepoName: "AzureDevOpsRotaWidget",
     codacyId: "0adfce1b3ab043b79c8283a8f68ca671",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -256,7 +256,7 @@ export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
 
 export const browserExtensionUsingAngularWorksInChromeNotInEdge: IVsmpMetaData = {
     appVeyorId: "6hwmbbvub7vin7b2",
-    azureDefinitionId: "",
+    azureDefinitionId: "14",
     localRepoName: "BrowserExtensionUsingAngularWorksInChromeNotInEdge",
     codacyId: "fbab92a148b146209eda380777abc7c5",
     repoCategory: RepoCategory.MiscellaneousRepo,
@@ -289,7 +289,7 @@ export const more: IVsmpMetaData = {
 
 export const gregtSideWaffleV2: IRepoMetaData = {
     appVeyorId: "53q1kagc0jsbfpik",
-    azureDefinitionId: "",
+    azureDefinitionId: "9",
     localRepoName: "Gregt.sidewafflev2",
     codacyId: "64d3c825785c4398a4e0c0f3c0542865",
     repoCategory: RepoCategory.Forks,
@@ -297,7 +297,7 @@ export const gregtSideWaffleV2: IRepoMetaData = {
 
 export const angularBasic: IVsmpMetaData = {
     appVeyorId: "9u37xi3cuan7qxpa",
-    azureDefinitionId: "",
+    azureDefinitionId: "12",
     localRepoName: "AngularBasic",
     codacyId: "6c528ee94ef349d2b9f3d548761e8617",
     repoCategory: RepoCategory.Forks,
@@ -319,7 +319,7 @@ export const awib: IVsmpMetaData = {
 
 export const meneesVsTools2017: IVsmpMetaData = {
     appVeyorId: "403ut9uqnu4yv7ln",
-    azureDefinitionId: "",
+    azureDefinitionId: "16",
     localRepoName: "Menees.VsTools.2017",
     codacyId: "0f084189c9f94d619e3b5fe7052678c9",
     repoCategory: RepoCategory.Forks,
@@ -330,7 +330,7 @@ export const meneesVsTools2017: IVsmpMetaData = {
 
 export const openCoverExample: IVsmpMetaData = {
     appVeyorId: "eiso821168e15t9e",
-    azureDefinitionId: "",
+    azureDefinitionId: "28",
     localRepoName: "OpenCoverExample",
     codacyId: "e9691ea13c68406c9a77447c243cbddb",
     repoCategory: RepoCategory.Forks,
@@ -341,7 +341,7 @@ export const openCoverExample: IVsmpMetaData = {
 
 export const renameProjectVsExtension: IVsmpMetaData = {
     appVeyorId: "p304wa3aqlwir63f",
-    azureDefinitionId: "",
+    azureDefinitionId: "22",
     localRepoName: "RenameProjectVsExtension",
     codacyId: "cf9d3266e9654def87d38c44300935c5",
     repoCategory: RepoCategory.Forks,
@@ -352,7 +352,7 @@ export const renameProjectVsExtension: IVsmpMetaData = {
 
 export const helloWorldTypescriptParcel: IVsmpMetaData = {
     appVeyorId: "u3s4x8kx4fo0ejog",
-    azureDefinitionId: "",
+    azureDefinitionId: "11",
     localRepoName: "HelloWorldTypescriptParcel",
     codacyId: "f519d95563a64063a1d349b8c6252ec0",
     repoCategory: RepoCategory.HelloWorld,
@@ -374,7 +374,7 @@ export const helloWorldBlazor: IVsmpMetaData = {
 
 export const helloWorldTypescriptWebpack: IVsmpMetaData = {
     appVeyorId: "4pjmtgwdmqrpg1pl",
-    azureDefinitionId: "",
+    azureDefinitionId: "33",
     localRepoName: "HelloWorldTypescriptWebpack",
     codacyId: "b8374c0381374e82828d292bbdbb85ef",
     repoCategory: RepoCategory.HelloWorld,
@@ -385,7 +385,7 @@ export const helloWorldTypescriptWebpack: IVsmpMetaData = {
 
 export const helloWorldVstsExtension: IVsmpMetaData = {
     appVeyorId: "ola9n1um34vha0x4",
-    azureDefinitionId: "",
+    azureDefinitionId: "35",
     localRepoName: "HelloWorldVstsExtension",
     codacyId: "5c49e26432e541c5861195ed4a425ac8",
     repoCategory: RepoCategory.HelloWorld,
@@ -396,7 +396,7 @@ export const helloWorldVstsExtension: IVsmpMetaData = {
 
 export const helloWorldVsixToolBar: IVsmpMetaData = {
     appVeyorId: "kv8q5fajysjxdwur",
-    azureDefinitionId: "",
+    azureDefinitionId: "34",
     localRepoName: "HelloWorldVsixToolBar",
     codacyId: "b397d57fb66841b0a4f67e9718840281",
     repoCategory: RepoCategory.HelloWorld,
@@ -407,7 +407,7 @@ export const helloWorldVsixToolBar: IVsmpMetaData = {
 
 export const helloWorldVsixPopUp: IVsmpMetaData = {
     appVeyorId: "j3hutqo41xv8xo06",
-    azureDefinitionId: "",
+    azureDefinitionId: "32",
     localRepoName: "HelloWorldVsixPopUp",
     codacyId: "03868a22c8db486d85c5d0bd33637e41",
     repoCategory: RepoCategory.HelloWorld,
@@ -418,7 +418,7 @@ export const helloWorldVsixPopUp: IVsmpMetaData = {
 
 export const helloWorldVsixToolWindowAsyncPackageExample: IVsmpMetaData = {
     appVeyorId: "1fha75b06hpw2lip",
-    azureDefinitionId: "",
+    azureDefinitionId: "26",
     localRepoName: "HelloWorldVsixToolWindowAsyncPackageExample",
     codacyId: "4d1ed9b21d9240cca47e314c1b06edda",
     repoCategory: RepoCategory.HelloWorld,
@@ -429,7 +429,7 @@ export const helloWorldVsixToolWindowAsyncPackageExample: IVsmpMetaData = {
 
 export const helloWorldWpfAsyncBindingPropertyExample: IVsmpMetaData = {
     appVeyorId: "eg1nxsm1a3c754al",
-    azureDefinitionId: "",
+    azureDefinitionId: "27",
     localRepoName: "HelloWorldWpfAsyncBindingPropertyExample",
     codacyId: "e4580e8133e04b8aa209252e37f3d1c6",
     repoCategory: RepoCategory.HelloWorld,
@@ -440,7 +440,7 @@ export const helloWorldWpfAsyncBindingPropertyExample: IVsmpMetaData = {
 
 export const vsixDotNetCorePoc: IVsmpMetaData = {
     appVeyorId: "ktrqskiaastij4jd",
-    azureDefinitionId: "",
+    azureDefinitionId: "31",
     localRepoName: "VsixDotNetCorePoc",
     codacyId: "e2fa50e29fea429897c304c79e9d9479",
     repoCategory: RepoCategory.HelloWorld,
