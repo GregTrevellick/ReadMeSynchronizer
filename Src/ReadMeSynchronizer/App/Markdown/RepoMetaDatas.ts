@@ -6,54 +6,19 @@ export class RepoMetaDatas {
 
     constructor() {
 
-        //DO NOT ALPHA SORT THESE - THIS IS UI SEQUENCE (rubbish I know!)
+        // UI sequence of bottom half of AllBadges repo ReadMe file
 
         this.repoMetaDatas = [
 
-            //special
             myRepos.allBadges,
-
-            //chrome
-            myRepos.visualStudioMarketplaceMetrics,
-
-            //misc
-            myRepos.browserExtensionUsingAngularWorksInChromeNotInEdge,
-            myRepos.filesForEveryExtensionCreator,
-            myRepos.miscellaneousArtefacts,
-            myRepos.more,
-
-            //nuget
-            myRepos.dotNetFlags,
-            myRepos.vsixRatingChaser,
-
-            //readMeSynchronizer
-            myRepos.readMeSynchronizer,
-
-            //vsts extensions
-            myRepos.azureDevOpsRotaWidget,
-            myRepos.vsixTwitterWidget,
-
-            //vsix ide
-            myRepos.autoFindReplace,
-            myRepos.openInAppLauncher,
-            myRepos.quickLaunchButtons,
-            myRepos.quizLauncher,
-            myRepos.solutionOpenPopUp,
-            myRepos.trivialApisForIDE,
-            myRepos.vsixBlazorMinimalProjectTemplate,
-            myRepos.vsixFootball,
-            myRepos.vsixFootie,
-            myRepos.vstsDashboardWidgetProjectTemplate,
-
-            //forks
             myRepos.angularBasic,
+            myRepos.autoFindReplace,
             myRepos.awib,
+            myRepos.azureDevOpsRotaWidget,
+            myRepos.browserExtensionUsingAngularWorksInChromeNotInEdge,
+            myRepos.dotNetFlags,
+            myRepos.filesForEveryExtensionCreator,
             myRepos.gregtSideWaffleV2,
-            myRepos.meneesVsTools2017,
-            myRepos.openCoverExample,
-            myRepos.renameProjectVsExtension,
-
-            //hello world
             myRepos.helloWorldBlazor,
             myRepos.helloWorldTypescriptParcel,
             myRepos.helloWorldTypescriptWebpack,
@@ -62,7 +27,25 @@ export class RepoMetaDatas {
             myRepos.helloWorldVsixToolWindowAsyncPackageExample,
             myRepos.helloWorldVstsExtension,
             myRepos.helloWorldWpfAsyncBindingPropertyExample,
+            myRepos.meneesVsTools2017,
+            myRepos.miscellaneousArtefacts,
+            myRepos.more,
+            myRepos.openCoverExample,
+            myRepos.openInAppLauncher,
+            myRepos.quickLaunchButtons,
+            myRepos.quizLauncher,
+            myRepos.readMeSynchronizer,
+            myRepos.renameProjectVsExtension,
+            myRepos.solutionOpenPopUp,
+            myRepos.trivialApisForIDE,
+            myRepos.visualStudioMarketplaceMetrics,
+            myRepos.vsixBlazorMinimalProjectTemplate,
             myRepos.vsixDotNetCorePoc,
+            myRepos.vsixFootball,
+            myRepos.vsixFootie,
+            myRepos.vsixRatingChaser,
+            myRepos.vsixTwitterWidget,
+            myRepos.vstsDashboardWidgetProjectTemplate,
 
         ];
 
