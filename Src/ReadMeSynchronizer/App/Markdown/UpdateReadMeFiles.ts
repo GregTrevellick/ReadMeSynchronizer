@@ -373,7 +373,7 @@ export class ReadMeUpdater {
         // With expand/collapse...
         return `
 ${title}
-<details>
+<details open>
 <summary>
 Click to expand or collapse
 </summary>
