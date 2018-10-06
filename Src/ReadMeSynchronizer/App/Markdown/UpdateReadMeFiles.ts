@@ -56,19 +56,9 @@ export class ReadMeUpdater {
     }
 
     private GetFullTitle(repoCategoryDescription: string, localRepoName: string) {
-
-        // Without expand/collapse...
-        return `${this.titleHtag} [${repoCategoryDescription} - ${localRepoName}](https://github.com/${this.mp.myUserName}/${localRepoName})`;
-
-//////        // With expand/collapse...
-//////        return `
-//////<details>
-//////<summary>
-//////Click to expand or collapse
-//////</summary>
-//////${markdown}${this.lineBreak}
-//////</details>
-//////${this.lineBreak}`;
+        //commented out - second bottom half of AllBadges repo readme file contains categorized repos 
+        //return `${this.titleHtag} [${repoCategoryDescription} - ${localRepoName}](https://github.com/${this.mp.myUserName}/${localRepoName})`;
+        return `${this.titleHtag} [${localRepoName}](https://github.com/${this.mp.myUserName}/${localRepoName})`;
     }
 
     private GetSurroundedBadgesMarkdown(baseBadgesMarkdown: string) {
