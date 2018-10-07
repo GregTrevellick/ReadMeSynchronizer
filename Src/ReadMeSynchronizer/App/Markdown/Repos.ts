@@ -1,4 +1,3 @@
-import { IRepoMetaData } from "./IRepoMetaData";
 import { IVsmpMetaData } from "./IVsmpMetaData";
 import { RepoCategory } from "./RepoCategory";
 
@@ -82,7 +81,7 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
 };
 
 export const gitPlayground1: IRepoMetaData = {
-    appVeyorId: "",
+    //appVeyorId: "",
     azureDefinitionId: "",
     localRepoName: "GitPlayground1",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
@@ -90,7 +89,7 @@ export const gitPlayground1: IRepoMetaData = {
 };
 
 export const gitPlayground2: IRepoMetaData = {
-    appVeyorId: "",
+    //appVeyorId: "",
     azureDefinitionId: "",
     localRepoName: "GitPlayground2",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
@@ -98,7 +97,7 @@ export const gitPlayground2: IRepoMetaData = {
 };
 
 export const gitPlayground3: IRepoMetaData = {
-    appVeyorId: "",
+    //appVeyorId: "",
     azureDefinitionId: "",
     localRepoName: "Git-Playground3",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",

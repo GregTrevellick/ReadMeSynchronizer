@@ -61,23 +61,6 @@ export class MarkdownProvider {
         return `[![${sonarDescription}](${sonarBadgeUrl})](${badgeHyperlinkUrl})`;
     }
 
-    public GetBetterCodeHubCompliance(localRepoName: string) {
-        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + this.myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + this.myUserName + "/" + localRepoName + ")";
-    }
-
-    public GetCodacyBadge(localRepoName: string, codacyId: string) {
-        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
-            "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + this.myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
-    }
-
-    //public GetCodeCov(localRepoName: string) {
-    //    return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
-    //}
-
-    public GetCodeFactor(localRepoName: string) {
-        return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
-    }
-
     public GetAppveyorBuildStatus(localRepoName: string, appVeyorId?: string) {
         if (appVeyorId != undefined) {
             const appVeyorRepoName = this.DotSubstituion(localRepoName);
@@ -98,9 +81,26 @@ export class MarkdownProvider {
             "(https://gregtrevellick.visualstudio.com/" + localRepoName + "/_build/latest?definitionId=" + azureDefinitionId + ")";
     }
 
+    public GetBetterCodeHubCompliance(localRepoName: string) {
+        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + this.myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + this.myUserName + "/" + localRepoName + ")";
+    }
+
+    public GetCodacyBadge(localRepoName: string, codacyId: string) {
+        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
+            "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + this.myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
+    }
+
+    //public GetCodeCov(localRepoName: string) {
+    //    return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
+    //}
+
     //public GetTravisBuildStatus(localRepoName: string) {
     //    return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";
     //}
+
+    public GetCodeFactor(localRepoName: string) {
+        return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
+    }
 
     public GetImgBot(localRepoName: string) {
         return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-brightgreen.svg)](https://imgbot.net/)";
