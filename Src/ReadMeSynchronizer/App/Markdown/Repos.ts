@@ -1,3 +1,4 @@
+import { IRepoMetaData } from "./IRepoMetaData";
 import { IVsmpMetaData } from "./IVsmpMetaData";
 import { RepoCategory } from "./RepoCategory";
 
