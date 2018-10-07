@@ -256,89 +256,95 @@ export class ReadMeUpdater {
 
     private GetGroupedBadgeTypeMarkdown(allReposExceptTheAllBadgesRepo: IRepoMetaData[], groupedBadgeType: GroupedBadgeType) {
         let badgesMarkdown = "";
+        let repoMarkdown = "";
         let title = "";
 
         for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
             switch (groupedBadgeType)
             {
                 case GroupedBadgeType.AppveyorBuildStatus: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId)}`;
+                    repoMarkdown = this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId);
                     break;
                 }
                 case GroupedBadgeType.AppveyorUnitTests: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName)}`;
+                    repoMarkdown = this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.AzurePipelineBuildStatus: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetAzurePipelineBuildStatus(repoMetaData.localRepoName, repoMetaData.azureDefinitionId)}`;
+                    repoMarkdown = this.mp.GetAzurePipelineBuildStatus(repoMetaData.localRepoName, repoMetaData.azureDefinitionId);
                     break;
                 }
                 case GroupedBadgeType.BetterCodeHubCompliance: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName)}`;
+                    repoMarkdown = this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.CodacyBadge: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId)}`;
+                    repoMarkdown = this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId);
                     break;
                 }
                 case GroupedBadgeType.CodeFactor: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetCodeFactor(repoMetaData.localRepoName)}`;
+                    repoMarkdown = this.mp.GetCodeFactor(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.GitHubIssues: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetGitHubIssues(repoMetaData.localRepoName)}`;
+                    repoMarkdown = this.mp.GetGitHubIssues(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.GitHubPullRequests: {
-                    badgesMarkdown += `${this.lineBreak}${this.mp.GetGitHubPullRequests(repoMetaData.localRepoName)}`;
+                    repoMarkdown = this.mp.GetGitHubPullRequests(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.SonarBugs: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Bugs);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Bugs);
                     break;
                 }
                 case GroupedBadgeType.SonarCodeSmells: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.CodeSmells);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.CodeSmells);
                     break;
                 }
                 case GroupedBadgeType.SonarCoverage: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Coverage);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Coverage);
                     break;
                 }
                 case GroupedBadgeType.SonarDuplicatedLinesDensity: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.DuplicatedLinesDensity);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.DuplicatedLinesDensity);
                     break;
                 }
                 case GroupedBadgeType.SonarMaintainability: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Maintainability);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Maintainability);
                     break;
                 }
                 case GroupedBadgeType.SonarNumberOfLinesOfCode: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.NumberOfLinesOfCode);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.NumberOfLinesOfCode);
                     break;
                 }
                 case GroupedBadgeType.SonarQualityGateStatus: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.QualityGateStatus);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.QualityGateStatus);
                     break;
                 }
                 case GroupedBadgeType.SonarReliabilityRating: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.ReliabilityRating);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.ReliabilityRating);
                     break;
                 }
                 case GroupedBadgeType.SonarSecurityRating: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SecurityRating);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.SecurityRating);
                     break;
                 }
                 case GroupedBadgeType.SonarTechnicalDebt: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.TechnicalDebt);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.TechnicalDebt);
                     break;
                 }
                 case GroupedBadgeType.SonarVulnerabilities: {
-                    badgesMarkdown += this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Vulnerabilities);
+                    repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Vulnerabilities);
                     break;
                 }
 
             }
+
+            if (repoMarkdown != "") {
+                badgesMarkdown += `${this.lineBreak}${repoMarkdown}`;
+            }
+
         }
 
         title = this.GetTitle(groupedBadgeType);

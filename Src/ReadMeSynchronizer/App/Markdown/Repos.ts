@@ -202,7 +202,7 @@ export const meneesVsTools2017: IVsmpMetaData = {
 };
 
 export const miscellaneousArtefacts: IVsmpMetaData = {
-    appVeyorId: "fl77g7npbyb91h8r",
+    //appVeyorId: "fl77g7npbyb91h8r",
     azureDefinitionId: "",
     localRepoName: "MiscellaneousArtefacts",
     codacyId: "9bf237f7393d4c9ea544206278ff51a8",
@@ -213,7 +213,7 @@ export const miscellaneousArtefacts: IVsmpMetaData = {
 };
 
 export const more: IVsmpMetaData = {
-    appVeyorId: "474xser6ddbk1u4t",
+    //appVeyorId: "474xser6ddbk1u4t",
     azureDefinitionId: "",
     localRepoName: "More",
     codacyId: "e7801c84e3d645859e668f1b6bd7af05",
