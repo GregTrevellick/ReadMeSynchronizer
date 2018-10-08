@@ -56,7 +56,7 @@ export class ReadMeUpdater {
     }
 
     private GetFullTitle(repoCategoryDescription: string, localRepoName: string) {
-        //commented out - second bottom half of AllBadges repo readme file contains categorized repos 
+        //commented out - second bottom half of AllBadges repo readme file contains categorized repos
         //return `${this.titleHtag} [${repoCategoryDescription} - ${localRepoName}](https://github.com/${this.mp.myUserName}/${localRepoName})`;
         return `${this.titleHtag} [${localRepoName}](https://github.com/${this.mp.myUserName}/${localRepoName})`;
     }
@@ -188,7 +188,7 @@ export class ReadMeUpdater {
 
             //build / test coverage related
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId),
-            this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName),
+            this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName, repoMetaData.appVeyorId),
             this.mp.GetAzurePipelineBuildStatus(repoMetaData.localRepoName, repoMetaData.azureDefinitionId),
 
             //less important stuff
@@ -267,7 +267,7 @@ export class ReadMeUpdater {
                     break;
                 }
                 case GroupedBadgeType.AppveyorUnitTests: {
-                    repoMarkdown = this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName);
+                    repoMarkdown = this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName, repoMetaData.appVeyorId);
                     break;
                 }
                 case GroupedBadgeType.AzurePipelineBuildStatus: {
