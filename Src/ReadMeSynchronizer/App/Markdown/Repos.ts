@@ -202,7 +202,7 @@ export const meneesVsTools2017: IVsmpMetaData = {
 };
 
 export const miscellaneousArtefacts: IVsmpMetaData = {
-    //appVeyorId: "fl77g7npbyb91h8r",
+    appVeyorId: "fl77g7npbyb91h8r",
     azureDefinitionId: "",
     localRepoName: "MiscellaneousArtefacts",
     codacyId: "9bf237f7393d4c9ea544206278ff51a8",

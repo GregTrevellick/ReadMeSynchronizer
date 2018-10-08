@@ -1,3 +1,19 @@
+project settings > pipielines > service connections
+
+pipeline > build > getsources >
+
+
+
+
+
+
+
+
+
+
+
+
+
 convert to node app for debugging => unit tests (jest?) (else get rid of karma packages)
 
 
