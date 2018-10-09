@@ -11,7 +11,7 @@ export const allBadges: IRepoMetaData = {
 };
 
 export const angularBasic: IVsmpMetaData = {
-    appVeyorId: "9u37xi3cuan7qxpa",
+    //appVeyorId: "9u37xi3cuan7qxpa",
     azureDefinitionId: "36",
     localRepoName: "AngularBasic",
     codacyId: "6c528ee94ef349d2b9f3d548761e8617",
@@ -33,7 +33,7 @@ export const autoFindReplace: IVsmpMetaData = {
 };
 
 export const awib: IVsmpMetaData = {
-    appVeyorId: "903t2c7smsutgf8e",
+    //appVeyorId: "903t2c7smsutgf8e",
     azureDefinitionId: "",
     localRepoName: "awib",
     codacyId: "9db6094d5fd342ee8a8740efd33526c9",
@@ -55,7 +55,7 @@ export const azureDevOpsRotaWidget: IVsmpMetaData = {
 };
 
 export const browserExtensionUsingAngularWorksInChromeNotInEdge: IVsmpMetaData = {
-    appVeyorId: "6hwmbbvub7vin7b2",
+    //appVeyorId: "6hwmbbvub7vin7b2",
     azureDefinitionId: "14",
     localRepoName: "BrowserExtensionUsingAngularWorksInChromeNotInEdge",
     codacyId: "fbab92a148b146209eda380777abc7c5",
@@ -191,7 +191,7 @@ export const helloWorldWpfAsyncBindingPropertyExample: IVsmpMetaData = {
 };
 
 export const meneesVsTools2017: IVsmpMetaData = {
-    appVeyorId: "403ut9uqnu4yv7ln",
+    //appVeyorId: "403ut9uqnu4yv7ln",
     azureDefinitionId: "16",
     localRepoName: "Menees.VsTools.2017",
     codacyId: "0f084189c9f94d619e3b5fe7052678c9",
