@@ -12,27 +12,9 @@ export class BadgeExclusions {
         RepoNames["Menees.VsTools.2017"]
     ];
 
+    //betterCodeHubCompliance
+    //codacyBadge
+    //codeFactor
+    //gitHub
+    //sonar
 }
-
-
-
-    //Applicable badges
-    //appveyorBuildStatus?: boolean;
-    //appveyorUnitTests?: boolean;
-    //azurePipelineBuildStatus?: boolean;
-    //betterCodeHubCompliance?: boolean;
-    //codacyBadge?: boolean;
-    //codeFactor?: boolean;
-    //gitHubIssues: boolean;
-    //gitHubPullRequests?: boolean;
-    //sonarBugs?: boolean;
-    //sonarCodeSmells?: boolean;
-    //sonarCoverage?: boolean;
-    //sonarDuplicatedLinesDensity?: boolean;
-    //sonarMaintainability?: boolean;
-    //sonarNumberOfLinesOfCode?: boolean;
-    //sonarQualityGateStatus?: boolean;
-    //sonarReliabilityRating?: boolean;
-    //sonarSecurityRating?: boolean;
-    //sonarTechnicalDebt?: boolean;
-    //sonarVulnerabilities?: boolean;
