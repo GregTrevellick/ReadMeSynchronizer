@@ -1,4 +1,4 @@
-project settings > pipielines > service connections
+project settings > pipelines > service connections
 
 pipeline > build > edit > getsources >
 
