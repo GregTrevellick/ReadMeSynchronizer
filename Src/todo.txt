@@ -1,6 +1,6 @@
 project settings > pipielines > service connections
 
-pipeline > build > getsources >
+pipeline > build > edit > getsources >
 
 
 
