@@ -354,7 +354,8 @@ export class ReadMeUpdater {
 
     private GetSonarBadgesMarkdown(repoMetaData: IRepoMetaData, sonarCategory: SonarCategory) {
         const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(sonarCategory);
-        return `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;
+        //return `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;
+        return `${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;
     }
 
     private GetTitle(groupedBadgeType: GroupedBadgeType) {
