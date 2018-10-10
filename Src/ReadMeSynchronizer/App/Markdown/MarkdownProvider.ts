@@ -1,4 +1,6 @@
+import { BadgeExclusions } from "./BadgeExclusions";
 import { SonarMetaData } from "./SonarMetaData";
+import { RepoNames } from "./RepoNames";
 
 const chromeWebStore = "chrome-web-store";
 const shieldsDotIoUrl = "https://img.shields.io/";
@@ -10,11 +12,15 @@ const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio
 
 export class MarkdownProvider {
 
+    private badgeExclusions: BadgeExclusions;
     private lineBreak: string = "\n";//gregt dedupe
-    public myUserName = "GregTrevellick";
+    private noMarkdown: string = "";
     public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
+    public myUserName = "GregTrevellick";
 
-    constructor() { }
+    constructor() {
+        this.badgeExclusions = new BadgeExclusions();
+    }
 
     //TODO convert all methods below to call a common method that returns the md, passing description + badge URL + hyperlink URL & returns square braces & curved brackets
 
@@ -30,29 +36,28 @@ export class MarkdownProvider {
         return "[![Access Lint github](" + shieldsDotIoUrl + "badge/a11y-checked-brightgreen.svg)](https://www.accesslint.com)";
     }
 
-    public GetAppveyorBuildStatus(localRepoName: string, appVeyorId?: string) {
-        if (appVeyorId != undefined) {
+    public GetAppveyorBuildStatus(localRepoName: string, appVeyorId: string) {
+        if (this.ShowAppveyorBadges(localRepoName)) {
             const appVeyorRepoName = this.DotSubstituion(localRepoName);
             return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/" + appVeyorId + "?svg=true)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + ")";
         }
-        else {
-            return "";
-        }
+        return this.noMarkdown;
     }
 
-    public GetAppveyorUnitTests(localRepoName: string, appVeyorId?: string) {
-        if (appVeyorId != undefined) {
+    public GetAppveyorUnitTests(localRepoName: string, appVeyorId: string) {
+        if (this.ShowAppveyorBadges(localRepoName)) {
             const appVeyorRepoName = this.DotSubstituion(localRepoName);
             return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + this.myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + "/build/tests)";
         }
-        else {
-            return "";
-        }
+        return this.noMarkdown;
     }
 
     public GetAzurePipelineBuildStatus(localRepoName: string, azureDefinitionId: string) {
-        return "[![Azure Build Status](https://gregtrevellick.visualstudio.com/" + localRepoName + "/_apis/build/status/" + localRepoName + ")]" +
-            "(https://gregtrevellick.visualstudio.com/" + localRepoName + "/_build/latest?definitionId=" + azureDefinitionId + ")";
+        if (this.ShowAzurePipelineBadges(localRepoName)) {
+            return "[![Azure Build Status](https://gregtrevellick.visualstudio.com/" + localRepoName + "/_apis/build/status/" + localRepoName + ")]" +
+                "(https://gregtrevellick.visualstudio.com/" + localRepoName + "/_build/latest?definitionId=" + azureDefinitionId + ")";
+        }
+        return this.noMarkdown;
     }
 
     public GetBetterCodeHubCompliance(localRepoName: string) {
@@ -168,7 +173,7 @@ export class MarkdownProvider {
     private GetVisualStudioMarketplaceUrlPrefix() {
         return `${visualStudioMarketplaceUrl}${this.myUserName}.`;
     }
-    
+
     private GetGitHubUrlForRepo(localRepoName: string) {
         return "https://github.com/" + this.myUserName + "/" + localRepoName;
     }
@@ -176,4 +181,24 @@ export class MarkdownProvider {
     private DotSubstituion(localreponame: string) {
         return localreponame.replace(".", "-");
     }
+
+    private ShowAppveyorBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.appveyor.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowAzurePipelineBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.azurePipeline.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private GetRepoName(localRepoName: string): RepoNames {
+        let repoName: RepoNames = RepoNames[localRepoName];
+        return repoName;
+    }
+
 }

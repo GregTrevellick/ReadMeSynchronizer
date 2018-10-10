@@ -11,7 +11,7 @@ export const allBadges: IRepoMetaData = {
 };
 
 export const angularBasic: IVsmpMetaData = {
-    //appVeyorId: "9u37xi3cuan7qxpa",
+    appVeyorId: "9u37xi3cuan7qxpa",
     azureDefinitionId: "36",
     localRepoName: "AngularBasic",
     codacyId: "6c528ee94ef349d2b9f3d548761e8617",
@@ -33,7 +33,7 @@ export const autoFindReplace: IVsmpMetaData = {
 };
 
 export const awib: IVsmpMetaData = {
-    //appVeyorId: "903t2c7smsutgf8e",
+    appVeyorId: "903t2c7smsutgf8e",
     azureDefinitionId: "",
     localRepoName: "awib",
     codacyId: "9db6094d5fd342ee8a8740efd33526c9",
@@ -55,7 +55,7 @@ export const azureDevOpsRotaWidget: IVsmpMetaData = {
 };
 
 export const browserExtensionUsingAngularWorksInChromeNotInEdge: IVsmpMetaData = {
-    //appVeyorId: "6hwmbbvub7vin7b2",
+    appVeyorId: "6hwmbbvub7vin7b2",
     azureDefinitionId: "14",
     localRepoName: "BrowserExtensionUsingAngularWorksInChromeNotInEdge",
     codacyId: "fbab92a148b146209eda380777abc7c5",
@@ -82,7 +82,7 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
 };
 
 export const gitPlayground1: IRepoMetaData = {
-    //appVeyorId: "",
+    appVeyorId: "",
     azureDefinitionId: "",
     localRepoName: "GitPlayground1",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
@@ -90,7 +90,7 @@ export const gitPlayground1: IRepoMetaData = {
 };
 
 export const gitPlayground2: IRepoMetaData = {
-    //appVeyorId: "",
+    appVeyorId: "",
     azureDefinitionId: "",
     localRepoName: "GitPlayground2",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
@@ -98,7 +98,7 @@ export const gitPlayground2: IRepoMetaData = {
 };
 
 export const gitPlayground3: IRepoMetaData = {
-    //appVeyorId: "",
+    appVeyorId: "",
     azureDefinitionId: "",
     localRepoName: "Git-Playground3",
     codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
@@ -191,7 +191,7 @@ export const helloWorldWpfAsyncBindingPropertyExample: IVsmpMetaData = {
 };
 
 export const meneesVsTools2017: IVsmpMetaData = {
-    //appVeyorId: "403ut9uqnu4yv7ln",
+    appVeyorId: "403ut9uqnu4yv7ln",
     azureDefinitionId: "16",
     localRepoName: "Menees.VsTools.2017",
     codacyId: "0f084189c9f94d619e3b5fe7052678c9",
@@ -213,7 +213,7 @@ export const miscellaneousArtefacts: IVsmpMetaData = {
 };
 
 export const more: IVsmpMetaData = {
-    //appVeyorId: "474xser6ddbk1u4t",
+    appVeyorId: "474xser6ddbk1u4t",
     azureDefinitionId: "",
     localRepoName: "More",
     codacyId: "e7801c84e3d645859e668f1b6bd7af05",
