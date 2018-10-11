@@ -66,6 +66,8 @@ At some point I may try to make a generic scaffold app from this repo, and publi
 
 [loune.net](https://loune.net/2011/02/match-any-character-including-new-line-in-javascript-regexp/)
 
+[Microsoft Dev Labs](https://docs.microsoft.com/en-us/labs/devops/sonarcloudlab/)
+
 [Shields.io](https://shields.io/#/)
 
 [Stef Heyenrath](https://medium.com/@stef.heyenrath/how-to-fix-sonarcloud-issue-in-a-github-pr-when-using-appveyor-integration-8909b49406b4)

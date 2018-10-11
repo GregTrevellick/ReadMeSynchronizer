@@ -113,6 +113,17 @@ export const gregtSideWaffleV2: IRepoMetaData = {
     repoCategory: RepoCategory.Forks,
 };
 
+export const helloWorldBlazor: IVsmpMetaData = {
+    appVeyorId: "9ik81ir38chjwcp9",
+    azureDefinitionId: "37",
+    localRepoName: "HelloWorldBlazor",
+    codacyId: "52248629623c4b99b7039e7adb2a54c5",
+    repoCategory: RepoCategory.HelloWorld,
+    vsmpItemNames: [
+        "HelloWorldBlazor"
+    ],
+};
+
 export const helloWorldTypescriptParcel: IVsmpMetaData = {
     appVeyorId: "u3s4x8kx4fo0ejog",
     azureDefinitionId: "11",
@@ -438,13 +449,4 @@ export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     ],
 };
 
-export const helloWorldBlazor: IVsmpMetaData = {
-    appVeyorId: "9ik81ir38chjwcp9",
-    azureDefinitionId: "",
-    localRepoName: "HelloWorldBlazor",
-    codacyId: "52248629623c4b99b7039e7adb2a54c5",
-    repoCategory: RepoCategory.HelloWorld,
-    vsmpItemNames: [
-        "HelloWorldBlazor"
-    ],
-};
+
