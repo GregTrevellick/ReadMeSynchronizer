@@ -17,10 +17,12 @@ export class BadgeExclusions {
         RepoNames.AngularBasic,
         RepoNames.awib,
         RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
+        RepoNames.HelloWorldTypescriptParcel,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
         RepoNames.More,
         RepoNames.OpenCoverExample,
+        RepoNames.VstsDashboardWidgetProjectTemplate,
     ];
 
     //betterCodeHubCompliance
