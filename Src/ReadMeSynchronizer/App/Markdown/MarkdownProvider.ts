@@ -105,6 +105,10 @@ export class MarkdownProvider {
         return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
+    public GetHound(localRepoName: string) {
+        return "[![Hound](" + shieldsDotIoUrl + "badge/hound_ci-checked-brightgreen.svg)](https://houndci.com/)";
+    }
+
     public GetImgBot(localRepoName: string) {
         return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-brightgreen.svg)](https://imgbot.net/)";
     }

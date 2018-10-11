@@ -192,6 +192,7 @@ export class ReadMeUpdater {
             this.mp.GetAzurePipelineBuildStatus(repoMetaData.localRepoName, repoMetaData.azureDefinitionId),
 
             //less important stuff
+            this.mp.GetHound(repoMetaData.localRepoName),
             this.mp.GetAccessLintBadgeMarkdown(),
             this.mp.GetImgBot(repoMetaData.localRepoName),
             this.mp.GetRenovateBotBadgeMarkdown(),
