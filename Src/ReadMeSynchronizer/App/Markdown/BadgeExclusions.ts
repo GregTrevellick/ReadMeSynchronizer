@@ -17,7 +17,7 @@ export class BadgeExclusions {
         RepoNames.AngularBasic,
         RepoNames.awib,
         RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
-        RepoNames.HelloWorldTypescriptParcel,
+        //RepoNames.HelloWorldTypescriptParcel,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
         RepoNames.More,
