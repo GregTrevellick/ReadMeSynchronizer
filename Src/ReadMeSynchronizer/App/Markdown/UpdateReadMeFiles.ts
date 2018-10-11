@@ -341,7 +341,7 @@ export class ReadMeUpdater {
 
             }
 
-            if (repoMarkdown != "") {
+            if (repoMarkdown != this.mp.noMarkdown) {
                 badgesMarkdown += `${this.lineBreak}${repoMarkdown}`;
             }
 

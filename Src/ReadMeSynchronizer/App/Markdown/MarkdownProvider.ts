@@ -14,9 +14,9 @@ export class MarkdownProvider {
 
     private badgeExclusions: BadgeExclusions;
     private lineBreak: string = "\n";//gregt dedupe
-    private noMarkdown: string = "";
     public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
     public myUserName = "GregTrevellick";
+    public noMarkdown: string = "";
 
     constructor() {
         this.badgeExclusions = new BadgeExclusions();
@@ -126,10 +126,13 @@ export class MarkdownProvider {
     }
 
     public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData) {
-        const sonarDescription: string = "Sonar" + sonarMetaData.badgeQueryString;
-        const badgeHyperlinkUrl = sonarMetaData.badgeHyperlinkTargetUrlPrefix + localRepoName + sonarMetaData.badgeHyperlinkTargetUrlSuffix;
-        const sonarBadgeUrl = sonarBadgesUrlAddress + localRepoName + sonarMetaData.badgeQueryString;
-        return `[![${sonarDescription}](${sonarBadgeUrl})](${badgeHyperlinkUrl})`;
+        if (this.ShowSonarBadges(localRepoName)) {
+            const sonarDescription: string = "Sonar" + sonarMetaData.badgeQueryString;
+            const badgeHyperlinkUrl = sonarMetaData.badgeHyperlinkTargetUrlPrefix + localRepoName + sonarMetaData.badgeHyperlinkTargetUrlSuffix;
+            const sonarBadgeUrl = sonarBadgesUrlAddress + localRepoName + sonarMetaData.badgeQueryString;
+            return `[![${sonarDescription}](${sonarBadgeUrl})](${badgeHyperlinkUrl})`;
+        }
+        return this.noMarkdown;
     }
 
     public GetSubscribeMarkdown(localRepoName: string) {
@@ -191,6 +194,13 @@ export class MarkdownProvider {
 
     private ShowAzurePipelineBadges(localRepoName: string): boolean {
         if (this.badgeExclusions.azurePipeline.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowSonarBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.sonar.includes(this.GetRepoName(localRepoName))) {
             return false;
         }
         return true;
