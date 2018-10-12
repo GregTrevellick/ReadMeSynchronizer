@@ -373,7 +373,7 @@ export class ReadMeUpdater {
 ${title}
 <details open>
 <summary>
-Click to expand or collapse
+expand/collapse
 </summary>
 ${this.lineBreak}${markdown}${this.lineBreak}
 </details>
