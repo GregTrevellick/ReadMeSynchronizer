@@ -113,6 +113,16 @@ export class MarkdownProvider {
         return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-brightgreen.svg)](https://imgbot.net/)";
     }
 
+    public GetInspecodeReport(localRepoName: string, inspecodeId: string) {
+        return "[![Inspecode Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName +
+            "/report?token=" + inspecodeId + "&branch=master)](https://inspecode.rocro.com/reports/github.com/" + this.myUserName + "/" + localRepoName + "/branch/master/summary)";
+    }
+
+    public GetInspecodeStatus(localRepoName: string, inspecodeId: string) {
+        return "[![Inspecode Job Status](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName +
+            "/status?token=" + inspecodeId + ")](https://inspecode.rocro.com/jobs/github.com/" + this.myUserName + "/" + localRepoName + "/latest?completed=true)";
+    }
+
     public GetLicenceBadgeMarkdown() {
         return "[![License](" + shieldsDotIoUrl + "github/license/gittools/gitlink.svg)](/LICENSE.txt)";
     }

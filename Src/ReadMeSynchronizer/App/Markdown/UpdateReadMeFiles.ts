@@ -164,6 +164,7 @@ export class ReadMeUpdater {
             this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
             this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
+            this.mp.GetInspecodeReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
 
             //lang info
             this.mp.GetGitHubTopLanguage(repoMetaData.localRepoName),
@@ -190,6 +191,7 @@ export class ReadMeUpdater {
             this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId),
             this.mp.GetAppveyorUnitTests(repoMetaData.localRepoName, repoMetaData.appVeyorId),
             this.mp.GetAzurePipelineBuildStatus(repoMetaData.localRepoName, repoMetaData.azureDefinitionId),
+            this.mp.GetInspecodeStatus(repoMetaData.localRepoName, repoMetaData.inspecodeId),
 
             //less important stuff
             this.mp.GetHound(repoMetaData.localRepoName),
@@ -240,6 +242,8 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeReport);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarQualityGateStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarBugs);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarCodeSmells);
@@ -293,6 +297,14 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.GitHubPullRequests: {
                     repoMarkdown = this.mp.GetGitHubPullRequests(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.InspecodeReport: {
+                    repoMarkdown = this.mp.GetInspecodeReport(repoMetaData.localRepoName, repoMetaData.inspecodeId);
+                    break;
+                }
+                case GroupedBadgeType.InspecodeStatus: {
+                    repoMarkdown = this.mp.GetInspecodeStatus(repoMetaData.localRepoName, repoMetaData.inspecodeId);
                     break;
                 }
                 case GroupedBadgeType.SonarBugs: {

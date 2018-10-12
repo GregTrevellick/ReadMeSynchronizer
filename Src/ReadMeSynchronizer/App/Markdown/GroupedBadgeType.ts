@@ -7,6 +7,8 @@ export enum GroupedBadgeType {
     CodeFactor,
     GitHubIssues,
     GitHubPullRequests,
+    InspecodeReport,
+    InspecodeStatus,
     SonarBugs,
     SonarCodeSmells,
     SonarCoverage,
