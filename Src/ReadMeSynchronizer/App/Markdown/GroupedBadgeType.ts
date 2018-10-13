@@ -9,6 +9,8 @@ export enum GroupedBadgeType {
     GitHubPullRequests,
     InspecodeReport,
     InspecodeStatus,
+    LgtmAlert,
+    LgtmCodeQuality,
     SonarBugs,
     SonarCodeSmells,
     SonarCoverage,
@@ -21,3 +23,4 @@ export enum GroupedBadgeType {
     SonarTechnicalDebt,
     SonarVulnerabilities,
 }
+

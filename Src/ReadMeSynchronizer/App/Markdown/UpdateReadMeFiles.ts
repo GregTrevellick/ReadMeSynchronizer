@@ -20,7 +20,6 @@ export class ReadMeUpdater {
     public badgeCommentEnd: string = this.htmlCommentStart + "END" + this.htmlCommentEnd;
     private allReposExceptTheAllBadgesRepo: IRepoMetaData[];
     private fileSystemUpdater: FileSystemUpdater;
-    private lineBreak: string = "\n";//gregt dedupe
     private mp: MarkdownProvider;
     private repoMetaDatas: RepoMetaDatas;
     private sonarMetaHelper: SonarMetaHelper;
@@ -33,7 +32,7 @@ export class ReadMeUpdater {
         this.sonarMetaHelper = new SonarMetaHelper;
         this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
         this.badgeCommentStartSuffixBadgeMarkdown = this.mp.GetPoweredByReadMeSynchronizerBadgeMarkdown();
-        this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.lineBreak}<!-- Powered by ${this.mp.gitHubReadMeSynchronizerUrl} -->`;
+        this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.mp.lineBreak}<!-- Powered by ${this.mp.gitHubReadMeSynchronizerUrl} -->`;
     }
 
     public ReplaceBadgeComments() {
@@ -43,11 +42,11 @@ export class ReadMeUpdater {
 
             if (repoMetaData.localRepoName === allBadges.localRepoName) {
                 baseBadgesMarkdown += this.GetBadgesByType();
-                baseBadgesMarkdown += `${this.lineBreak}## Per Repo${this.lineBreak}`;
+                baseBadgesMarkdown += `${this.mp.lineBreak}## Per Repo${this.mp.lineBreak}`;
                 baseBadgesMarkdown += this.GetFullTitle("Parent", repoMetaData.localRepoName);
             }
 
-            baseBadgesMarkdown += `${this.lineBreak}${this.GetMultipleBadgesMarkdown(repoMetaData)}`;
+            baseBadgesMarkdown += `${this.mp.lineBreak}${this.GetMultipleBadgesMarkdown(repoMetaData)}`;
 
             const surroundedBadgesMarkdown = this.GetSurroundedBadgesMarkdown(baseBadgesMarkdown);
 
@@ -62,7 +61,7 @@ export class ReadMeUpdater {
     }
 
     private GetSurroundedBadgesMarkdown(baseBadgesMarkdown: string) {
-        return `${this.badgeCommentStart}${this.lineBreak}${this.badgeCommentStartSuffix}${this.lineBreak}${baseBadgesMarkdown}${this.badgeCommentEnd}`;
+        return `${this.badgeCommentStart}${this.mp.lineBreak}${this.badgeCommentStartSuffix}${this.mp.lineBreak}${baseBadgesMarkdown}${this.badgeCommentEnd}`;
     }
 
     private GetMultipleBadgesMarkdown(repoMetaData: IRepoMetaData) {
@@ -165,6 +164,8 @@ export class ReadMeUpdater {
             this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
             this.mp.GetInspecodeReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
+            this.mp.GetLgtmAlert(repoMetaData.localRepoName),
+            this.mp.GetLgtmCodeQuality(repoMetaData.localRepoName),
 
             //lang info
             this.mp.GetGitHubTopLanguage(repoMetaData.localRepoName),
@@ -224,7 +225,7 @@ export class ReadMeUpdater {
                 result.push(this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, itemName));
             }
 
-            result.push(this.lineBreak);
+            result.push(this.mp.lineBreak);
         }
 
         return result;
@@ -244,6 +245,8 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeReport);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeStatus);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.LgtmAlert);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.LgtmCodeQuality);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarQualityGateStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarBugs);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.SonarCodeSmells);
@@ -307,6 +310,14 @@ export class ReadMeUpdater {
                     repoMarkdown = this.mp.GetInspecodeStatus(repoMetaData.localRepoName, repoMetaData.inspecodeId);
                     break;
                 }
+                case GroupedBadgeType.LgtmAlert: {
+                    repoMarkdown = this.mp.GetLgtmAlert(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.LgtmCodeQuality: {
+                    repoMarkdown = this.mp.GetLgtmCodeQuality(repoMetaData.localRepoName);
+                    break;
+                }
                 case GroupedBadgeType.SonarBugs: {
                     repoMarkdown = this.GetSonarBadgesMarkdown(repoMetaData, SonarCategory.Bugs);
                     break;
@@ -355,7 +366,7 @@ export class ReadMeUpdater {
             }
 
             if (repoMarkdown != this.mp.noMarkdown) {
-                badgesMarkdown += `${this.lineBreak}${repoMarkdown}`;
+                badgesMarkdown += `${this.mp.lineBreak}${repoMarkdown}`;
             }
 
         }
@@ -367,7 +378,7 @@ export class ReadMeUpdater {
 
     private GetSonarBadgesMarkdown(repoMetaData: IRepoMetaData, sonarCategory: SonarCategory) {
         const sonarMetaData = this.sonarMetaHelper.GetSonarMetaData(sonarCategory);
-        //return `${this.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;
+        //return `${this.mp.lineBreak}${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;
         return `${this.mp.GetSonarBadge(repoMetaData.localRepoName, sonarMetaData)}`;
     }
 
@@ -378,7 +389,7 @@ export class ReadMeUpdater {
     private GetTitleAndBadges(title: string, markdown: string) {
 
         // Without expand/collapse...
-        //return `${title}${this.lineBreak}${markdown}${this.lineBreak}`;
+        //return `${title}${this.mp.lineBreak}${markdown}${this.mp.lineBreak}`;
 
         // With expand/collapse...
         return `
@@ -387,9 +398,9 @@ ${title}
 <summary>
 expand/collapse
 </summary>
-${this.lineBreak}${markdown}${this.lineBreak}
+${this.mp.lineBreak}${markdown}${this.mp.lineBreak}
 </details>
-${this.lineBreak}`;
+${this.mp.lineBreak}`;
 
     }
 }

@@ -13,8 +13,8 @@ const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio
 export class MarkdownProvider {
 
     private badgeExclusions: BadgeExclusions;
-    private lineBreak: string = "\n";//gregt dedupe
     public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
+    public lineBreak: string = "\n";
     public myUserName = "GregTrevellick";
     public noMarkdown: string = "";
 
@@ -33,13 +33,15 @@ export class MarkdownProvider {
     //}
 
     public GetAccessLintBadgeMarkdown() {
-        return "[![Access Lint github](" + shieldsDotIoUrl + "badge/a11y-checked-brightgreen.svg)](https://www.accesslint.com)";
+        return "[![Access Lint github](" + shieldsDotIoUrl + "badge/a11y-checked-brightgreen.svg)]" +
+            "(https://www.accesslint.com)";
     }
 
     public GetAppveyorBuildStatus(localRepoName: string, appVeyorId: string) {
         if (this.ShowAppveyorBadges(localRepoName)) {
             const appVeyorRepoName = this.DotSubstituion(localRepoName);
-            return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/" + appVeyorId + "?svg=true)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + ")";
+            return "[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/" + appVeyorId + "?svg=true)]" +
+                "(https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + ")";
         }
         return this.noMarkdown;
     }
@@ -47,7 +49,8 @@ export class MarkdownProvider {
     public GetAppveyorUnitTests(localRepoName: string, appVeyorId: string) {
         if (this.ShowAppveyorBadges(localRepoName)) {
             const appVeyorRepoName = this.DotSubstituion(localRepoName);
-            return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + this.myUserName + "/" + appVeyorRepoName + ".svg)](https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + "/build/tests)";
+            return "[![Appveyor unit tests](" + shieldsDotIoUrl + "appveyor/tests/" + this.myUserName + "/" + appVeyorRepoName + ".svg)]" +
+                "(https://ci.appveyor.com/project/" + this.myUserName + "/" + appVeyorRepoName + "/build/tests)";
         }
         return this.noMarkdown;
     }
@@ -61,23 +64,28 @@ export class MarkdownProvider {
     }
 
     public GetBetterCodeHubCompliance(localRepoName: string) {
-        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + this.myUserName + "/" + localRepoName + "?branch=master)](https://bettercodehub.com/results/" + this.myUserName + "/" + localRepoName + ")";
+        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + this.myUserName + "/" + localRepoName + "?branch=master)]" +
+            "(https://bettercodehub.com/results/" + this.myUserName + "/" + localRepoName + ")";
     }
 
     public GetCharityWare(localRepoName: string) {
-        return "[![Charity Ware](" + shieldsDotIoUrl + "badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/" + this.myUserName + "/MiscellaneousArtefacts/wiki/Charity-Ware)";
+        return "[![Charity Ware](" + shieldsDotIoUrl + "badge/charity%20ware-thank%20you-brightgreen.svg)]" +
+            "(https://github.com/" + this.myUserName + "/MiscellaneousArtefacts/wiki/Charity-Ware)";
     }
 
     public GetChromeWebstoreRating(localRepoName: string) {
-        return "[![Chrome webstore rating](" + shieldsDotIoUrl + chromeWebStore + "/rating/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + "/reviews)";
+        return "[![Chrome webstore rating](" + shieldsDotIoUrl + chromeWebStore + "/rating/" + vsmmWebstoreId + ".svg)]" +
+            "(" + vsmmWebstoreUrl + "/reviews)";
     }
 
     public GetChromeWebstoreUsers(localRepoName: string) {
-        return "[![Chrome webstore users](" + shieldsDotIoUrl + chromeWebStore + "/users/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + ")";
+        return "[![Chrome webstore users](" + shieldsDotIoUrl + chromeWebStore + "/users/" + vsmmWebstoreId + ".svg)]" +
+            "(" + vsmmWebstoreUrl + ")";
     }
 
     public GetChromeWebstoreVersion(localRepoName: string) {
-        return "[![Chrome webstore version](" + shieldsDotIoUrl + chromeWebStore + "/v/" + vsmmWebstoreId + ".svg)](" + vsmmWebstoreUrl + ")";
+        return "[![Chrome webstore version](" + shieldsDotIoUrl + chromeWebStore + "/v/" + vsmmWebstoreId + ".svg)]" +
+            "(" + vsmmWebstoreUrl + ")";
     }
 
     public GetCodacyBadge(localRepoName: string, codacyId: string) {
@@ -86,31 +94,38 @@ export class MarkdownProvider {
     }
 
     public GetCodeFactor(localRepoName: string) {
-        return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
+        return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)]" +
+            "(https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
     }
 
     public GetGitHubLanguageCount(localRepoName: string) {
-        return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+            "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
     public GetGitHubIssues(localRepoName: string) {
-        return "[![GitHub issues](" + shieldsDotIoUrl + "github/issues-raw/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/issues)";
+        return "[![GitHub issues](" + shieldsDotIoUrl + "github/issues-raw/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+            "(" + this.GetGitHubUrlForRepo(localRepoName) + "/issues)";
     }
 
     public GetGitHubPullRequests(localRepoName: string) {
-        return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
+        return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+            "(" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
     }
 
     public GetGitHubTopLanguage(localRepoName: string) {
-        return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + this.myUserName + "/" + localRepoName + ".svg)](" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+            "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
     }
 
     public GetHound(localRepoName: string) {
-        return "[![Hound](" + shieldsDotIoUrl + "badge/hound_ci-checked-brightgreen.svg)](https://houndci.com/)";
+        return "[![Hound](" + shieldsDotIoUrl + "badge/hound_ci-checked-brightgreen.svg)]" +
+            "(https://houndci.com/)";
     }
 
     public GetImgBot(localRepoName: string) {
-        return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-brightgreen.svg)](https://imgbot.net/)";
+        return "[![ImgBot](" + shieldsDotIoUrl + "badge/images-optimized-brightgreen.svg)]" +
+            "(https://imgbot.net/)";
     }
 
     public GetInspecodeReport(localRepoName: string, inspecodeId: string) {
@@ -123,12 +138,24 @@ export class MarkdownProvider {
             "(https://inspecode.rocro.com/jobs/github.com/" + this.myUserName + "/" + localRepoName + "/latest?completed=true)";
     }
 
+    public GetLgtmAlert(localRepoName: string) {
+        return "[![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/" + this.myUserName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
+            "(https://lgtm.com/projects/g/" + this.myUserName + "/" + localRepoName + "/alerts/)";
+    }
+
+    public GetLgtmCodeQuality(localRepoName: string) {
+        return "[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/" + this.myUserName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
+            "(https://lgtm.com/projects/g/" + this.myUserName + "/" + localRepoName + "/context:javascript)";
+    }
+
     public GetLicenceBadgeMarkdown() {
-        return "[![License](" + shieldsDotIoUrl + "github/license/gittools/gitlink.svg)](/LICENSE.txt)";
+        return "[![License](" + shieldsDotIoUrl + "github/license/gittools/gitlink.svg)]" +
+            "(/LICENSE.txt)";
     }
 
     public GetNugetDownloads(localRepoName: string) {
-        return "[![Nuget downloads](" + shieldsDotIoUrl + "nuget/dt/" + localRepoName + ".svg)](https://www.nuget.org/packages/" + localRepoName + "/)";
+        return "[![Nuget downloads](" + shieldsDotIoUrl + "nuget/dt/" + localRepoName + ".svg)]" +
+            "(https://www.nuget.org/packages/" + localRepoName + "/)";
     }
 
     public GetPoweredByReadMeSynchronizerBadgeMarkdown() {
@@ -136,7 +163,8 @@ export class MarkdownProvider {
     }
 
     public GetRenovateBotBadgeMarkdown() {
-        return "[![Renovate Bot github](" + shieldsDotIoUrl + "badge/renovatebot-checked-brightgreen.svg)](https://renovatebot.com/)";
+        return "[![Renovate Bot github](" + shieldsDotIoUrl + "badge/renovatebot-checked-brightgreen.svg)]" +
+            "(https://renovatebot.com/)";
     }
 
     public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData) {
@@ -154,35 +182,43 @@ export class MarkdownProvider {
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
-        return "[![Visual Studio Marketplace downloads](" + vsmarketplacebadgeAppHarborUrl + "installs/" + this.myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+        return "[![Visual Studio Marketplace downloads](" + vsmarketplacebadgeAppHarborUrl + "installs/" + this.myUserName + "." + localRepoName + ".svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEItemBadge(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDERatings(localRepoName: string) {
-        return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + this.myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+        return "[![Visual Studio Marketplace ratings](" + vsmarketplacebadgeAppHarborUrl + "rating/" + this.myUserName + "." + localRepoName + ".svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceIDEVersion(localRepoName: string) {
-        return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + this.myUserName + "." + localRepoName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
+        return "[![Visual Studio Marketplace version](" + vsmarketplacebadgeAppHarborUrl + "version/" + this.myUserName + "." + localRepoName + ".svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + localRepoName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSDownloads(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + this.myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
+        return "[![Visual Studio Marketplace downloads](" + shieldsDotIoUrl + "vscode-marketplace/d/" + this.myUserName + "." + itemName + ".svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSItemBadge(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "badge/-" + localRepoName + "-%23e2165e.svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     public GetVisualStudioMarketplaceVSTSRatings(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + this.myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + "#review-details)";
+        return "[![Visual Studio Marketplace ratings](" + shieldsDotIoUrl + "vscode-marketplace/r/" + this.myUserName + "." + itemName + ".svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + "#review-details)";
     }
 
     public GetVisualStudioMarketplaceVSTSVersion(localRepoName: string, itemName: string) {
-        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + this.myUserName + "." + itemName + ".svg)](" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
+        return "[![Visual Studio Marketplace version](" + shieldsDotIoUrl + "vscode-marketplace/v/" + this.myUserName + "." + itemName + ".svg)]" +
+            "(" + this.GetVisualStudioMarketplaceUrlPrefix() + itemName + ")";
     }
 
     //Privates...
