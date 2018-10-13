@@ -47,12 +47,12 @@ export class BadgeExclusions {
     ];
 
     public lgtm: RepoNames[] = [
-        RepoNames.AutoFindReplace,
+        RepoNames.AutoFindReplace,//matt jeanes
         RepoNames.awib,
         RepoNames.DotNetFlags,
         RepoNames.FilesForEveryExtensionCreator,
         RepoNames["Gregt.sidewafflev2"],
-        RepoNames.HelloWorldTypescriptParcel,
+        RepoNames.HelloWorldTypescriptParcel,//lgtm doesn't support forks
         RepoNames.HelloWorldVsixCommandButton,
         RepoNames.HelloWorldVsixPopUp,
         RepoNames.HelloWorldVsixToolWindowAsyncPackageExample,

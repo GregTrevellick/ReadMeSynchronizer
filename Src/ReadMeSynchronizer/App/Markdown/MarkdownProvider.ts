@@ -160,10 +160,7 @@ export class MarkdownProvider {
 
     public GetLgtmAlert(localRepoName: string) {
         if (this.ShowLgtmBadges(localRepoName)) {
-            let userName = this.myUserName;
-            if (localRepoName == "AngularBasic") {
-                userName = "MattJeanes";
-            }
+            let userName = this.GetUserName(localRepoName);
             return "[![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/" + userName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
                 "(https://lgtm.com/projects/g/" + userName + "/" + localRepoName + "/alerts/)";
         }
@@ -172,10 +169,7 @@ export class MarkdownProvider {
 
     public GetLgtmCodeQuality(localRepoName: string) {
         if (this.ShowLgtmBadges(localRepoName)) {
-            let userName = this.myUserName;
-            if (localRepoName == "AngularBasic") {
-                userName = "MattJeanes";
-            }
+            let userName = this.GetUserName(localRepoName);
             return "[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/" + userName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
                 "(https://lgtm.com/projects/g/" + userName + "/" + localRepoName + "/context:javascript)";
         }
@@ -268,6 +262,14 @@ export class MarkdownProvider {
     private GetRepoName(localRepoName: string): RepoNames {
         let repoName: RepoNames = RepoNames[localRepoName];
         return repoName;
+    }
+
+    private GetUserName(localRepoName: string) {
+        let userName = this.myUserName;
+        if (localRepoName == "AngularBasic") {
+            userName = "MattJeanes";
+        }
+        return userName;
     }
 
     private GetVisualStudioMarketplaceUrlPrefix() {
