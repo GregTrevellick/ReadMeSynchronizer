@@ -14,6 +14,7 @@ export enum RepoNames {
     HelloWorldBlazor,
     HelloWorldTypescriptParcel,
     HelloWorldTypescriptWebpack,
+    HelloWorldVsixCommandButton,
     HelloWorldVsixPopUp,
     HelloWorldVsixToolBar,
     HelloWorldVsixToolWindowAsyncPackageExample,

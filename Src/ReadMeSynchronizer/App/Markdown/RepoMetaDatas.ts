@@ -22,6 +22,7 @@ export class RepoMetaDatas {
             myRepos.helloWorldBlazor,
             myRepos.helloWorldTypescriptParcel,
             myRepos.helloWorldTypescriptWebpack,
+            myRepos.helloWorldVsixCommandButton,
             myRepos.helloWorldVsixPopUp,
             myRepos.helloWorldVsixToolBar,
             myRepos.helloWorldVsixToolWindowAsyncPackageExample,

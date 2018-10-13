@@ -24,14 +24,6 @@ export class MarkdownProvider {
 
     //TODO convert all methods below to call a common method that returns the md, passing description + badge URL + hyperlink URL & returns square braces & curved brackets
 
-    //public GetCodeCov(localRepoName: string) {
-    //    return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
-    //}
-
-    //public GetTravisBuildStatus(localRepoName: string) {
-    //    return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";
-    //}
-
     public GetAccessLintBadgeMarkdown() {
         return "[![Access Lint github](" + shieldsDotIoUrl + "badge/a11y-checked-brightgreen.svg)]" +
             "(https://www.accesslint.com)";
@@ -64,8 +56,11 @@ export class MarkdownProvider {
     }
 
     public GetBetterCodeHubCompliance(localRepoName: string) {
-        return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + this.myUserName + "/" + localRepoName + "?branch=master)]" +
-            "(https://bettercodehub.com/results/" + this.myUserName + "/" + localRepoName + ")";
+        if (this.ShowBetterCodeHubBadges(localRepoName)) {
+            return "[![BetterCodeHub compliance](https://bettercodehub.com/edge/badge/" + this.myUserName + "/" + localRepoName + "?branch=master)]" +
+                "(https://bettercodehub.com/results/" + this.myUserName + "/" + localRepoName + ")";
+        }
+        return this.noMarkdown;
     }
 
     public GetCharityWare(localRepoName: string) {
@@ -89,33 +84,51 @@ export class MarkdownProvider {
     }
 
     public GetCodacyBadge(localRepoName: string, codacyId: string) {
-        return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
-            "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + this.myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
+        if (this.ShowCodacyBadges(localRepoName)) {
+            return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
+                "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + this.myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";
+        }
+        return this.noMarkdown;
     }
 
     public GetCodeFactor(localRepoName: string) {
-        return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)]" +
-            "(https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
+        if (this.ShowCodeFactorBadges(localRepoName)) {
+            return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)]" +
+                "(https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + ")";
+        }
+        return this.noMarkdown;
     }
 
     public GetGitHubLanguageCount(localRepoName: string) {
-        return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)]" +
-            "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        if (this.ShowGitHubBadges(localRepoName)) {
+            return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        }
+        return this.noMarkdown;
     }
 
     public GetGitHubIssues(localRepoName: string) {
-        return "[![GitHub issues](" + shieldsDotIoUrl + "github/issues-raw/" + this.myUserName + "/" + localRepoName + ".svg)]" +
-            "(" + this.GetGitHubUrlForRepo(localRepoName) + "/issues)";
+        if (this.ShowGitHubBadges(localRepoName)) {
+            return "[![GitHub issues](" + shieldsDotIoUrl + "github/issues-raw/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + "/issues)";
+        }
+        return this.noMarkdown;
     }
 
     public GetGitHubPullRequests(localRepoName: string) {
-        return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + this.myUserName + "/" + localRepoName + ".svg)]" +
-            "(" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
+        if (this.ShowGitHubBadges(localRepoName)) {
+            return "[![GitHub pull requests](" + shieldsDotIoUrl + "github/issues-pr-raw/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + "/pulls)";
+        }
+        return this.noMarkdown;
     }
 
     public GetGitHubTopLanguage(localRepoName: string) {
-        return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + this.myUserName + "/" + localRepoName + ".svg)]" +
-            "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        if (this.ShowGitHubBadges(localRepoName)) {
+            return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        }
+        return this.noMarkdown;
     }
 
     public GetHound(localRepoName: string) {
@@ -129,23 +142,44 @@ export class MarkdownProvider {
     }
 
     public GetInspecodeReport(localRepoName: string, inspecodeId: string) {
-        return "[![Inspecode Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/report?token=" + inspecodeId + "&branch=master)]" +
+        if (this.ShowInspecodeBadges(localRepoName)) {
+            //return "[![Inspecode Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/report?token=" + inspecodeId + "&branch=master)]" +
+            return "[![Inspecode Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/report?token=" + inspecodeId + ")]" +
                 "(https://inspecode.rocro.com/reports/github.com/" + this.myUserName + "/" + localRepoName + "/branch/master/summary)";
+        }
+        return this.noMarkdown;
     }
 
     public GetInspecodeStatus(localRepoName: string, inspecodeId: string) {
-        return "[![Inspecode Job Status](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/status?token=" + inspecodeId + ")]" +
-            "(https://inspecode.rocro.com/jobs/github.com/" + this.myUserName + "/" + localRepoName + "/latest?completed=true)";
+        if (this.ShowInspecodeBadges(localRepoName)) {
+            return "[![Inspecode Job Status](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/status?token=" + inspecodeId + ")]" +
+                "(https://inspecode.rocro.com/jobs/github.com/" + this.myUserName + "/" + localRepoName + "/latest?completed=true)";
+        }
+        return this.noMarkdown;
     }
 
     public GetLgtmAlert(localRepoName: string) {
-        return "[![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/" + this.myUserName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
-            "(https://lgtm.com/projects/g/" + this.myUserName + "/" + localRepoName + "/alerts/)";
+        if (this.ShowLgtmBadges(localRepoName)) {
+            let userName = this.myUserName;
+            if (localRepoName == "AngularBasic") {
+                userName = "MattJeanes";
+            }
+            return "[![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/" + userName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
+                "(https://lgtm.com/projects/g/" + userName + "/" + localRepoName + "/alerts/)";
+        }
+        return this.noMarkdown;
     }
 
     public GetLgtmCodeQuality(localRepoName: string) {
-        return "[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/" + this.myUserName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
-            "(https://lgtm.com/projects/g/" + this.myUserName + "/" + localRepoName + "/context:javascript)";
+        if (this.ShowLgtmBadges(localRepoName)) {
+            let userName = this.myUserName;
+            if (localRepoName == "AngularBasic") {
+                userName = "MattJeanes";
+            }
+            return "[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/" + userName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
+                "(https://lgtm.com/projects/g/" + userName + "/" + localRepoName + "/context:javascript)";
+        }
+        return this.noMarkdown;
     }
 
     public GetLicenceBadgeMarkdown() {
@@ -223,18 +257,24 @@ export class MarkdownProvider {
 
     //Privates...
 
-    private GetVisualStudioMarketplaceUrlPrefix() {
-        return `${visualStudioMarketplaceUrl}${this.myUserName}.`;
+    private DotSubstituion(localreponame: string) {
+        return localreponame.replace(".", "-");
     }
 
     private GetGitHubUrlForRepo(localRepoName: string) {
         return "https://github.com/" + this.myUserName + "/" + localRepoName;
     }
 
-    private DotSubstituion(localreponame: string) {
-        return localreponame.replace(".", "-");
+    private GetRepoName(localRepoName: string): RepoNames {
+        let repoName: RepoNames = RepoNames[localRepoName];
+        return repoName;
     }
 
+    private GetVisualStudioMarketplaceUrlPrefix() {
+        return `${visualStudioMarketplaceUrl}${this.myUserName}.`;
+    }
+
+    // Show-ers TODO extract to separate .ts file
     private ShowAppveyorBadges(localRepoName: string): boolean {
         if (this.badgeExclusions.appveyor.includes(this.GetRepoName(localRepoName))) {
             return false;
@@ -249,16 +289,62 @@ export class MarkdownProvider {
         return true;
     }
 
+    private ShowBetterCodeHubBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.bettercodehub.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowCodacyBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.codacy.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    //private ShowCodeBeatBadges(localRepoName: string): boolean {
+    //    if (this.badgeExclusions.codebeat.includes(this.GetRepoName(localRepoName))) {
+    //        return false;
+    //    }
+    //    return true;
+    //}
+
+    private ShowCodeFactorBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.codefactor.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowGitHubBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.gitHub.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowInspecodeBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.inspecode.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowLgtmBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.lgtm.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
     private ShowSonarBadges(localRepoName: string): boolean {
         if (this.badgeExclusions.sonar.includes(this.GetRepoName(localRepoName))) {
             return false;
         }
         return true;
     }
-
-    private GetRepoName(localRepoName: string): RepoNames {
-        let repoName: RepoNames = RepoNames[localRepoName];
-        return repoName;
-    }
-
 }
+
+//return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
+//return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";
