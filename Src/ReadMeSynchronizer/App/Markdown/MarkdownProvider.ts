@@ -91,6 +91,14 @@ export class MarkdownProvider {
         return this.noMarkdown;
     }
 
+    public GetCodeBeat(localRepoName: string, codeBeatId?: string) {
+        if (this.ShowCodeBeatBadges(localRepoName)) {
+            return "[![CodeBeat](https://codebeat.co/badges/" + codeBeatId + ")]" +
+                "(https://codebeat.co/projects/github-com-" + this.myUserName.toLowerCase() + "-" + localRepoName.toLowerCase() + "-master)";
+        }
+        return this.noMarkdown;
+    }
+
     public GetCodeFactor(localRepoName: string) {
         if (this.ShowCodeFactorBadges(localRepoName)) {
             return "[![CodeFactor](https://www.codefactor.io/repository/github/" + this.myUserName + "/" + localRepoName + "/badge)]" +
@@ -305,12 +313,12 @@ export class MarkdownProvider {
         return true;
     }
 
-    //private ShowCodeBeatBadges(localRepoName: string): boolean {
-    //    if (this.badgeExclusions.codebeat.includes(this.GetRepoName(localRepoName))) {
-    //        return false;
-    //    }
-    //    return true;
-    //}
+    private ShowCodeBeatBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.codebeat.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
 
     private ShowCodeFactorBadges(localRepoName: string): boolean {
         if (this.badgeExclusions.codefactor.includes(this.GetRepoName(localRepoName))) {

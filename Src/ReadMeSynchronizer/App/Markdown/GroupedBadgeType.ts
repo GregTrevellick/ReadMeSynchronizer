@@ -4,6 +4,7 @@ export enum GroupedBadgeType {
     AzurePipelineBuildStatus,
     BetterCodeHubCompliance,
     CodacyBadge,
+    CodeBeat,
     CodeFactor,
     GitHubIssues,
     GitHubPullRequests,

@@ -162,6 +162,7 @@ export class ReadMeUpdater {
             //code quality first
             this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
             this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId),
+            this.mp.GetCodeBeat(repoMetaData.localRepoName),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
             this.mp.GetInspecodeReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
             this.mp.GetLgtmAlert(repoMetaData.localRepoName),
@@ -240,6 +241,7 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AzurePipelineBuildStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.BetterCodeHubCompliance);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodacyBadge);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeBeat);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
@@ -288,6 +290,10 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.CodacyBadge: {
                     repoMarkdown = this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId);
+                    break;
+                }
+                case GroupedBadgeType.CodeBeat: {
+                    repoMarkdown = this.mp.GetCodeBeat(repoMetaData.localRepoName, repoMetaData.codeBeatId);
                     break;
                 }
                 case GroupedBadgeType.CodeFactor: {

@@ -2,9 +2,12 @@
 ==============
 Having created the repo in GitHub, add to...
  a) appveyor (see below - this will also add to sonar (see below))
- b) bettercodehub (quick)
- c) codacy (slower but more depth)
- d) codefactor (sweet)
+ b) bettercodehub
+ c) codebeat
+ d) codacy (slower but more depth)
+ e) codefactor
+ f) inspecode
+ g) lgtm
 
 
 
