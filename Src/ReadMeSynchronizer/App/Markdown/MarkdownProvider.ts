@@ -107,6 +107,11 @@ export class MarkdownProvider {
         return this.noMarkdown;
     }
 
+    public GetDepShield(localRepoName: string) {
+        return "[![DepShield](https://depshield.sonatype.org/badges/" + this.myUserName + "/" + localRepoName + "/depshield.svg)]" +
+            "(https://depshield.github.io)";
+    }
+
     public GetGitHubLanguageCount(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
             return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)]" +

@@ -3,11 +3,11 @@ export enum SonarCategory {
     CodeSmells,
     Coverage,
     DuplicatedLinesDensity,
-    Maintainability,//Maintainability
-    NumberOfLinesOfCode,//NumberOfLinesOfCode
-    QualityGateStatus,//QualityGateStatus
+    Maintainability,
+    NumberOfLinesOfCode,
+    QualityGateStatus,
     ReliabilityRating,
     SecurityRating,
-    TechnicalDebt,//TechnicalDebt
+    TechnicalDebt,
     Vulnerabilities,
 }
