@@ -83,7 +83,7 @@ export class MarkdownProvider {
             "(" + vsmmWebstoreUrl + ")";
     }
 
-    public GetCodacyBadge(localRepoName: string, codacyId: string) {
+    public GetCodacy(localRepoName: string, codacyId: string) {
         if (this.ShowCodacyBadges(localRepoName)) {
             return "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/" + codacyId + ")]" +
                 "(https://www.codacy.com/project/gtrevellick/" + localRepoName + "/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=" + this.myUserName + "/" + localRepoName + "&amp;utm_campaign=Badge_Grade_Dashboard)";

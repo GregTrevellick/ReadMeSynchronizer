@@ -161,7 +161,7 @@ export class ReadMeUpdater {
 
             //code quality first
             this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName),
-            this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId),
+            this.mp.GetCodacy(repoMetaData.localRepoName, repoMetaData.codacyId),
             this.mp.GetCodeBeat(repoMetaData.localRepoName),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
             this.mp.GetInspecodeReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
@@ -240,7 +240,7 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorUnitTests);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AzurePipelineBuildStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.BetterCodeHubCompliance);
-        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodacyBadge);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.Codacy);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeBeat);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
@@ -288,8 +288,8 @@ export class ReadMeUpdater {
                     repoMarkdown = this.mp.GetBetterCodeHubCompliance(repoMetaData.localRepoName);
                     break;
                 }
-                case GroupedBadgeType.CodacyBadge: {
-                    repoMarkdown = this.mp.GetCodacyBadge(repoMetaData.localRepoName, repoMetaData.codacyId);
+                case GroupedBadgeType.Codacy: {
+                    repoMarkdown = this.mp.GetCodacy(repoMetaData.localRepoName, repoMetaData.codacyId);
                     break;
                 }
                 case GroupedBadgeType.CodeBeat: {

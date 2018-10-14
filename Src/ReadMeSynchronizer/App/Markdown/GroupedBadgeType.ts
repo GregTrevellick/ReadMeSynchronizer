@@ -3,7 +3,7 @@ export enum GroupedBadgeType {
     AppveyorUnitTests,
     AzurePipelineBuildStatus,
     BetterCodeHubCompliance,
-    CodacyBadge,
+    Codacy,
     CodeBeat,
     CodeFactor,
     GitHubIssues,
