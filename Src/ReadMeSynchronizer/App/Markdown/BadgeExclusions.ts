@@ -32,6 +32,28 @@ export class BadgeExclusions {
     ];
 
     public codebeat: RepoNames[] = [
+        RepoNames.AllBadges,
+        RepoNames.AutoFindReplace,
+        RepoNames.DotNetFlags,
+        RepoNames.FilesForEveryExtensionCreator,
+        RepoNames["Gregt.sidewafflev2"],
+        RepoNames.HelloWorldBlazor,
+        RepoNames.HelloWorldVsixCommandButton,
+        RepoNames.HelloWorldVsixPopUp,
+        RepoNames.HelloWorldVsixToolBar,
+        RepoNames.HelloWorldVsixToolWindowAsyncPackageExample,
+        RepoNames.HelloWorldWpfAsyncBindingPropertyExample,
+        RepoNames["Menees.VsTools.2017"],
+        RepoNames.MiscellaneousArtefacts,
+        RepoNames.More,
+        RepoNames.QuickLaunchButtons,
+        RepoNames["Quiz.Launcher"],
+        RepoNames.SolutionOpenPopUp,
+        RepoNames.TrivialApisForIDE,
+        RepoNames.VsixBlazorMinimalProjectTemplate,
+        RepoNames.VsixDotNetCorePoc,
+        RepoNames.VsixFootball,
+        RepoNames.VsixRatingChaser,
     ];
 
     public codefactor: RepoNames[] = [
