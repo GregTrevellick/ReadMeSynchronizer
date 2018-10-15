@@ -235,7 +235,7 @@ export class ReadMeUpdater {
     private GetBadgesByType(): string {
         let badgesByTypeMarkdown = "";
 
-        //DO NOT ALPHA SORT THESE - THIS IS UI SEQUENCE (rubbish I know!)
+        //SORT THESE ALPHA - THIS IS UI SEQUENCE
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorBuildStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AppveyorUnitTests);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.AzurePipelineBuildStatus);
