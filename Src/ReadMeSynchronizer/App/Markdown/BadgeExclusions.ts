@@ -42,6 +42,7 @@ export class BadgeExclusions {
         RepoNames.HelloWorldVsixPopUp,
         RepoNames.HelloWorldVsixToolBar,
         RepoNames.HelloWorldVsixToolWindowAsyncPackageExample,
+        RepoNames.HelloWorldVstsExtension,
         RepoNames.HelloWorldWpfAsyncBindingPropertyExample,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
