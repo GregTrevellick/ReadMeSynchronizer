@@ -17,8 +17,8 @@ export class FileSystemUpdater {
 
         const options = {
             logs: {
-                enabled: false
-            }
+                enabled: false,
+            },
         };
 
         myGulp.src([source])

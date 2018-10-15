@@ -29,7 +29,7 @@ export const autoFindReplace: IVsmpMetaData = {
     localRepoName: "AutoFindReplace",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "AutoFindReplace"
+        "AutoFindReplace",
     ],
 };
 
@@ -52,7 +52,7 @@ export const azureDevOpsRotaWidget: IVsmpMetaData = {
     localRepoName: "AzureDevOpsRotaWidget",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "AzureDevOpsRotaWidget"
+        "AzureDevOpsRotaWidget",
     ],
 };
 
@@ -251,30 +251,30 @@ export const openInAppLauncher: IVsmpMetaData = {
     localRepoName: "OpenInApp.Launcher",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-         'OpenInAltovaXmlSpy'
-        , 'OpenInAndroidStudio'
-        , 'OpenInAtom'
-        , 'OpenInChromeCanary'
-        , 'OpenInEmacs'
-        , 'OpenInFirefoxDeveloperEdition'
-        , 'OpenInGimp'
-        , 'OpenInMarkdownMonster'
-        , 'OpenInMSPaint'
-        , 'OpenInOpera'
-        , 'OpenInOperaDeveloper'
-        , 'OpenInPaintDotNet'
-        , 'OpenInSQLServerManagementStudio'
-        , 'OpenInTreeSizeFree'
-        , 'OpenInTreeSizeProfessional'
-        , 'OpenInVivaldi'
-        , 'OpenInVS2012'
-        , 'OpenInVS2013'
-        , 'OpenInVS2015'
-        , 'OpenInVS2017Community'
-        , 'OpenInVS2017Enterprise'
-        , 'OpenInVS2017Professional'
-        , 'OpenInWinDirStat'
-        , 'OpenInXamarinStudio'
+         "OpenInAltovaXmlSpy"
+        , "OpenInAndroidStudio"
+        , "OpenInAtom"
+        , "OpenInChromeCanary"
+        , "OpenInEmacs"
+        , "OpenInFirefoxDeveloperEdition"
+        , "OpenInGimp"
+        , "OpenInMarkdownMonster"
+        , "OpenInMSPaint"
+        , "OpenInOpera"
+        , "OpenInOperaDeveloper"
+        , "OpenInPaintDotNet"
+        , "OpenInSQLServerManagementStudio"
+        , "OpenInTreeSizeFree"
+        , "OpenInTreeSizeProfessional"
+        , "OpenInVivaldi"
+        , "OpenInVS2012"
+        , "OpenInVS2013"
+        , "OpenInVS2015"
+        , "OpenInVS2017Community"
+        , "OpenInVS2017Enterprise"
+        , "OpenInVS2017Professional"
+        , "OpenInWinDirStat"
+        , "OpenInXamarinStudio",
     ],
 };
 
@@ -287,7 +287,7 @@ export const quickLaunchButtons: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
         "OpenFiddler",
-        "OpenWireshark"
+        "OpenWireshark",
     ],
 };
 
@@ -299,7 +299,7 @@ export const quizLauncher: IVsmpMetaData = {
     localRepoName: "Quiz.Launcher",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "MusicQuiz"
+        "MusicQuiz",
     ],
 };
 
@@ -329,7 +329,7 @@ export const solutionOpenPopUp: IVsmpMetaData = {
     localRepoName: "SolutionOpenPopUp",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "SolutionOpenPopUp"
+        "SolutionOpenPopUp",
     ],
 };
 
@@ -343,7 +343,7 @@ export const trivialApisForIDE: IVsmpMetaData = {
     vsmpItemNames: [
         "DrainTheSwamp",
         "Jeopardy",
-        "NumericTrivia"
+        "NumericTrivia",
     ],
 };
 
@@ -365,7 +365,7 @@ export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
     localRepoName: "VsixBlazorMinimalProjectTemplate",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "BlazorMinimalProjectTemplate"
+        "BlazorMinimalProjectTemplate",
     ],
 };
 
@@ -386,7 +386,7 @@ export const vsixFootball: IVsmpMetaData = {
     localRepoName: "VsixFootball",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "Football"
+        "Football",
     ],
 };
 
@@ -398,7 +398,7 @@ export const vsixFootie: IVsmpMetaData = {
     localRepoName: "VsixFootie",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "VSSportsDesk"
+        "VSSportsDesk",
     ],
 };
 
@@ -442,7 +442,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
         "@visualstudio",
         "@vsmdev",
         "@vsts",
-        "@xamarinhq"
+        "@xamarinhq",
     ],
 };
 
@@ -455,6 +455,6 @@ export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     localRepoName: "VstsDashboardWidgetProjectTemplate",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "VstsDashboardWidgetProjectTemplate"
+        "VstsDashboardWidgetProjectTemplate",
     ],
 };

@@ -6,7 +6,6 @@ export enum GroupedBadgeType {
     Codacy,
     CodeBeat,
     CodeFactor,
-    DepShield,
     GitHubIssues,
     GitHubPullRequests,
     InspecodeRocroReport,
@@ -25,4 +24,3 @@ export enum GroupedBadgeType {
     SonarTechnicalDebt,
     SonarVulnerabilities,
 }
-

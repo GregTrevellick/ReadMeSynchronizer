@@ -1,7 +1,7 @@
+import { IRepoMetaData } from "../Markdown/IRepoMetaData";
 import { RepoCategory } from "../Markdown/RepoCategory";
 import { RepoMetaDatas } from "../Markdown/RepoMetaDatas";
 import { GitCommand } from "./GitCommand";
-import { IRepoMetaData } from "../Markdown/IRepoMetaData";
 
 export class GitExecutioner {
 

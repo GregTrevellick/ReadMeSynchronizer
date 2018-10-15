@@ -1,6 +1,6 @@
 import { BadgeExclusions } from "./BadgeExclusions";
-import { SonarMetaData } from "./SonarMetaData";
 import { RepoNames } from "./RepoNames";
+import { SonarMetaData } from "./SonarMetaData";
 
 const chromeWebStore = "chrome-web-store";
 const shieldsDotIoUrl = "https://img.shields.io/";
@@ -11,12 +11,12 @@ const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
 
 export class MarkdownProvider {
-
-    private badgeExclusions: BadgeExclusions;
     public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
     public lineBreak: string = "\n";
     public myUserName = "GregTrevellick";
     public noMarkdown: string = "";
+
+    private badgeExclusions: BadgeExclusions;
 
     constructor() {
         this.badgeExclusions = new BadgeExclusions();
@@ -107,11 +107,6 @@ export class MarkdownProvider {
         return this.noMarkdown;
     }
 
-    public GetDepShield(localRepoName: string) {
-        return "[![DepShield](https://depshield.sonatype.org/badges/" + this.myUserName + "/" + localRepoName + "/depshield.svg)]" +
-            "(https://depshield.github.io)";
-    }
-
     public GetGitHubLanguageCount(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
             return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)]" +
@@ -173,7 +168,7 @@ export class MarkdownProvider {
 
     public GetLgtmAlert(localRepoName: string) {
         if (this.ShowLgtmBadges(localRepoName)) {
-            let userName = this.GetUserName(localRepoName);
+            const userName = this.GetUserName(localRepoName);
             return "[![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/" + userName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
                 "(https://lgtm.com/projects/g/" + userName + "/" + localRepoName + "/alerts/)";
         }
@@ -182,7 +177,7 @@ export class MarkdownProvider {
 
     public GetLgtmCodeQuality(localRepoName: string) {
         if (this.ShowLgtmBadges(localRepoName)) {
-            let userName = this.GetUserName(localRepoName);
+            const userName = this.GetUserName(localRepoName);
             return "[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/" + userName + "/" + localRepoName + ".svg?logo=lgtm&logoWidth=18)]" +
                 "(https://lgtm.com/projects/g/" + userName + "/" + localRepoName + "/context:javascript)";
         }
@@ -273,7 +268,7 @@ export class MarkdownProvider {
     }
 
     private GetRepoName(localRepoName: string): RepoNames {
-        let repoName: RepoNames = RepoNames[localRepoName];
+        const repoName: RepoNames = RepoNames[localRepoName];
         return repoName;
     }
 
@@ -362,4 +357,5 @@ export class MarkdownProvider {
 }
 
 //return "[![codecov](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + "/branch/master/graph/badge.svg)](https://codecov.io/gh/" + this.myUserName + "/" + localRepoName + ")";
+//return "[![DepShield](https://depshield.sonatype.org/badges/" + this.myUserName + "/" + localRepoName + "/depshield.svg)]" + "(https://depshield.github.io)";
 //return "[![Travis Build Status](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ".svg?branch=master)](https://travis-ci.org/" + this.myUserName + "/" + localRepoName + ")";

@@ -38,5 +38,5 @@ export enum RepoNames {
     VsixFootie,
     VsixRatingChaser,
     VsixTwitterWidget,
-    VstsDashboardWidgetProjectTemplate
+    VstsDashboardWidgetProjectTemplate,
 }

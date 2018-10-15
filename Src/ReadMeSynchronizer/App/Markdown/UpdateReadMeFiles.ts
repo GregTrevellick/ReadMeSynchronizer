@@ -1,11 +1,11 @@
 import { FileSystemUpdater } from "./FileSystemUpdater";
+import { GroupedBadgeType } from "./GroupedBadgeType";
 import { IRepoMetaData } from "./IRepoMetaData";
+import { IVsmpMetaData } from "./IVsmpMetaData";
 import { MarkdownProvider } from "./MarkdownProvider";
 import { RepoCategory } from "./RepoCategory";
 import { RepoMetaDatas } from "./RepoMetaDatas";
 import { allBadges } from "./Repos";
-import { GroupedBadgeType } from "./GroupedBadgeType";
-import { IVsmpMetaData } from "./IVsmpMetaData";
 import { SonarCategory } from "./SonarCategory";
 import { SonarMetaHelper } from "./SonarMetaHelper";
 
@@ -164,7 +164,6 @@ export class ReadMeUpdater {
             this.mp.GetCodacy(repoMetaData.localRepoName, repoMetaData.codacyId),
             this.mp.GetCodeBeat(repoMetaData.localRepoName),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
-            this.mp.GetDepShield(repoMetaData.localRepoName),
             this.mp.GetInspecodeRocroReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
             this.mp.GetLgtmAlert(repoMetaData.localRepoName),
             this.mp.GetLgtmCodeQuality(repoMetaData.localRepoName),
@@ -207,7 +206,7 @@ export class ReadMeUpdater {
     }
 
     private GetVsmpExtensionsBadgesMarkdown(repoMetaData: IRepoMetaData) {
-        let result: string[] = [""];
+        const result: string[] = [""];
         const vsmpMetaData = repoMetaData as IVsmpMetaData;
 
         for (const vsmpItemName of vsmpMetaData.vsmpItemNames) {
@@ -244,7 +243,6 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.Codacy);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeBeat);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
-        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.DepShield);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeRocroReport);
@@ -272,8 +270,7 @@ export class ReadMeUpdater {
         let title = "";
 
         for (const repoMetaData of allReposExceptTheAllBadgesRepo) {
-            switch (groupedBadgeType)
-            {
+            switch (groupedBadgeType) {
                 case GroupedBadgeType.AppveyorBuildStatus: {
                     repoMarkdown = this.mp.GetAppveyorBuildStatus(repoMetaData.localRepoName, repoMetaData.appVeyorId);
                     break;
@@ -300,10 +297,6 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.CodeFactor: {
                     repoMarkdown = this.mp.GetCodeFactor(repoMetaData.localRepoName);
-                    break;
-                }
-                case GroupedBadgeType.DepShield: {
-                    repoMarkdown = this.mp.GetDepShield(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.GitHubIssues: {
