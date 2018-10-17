@@ -26,11 +26,11 @@ export class ReadMeUpdater {
     private titleHtag = "##### ";
 
     constructor() {
-        this.fileSystemUpdater = new FileSystemUpdater;
-        this.mp = new MarkdownProvider;
-        this.repoMetaDatas = new RepoMetaDatas;
-        this.sonarMetaHelper = new SonarMetaHelper;
-        this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName != allBadges.localRepoName);
+        this.fileSystemUpdater = new FileSystemUpdater();
+        this.mp = new MarkdownProvider();
+        this.repoMetaDatas = new RepoMetaDatas();
+        this.sonarMetaHelper = new SonarMetaHelper();
+        this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName !== allBadges.localRepoName);
         this.badgeCommentStartSuffixBadgeMarkdown = this.mp.GetPoweredByReadMeSynchronizerBadgeMarkdown();
         this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.mp.lineBreak}<!-- Powered by ${this.mp.gitHubReadMeSynchronizerUrl} -->`;
     }
@@ -370,7 +370,7 @@ export class ReadMeUpdater {
 
             }
 
-            if (repoMarkdown != this.mp.noMarkdown) {
+            if (repoMarkdown !== this.mp.noMarkdown) {
                 badgesMarkdown += `${this.mp.lineBreak}${repoMarkdown}`;
             }
 
