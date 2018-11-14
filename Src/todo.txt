@@ -1,3 +1,21 @@
+http://fabiospampinato.com/autogit/#install
+https://github.com/fabiospampinato/autogit-command-github-sync
+https://github.com/fabiospampinato/autogit-command-github-publish
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 project settings > pipelines > service connections
 
 pipeline > build > edit > getsources >
@@ -19,7 +37,7 @@ convert to node app for debugging => unit tests (jest?) (else get rid of karma p
 
 YES greenkeeper [](https://badges.greenkeeper.io/GregTrevellick/OpenInApp.Launcher.svg)](https://greenkeeper.io/)  
    Greenkeeper will open an Initial Pull Request to update all dependencies at once
-   It will add the Greenkeeper badge to your project’s readme.md
+   It will add the Greenkeeper badge to your projectâ€™s readme.md
    The initial PR will not be opened if all dependencies are already up to date and the readme.md already has a badge (in this case Greenkeeper is silently enabled)
 
 YES codecov (need to add yaml file) https://codecov.io/gh 
