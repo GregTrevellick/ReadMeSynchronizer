@@ -11,9 +11,9 @@ const vsmmWebstoreId = "fifncokofckhanlhmdacdnkbempmopbo";
 const vsmmWebstoreUrl = "https://chrome.google.com/webstore/detail/visual-studio-marketplace/" + vsmmWebstoreId;
 
 export class MarkdownProvider {
-    public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
     public lineBreak: string = "\n";
     public myUserName = "GregTrevellick";
+    public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
     public noMarkdown: string = "";
 
     private badgeExclusions: BadgeExclusions;
@@ -278,7 +278,7 @@ export class MarkdownProvider {
             userName = "MattJeanes";
         }
         if (localRepoName == "CleanArchitecture") {
-            userName = "Ardalis";
+            userName = "ardalis";//must be lower case
         }
         return userName;
     }
