@@ -195,7 +195,7 @@ export class MarkdownProvider {
     }
 
     public GetPoweredByReadMeSynchronizerBadgeMarkdown() {
-        return `[![Read Me Synchronizer](${shieldsDotIoUrl}badge/-powered%20by%20read%20me%20synchronizer-brightgreen.svg)](${this.gitHubReadMeSynchronizerUrl})`;
+        return `[![Read Me Synchronizer](${shieldsDotIoUrl}badge/-powered%20by%20ReadMeSynchronizer-brightgreen.svg)](${this.gitHubReadMeSynchronizerUrl})`;
     }
 
     public GetRenovateBotBadgeMarkdown() {
@@ -214,7 +214,7 @@ export class MarkdownProvider {
     }
 
     public GetSubscribeMarkdown(localRepoName: string) {
-        return "[Subscribe](https://github.com/" + this.myUserName + "/" + localRepoName + "/subscription) to receive notificatons." + this.lineBreak;
+        return `${this.lineBreak}[Subscribe](https://github.com/${this.myUserName}/${localRepoName}/subscription) to receive notificatons.`;
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {

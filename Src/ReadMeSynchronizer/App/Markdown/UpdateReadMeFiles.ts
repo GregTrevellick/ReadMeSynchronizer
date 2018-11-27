@@ -46,7 +46,7 @@ export class ReadMeUpdater {
                 baseBadgesMarkdown += this.GetFullTitle("Parent", repoMetaData.localRepoName);
             }
 
-            baseBadgesMarkdown += `${this.mp.lineBreak}${this.GetMultipleBadgesMarkdown(repoMetaData)}`;
+            baseBadgesMarkdown += `${this.GetMultipleBadgesMarkdown(repoMetaData)}${this.mp.lineBreak}`;
 
             const surroundedBadgesMarkdown = this.GetSurroundedBadgesMarkdown(baseBadgesMarkdown);
 
