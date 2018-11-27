@@ -16,6 +16,7 @@ export class RepoMetaDatas {
             myRepos.awib,
             myRepos.azureDevOpsRotaWidget,
             myRepos.browserExtensionUsingAngularWorksInChromeNotInEdge,
+            myRepos.cleanArchitecture,
             myRepos.dotNetFlags,
             myRepos.filesForEveryExtensionCreator,
             myRepos.gregtSideWaffleV2,

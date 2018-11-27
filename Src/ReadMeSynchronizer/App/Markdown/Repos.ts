@@ -66,6 +66,18 @@ export const browserExtensionUsingAngularWorksInChromeNotInEdge: IRepoMetaData =
     repoCategory: RepoCategory.MiscellaneousRepo,
 };
 
+export const cleanArchitecture: IVsmpMetaData = {
+    appVeyorId: "6raa1n0tucf66h0q",
+    azureDefinitionId: "5",//gregt
+    codacyId: "3b74ee0e8da64daf94199f8a7f2fcf12",
+    inspecodeId: "WKSXU-jLYaQ1gLRpIJHkwIlG7ICpchlzi2Bc6bUpmTI",
+    localRepoName: "CleanArchitecture",
+    repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: [
+        "CleanArchitecture",
+    ],
+};
+
 export const dotNetFlags: IRepoMetaData = {
     appVeyorId: "0yqqgbviev6x1pe3",
     azureDefinitionId: "1",
