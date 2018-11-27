@@ -32,7 +32,7 @@ export class ReadMeUpdater {
         this.sonarMetaHelper = new SonarMetaHelper();
         this.allReposExceptTheAllBadgesRepo = this.repoMetaDatas.repoMetaDatas.filter(x => x.localRepoName !== allBadges.localRepoName);
         this.badgeCommentStartSuffixBadgeMarkdown = this.mp.GetPoweredByReadMeSynchronizerBadgeMarkdown();
-        this.badgeCommentStartSuffix = `${this.badgeCommentStartSuffixBadgeMarkdown}${this.mp.lineBreak}<!-- Powered by ${this.mp.gitHubReadMeSynchronizerUrl} -->`;
+        this.badgeCommentStartSuffix = `<!-- Powered by ${this.mp.gitHubReadMeSynchronizerUrl} -->${this.mp.lineBreak}${this.badgeCommentStartSuffixBadgeMarkdown}`;
     }
 
     public ReplaceBadgeComments() {
