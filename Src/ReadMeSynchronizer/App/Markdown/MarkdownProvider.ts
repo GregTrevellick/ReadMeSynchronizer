@@ -277,6 +277,9 @@ export class MarkdownProvider {
         if (localRepoName == "AngularBasic") {
             userName = "MattJeanes";
         }
+        if (localRepoName == "CleanArchitecture") {
+            userName = "Ardalis";
+        }
         return userName;
     }
 

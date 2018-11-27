@@ -68,7 +68,7 @@ export const browserExtensionUsingAngularWorksInChromeNotInEdge: IRepoMetaData =
 
 export const cleanArchitecture: IVsmpMetaData = {
     appVeyorId: "6raa1n0tucf66h0q",
-    azureDefinitionId: "5",//gregt
+    azureDefinitionId: "41",
     codacyId: "3b74ee0e8da64daf94199f8a7f2fcf12",
     inspecodeId: "WKSXU-jLYaQ1gLRpIJHkwIlG7ICpchlzi2Bc6bUpmTI",
     localRepoName: "CleanArchitecture",
