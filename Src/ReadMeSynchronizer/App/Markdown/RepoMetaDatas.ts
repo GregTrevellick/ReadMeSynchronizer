@@ -47,6 +47,7 @@ export class RepoMetaDatas {
             myRepos.vsixFootie,
             myRepos.vsixRatingChaser,
             myRepos.vsixTwitterWidget,
+            myRepos.vsixYeomanTemplates,
             myRepos.vstsDashboardWidgetProjectTemplate,
 
         ];

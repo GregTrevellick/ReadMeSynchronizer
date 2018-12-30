@@ -458,6 +458,20 @@ export const vsixTwitterWidget: IVsmpMetaData = {
     ],
 };
 
+export const vsixYeomanTemplates: IVsmpMetaData = {
+    appVeyorId: "0vwmtcboontemltq",//?????????????????????
+    azureDefinitionId: "10",//////////////////////////////
+    codeBeatId: "a7581535-50d9-476a-935d-d64dee54e5c0",///////////////////////////////
+    codacyId: "e61c4dba8261497fb447379730e97a25",//?????????????????????
+    inspecodeId: "gMeDVWmC1m0zT4s6qrY9hlEdBvNla8Qzmt2Mi5GAgEE",////////////////////////////
+    localRepoName: "VsixYeomanTemplates",
+    repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: [
+          "VsixAngularBasic"
+        , "OmniSharpAspNet"
+    ],
+};
+
 export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     appVeyorId: "9uoctpmaj9wj6gjc",
     azureDefinitionId: "15",
