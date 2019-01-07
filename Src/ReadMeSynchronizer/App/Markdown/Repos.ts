@@ -460,9 +460,8 @@ export const vsixTwitterWidget: IVsmpMetaData = {
 
 export const vsixYeomanTemplates: IVsmpMetaData = {
     appVeyorId: "am8i6aama94x7yma",
-    azureDefinitionId: "10",//////////////////////////////
-    codeBeatId: "9a6e3cef-dfe7-49ea-998c-0d30ddc5088f",
-    codacyId: "e61c4dba8261497fb447379730e97a25",//tba
+    azureDefinitionId: "10",//gregt TODO
+    codacyId: "e61c4dba8261497fb447379730e97a25",
     inspecodeId: "30Z4CaX866HwkclUJDsYON-CM-yrFCk_LzgbNrKlpg8",
     localRepoName: "VsixYeomanTemplates",
     repoCategory: RepoCategory.VsIdeExtension,
