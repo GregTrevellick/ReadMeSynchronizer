@@ -294,7 +294,7 @@ export const quickLaunchButtons: IVsmpMetaData = {
     appVeyorId: "e8fq3ang07ahq8yf",
     azureDefinitionId: "17",
     codacyId: "def29563a15940cda03af19faac0e006",
-    inspecodeId: "iuSqTJxsdcqiMo6lLf8ZjNtUCVUtrkEvwGR9wD6-6R8)",
+    inspecodeId: "iuSqTJxsdcqiMo6lLf8ZjNtUCVUtrkEvwGR9wD6-6R8",
     localRepoName: "QuickLaunchButtons",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
@@ -411,6 +411,18 @@ export const vsixFootie: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
         "VSSportsDesk",
+    ],
+};
+
+export const vsixNewYeomanProject: IVsmpMetaData = {
+    appVeyorId: "awv70p92uu0u84k9",
+    azureDefinitionId: "17",
+    codacyId: "b7496ea552ed4856b6875d1412dbe48f",
+    inspecodeId: "oipmdrN2Gy-tPGQshVJv1QsQscjeGd-chBeao8AF81U",
+    localRepoName: "VsixNewYeomanProject",
+    repoCategory: RepoCategory.VsIdeExtension,
+    vsmpItemNames: [
+        "NewYeomanProject"
     ],
 };
 

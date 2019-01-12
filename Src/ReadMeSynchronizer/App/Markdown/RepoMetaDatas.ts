@@ -45,6 +45,7 @@ export class RepoMetaDatas {
             myRepos.vsixDotNetCorePoc,
             myRepos.vsixFootball,
             myRepos.vsixFootie,
+            myRepos.vsixNewYeomanProject,
             myRepos.vsixRatingChaser,
             myRepos.vsixTwitterWidget,
             myRepos.vsixYeomanTemplates,
