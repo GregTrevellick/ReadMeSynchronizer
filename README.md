@@ -1,5 +1,7 @@
 ## Read Me Sychchronizer
 
+[![](https://codescene.io/projects/4316/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4316/jobs/latest-successful/results)
+
 <!--BadgesSTART-->
 <!-- Powered by https://github.com/GregTrevellick/ReadMeSynchronizer -->
 [![Read Me Synchronizer](https://img.shields.io/badge/-powered%20by%20ReadMeSynchronizer-brightgreen.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
