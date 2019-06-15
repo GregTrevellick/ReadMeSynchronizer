@@ -43,6 +43,19 @@ export const awib: IRepoMetaData = {
     repoCategory: RepoCategory.Forks,
 };
 
+export const azureDevOpsAgileManifestoWidget: IVsmpMetaData = {
+    appVeyorId: "duvijp0qiget07i1",
+    azureDefinitionId: "10",//TODO
+    codacyId: "efd52920f7c640139556d0a10252523e",
+    codeBeatId: "ec536ac2-8a8a-421f-9d4d-5125cf9a05c9",
+    inspecodeId: "sZh8A1uRF9HzGXCxtWIHyXsrVUTiY6Iw-sRuxuaFMqs",
+    localRepoName: "AzureDevOpsAgileManifestoWidget",
+    repoCategory: RepoCategory.VstsExtension,
+    vsmpItemNames: [
+        "AzureDevOpsAgileManifestoWidget",
+    ],
+};
+
 export const azureDevOpsRotaWidget: IVsmpMetaData = {
     appVeyorId: "01islyin3t8bsxoe",
     azureDefinitionId: "13",

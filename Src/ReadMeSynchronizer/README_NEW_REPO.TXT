@@ -18,7 +18,7 @@ New Repos:
      (a) appVeyorId
      (b) codacyId
 2) Add repo to RepoMetaDatas.ts (towards the bottom, one entry for entire repo, no sub-properties for OpenInAppLauncher & VsixTwitterWidget)  
-3) Run Gulp task to update markdown badges
+3) Run Gulp task to Update_Markdown_Badges
 4) Commit/Push the AllBadges repo & check the new item on GitHub
 5) Commit/Push the ReadMeSynchronizer repo & the new repo with its updated ReadMe file
 
