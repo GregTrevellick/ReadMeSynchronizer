@@ -3,7 +3,7 @@
 Having created the repo in GitHub, add to...
  a) appveyor (see below - this will also add to sonar (see below))
  b) bettercodehub
- c) codebeat
+ c) codebeat (no C# support, hence limited number of repos, see settings tab for id)
  d) codacy (slower but more depth)
  e) codefactor
  f) inspecode
@@ -15,7 +15,7 @@ New Repos:
 ==========
 1) Add repo to Repos.ts (one entry for OpenInAppLauncher & VsixTwitterWidget but with sub-properties)
     Primarily need the following:
-     (a) appVeyorId
+     (a) appVeyorId (see webhook url in general tab)
      (b) codacyId
 2) Add repo to RepoMetaDatas.ts (towards the bottom, one entry for entire repo, no sub-properties for OpenInAppLauncher & VsixTwitterWidget)  
 3) Run Gulp task to Update_Markdown_Badges

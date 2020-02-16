@@ -15,6 +15,7 @@ export class RepoMetaDatas {
             myRepos.autoFindReplace,
             myRepos.awib,
             myRepos.azureDevOpsAgileManifestoWidget,
+            myRepos.azureDevOpsBlazorRadiator,
             myRepos.azureDevOpsRotaWidget,
             myRepos.browserExtensionUsingAngularWorksInChromeNotInEdge,
             myRepos.cleanArchitecture,

@@ -56,6 +56,19 @@ export const azureDevOpsAgileManifestoWidget: IVsmpMetaData = {
     ],
 };
 
+export const azureDevOpsBlazorRadiator: IVsmpMetaData = {
+    appVeyorId: "108odcop2p0k0n8n",
+    azureDefinitionId: "10",//TODO
+    codacyId: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    codeBeatId: "815a0200-48fd-4fd8-889a-00556324d65b",
+    inspecodeId: "decommissioned",
+    localRepoName: "AzureDevOpsBlazorRadiator",
+    repoCategory: RepoCategory.VstsExtension,
+    vsmpItemNames: [
+        "AzureDevOpsBlazorRadiator",
+    ],
+};
+
 export const azureDevOpsRotaWidget: IVsmpMetaData = {
     appVeyorId: "01islyin3t8bsxoe",
     azureDefinitionId: "13",
@@ -435,7 +448,7 @@ export const vsixNewYeomanProject: IVsmpMetaData = {
     localRepoName: "VsixNewYeomanProject",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-        "NewYeomanProject"
+        "NewYeomanProject",
     ],
 };
 
@@ -491,8 +504,8 @@ export const vsixYeomanTemplates: IVsmpMetaData = {
     localRepoName: "VsixYeomanTemplates",
     repoCategory: RepoCategory.VsIdeExtension,
     vsmpItemNames: [
-          "VsixAngularBasic"
-        , "OmniSharpAspNet"
+          "VsixAngularBasic",
+          "OmniSharpAspNet",
     ],
 };
 
