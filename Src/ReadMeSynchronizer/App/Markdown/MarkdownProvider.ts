@@ -203,11 +203,11 @@ export class MarkdownProvider {
             "(https://renovatebot.com/)";
     }
 
-    public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData) {
+    public GetSonarBadge(localRepoName: string, sonarMetaData: SonarMetaData, sonarCloudProjectPrefix: string) {
         if (this.ShowSonarBadges(localRepoName)) {
             const sonarDescription: string = "Sonar" + sonarMetaData.badgeQueryString;
-            const badgeHyperlinkUrl = sonarMetaData.badgeHyperlinkTargetUrlPrefix + localRepoName + sonarMetaData.badgeHyperlinkTargetUrlSuffix;
-            const sonarBadgeUrl = sonarBadgesUrlAddress + localRepoName + sonarMetaData.badgeQueryString;
+            const badgeHyperlinkUrl = sonarMetaData.badgeHyperlinkTargetUrlPrefix + sonarCloudProjectPrefix + localRepoName + sonarMetaData.badgeHyperlinkTargetUrlSuffix;
+            const sonarBadgeUrl = sonarBadgesUrlAddress + sonarCloudProjectPrefix + localRepoName + sonarMetaData.badgeQueryString;
             return `[![${sonarDescription}](${sonarBadgeUrl})](${badgeHyperlinkUrl})`;
         }
         return this.noMarkdown;

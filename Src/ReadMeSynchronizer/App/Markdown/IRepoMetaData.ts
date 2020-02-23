@@ -8,4 +8,5 @@ export interface IRepoMetaData {
     inspecodeId: string;
     localRepoName: string;
     repoCategory: RepoCategory;
+    sonarCloudProjectPrefix: string;
 }
