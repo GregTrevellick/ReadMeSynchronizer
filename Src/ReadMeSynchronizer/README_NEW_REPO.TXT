@@ -40,7 +40,7 @@ Edit the appveyor.yml as follows:
 
 Sonar
 =====
-1) Add project, that's all. We don't need a 'Save'/'Submit' button because it gets setup/defined by AppVeyor which invokes Sonar analysis.
+1A) Add project, that's all. We don't need a 'Save'/'Submit' button because it gets setup/defined by AppVeyor which invokes Sonar analysis.
   Note: 
     This fails:
      https://sonarcloud.io/dashboard?id=GregTrevellick_VsixBlazorMinimalProjectTemplate
@@ -49,3 +49,11 @@ Sonar
      https://sonarcloud.io/dashboard?id=VsixBlazorMinimalProjectTemplate
      https://sonarcloud.io/component_measures?id=VsixBlazorMinimalProjectTemplate
 
+*** OR ***
+
+1B) [Feb 2020 - Blazor Radiator]
+    Log into sonarcloud.io using github
+    Click 'Analyze New Project' plus button top right corner
+    Pick from the Greg Trevellick organization - this will create https://sonarcloud.io/dashboard?id=GregTrevellick_AzureDevOpsBlazorRadiator (as opposed to the URLs above without "GregTrevellick_")
+    You'll see 5 buttons - one big for Sonar auto-analysis and 4 smaller (e.g. Travis), so just click the big auto-button, this simply tells you to create an empty file in your repo called ".sonarcloud.properties"
+     
