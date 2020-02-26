@@ -5,7 +5,7 @@ export interface IRepoMetaData {
     azureDefinitionId: string;
     codacyId: string;
     codeBeatId?: string;
-    inspecodeId: string;
+    //inspecodeId: string;
     localRepoName: string;
     repoCategory: RepoCategory;
     sonarCloudProjectPrefix: string;

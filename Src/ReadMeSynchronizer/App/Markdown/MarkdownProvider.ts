@@ -149,22 +149,22 @@ export class MarkdownProvider {
             "(https://imgbot.net/)";
     }
 
-    public GetInspecodeRocroReport(localRepoName: string, inspecodeId: string) {
-        if (this.ShowInspecodeRocroBadges(localRepoName)) {
-            //return "[![InspecodeRocro Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/report?token=" + inspecodeId + "&branch=master)]" +
-            return "[![InspecodeRocro Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/report?token=" + inspecodeId + ")]" +
-                "(https://inspecode.rocro.com/reports/github.com/" + this.myUserName + "/" + localRepoName + "/branch/master/summary)";
-        }
-        return this.noMarkdown;
-    }
+    //public GetInspecodeRocroReport(localRepoName: string, inspecodeId: string) {
+    //    if (this.ShowInspecodeRocroBadges(localRepoName)) {
+    //        //return "[![InspecodeRocro Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/report?token=" + inspecodeId + "&branch=master)]" +
+    //        return "[![InspecodeRocro Report](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/report?token=" + inspecodeId + ")]" +
+    //            "(https://inspecode.rocro.com/reports/github.com/" + this.myUserName + "/" + localRepoName + "/branch/master/summary)";
+    //    }
+    //    return this.noMarkdown;
+    //}
 
-    public GetInspecodeRocroStatus(localRepoName: string, inspecodeId: string) {
-        if (this.ShowInspecodeRocroBadges(localRepoName)) {
-            return "[![InspecodeRocro Job Status](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/status?token=" + inspecodeId + ")]" +
-                "(https://inspecode.rocro.com/jobs/github.com/" + this.myUserName + "/" + localRepoName + "/latest?completed=true)";
-        }
-        return this.noMarkdown;
-    }
+    //public GetInspecodeRocroStatus(localRepoName: string, inspecodeId: string) {
+    //    if (this.ShowInspecodeRocroBadges(localRepoName)) {
+    //        return "[![InspecodeRocro Job Status](https://inspecode.rocro.com/badges/github.com/" + this.myUserName + "/" + localRepoName + "/status?token=" + inspecodeId + ")]" +
+    //            "(https://inspecode.rocro.com/jobs/github.com/" + this.myUserName + "/" + localRepoName + "/latest?completed=true)";
+    //    }
+    //    return this.noMarkdown;
+    //}
 
     public GetLgtmAlert(localRepoName: string) {
         if (this.ShowLgtmBadges(localRepoName)) {
@@ -337,12 +337,12 @@ export class MarkdownProvider {
         return true;
     }
 
-    private ShowInspecodeRocroBadges(localRepoName: string): boolean {
-        if (this.badgeExclusions.inspecode.includes(this.GetRepoName(localRepoName))) {
-            return false;
-        }
-        return true;
-    }
+    //private ShowInspecodeRocroBadges(localRepoName: string): boolean {
+    //    if (this.badgeExclusions.inspecode.includes(this.GetRepoName(localRepoName))) {
+    //        return false;
+    //    }
+    //    return true;
+    //}
 
     private ShowLgtmBadges(localRepoName: string): boolean {
         if (this.badgeExclusions.lgtm.includes(this.GetRepoName(localRepoName))) {

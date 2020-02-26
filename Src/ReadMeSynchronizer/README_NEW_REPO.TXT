@@ -6,8 +6,7 @@ Having created the repo in GitHub, add to...
  c) codebeat (no C# support, hence limited number of repos, see settings tab for id)
  d) codacy (slower but more depth)
  e) codefactor
- f) inspecode
- g) lgtm
+ f) lgtm
 
 
 

@@ -63,11 +63,11 @@ export class BadgeExclusions {
     public gitHub: RepoNames[] = [
     ];
 
-    public inspecode: RepoNames[] = [
-        RepoNames.awib,
-        RepoNames.MiscellaneousArtefacts,
-        RepoNames.More,
-    ];
+    //public inspecode: RepoNames[] = [
+    //    RepoNames.awib,
+    //    RepoNames.MiscellaneousArtefacts,
+    //    RepoNames.More,
+    //];
 
     public lgtm: RepoNames[] = [
         RepoNames.AutoFindReplace,//matt jeanes
