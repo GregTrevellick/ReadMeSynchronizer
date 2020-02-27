@@ -1,5 +1,5 @@
 version: 1.0.{build}
-image: Visual Studio 2017
+image: Visual Studio 2019
 
 branches:
   only:
@@ -20,7 +20,7 @@ install:
 before_build:
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     # AppVeyor does not decrypt the secure env vars for PR builds (prevents someone from submitting PR with malicious build script displaying those variables)
-    #- SonarScanner.MSBuild.exe begin /k:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /d:"sonar.organization=gregtrevellick-github"
+    #- SonarScanner.MSBuild.exe begin /k:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarqube.com" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
     - ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { SonarScanner.MSBuild.exe begin /k:"ReadMeSynchronizer" /d:sonar.host.url="https://sonarqube.com" /d:sonar.login="$env:my_encrypted_sonarqube_token" /d:sonar.organization="gregtrevellick-github" }'
 
 build:
