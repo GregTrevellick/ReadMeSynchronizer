@@ -48,9 +48,9 @@ export class ReadMeUpdater {
 
             baseBadgesMarkdown += `${this.GetMultipleBadgesMarkdown(repoMetaData)}${this.mp.lineBreak}`;
 
-            //gregt dedupe
+            //gregt2 dedupe
             //this is allbadges
-            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);//gregt dedupe
+            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);//gregt2 dedupe
             //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
@@ -82,7 +82,7 @@ export class ReadMeUpdater {
 `;
         });
 
-        //gregt this is defo just repo, not allbadges, put into a loop
+        //gregt2 this is defo just repo, not allbadges, put into a loop
         badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
         badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
         badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
@@ -94,7 +94,6 @@ export class ReadMeUpdater {
 
         let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData);
 
-        //gregt wrap in foreach
         for (let repoBadgeMarkdown of repoBadgesMarkdown) {
             repoBadgeMarkdown = repoBadgeMarkdown.replace(`[Subscribe]`, `${this.mp.lineBreak}${this.mp.lineBreak}[Subscribe]`);
         }
@@ -150,8 +149,8 @@ export class ReadMeUpdater {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetMultipleBadgesMarkdown(repoMetaData);
 
-            //////////////////////////////////gregt dedupe
-            //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);//gregt dedupe
+            //////////////////////////////////gregt2 dedupe
+            //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
