@@ -54,10 +54,10 @@ export const azureDevOpsAgileManifestoWidget: IVsmpMetaData = {
     codeBeatId: "ec536ac2-8a8a-421f-9d4d-5125cf9a05c9",
     //inspecodeIdId: "sZh8A1uRF9HzGXCxtWIHyXsrVUTiY6Iw-sRuxuaFMqs",
     localRepoName: "AzureDevOpsAgileManifestoWidget",
-    repoCategory: RepoCategory.VstsExtension,
+    repoCategory: RepoCategory.AzureDevOpsExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "AzureDevOpsAgileManifestoWidget",
+        "AgileManifestoDashboardWidget",
     ],
 };
 
@@ -68,10 +68,10 @@ export const azureDevOpsBlazorRadiator: IVsmpMetaData = {
     codeBeatId: "815a0200-48fd-4fd8-889a-00556324d65b",
     //inspecodeIdId: "decommissioned",
     localRepoName: "AzureDevOpsBlazorRadiator",
-    repoCategory: RepoCategory.VstsExtension,
+    repoCategory: RepoCategory.AzureDevOpsExtension,
     sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
-        "AzureDevOpsBlazorRadiator",
+        "BlazorRadiator",
     ],
 };
 

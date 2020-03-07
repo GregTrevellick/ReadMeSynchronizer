@@ -1,5 +1,6 @@
 export enum RepoCategory {
     AllBadges,
+    AzureDevOpsExtension,
     ChromeExtension,
     Forks,
     HelloWorld,

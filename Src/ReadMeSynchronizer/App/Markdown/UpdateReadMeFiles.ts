@@ -115,7 +115,8 @@ export class ReadMeUpdater {
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
-        if (repoMetaData.repoCategory === RepoCategory.VstsExtension) {
+        if (repoMetaData.repoCategory === RepoCategory.AzureDevOpsExtension ||
+            repoMetaData.repoCategory === RepoCategory.VstsExtension) {
             const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(repoMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
@@ -210,6 +211,13 @@ export class ReadMeUpdater {
         const vsmpMetaData = repoMetaData as IVsmpMetaData;
 
         for (const vsmpItemName of vsmpMetaData.vsmpItemNames) {
+
+            if (vsmpMetaData.repoCategory === RepoCategory.AzureDevOpsExtension) {
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSItemBadge(vsmpItemName, vsmpItemName));
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSDownloads(vsmpItemName, vsmpItemName));
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSRatings(vsmpItemName, vsmpItemName));
+                result.push(this.mp.GetVisualStudioMarketplaceVSTSVersion(vsmpItemName, vsmpItemName));
+            }
 
             if (vsmpMetaData.repoCategory === RepoCategory.VsIdeExtension) {
                 result.push(this.mp.GetVisualStudioMarketplaceIDEItemBadge(vsmpItemName));
