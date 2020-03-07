@@ -20,9 +20,14 @@ export class GitExecutioner {
 
     private GitProcessRepo(repoMetaData: IRepoMetaData, gitCommand: GitCommand) {
 
-        const simpleGit = require("simple-git");
+        const simpleGit = require("simple-git");//Error: Cannot use simple-git on a directory that does not exist.
+        //const simpleGit = require("simple-git")("D:");//TypeError: simpleGit is not a function
+        //const simpleGit = require("simple-git")("D:\\");//TypeError: simpleGit is not a function
         const targetReadMeFileName = "README.md";
+        //const workingDirPath = "../../../../" + repoMetaData.localRepoName;
         const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
+        //const workingDirPath: string = "../../" + repoMetaData.localRepoName;
+        //const workingDirPath: string = "../" + repoMetaData.localRepoName;
 
         switch (gitCommand) {
             case GitCommand.CommitReadMe: {

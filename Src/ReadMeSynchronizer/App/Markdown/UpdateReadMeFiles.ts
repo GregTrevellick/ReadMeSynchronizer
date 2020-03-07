@@ -148,7 +148,7 @@ export class ReadMeUpdater {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetMultipleBadgesMarkdown(repoMetaData);
 
-            //////////////////////////////////gregt2 
+            //////////////////////////////////gregt2
             //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
