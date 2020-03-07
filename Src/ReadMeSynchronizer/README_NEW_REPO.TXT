@@ -7,6 +7,7 @@ Having created the repo in GitHub, add to...
  d) codacy (slower but more depth)
  e) codefactor
  f) lgtm
+ todo) https://codecov.io
 
 
 
