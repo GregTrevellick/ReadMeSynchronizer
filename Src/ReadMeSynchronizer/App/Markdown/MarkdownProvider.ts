@@ -274,7 +274,7 @@ export class MarkdownProvider {
 
     private GetUserName(localRepoName: string) {
         let userName = this.myUserName;
-        if (localRepoName == "AngularBasic") {
+        if (localRepoName == "zAngularBasic") {
             userName = "MattJeanes";
         }
         if (localRepoName == "CleanArchitecture") {

@@ -4,7 +4,7 @@ export class BadgeExclusions {
 
     public appveyor: RepoNames[] = [
         RepoNames.AllBadges,
-        RepoNames.AngularBasic,
+        RepoNames.zAngularBasic,
         RepoNames.awib,
         RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
         RepoNames["Menees.VsTools.2017"],
@@ -14,7 +14,7 @@ export class BadgeExclusions {
 
     public azurePipeline: RepoNames[] = [
         RepoNames.AllBadges,
-        RepoNames.AngularBasic,
+        RepoNames.zAngularBasic,
         RepoNames.awib,
         RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
         RepoNames["Menees.VsTools.2017"],
@@ -58,6 +58,9 @@ export class BadgeExclusions {
     ];
 
     public codefactor: RepoNames[] = [
+        RepoNames.zAngularBasic,
+        RepoNames.HelloWorldBlazor,
+        RepoNames.VsixDotNetCorePoc,
     ];
 
     public gitHub: RepoNames[] = [
@@ -97,7 +100,7 @@ export class BadgeExclusions {
 
     public sonar: RepoNames[] = [
         RepoNames.AllBadges,
-        RepoNames.AngularBasic,
+        RepoNames.zAngularBasic,
         RepoNames.awib,
         RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
         RepoNames["Menees.VsTools.2017"],

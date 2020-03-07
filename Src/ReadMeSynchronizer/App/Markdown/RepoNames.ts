@@ -1,6 +1,6 @@
 export enum RepoNames {
     AllBadges,
-    AngularBasic,
+    zAngularBasic,
     AutoFindReplace,
     awib,
     //AzureDevOpsRotaWidget,
