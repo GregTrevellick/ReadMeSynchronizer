@@ -94,6 +94,11 @@ export class ReadMeUpdater {
 
         let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData);
 
+        //gregt wrap in foreach
+        for (let repoBadgeMarkdown of repoBadgesMarkdown) {
+            repoBadgeMarkdown = repoBadgeMarkdown.replace(`[Subscribe]`, `${this.mp.lineBreak}${this.mp.lineBreak}[Subscribe]`);
+        }
+
         const repoTypeSpecificMarkdown: string[] = this.GetRepoTypeSpecificMarkdown(repoMetaData);
 
         repoBadgesMarkdown = repoBadgesMarkdown.concat(repoTypeSpecificMarkdown);
