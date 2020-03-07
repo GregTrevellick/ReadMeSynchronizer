@@ -48,7 +48,7 @@ export class ReadMeUpdater {
 
             baseBadgesMarkdown += `${this.GetMultipleBadgesMarkdown(repoMetaData)}${this.mp.lineBreak}`;
 
-            //gregt2 dedupe - this is allbadgesi think
+            //gregt2 dedupe - this is allbadges i think
             //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
             //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
