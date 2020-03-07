@@ -48,6 +48,13 @@ export class ReadMeUpdater {
 
             baseBadgesMarkdown += `${this.GetMultipleBadgesMarkdown(repoMetaData)}${this.mp.lineBreak}`;
 
+            //gregt dedupe
+            //this is allbadges
+            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);//gregt dedupe
+            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+
             const surroundedBadgesMarkdown = this.GetSurroundedBadgesMarkdown(baseBadgesMarkdown);
 
             this.fileSystemUpdater.ReplaceBadgeCommentOnDisc(repoMetaData.localRepoName, surroundedBadgesMarkdown, this.badgeCommentStart, this.badgeCommentEnd);
@@ -74,6 +81,11 @@ export class ReadMeUpdater {
             badgesMarkdownFinal += `${badgeMarkdown}
 `;
         });
+
+        //gregt this is defo just repo, not allbadges, put into a loop
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
 
         return badgesMarkdownFinal;
     }
@@ -132,6 +144,14 @@ export class ReadMeUpdater {
         for (const repoMetaData of this.allReposExceptTheAllBadgesRepo) {
             const repoCategoryDescription = RepoCategory[repoMetaData.repoCategory];
             const markdown = this.GetMultipleBadgesMarkdown(repoMetaData);
+
+            //////////////////////////////////gregt dedupe
+            //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);//gregt dedupe
+            //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //////////////////////////////////markdown = markdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+
             const title = this.GetFullTitle(repoCategoryDescription, repoMetaData.localRepoName);
             badgesMarkdown += this.GetTitleAndBadges(title, markdown);
         }
