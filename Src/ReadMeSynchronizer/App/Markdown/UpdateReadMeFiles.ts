@@ -48,11 +48,11 @@ export class ReadMeUpdater {
 
             baseBadgesMarkdown += `${this.GetMultipleBadgesMarkdown(repoMetaData)}${this.mp.lineBreak}`;
 
-            //gregt2 dedupe - this is allbadges i think
-            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-            //baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            ////////////gregt2 dedupe - this is allbadges i think
+            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
 
             const surroundedBadgesMarkdown = this.GetSurroundedBadgesMarkdown(baseBadgesMarkdown);
 
@@ -81,10 +81,10 @@ export class ReadMeUpdater {
 `;
         });
 
-        //gregt2 this is defo just repo alone & "Per Repo" bottom half of allbagges, not allbadges top half (todo: put into a loop)
-        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        //////////////gregt2 this is defo just repo alone & "Per Repo" bottom half of allbagges, not allbadges top half (todo: put into a loop)
+        ////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        ////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        ////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
 
         return badgesMarkdownFinal;
     }
@@ -125,12 +125,8 @@ export class ReadMeUpdater {
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
         }
 
-        if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension) {
-            const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(repoMetaData);
-            repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);
-        }
-
-        if (repoMetaData.repoCategory === RepoCategory.AzureDevOpsExtension ||
+        if (repoMetaData.repoCategory === RepoCategory.VsIdeExtension ||
+            repoMetaData.repoCategory === RepoCategory.AzureDevOpsExtension ||
             repoMetaData.repoCategory === RepoCategory.VstsExtension) {
             const badgesMarkdown = this.GetVsmpExtensionsBadgesMarkdown(repoMetaData);
             repoTypeSpecificMarkdown = repoTypeSpecificMarkdown.concat(badgesMarkdown);

@@ -1,3 +1,20 @@
+swap the vsix purple badge & "subscribe..." to which hence allows everything one 1 line
+get gulp task for git _commit_readme working
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 http://fabiospampinato.com/autogit/#install
 https://github.com/fabiospampinato/autogit-command-github-sync
 https://github.com/fabiospampinato/autogit-command-github-publish
