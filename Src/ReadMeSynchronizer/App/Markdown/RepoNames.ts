@@ -3,7 +3,7 @@ export enum RepoNames {
     AngularBasic,
     AutoFindReplace,
     awib,
-    AzureDevOpsRotaWidget,
+    //AzureDevOpsRotaWidget,
     BrowserExtensionUsingAngularWorksInChromeNotInEdge,
     DotNetFlags,
     FilesForEveryExtensionCreator,

@@ -75,19 +75,19 @@ export const azureDevOpsBlazorRadiator: IVsmpMetaData = {
     ],
 };
 
-export const azureDevOpsRotaWidget: IVsmpMetaData = {
-    appVeyorId: "01islyin3t8bsxoe",
-    azureDefinitionId: "13",
-    codacyId: "0adfce1b3ab043b79c8283a8f68ca671",
-    codeBeatId: "5fc8c82c-4aa3-4a42-ad8e-ad5493867f8e",
-    //inspecodeIdId: "ZHWlGXThCe0r9D7qzbrOJyhHHKBg3OYc4N-pq3XRuvk",
-    localRepoName: "AzureDevOpsRotaWidget",
-    repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
-    vsmpItemNames: [
-        "AzureDevOpsRotaWidget",
-    ],
-};
+//export const azureDevOpsRotaWidget: IVsmpMetaData = {
+//    appVeyorId: "01islyin3t8bsxoe",
+//    azureDefinitionId: "13",
+//    codacyId: "0adfce1b3ab043b79c8283a8f68ca671",
+//    codeBeatId: "5fc8c82c-4aa3-4a42-ad8e-ad5493867f8e",
+//    //inspecodeIdId: "ZHWlGXThCe0r9D7qzbrOJyhHHKBg3OYc4N-pq3XRuvk",
+//    localRepoName: "AzureDevOpsRotaWidget",
+//    repoCategory: RepoCategory.VsIdeExtension,
+//    sonarCloudProjectPrefix: "",
+//    vsmpItemNames: [
+//        "AzureDevOpsRotaWidget",
+//    ],
+//};
 
 export const browserExtensionUsingAngularWorksInChromeNotInEdge: IRepoMetaData = {
     appVeyorId: "6hwmbbvub7vin7b2",
