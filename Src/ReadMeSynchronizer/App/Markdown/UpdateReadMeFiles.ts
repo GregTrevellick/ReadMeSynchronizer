@@ -48,11 +48,11 @@ export class ReadMeUpdater {
 
             baseBadgesMarkdown += `${this.GetMultipleBadgesMarkdown(repoMetaData)}${this.mp.lineBreak}`;
 
-            ////////////gregt2 dedupe - this is allbadges i think
-            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-            ////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //////////////////////////////////////////gregt2 dedupe - this is allbadges i think
+            //////////////////////////////////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //////////////////////////////////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //////////////////////////////////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+            //////////////////////////////////////////baseBadgesMarkdown = baseBadgesMarkdown.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
 
             const surroundedBadgesMarkdown = this.GetSurroundedBadgesMarkdown(baseBadgesMarkdown);
 
@@ -81,10 +81,10 @@ export class ReadMeUpdater {
 `;
         });
 
-        //////////////gregt2 this is defo just repo alone & "Per Repo" bottom half of allbagges, not allbadges top half (todo: put into a loop)
-        ////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-        ////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-        ////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        //////////////////////////////////////////////////////gregt2 this is defo just repo alone & "Per Repo" bottom half of allbagges, not allbadges top half (todo: put into a loop)
+        ////////////////////////////////////////////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        ////////////////////////////////////////////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        ////////////////////////////////////////////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
 
         return badgesMarkdownFinal;
     }
@@ -93,9 +93,10 @@ export class ReadMeUpdater {
 
         let repoBadgesMarkdown = this.GetSharedBadgesMarkdown(repoMetaData);
 
-        for (let repoBadgeMarkdown of repoBadgesMarkdown) {
-            repoBadgeMarkdown = repoBadgeMarkdown.replace(`[Subscribe]`, `${this.mp.lineBreak}${this.mp.lineBreak}[Subscribe]`);
-        }
+        //////////////////////////////////////line break before subscribe link - not required if appears after all the badges
+        ////////////////////////////////////////////////////////for (let repoBadgeMarkdown of repoBadgesMarkdown) {
+        ////////////////////////////////////////////////////////    repoBadgeMarkdown = repoBadgeMarkdown.replace(`[Subscribe]`, `${this.mp.lineBreak}${this.mp.lineBreak}[Subscribe]`);
+        ////////////////////////////////////////////////////////}
 
         const repoTypeSpecificMarkdown: string[] = this.GetRepoTypeSpecificMarkdown(repoMetaData);
 

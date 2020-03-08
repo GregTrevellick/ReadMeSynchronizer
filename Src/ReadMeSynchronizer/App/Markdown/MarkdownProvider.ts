@@ -214,7 +214,7 @@ export class MarkdownProvider {
     }
 
     public GetSubscribeMarkdown(localRepoName: string) {
-        return `[Subscribe](https://github.com/${this.myUserName}/${localRepoName}/subscription) to receive notificatons.`;
+        return "[![Subscribe](" + shieldsDotIoUrl + "badge/Subscribe-black.svg)]" + "(https://github.com/${this.myUserName}/${localRepoName}/subscription)";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
