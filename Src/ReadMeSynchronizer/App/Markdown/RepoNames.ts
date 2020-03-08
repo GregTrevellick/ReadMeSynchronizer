@@ -1,6 +1,6 @@
 export enum RepoNames {
     AllBadges,
-    zAngularBasic,
+    //zAngularBasic,//superceded by VsixYeomanTemplates
     AutoFindReplace,
     AzureDevOpsAgileManifestoWidget,
     AzureDevOpsBlazorRadiator,

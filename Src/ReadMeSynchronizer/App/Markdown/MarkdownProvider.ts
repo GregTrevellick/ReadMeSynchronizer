@@ -214,7 +214,8 @@ export class MarkdownProvider {
     }
 
     public GetSubscribeMarkdown(localRepoName: string) {
-        return "[![Subscribe](" + shieldsDotIoUrl + "badge/Subscribe-black.svg)]" + "(https://github.com/${this.myUserName}/${localRepoName}/subscription)";
+        //////////////////////////////////////////////return "[![Subscribe](" + shieldsDotIoUrl + "badge/Subscribe-black.svg)]" + "(https://github.com/${this.myUserName}/${localRepoName}/subscription)";
+        return "[![Subscribe](" + shieldsDotIoUrl + "badge/Subscribe-black.svg)]" + "(https://github.com/" + this.myUserName + "/" + localRepoName + "/subscription)";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
@@ -274,10 +275,10 @@ export class MarkdownProvider {
 
     private GetUserName(localRepoName: string) {
         let userName = this.myUserName;
-        if (localRepoName == "zAngularBasic") {
-            userName = "MattJeanes";
-        }
-        if (localRepoName == "CleanArchitecture") {
+        //if (localRepoName == "zAngularBasic") {
+        //    userName = "MattJeanes";
+        //}
+        if (localRepoName === "CleanArchitecture") {
             userName = "ardalis";//must be lower case
         }
         return userName;

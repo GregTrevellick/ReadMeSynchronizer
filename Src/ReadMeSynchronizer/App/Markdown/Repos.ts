@@ -12,16 +12,16 @@ export const allBadges: IRepoMetaData = {
     sonarCloudProjectPrefix: "",
 };
 
-export const angularBasic: IRepoMetaData = {
-    appVeyorId: "9u37xi3cuan7qxpa",
-    azureDefinitionId: "36",
-    codacyId: "6c528ee94ef349d2b9f3d548761e8617",
-    codeBeatId: "4accb8ab-c72b-42f8-91e3-6e0bed64b288",
-    //inspecodeIdId: "GHPPD5s2JaoXOX0QayEgLqn_gAVeFboxSGDImfbUVWQ",
-    localRepoName: "zAngularBasic",
-    repoCategory: RepoCategory.Forks,
-    sonarCloudProjectPrefix: "",
-};
+//export const angularBasic: IRepoMetaData = { //superceded by VsixYeomanTemplates
+//    appVeyorId: "9u37xi3cuan7qxpa",
+//    azureDefinitionId: "36",
+//    codacyId: "6c528ee94ef349d2b9f3d548761e8617",
+//    codeBeatId: "4accb8ab-c72b-42f8-91e3-6e0bed64b288",
+//    //inspecodeIdId: "GHPPD5s2JaoXOX0QayEgLqn_gAVeFboxSGDImfbUVWQ",
+//    localRepoName: "zAngularBasic",
+//    repoCategory: RepoCategory.Forks,
+//    sonarCloudProjectPrefix: "",
+//};
 
 export const autoFindReplace: IVsmpMetaData = {
     appVeyorId: "2iy2c8ucrn5mc96o",

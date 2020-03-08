@@ -11,7 +11,7 @@ export class RepoMetaDatas {
         this.repoMetaDatas = [
 
             myRepos.allBadges,
-            myRepos.angularBasic,
+            //myRepos.angularBasic, //superceded by VsixYeomanTemplates
             myRepos.autoFindReplace,
             myRepos.awib,
             myRepos.azureDevOpsAgileManifestoWidget,
