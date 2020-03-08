@@ -15,12 +15,16 @@ export class BadgeExclusions {
     public azurePipeline: RepoNames[] = [
         RepoNames.AllBadges,
         RepoNames.zAngularBasic,
+        RepoNames.AzureDevOpsAgileManifestoWidget,
+        RepoNames.AzureDevOpsBlazorRadiator,
         RepoNames.awib,
         RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
         RepoNames.More,
         RepoNames.OpenCoverExample,
+        RepoNames.VsixNewYeomanProject,
+        RepoNames.VsixYeomanTemplates,
         RepoNames.VstsDashboardWidgetProjectTemplate,
     ];
 

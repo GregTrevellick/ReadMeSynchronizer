@@ -2,6 +2,8 @@ export enum RepoNames {
     AllBadges,
     zAngularBasic,
     AutoFindReplace,
+    AzureDevOpsAgileManifestoWidget,
+    AzureDevOpsBlazorRadiator,
     awib,
     //AzureDevOpsRotaWidget,
     BrowserExtensionUsingAngularWorksInChromeNotInEdge,
@@ -36,7 +38,9 @@ export enum RepoNames {
     VsixDotNetCorePoc,
     VsixFootball,
     VsixFootie,
+    VsixNewYeomanProject,
     VsixRatingChaser,
     VsixTwitterWidget,
+    VsixYeomanTemplates,
     VstsDashboardWidgetProjectTemplate,
 }

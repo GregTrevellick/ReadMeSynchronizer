@@ -13,6 +13,7 @@ Having created the repo in GitHub, add to...
 
 New Repos:
 ==========
+0) Add to RepoNames.ts
 1) Add repo to Repos.ts (one entry for OpenInAppLauncher & VsixTwitterWidget but with sub-properties)
     Primarily need the following:
      (a) appVeyorId (see webhook url in general tab)
