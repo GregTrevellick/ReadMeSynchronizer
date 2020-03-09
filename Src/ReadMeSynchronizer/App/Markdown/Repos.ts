@@ -104,6 +104,7 @@ export const cleanArchitecture: IVsmpMetaData = {
     appVeyorId: "6raa1n0tucf66h0q",
     azureDefinitionId: "41",
     codacyId: "3b74ee0e8da64daf94199f8a7f2fcf12",
+    codeBeatId: "ddc70e2d-c6aa-41ed-841e-1555968bc405",
     //inspecodeIdId: "WKSXU-jLYaQ1gLRpIJHkwIlG7ICpchlzi2Bc6bUpmTI",
     localRepoName: "CleanArchitecture",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -375,6 +376,7 @@ export const quizLauncher: IVsmpMetaData = {
 export const readMeSynchronizer: IRepoMetaData = {
     appVeyorId: "uy4igyamwjq51gx4",
     azureDefinitionId: "24",
+    codeBeatId: "2c801446-eda5-42a7-a473-eaab81088c59",
     codacyId: "47d41dfc5df74ceba32dc53ddfd00b28",
     //inspecodeIdId: "0ltbjGw6KH1y7DAIB3JSvLin2HpRyvmzqFACVrf1jbA",
     localRepoName: "ReadMeSynchronizer",
@@ -484,6 +486,7 @@ export const vsixNewYeomanProject: IVsmpMetaData = {
     appVeyorId: "awv70p92uu0u84k9",
     azureDefinitionId: "17",
     codacyId: "b7496ea552ed4856b6875d1412dbe48f",
+    codeBeatId: "4bbf1a94-7042-42b0-9440-ec108cc28cbc",
     //inspecodeIdId: "oipmdrN2Gy-tPGQshVJv1QsQscjeGd-chBeao8AF81U",
     localRepoName: "VsixNewYeomanProject",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -542,6 +545,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
 export const vsixYeomanTemplates: IVsmpMetaData = {
     appVeyorId: "am8i6aama94x7yma",
     azureDefinitionId: "10",//gregt TODO
+    codeBeatId: "9a6e3cef-dfe7-49ea-998c-0d30ddc5088f",
     codacyId: "e61c4dba8261497fb447379730e97a25",
     //inspecodeIdId: "30Z4CaX866HwkclUJDsYON-CM-yrFCk_LzgbNrKlpg8",
     localRepoName: "VsixYeomanTemplates",
