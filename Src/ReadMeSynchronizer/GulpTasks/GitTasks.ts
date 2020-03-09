@@ -2,7 +2,7 @@ import * as gulp from "gulp";
 import { GitCommand } from "../App/Git/GitCommand";
 import { GitExecutioner } from "../App/Git/GitExecutioner";
 
-const gitExecutioner: GitExecutioner = new GitExecutioner;
+const gitExecutioner: GitExecutioner = new GitExecutioner();
 
 gulp.task("Git_Commit_ReadMe", () => {
     gitExecutioner.GitExecute(GitCommand.CommitReadMe);

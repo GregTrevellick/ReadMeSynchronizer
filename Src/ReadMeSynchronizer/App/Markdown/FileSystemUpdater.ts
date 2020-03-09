@@ -3,7 +3,7 @@ import * as myGulp from "gulp";
 export class FileSystemUpdater {
     public replace = require("gulp-string-replace");
 
-    constructor() { }
+    //////////////////////////////////////////////////////////////////////constructor() { }
 
     public ReplaceBadgeCommentOnDisc(repoFolderName: string, badgesMarkdown: string, badgeCommentStart: string, badgeCommentEnd: string) {
 

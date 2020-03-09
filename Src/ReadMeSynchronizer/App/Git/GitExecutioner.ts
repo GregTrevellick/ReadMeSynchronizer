@@ -8,7 +8,7 @@ export class GitExecutioner {
     private repoMetaDatas: RepoMetaDatas;
 
     constructor() {
-        this.repoMetaDatas = new RepoMetaDatas;
+        this.repoMetaDatas = new RepoMetaDatas();
     }
 
     public GitExecute(gitCommand: GitCommand) {
