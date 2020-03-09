@@ -14,7 +14,7 @@ export class MarkdownProvider {
     public lineBreak: string = "\n";
     public myUserName = "GregTrevellick";
     public gitHubReadMeSynchronizerUrl = `https://github.com/${this.myUserName}/ReadMeSynchronizer`;
-    public noMarkdown: string = "";
+    public noMarkdown: string = "<!-- no md -->";
 
     private badgeExclusions: BadgeExclusions;
 
