@@ -38,6 +38,7 @@ export class BadgeExclusions {
     public codebeat: RepoNames[] = [
         RepoNames.AllBadges,
         RepoNames.AutoFindReplace,
+        RepoNames.CleanArchitecture,
         RepoNames.DotNetFlags,
         RepoNames.FilesForEveryExtensionCreator,
         RepoNames["Gregt.sidewafflev2"],
@@ -58,7 +59,9 @@ export class BadgeExclusions {
         RepoNames.VsixBlazorMinimalProjectTemplate,
         //RepoNames.VsixDotNetCorePoc,
         RepoNames.VsixFootball,
+        RepoNames.VsixNewYeomanProject,
         RepoNames.VsixRatingChaser,
+        RepoNames.VsixYeomanTemplates,
     ];
 
     public codefactor: RepoNames[] = [
@@ -99,6 +102,7 @@ export class BadgeExclusions {
         //RepoNames.VsixDotNetCorePoc,
         RepoNames.VsixFootball,
         //RepoNames.VsixFootie,
+        RepoNames.VsixNewYeomanProject,
         RepoNames.VsixRatingChaser,
     ];
 
