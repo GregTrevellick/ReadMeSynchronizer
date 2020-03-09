@@ -5,8 +5,8 @@ export class BadgeExclusions {
     public appveyor: RepoNames[] = [
         RepoNames.AllBadges,
         //RepoNames.zAngularBasic,
-        RepoNames.awib,
-        RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
+        //RepoNames.awib,
+        //RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
         RepoNames.More,
@@ -17,12 +17,12 @@ export class BadgeExclusions {
         //RepoNames.zAngularBasic,
         RepoNames.AzureDevOpsAgileManifestoWidget,
         RepoNames.AzureDevOpsBlazorRadiator,
-        RepoNames.awib,
-        RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
+        //RepoNames.awib,
+        //RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
         RepoNames.More,
-        RepoNames.OpenCoverExample,
+        //RepoNames.OpenCoverExample,
         RepoNames.VsixNewYeomanProject,
         RepoNames.VsixYeomanTemplates,
         RepoNames.VstsDashboardWidgetProjectTemplate,
@@ -41,7 +41,7 @@ export class BadgeExclusions {
         RepoNames.DotNetFlags,
         RepoNames.FilesForEveryExtensionCreator,
         RepoNames["Gregt.sidewafflev2"],
-        RepoNames.HelloWorldBlazor,
+        //RepoNames.HelloWorldBlazor,
         RepoNames.HelloWorldVsixCommandButton,
         RepoNames.HelloWorldVsixPopUp,
         RepoNames.HelloWorldVsixToolBar,
@@ -56,15 +56,15 @@ export class BadgeExclusions {
         RepoNames.SolutionOpenPopUp,
         RepoNames.TrivialApisForIDE,
         RepoNames.VsixBlazorMinimalProjectTemplate,
-        RepoNames.VsixDotNetCorePoc,
+        //RepoNames.VsixDotNetCorePoc,
         RepoNames.VsixFootball,
         RepoNames.VsixRatingChaser,
     ];
 
     public codefactor: RepoNames[] = [
         //RepoNames.zAngularBasic,
-        RepoNames.HelloWorldBlazor,
-        RepoNames.VsixDotNetCorePoc,
+        //RepoNames.HelloWorldBlazor,
+        //RepoNames.VsixDotNetCorePoc,
     ];
 
     public gitHub: RepoNames[] = [
@@ -78,7 +78,7 @@ export class BadgeExclusions {
 
     public lgtm: RepoNames[] = [
         RepoNames.AutoFindReplace,//matt jeanes
-        RepoNames.awib,
+        //RepoNames.awib,
         RepoNames.DotNetFlags,
         RepoNames.FilesForEveryExtensionCreator,
         RepoNames["Gregt.sidewafflev2"],
@@ -90,23 +90,23 @@ export class BadgeExclusions {
         RepoNames.MiscellaneousArtefacts,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.More,
-        RepoNames.OpenCoverExample,
+        //RepoNames.OpenCoverExample,
         RepoNames.QuickLaunchButtons,
         RepoNames["Quiz.Launcher"],
-        RepoNames.RenameProjectVsExtension,
+        //RepoNames.RenameProjectVsExtension,
         RepoNames.SolutionOpenPopUp,
         RepoNames.TrivialApisForIDE,
-        RepoNames.VsixDotNetCorePoc,
+        //RepoNames.VsixDotNetCorePoc,
         RepoNames.VsixFootball,
-        RepoNames.VsixFootie,
+        //RepoNames.VsixFootie,
         RepoNames.VsixRatingChaser,
     ];
 
     public sonar: RepoNames[] = [
         RepoNames.AllBadges,
         //RepoNames.zAngularBasic,
-        RepoNames.awib,
-        RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
+        //RepoNames.awib,
+        //RepoNames.BrowserExtensionUsingAngularWorksInChromeNotInEdge,
         RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
         RepoNames.More,

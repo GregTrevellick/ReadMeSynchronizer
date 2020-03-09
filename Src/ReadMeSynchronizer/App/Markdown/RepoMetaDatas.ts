@@ -13,16 +13,16 @@ export class RepoMetaDatas {
             myRepos.allBadges,
             //myRepos.angularBasic, //superceded by VsixYeomanTemplates
             myRepos.autoFindReplace,
-            myRepos.awib,
+            //myRepos.awib,//error "Cannot use simple-git on a directory that does not exist"
             myRepos.azureDevOpsAgileManifestoWidget,
             myRepos.azureDevOpsBlazorRadiator,
             //myRepos.azureDevOpsRotaWidget,
-            myRepos.browserExtensionUsingAngularWorksInChromeNotInEdge,
+            //myRepos.browserExtensionUsingAngularWorksInChromeNotInEdge,//error "Cannot use simple-git on a directory that does not exist"
             myRepos.cleanArchitecture,
             myRepos.dotNetFlags,
             myRepos.filesForEveryExtensionCreator,
             myRepos.gregtSideWaffleV2,
-            myRepos.helloWorldBlazor,
+            //myRepos.helloWorldBlazor,//now prefixed with Z in git
             myRepos.helloWorldTypescriptParcel,
             myRepos.helloWorldTypescriptWebpack,
             myRepos.helloWorldVsixCommandButton,
@@ -31,22 +31,22 @@ export class RepoMetaDatas {
             myRepos.helloWorldVsixToolWindowAsyncPackageExample,
             myRepos.helloWorldVstsExtension,
             myRepos.helloWorldWpfAsyncBindingPropertyExample,
-            myRepos.meneesVsTools2017,
+            //myRepos.meneesVsTools2017,//error "Cannot use simple-git on a directory that does not exist"
             myRepos.miscellaneousArtefacts,
             myRepos.more,
-            myRepos.openCoverExample,
+            //myRepos.openCoverExample,//error "Cannot use simple-git on a directory that does not exist"
             myRepos.openInAppLauncher,
             myRepos.quickLaunchButtons,
             myRepos.quizLauncher,
             myRepos.readMeSynchronizer,
-            myRepos.renameProjectVsExtension,
+            //myRepos.renameProjectVsExtension,//error "Cannot use simple-git on a directory that does not exist"
             myRepos.solutionOpenPopUp,
             myRepos.trivialApisForIDE,
             myRepos.visualStudioMarketplaceMetrics,
             myRepos.vsixBlazorMinimalProjectTemplate,
-            myRepos.vsixDotNetCorePoc,
+            //myRepos.vsixDotNetCorePoc, //now prefixed with Z in git
             myRepos.vsixFootball,
-            myRepos.vsixFootie,
+            //myRepos.vsixFootie,//archived in github
             myRepos.vsixNewYeomanProject,
             myRepos.vsixRatingChaser,
             myRepos.vsixTwitterWidget,

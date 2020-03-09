@@ -2,18 +2,19 @@ export enum RepoNames {
     AllBadges,
     //zAngularBasic,//superceded by VsixYeomanTemplates
     AutoFindReplace,
+    //awib,//error "Cannot use simple-git on a directory that does not exist"
     AzureDevOpsAgileManifestoWidget,
     AzureDevOpsBlazorRadiator,
-    awib,
-    //AzureDevOpsRotaWidget,
-    BrowserExtensionUsingAngularWorksInChromeNotInEdge,
+    //AzureDevOpsRotaWidget, //now prefixed with Z in git
+    //BrowserExtensionUsingAngularWorksInChromeNotInEdge,//error "Cannot use simple-git on a directory that does not exist"
+    CleanArchitecture,
     DotNetFlags,
     FilesForEveryExtensionCreator,
-    GitPlayground1,
-    GitPlayground2,
-    "Git-Playground3",
+    //GitPlayground1,//error "Cannot use simple-git on a directory that does not exist"
+    //GitPlayground2,//error "Cannot use simple-git on a directory that does not exist"
+    //"Git-Playground3",//error "Cannot use simple-git on a directory that does not exist"
     "Gregt.sidewafflev2",
-    HelloWorldBlazor,
+    //HelloWorldBlazor, //now prefixed with Z in git
     HelloWorldTypescriptParcel,
     HelloWorldTypescriptWebpack,
     HelloWorldVsixCommandButton,
@@ -22,22 +23,22 @@ export enum RepoNames {
     HelloWorldVsixToolWindowAsyncPackageExample,
     HelloWorldVstsExtension,
     HelloWorldWpfAsyncBindingPropertyExample,
-    "Menees.VsTools.2017",
+    //"Menees.VsTools.2017",//error "Cannot use simple-git on a directory that does not exist"
     MiscellaneousArtefacts,
     More,
-    OpenCoverExample,
+    //OpenCoverExample,//error "Cannot use simple-git on a directory that does not exist"
     "OpenInApp.Launcher",
     QuickLaunchButtons,
     "Quiz.Launcher",
     ReadMeSynchronizer,
-    RenameProjectVsExtension,
+    //RenameProjectVsExtension,//error "Cannot use simple-git on a directory that does not exist"
     SolutionOpenPopUp,
     TrivialApisForIDE,
     VisualStudioMarketplaceMetrics,
     VsixBlazorMinimalProjectTemplate,
-    VsixDotNetCorePoc,
+    //VsixDotNetCorePoc, //now prefixed with Z in git
     VsixFootball,
-    VsixFootie,
+    //VsixFootie,//archived in github
     VsixNewYeomanProject,
     VsixRatingChaser,
     VsixTwitterWidget,

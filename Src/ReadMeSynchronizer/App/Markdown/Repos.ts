@@ -9,7 +9,7 @@ export const allBadges: IRepoMetaData = {
     //inspecodeIdIdId: "e0IR4KC6HaNIJBXX8gi_amyD7LqljUnY3NxFSU78Vak",
     localRepoName: "AllBadges",
     repoCategory: RepoCategory.AllBadges,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 //export const angularBasic: IRepoMetaData = { //superceded by VsixYeomanTemplates
@@ -20,7 +20,7 @@ export const allBadges: IRepoMetaData = {
 //    //inspecodeIdId: "GHPPD5s2JaoXOX0QayEgLqn_gAVeFboxSGDImfbUVWQ",
 //    localRepoName: "zAngularBasic",
 //    repoCategory: RepoCategory.Forks,
-//    sonarCloudProjectPrefix: "",
+//    sonarCloudProjectPrefix: "GregTrevellick_",
 //};
 
 export const autoFindReplace: IVsmpMetaData = {
@@ -30,22 +30,22 @@ export const autoFindReplace: IVsmpMetaData = {
     //inspecodeIdId: "tFEtqaxk--yMEhQpaaX987zz1-db0N_5CUbAlCF9bkM",
     localRepoName: "AutoFindReplace",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "AutoFindReplace",
     ],
 };
 
-export const awib: IRepoMetaData = {
-    appVeyorId: "903t2c7smsutgf8e",
-    azureDefinitionId: "",
-    codacyId: "9db6094d5fd342ee8a8740efd33526c9",
-    codeBeatId: "2d12821b-76ac-45e4-8d62-2fefd5e046c5",
-    //inspecodeIdId: "",
-    localRepoName: "awib",
-    repoCategory: RepoCategory.Forks,
-    sonarCloudProjectPrefix: "",
-};
+//export const awib: IRepoMetaData = {
+//    appVeyorId: "903t2c7smsutgf8e",
+//    azureDefinitionId: "",
+//    codacyId: "9db6094d5fd342ee8a8740efd33526c9",
+//    codeBeatId: "2d12821b-76ac-45e4-8d62-2fefd5e046c5",
+//    //inspecodeIdId: "",
+//    localRepoName: "awib",
+//    repoCategory: RepoCategory.Forks,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const azureDevOpsAgileManifestoWidget: IVsmpMetaData = {
     appVeyorId: "duvijp0qiget07i1",
@@ -55,7 +55,7 @@ export const azureDevOpsAgileManifestoWidget: IVsmpMetaData = {
     //inspecodeIdId: "sZh8A1uRF9HzGXCxtWIHyXsrVUTiY6Iw-sRuxuaFMqs",
     localRepoName: "AzureDevOpsAgileManifestoWidget",
     repoCategory: RepoCategory.AzureDevOpsExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "AgileManifestoDashboardWidget",
     ],
@@ -83,22 +83,22 @@ export const azureDevOpsBlazorRadiator: IVsmpMetaData = {
 //    //inspecodeIdId: "ZHWlGXThCe0r9D7qzbrOJyhHHKBg3OYc4N-pq3XRuvk",
 //    localRepoName: "AzureDevOpsRotaWidget",
 //    repoCategory: RepoCategory.VsIdeExtension,
-//    sonarCloudProjectPrefix: "",
+//    sonarCloudProjectPrefix: "GregTrevellick_",
 //    vsmpItemNames: [
 //        "AzureDevOpsRotaWidget",
 //    ],
 //};
 
-export const browserExtensionUsingAngularWorksInChromeNotInEdge: IRepoMetaData = {
-    appVeyorId: "6hwmbbvub7vin7b2",
-    azureDefinitionId: "14",
-    codacyId: "fbab92a148b146209eda380777abc7c5",
-    codeBeatId: "7ccd2ccb-3f8b-4f87-926c-9da61b0979f1",
-    //inspecodeIdId: "oiC3zAlWfQoJ0J99U_3ETsi7sXFllqmEiPWjlDzujOA",
-    localRepoName: "BrowserExtensionUsingAngularWorksInChromeNotInEdge",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-    sonarCloudProjectPrefix: "",
-};
+//export const browserExtensionUsingAngularWorksInChromeNotInEdge: IRepoMetaData = {
+//    appVeyorId: "6hwmbbvub7vin7b2",
+//    azureDefinitionId: "14",
+//    codacyId: "fbab92a148b146209eda380777abc7c5",
+//    codeBeatId: "7ccd2ccb-3f8b-4f87-926c-9da61b0979f1",
+//    //inspecodeIdId: "oiC3zAlWfQoJ0J99U_3ETsi7sXFllqmEiPWjlDzujOA",
+//    localRepoName: "BrowserExtensionUsingAngularWorksInChromeNotInEdge",
+//    repoCategory: RepoCategory.MiscellaneousRepo,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const cleanArchitecture: IVsmpMetaData = {
     appVeyorId: "6raa1n0tucf66h0q",
@@ -107,7 +107,7 @@ export const cleanArchitecture: IVsmpMetaData = {
     //inspecodeIdId: "WKSXU-jLYaQ1gLRpIJHkwIlG7ICpchlzi2Bc6bUpmTI",
     localRepoName: "CleanArchitecture",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "CleanArchitecture",
     ],
@@ -120,7 +120,7 @@ export const dotNetFlags: IRepoMetaData = {
     //inspecodeIdId: "ijmD3IjPguLh-fRQ8HxjQzizlIbw26rsarkAO0oN7Vo",
     localRepoName: "DotNetFlags",
     repoCategory: RepoCategory.NugetPackage,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const filesForEveryExtensionCreator: IRepoMetaData = {
@@ -130,38 +130,38 @@ export const filesForEveryExtensionCreator: IRepoMetaData = {
     //inspecodeIdId: "1lbVbxHo4oG2GCdtmPxAaQvaTJDri58c5BJgN9TpkBo",
     localRepoName: "FilesForEveryExtensionCreator",
     repoCategory: RepoCategory.MiscellaneousRepo,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
-export const gitPlayground1: IRepoMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "",
-    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
-    //inspecodeIdId: "",
-    localRepoName: "GitPlayground1",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-    sonarCloudProjectPrefix: "",
-};
+//export const gitPlayground1: IRepoMetaData = {
+//    appVeyorId: "",
+//    azureDefinitionId: "",
+//    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+//    //inspecodeIdId: "",
+//    localRepoName: "GitPlayground1",
+//    repoCategory: RepoCategory.MiscellaneousRepo,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
-export const gitPlayground2: IRepoMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "",
-    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
-    //inspecodeIdId: "",
-    localRepoName: "GitPlayground2",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-    sonarCloudProjectPrefix: "",
-};
+//export const gitPlayground2: IRepoMetaData = {
+//    appVeyorId: "",
+//    azureDefinitionId: "",
+//    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+//    //inspecodeIdId: "",
+//    localRepoName: "GitPlayground2",
+//    repoCategory: RepoCategory.MiscellaneousRepo,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
-export const gitPlayground3: IRepoMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "",
-    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
-    //inspecodeIdId: "",
-    localRepoName: "Git-Playground3",
-    repoCategory: RepoCategory.MiscellaneousRepo,
-    sonarCloudProjectPrefix: "",
-};
+//export const gitPlayground3: IRepoMetaData = {
+//    appVeyorId: "",
+//    azureDefinitionId: "",
+//    codacyId: "e0cb8a23f42c4859aeb5c653b1a3d2b6",
+//    //inspecodeIdId: "",
+//    localRepoName: "Git-Playground3",
+//    repoCategory: RepoCategory.MiscellaneousRepo,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const gregtSideWaffleV2: IRepoMetaData = {
     appVeyorId: "53q1kagc0jsbfpik",
@@ -170,18 +170,18 @@ export const gregtSideWaffleV2: IRepoMetaData = {
     //inspecodeIdId: "f0wNmz_NkQ5G4aOn5kCrKLZ5nHKJoCui553Lu8NOv10",
     localRepoName: "Gregt.sidewafflev2",
     repoCategory: RepoCategory.Forks,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
-export const helloWorldBlazor: IRepoMetaData = {
-    appVeyorId: "9ik81ir38chjwcp9",
-    azureDefinitionId: "37",
-    //inspecodeIdId: "YjllACR0PVsBMwdZA3Q_KoljK5PIQcWuWmd7CuzRgb4",
-    localRepoName: "HelloWorldBlazor",
-    codacyId: "52248629623c4b99b7039e7adb2a54c5",
-    repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
-};
+//export const helloWorldBlazor: IRepoMetaData = {
+//    appVeyorId: "9ik81ir38chjwcp9",
+//    azureDefinitionId: "37",
+//    //inspecodeIdId: "YjllACR0PVsBMwdZA3Q_KoljK5PIQcWuWmd7CuzRgb4",
+//    localRepoName: "HelloWorldBlazor",
+//    codacyId: "52248629623c4b99b7039e7adb2a54c5",
+//    repoCategory: RepoCategory.HelloWorld,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const helloWorldTypescriptParcel: IRepoMetaData = {
     appVeyorId: "u3s4x8kx4fo0ejog",
@@ -191,7 +191,7 @@ export const helloWorldTypescriptParcel: IRepoMetaData = {
     localRepoName: "HelloWorldTypescriptParcel",
     codacyId: "f519d95563a64063a1d349b8c6252ec0",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const helloWorldTypescriptWebpack: IRepoMetaData = {
@@ -202,7 +202,7 @@ export const helloWorldTypescriptWebpack: IRepoMetaData = {
     //inspecodeIdId: "sgHaN9gW7m5tBQkAbtC-jwffm_7YeTIjET92DyRBrK4",
     localRepoName: "HelloWorldTypescriptWebpack",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const helloWorldVsixCommandButton: IRepoMetaData = {
@@ -212,7 +212,7 @@ export const helloWorldVsixCommandButton: IRepoMetaData = {
     //inspecodeIdId: "3idyIU2dmKtdB5C_CTCQSZKS74YiMAmGBOm-4syQOS0",
     localRepoName: "HelloWorldVsixCommandButton",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const helloWorldVsixPopUp: IRepoMetaData = {
@@ -222,7 +222,7 @@ export const helloWorldVsixPopUp: IRepoMetaData = {
     //inspecodeIdId: "oNkPHV11hkzDQYv0dII1bfSrRNMb0kxDqUbhyWy8FhE",
     localRepoName: "HelloWorldVsixPopUp",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const helloWorldVsixToolBar: IRepoMetaData = {
@@ -232,7 +232,7 @@ export const helloWorldVsixToolBar: IRepoMetaData = {
     //inspecodeIdId: "wNVDnwrbVFr2W2kkEM8wOMGwF7ffsxHD3qQi2mI3ack",
     localRepoName: "HelloWorldVsixToolBar",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const helloWorldVsixToolWindowAsyncPackageExample: IRepoMetaData = {
@@ -243,7 +243,7 @@ export const helloWorldVsixToolWindowAsyncPackageExample: IRepoMetaData = {
     //inspecodeIdId: "FbWZtbALFZ_nLoGAT74YnM4KPor3z3y9uT-k5cPDvrw",
     localRepoName: "HelloWorldVsixToolWindowAsyncPackageExample",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const helloWorldVstsExtension: IRepoMetaData = {
@@ -254,7 +254,7 @@ export const helloWorldVstsExtension: IRepoMetaData = {
     //inspecodeIdId: "skiS-zyN2GA-Jz95Dvmb6SYt3HLJApCn2vW6BoAhmdg",
     localRepoName: "HelloWorldVstsExtension",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const helloWorldWpfAsyncBindingPropertyExample: IRepoMetaData = {
@@ -264,18 +264,18 @@ export const helloWorldWpfAsyncBindingPropertyExample: IRepoMetaData = {
     //inspecodeIdId: "1oJZM6d7GHBXag6IHb7W-3aIcK5pCEMZ2zuTLQmJfvU",
     localRepoName: "HelloWorldWpfAsyncBindingPropertyExample",
     repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
-export const meneesVsTools2017: IRepoMetaData = {
-    appVeyorId: "403ut9uqnu4yv7ln",
-    azureDefinitionId: "16",
-    codacyId: "0f084189c9f94d619e3b5fe7052678c9",
-    //inspecodeIdId: "tAsFXjJev3rV1FKWaPN3tA2aveBv__PMY0TuXTaGxXU",
-    localRepoName: "Menees.VsTools.2017",
-    repoCategory: RepoCategory.Forks,
-    sonarCloudProjectPrefix: "",
-};
+//export const meneesVsTools2017: IRepoMetaData = {
+//    appVeyorId: "403ut9uqnu4yv7ln",
+//    azureDefinitionId: "16",
+//    codacyId: "0f084189c9f94d619e3b5fe7052678c9",
+//    //inspecodeIdId: "tAsFXjJev3rV1FKWaPN3tA2aveBv__PMY0TuXTaGxXU",
+//    localRepoName: "Menees.VsTools.2017",
+//    repoCategory: RepoCategory.Forks,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const miscellaneousArtefacts: IRepoMetaData = {
     appVeyorId: "fl77g7npbyb91h8r",
@@ -284,7 +284,7 @@ export const miscellaneousArtefacts: IRepoMetaData = {
     //inspecodeIdId: "",
     localRepoName: "MiscellaneousArtefacts",
     repoCategory: RepoCategory.MiscellaneousRepo,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const more: IRepoMetaData = {
@@ -294,19 +294,19 @@ export const more: IRepoMetaData = {
     //inspecodeIdId: "",
     localRepoName: "More",
     repoCategory: RepoCategory.MiscellaneousRepo,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
-export const openCoverExample: IRepoMetaData = {
-    appVeyorId: "eiso821168e15t9e",
-    azureDefinitionId: "28",
-    codeBeatId: "acd43-7c9d-4087-8c59-6cda871a96f1",
-    codacyId: "e9691ea13c68406c9a77447c243cbddb",
-    //inspecodeIdId: "",
-    localRepoName: "OpenCoverExample",
-    repoCategory: RepoCategory.Forks,
-    sonarCloudProjectPrefix: "",
-};
+//export const openCoverExample: IRepoMetaData = {
+//    appVeyorId: "eiso821168e15t9e",
+//    azureDefinitionId: "28",
+//    codeBeatId: "acd43-7c9d-4087-8c59-6cda871a96f1",
+//    codacyId: "e9691ea13c68406c9a77447c243cbddb",
+//    //inspecodeIdId: "",
+//    localRepoName: "OpenCoverExample",
+//    repoCategory: RepoCategory.Forks,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const openInAppLauncher: IVsmpMetaData = {
     appVeyorId: "0vwmtcboontemltq",
@@ -316,7 +316,7 @@ export const openInAppLauncher: IVsmpMetaData = {
     //inspecodeIdId: "gMeDVWmC1m0zT4s6qrY9hlEdBvNla8Qzmt2Mi5GAgEE",
     localRepoName: "OpenInApp.Launcher",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
          "OpenInAltovaXmlSpy"
         , "OpenInAndroidStudio"
@@ -352,7 +352,7 @@ export const quickLaunchButtons: IVsmpMetaData = {
     //inspecodeIdId: "iuSqTJxsdcqiMo6lLf8ZjNtUCVUtrkEvwGR9wD6-6R8",
     localRepoName: "QuickLaunchButtons",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "OpenFiddler",
         "OpenWireshark",
@@ -366,7 +366,7 @@ export const quizLauncher: IVsmpMetaData = {
     //inspecodeIdId: "v6-CXe3t8AfJIAAumKlMWeWvtb6WzIPSJhFrRKnYzzs",
     localRepoName: "Quiz.Launcher",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "MusicQuiz",
     ],
@@ -379,18 +379,18 @@ export const readMeSynchronizer: IRepoMetaData = {
     //inspecodeIdId: "0ltbjGw6KH1y7DAIB3JSvLin2HpRyvmzqFACVrf1jbA",
     localRepoName: "ReadMeSynchronizer",
     repoCategory: RepoCategory.ReadMeSynchronizer,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
-export const renameProjectVsExtension: IRepoMetaData = {
-    appVeyorId: "p304wa3aqlwir63f",
-    azureDefinitionId: "22",
-    codacyId: "cf9d3266e9654def87d38c44300935c5",
-    //inspecodeIdId: "WePkH9SUX-2WNA2hb5Bc5YpCco8coo_x_I_FdRzeW9c",
-    localRepoName: "RenameProjectVsExtension",
-    repoCategory: RepoCategory.Forks,
-    sonarCloudProjectPrefix: "",
-};
+//export const renameProjectVsExtension: IRepoMetaData = {
+//    appVeyorId: "p304wa3aqlwir63f",
+//    azureDefinitionId: "22",
+//    codacyId: "cf9d3266e9654def87d38c44300935c5",
+//    //inspecodeIdId: "WePkH9SUX-2WNA2hb5Bc5YpCco8coo_x_I_FdRzeW9c",
+//    localRepoName: "RenameProjectVsExtension",
+//    repoCategory: RepoCategory.Forks,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const solutionOpenPopUp: IVsmpMetaData = {
     appVeyorId: "89c8gp1t0rua9fiw",
@@ -399,7 +399,7 @@ export const solutionOpenPopUp: IVsmpMetaData = {
     //inspecodeIdId: "0Oyen_xXU89j-bI9P32-6JZzwRbipU51eX-y36w4VmA",
     localRepoName: "SolutionOpenPopUp",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "SolutionOpenPopUp",
     ],
@@ -412,7 +412,7 @@ export const trivialApisForIDE: IVsmpMetaData = {
     //inspecodeIdId: "GpxBDXnJYBS1ejM-qYJEc9YH74BN5Aios8h_jYBjC_M",
     localRepoName: "TrivialApisForIDE",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "DrainTheSwamp",
         "Jeopardy",
@@ -428,7 +428,7 @@ export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     //inspecodeIdId: "RuLGAweRyHlv5VgxPHHzj3-EH5BS4bX3rXLoIkyHS9o",
     localRepoName: "VisualStudioMarketplaceMetrics",
     repoCategory: RepoCategory.ChromeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
@@ -438,21 +438,21 @@ export const vsixBlazorMinimalProjectTemplate: IVsmpMetaData = {
     //inspecodeIdId: "kEFMGhJTLhNvwwmZKiXB72Z8IkXY1FFBb0enecLrGDg",
     localRepoName: "VsixBlazorMinimalProjectTemplate",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "BlazorMinimalProjectTemplate",
     ],
 };
 
-export const vsixDotNetCorePoc: IRepoMetaData = {
-    appVeyorId: "ktrqskiaastij4jd",
-    azureDefinitionId: "31",
-    codacyId: "e2fa50e29fea429897c304c79e9d9479",
-    //inspecodeIdId: "i3SrWsobKqLgHa0BUgcUnuWt9AsHVHX5GpvlXQIdYt0",
-    localRepoName: "VsixDotNetCorePoc",
-    repoCategory: RepoCategory.HelloWorld,
-    sonarCloudProjectPrefix: "",
-};
+//export const vsixDotNetCorePoc: IRepoMetaData = {
+//    appVeyorId: "ktrqskiaastij4jd",
+//    azureDefinitionId: "31",
+//    codacyId: "e2fa50e29fea429897c304c79e9d9479",
+//    //inspecodeIdId: "i3SrWsobKqLgHa0BUgcUnuWt9AsHVHX5GpvlXQIdYt0",
+//    localRepoName: "VsixDotNetCorePoc",
+//    repoCategory: RepoCategory.HelloWorld,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//};
 
 export const vsixFootball: IVsmpMetaData = {
     appVeyorId: "wg65x8dnr41whrpi",
@@ -461,24 +461,24 @@ export const vsixFootball: IVsmpMetaData = {
     //inspecodeIdId: "DSIOgo1VyiBPc9h0bu4u8FxkW8o4IrW3e4dEm9ymYSY",
     localRepoName: "VsixFootball",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "Football",
     ],
 };
 
-export const vsixFootie: IVsmpMetaData = {
-    appVeyorId: "i7kxey89fewvjkac",
-    azureDefinitionId: "19",
-    codacyId: "55911452f4154dd9a5599bd6fae3c725",
-    //inspecodeIdId: "IQTJbMIOyXNl_zEKDu1N2hPWgb38J-4qM7ZOL4rRpR8",
-    localRepoName: "VsixFootie",
-    repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
-    vsmpItemNames: [
-        "VSSportsDesk",
-    ],
-};
+//export const vsixFootie: IVsmpMetaData = {
+//    appVeyorId: "i7kxey89fewvjkac",
+//    azureDefinitionId: "19",
+//    codacyId: "55911452f4154dd9a5599bd6fae3c725",
+//    //inspecodeIdId: "IQTJbMIOyXNl_zEKDu1N2hPWgb38J-4qM7ZOL4rRpR8",
+//    localRepoName: "VsixFootie",
+//    repoCategory: RepoCategory.VsIdeExtension,
+//    sonarCloudProjectPrefix: "GregTrevellick_",
+//    vsmpItemNames: [
+//        "VSSportsDesk",
+//    ],
+//};
 
 export const vsixNewYeomanProject: IVsmpMetaData = {
     appVeyorId: "awv70p92uu0u84k9",
@@ -487,7 +487,7 @@ export const vsixNewYeomanProject: IVsmpMetaData = {
     //inspecodeIdId: "oipmdrN2Gy-tPGQshVJv1QsQscjeGd-chBeao8AF81U",
     localRepoName: "VsixNewYeomanProject",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "NewYeomanProject",
     ],
@@ -500,7 +500,7 @@ export const vsixRatingChaser: IRepoMetaData = {
     //inspecodeIdId: "3MoJYEkjyMd9s5AsBr8dXRMCCs_psV5z0119oqn0NwM",
     localRepoName: "VsixRatingChaser",
     repoCategory: RepoCategory.NugetPackage,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
 };
 
 export const vsixTwitterWidget: IVsmpMetaData = {
@@ -511,7 +511,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
     //inspecodeIdId: "6GNCjP8IXuJUKjSg-APAprG8Pu-7a0PtKHX7RL6YmjM",
     localRepoName: "VsixTwitterWidget",
     repoCategory: RepoCategory.VstsExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "@azure",
         "@azuredevops",
@@ -546,7 +546,7 @@ export const vsixYeomanTemplates: IVsmpMetaData = {
     //inspecodeIdId: "30Z4CaX866HwkclUJDsYON-CM-yrFCk_LzgbNrKlpg8",
     localRepoName: "VsixYeomanTemplates",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
           "VsixAngularBasic",
           "OmniSharpAspNet",
@@ -561,7 +561,7 @@ export const vstsDashboardWidgetProjectTemplate: IVsmpMetaData = {
     //inspecodeIdId: "5zO1mTfKF4nKph3hD9GdANBnrMBMEQfsu5JkCb8Q1W0",
     localRepoName: "VstsDashboardWidgetProjectTemplate",
     repoCategory: RepoCategory.VsIdeExtension,
-    sonarCloudProjectPrefix: "",
+    sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
         "VstsDashboardWidgetProjectTemplate",
     ],
