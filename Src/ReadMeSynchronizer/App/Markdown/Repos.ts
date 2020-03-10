@@ -525,7 +525,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
         "@code",
         "@codeproject",
         "@dailydotnettips",
-        "@dev_humor",
+        "@dev-humor",//"@dev_humor" https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-Dev-Humor
         "@dotnet",
         "@dotnetcurry",
         "@dotnetfdn",
@@ -536,7 +536,7 @@ export const vsixTwitterWidget: IVsmpMetaData = {
         "@nodejs",
         "@octopusdeploy",
         "@reddittech",
-        "@thelivesoccer_",
+        "@thelivesoccer",//"@thelivesoccer_" https://marketplace.visualstudio.com/items?itemName=GregTrevellick.vsts-extensions-tweets-TheLiveSoccer
         "@theregister",
         "@visualstudio",
         "@vsmdev",
