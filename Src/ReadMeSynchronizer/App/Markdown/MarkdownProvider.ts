@@ -214,8 +214,8 @@ export class MarkdownProvider {
     }
 
     public GetSubscribeMarkdown(localRepoName: string) {
-        //////////////////////////////////////////////return "[![Subscribe](" + shieldsDotIoUrl + "badge/Subscribe-black.svg)]" + "(https://github.com/${this.myUserName}/${localRepoName}/subscription)";
-        return "[![Subscribe](" + shieldsDotIoUrl + "badge/Subscribe-black.svg)]" + "(https://github.com/" + this.myUserName + "/" + localRepoName + "/subscription)";
+        return "[![Subscribe](" + shieldsDotIoUrl + "badge/subscribe%20to%20receive%20notificatons-grey.svg)]" +
+            "(https://github.com/" + this.myUserName + "/" + localRepoName + "/subscription)";
     }
 
     public GetVisualStudioMarketplaceIDEDownloads(localRepoName: string) {
