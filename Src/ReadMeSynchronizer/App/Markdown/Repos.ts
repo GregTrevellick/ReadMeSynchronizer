@@ -555,8 +555,8 @@ export const vsixYeomanTemplates: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "GregTrevellick_",
     vsmpItemNames: [
-          "VsixAngularBasic",
-          "OmniSharpAspNet",
+        "AngularBasicVsix",//"VsixAngularBasic",
+        "OmniSharpAspNetVsix",//"https://marketplace.visualstudio.com/items?itemName=GregTrevellick.OmniSharpAspNetVsix
     ],
 };
 
