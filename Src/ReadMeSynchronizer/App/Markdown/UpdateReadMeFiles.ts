@@ -183,7 +183,8 @@ export class ReadMeUpdater {
             this.mp.GetCodeBeat(repoMetaData.localRepoName),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
             this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId),
-            this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId),
+            this.mp.GetCodeSceneGeneral(repoMetaData.localRepoName, repoMetaData.codeSceneId),
+            this.mp.GetCodeSceneSystemMastery(repoMetaData.localRepoName, repoMetaData.codeSceneId),
             //this.mp.GetInspecodeRocroReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
             this.mp.GetLgtmAlert(repoMetaData.localRepoName),
             this.mp.GetLgtmCodeQuality(repoMetaData.localRepoName),
@@ -274,7 +275,8 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeBeat);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneCodeHealth);
-        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneCodeHealth);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneGeneral);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneSystemMastery);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
         //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeRocroReport);
@@ -335,8 +337,12 @@ export class ReadMeUpdater {
                     repoMarkdown = this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId);
                     break;
                 }
-                case GroupedBadgeType.CodeSceneCodeHealth: {
-                    repoMarkdown = this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId);
+                case GroupedBadgeType.CodeSceneGeneral: {
+                    repoMarkdown = this.mp.GetCodeSceneGeneral(repoMetaData.localRepoName, repoMetaData.codeSceneId);
+                    break;
+                }
+                case GroupedBadgeType.CodeSceneSystemMastery: {
+                    repoMarkdown = this.mp.GetCodeSceneSystemMastery(repoMetaData.localRepoName, repoMetaData.codeSceneId);
                     break;
                 }
                 case GroupedBadgeType.GitHubIssues: {

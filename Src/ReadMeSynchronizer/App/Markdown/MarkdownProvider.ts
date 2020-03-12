@@ -109,29 +109,31 @@ export class MarkdownProvider {
 
     public GetCodeSceneCodeHealth(localRepoName: string, codeSceneId?: string) {
         if (this.ShowCodeSceneBadges(localRepoName)) {
-            return "[![CodeScene Code Health](https://codescene.io/projects/" + codeSceneId + "/status-badges/code-health)]" +
+            return "[![CodeScene Code Health](https://codescene.io/projects/" + codeSceneId + "/status-badges/code-health)]" + //gregt dedupe
                 "(https://codescene.io/projects/" + codeSceneId + ")";
-
-            //[![](https://codescene.io/projects/4316/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4316/jobs/latest-successful/results)
-            //[![CodeScene Code Health](https://codescene.io/projects/4316/status-badges/code-health)](https://codescene.io/projects/4316)
-            //[![CodeScene System Mastery](https://codescene.io/projects/4316/status-badges/system-mastery)](https://codescene.io/projects/4316)
-            //[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/4316)
         }
         return this.noMarkdown;
     }
 
-    public GetCodeSceneCodeHealth(localRepoName: string, codeSceneId?: string) {
+    public GetCodeSceneGeneral(localRepoName: string, codeSceneId?: string) {
         if (this.ShowCodeSceneBadges(localRepoName)) {
-            return "[![CodeScene Code Health](https://codescene.io/projects/" + codeSceneId + "/status-badges/code-health)]" +
+            return "[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)]" +
                 "(https://codescene.io/projects/" + codeSceneId + ")";
 
-            //[![](https://codescene.io/projects/4316/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4316/jobs/latest-successful/results)
-            //[![CodeScene Code Health](https://codescene.io/projects/4316/status-badges/code-health)](https://codescene.io/projects/4316)
-            //[![CodeScene System Mastery](https://codescene.io/projects/4316/status-badges/system-mastery)](https://codescene.io/projects/4316)
-            //[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/4316)
         }
         return this.noMarkdown;
     }
+
+    public GetCodeSceneSystemMastery(localRepoName: string, codeSceneId?: string) {
+        if (this.ShowCodeSceneBadges(localRepoName)) {
+            return "[![CodeScene System Mastery](https://codescene.io/projects/" + codeSceneId + "/status-badges/system-mastery)]" + //gregt dedupe
+                "(https://codescene.io/projects/" + codeSceneId + ")";
+        }
+        return this.noMarkdown;
+    }
+
+    //gregt
+    //[![](https://codescene.io/projects/4316/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4316/jobs/latest-successful/results)
 
     public GetGitHubLanguageCount(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
