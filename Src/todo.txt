@@ -1,12 +1,3 @@
-swap the vsix purple badge & "subscribe..." to which hence allows everything one 1 line
-get gulp task for git _commit_readme working
-
-
-
-
-
-
-
 
 
 
