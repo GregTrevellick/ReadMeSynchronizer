@@ -117,9 +117,10 @@ export class MarkdownProvider {
 
     public GetCodeSceneGeneral(localRepoName: string, codeSceneId?: string) {
         if (this.ShowCodeSceneBadges(localRepoName)) {
-            return "[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)]" +
-                "(https://codescene.io/projects/" + codeSceneId + ")";
-
+            //return "[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)]" +
+            //    "(https://codescene.io/projects/" + codeSceneId + ")";
+            return "[![](https://codescene.io/projects/" + codeSceneId + "/status.svg)]" +
+                "(https://codescene.io/projects/" + codeSceneId + "/jobs/latest-successful/results)";
         }
         return this.noMarkdown;
     }
@@ -131,9 +132,6 @@ export class MarkdownProvider {
         }
         return this.noMarkdown;
     }
-
-    //gregt
-    //[![](https://codescene.io/projects/4316/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4316/jobs/latest-successful/results)
 
     public GetGitHubLanguageCount(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {

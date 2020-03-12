@@ -10,7 +10,6 @@
 [![CodeBeat](https://codebeat.co/badges/undefined)](https://codebeat.co/projects/github-com-gregtrevellick-readmesynchronizer-master)
 [![CodeFactor](https://www.codefactor.io/repository/github/GregTrevellick/ReadMeSynchronizer/badge)](https://www.codefactor.io/repository/github/GregTrevellick/ReadMeSynchronizer)
 [![CodeScene Code Health](https://codescene.io/projects/4316/status-badges/code-health)](https://codescene.io/projects/4316)
-[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/4316)
 [![CodeScene System Mastery](https://codescene.io/projects/4316/status-badges/system-mastery)](https://codescene.io/projects/4316)
 [![LGTM Alerts](https://img.shields.io/lgtm/alerts/g/GregTrevellick/ReadMeSynchronizer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GregTrevellick/ReadMeSynchronizer/alerts/)
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/GregTrevellick/ReadMeSynchronizer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GregTrevellick/ReadMeSynchronizer/context:javascript)
@@ -39,6 +38,7 @@
 [![Charity Ware](https://img.shields.io/badge/charity%20ware-thank%20you-brightgreen.svg)](https://github.com/GregTrevellick/MiscellaneousArtefacts/wiki/Charity-Ware)
 [![License](https://img.shields.io/github/license/gittools/gitlink.svg)](/LICENSE.txt)
 [![Subscribe](https://img.shields.io/badge/subscribe%20to%20receive%20notificatons-grey.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/subscription)
+[![](https://codescene.io/projects/4316/status.svg)](https://codescene.io/projects/4316/jobs/latest-successful/results)
 
 <!--BadgesEND-->
 

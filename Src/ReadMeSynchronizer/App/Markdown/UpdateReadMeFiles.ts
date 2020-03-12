@@ -183,7 +183,6 @@ export class ReadMeUpdater {
             this.mp.GetCodeBeat(repoMetaData.localRepoName),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
             this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId),
-            this.mp.GetCodeSceneGeneral(repoMetaData.localRepoName, repoMetaData.codeSceneId),
             this.mp.GetCodeSceneSystemMastery(repoMetaData.localRepoName, repoMetaData.codeSceneId),
             //this.mp.GetInspecodeRocroReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
             this.mp.GetLgtmAlert(repoMetaData.localRepoName),
@@ -226,6 +225,9 @@ export class ReadMeUpdater {
 
             //subscribe link
             this.mp.GetSubscribeMarkdown(repoMetaData.localRepoName),
+
+            //big codescene svg
+            this.mp.GetCodeSceneGeneral(repoMetaData.localRepoName, repoMetaData.codeSceneId),
         ];
     }
 
