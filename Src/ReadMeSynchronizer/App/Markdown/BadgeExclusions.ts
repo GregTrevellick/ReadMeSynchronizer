@@ -73,19 +73,23 @@ export class BadgeExclusions {
     public codescene: RepoNames[] = [
         RepoNames.AllBadges,
         RepoNames.AutoFindReplace,
+        RepoNames.AzureDevOpsAgileManifestoWidget,
         RepoNames.DotNetFlags,
         RepoNames.FilesForEveryExtensionCreator,
         RepoNames["Gregt.sidewafflev2"],
         //RepoNames.HelloWorldBlazor,
+        RepoNames.HelloWorldTypescriptParcel,
+        RepoNames.HelloWorldTypescriptWebpack,
         RepoNames.HelloWorldVsixCommandButton,
         RepoNames.HelloWorldVsixPopUp,
         RepoNames.HelloWorldVsixToolBar,
         RepoNames.HelloWorldVsixToolWindowAsyncPackageExample,
         RepoNames.HelloWorldVstsExtension,
         RepoNames.HelloWorldWpfAsyncBindingPropertyExample,
-        RepoNames["Menees.VsTools.2017"],
+        //RepoNames["Menees.VsTools.2017"],
         RepoNames.MiscellaneousArtefacts,
         RepoNames.More,
+        RepoNames["OpenInApp.Launcher"],
         RepoNames.QuickLaunchButtons,
         RepoNames["Quiz.Launcher"],
         RepoNames.SolutionOpenPopUp,
@@ -95,7 +99,9 @@ export class BadgeExclusions {
         RepoNames.VsixFootball,
         RepoNames.VsixNewYeomanProject,
         RepoNames.VsixRatingChaser,
+        RepoNames.VsixTwitterWidget,
         RepoNames.VsixYeomanTemplates,
+        RepoNames.VstsDashboardWidgetProjectTemplate
     ];
 
     public gitHub: RepoNames[] = [
