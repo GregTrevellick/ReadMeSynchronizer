@@ -107,6 +107,32 @@ export class MarkdownProvider {
         return this.noMarkdown;
     }
 
+    public GetCodeSceneCodeHealth(localRepoName: string, codeSceneId?: string) {
+        if (this.ShowCodeSceneBadges(localRepoName)) {
+            return "[![CodeScene Code Health](https://codescene.io/projects/" + codeSceneId + "/status-badges/code-health)]" +
+                "(https://codescene.io/projects/" + codeSceneId + ")";
+
+            //[![](https://codescene.io/projects/4316/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4316/jobs/latest-successful/results)
+            //[![CodeScene Code Health](https://codescene.io/projects/4316/status-badges/code-health)](https://codescene.io/projects/4316)
+            //[![CodeScene System Mastery](https://codescene.io/projects/4316/status-badges/system-mastery)](https://codescene.io/projects/4316)
+            //[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/4316)
+        }
+        return this.noMarkdown;
+    }
+
+    public GetCodeSceneCodeHealth(localRepoName: string, codeSceneId?: string) {
+        if (this.ShowCodeSceneBadges(localRepoName)) {
+            return "[![CodeScene Code Health](https://codescene.io/projects/" + codeSceneId + "/status-badges/code-health)]" +
+                "(https://codescene.io/projects/" + codeSceneId + ")";
+
+            //[![](https://codescene.io/projects/4316/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/4316/jobs/latest-successful/results)
+            //[![CodeScene Code Health](https://codescene.io/projects/4316/status-badges/code-health)](https://codescene.io/projects/4316)
+            //[![CodeScene System Mastery](https://codescene.io/projects/4316/status-badges/system-mastery)](https://codescene.io/projects/4316)
+            //[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/4316)
+        }
+        return this.noMarkdown;
+    }
+
     public GetGitHubLanguageCount(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
             return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)]" +
@@ -326,6 +352,13 @@ export class MarkdownProvider {
 
     private ShowCodeFactorBadges(localRepoName: string): boolean {
         if (this.badgeExclusions.codefactor.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowCodeSceneBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.codescene.includes(this.GetRepoName(localRepoName))) {
             return false;
         }
         return true;

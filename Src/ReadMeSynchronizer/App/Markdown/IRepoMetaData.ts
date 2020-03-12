@@ -5,6 +5,7 @@ export interface IRepoMetaData {
     azureDefinitionId: string;
     codacyId: string;
     codeBeatId?: string;
+    codeSceneId?: string;
     //inspecodeId: string;
     localRepoName: string;
     repoCategory: RepoCategory;

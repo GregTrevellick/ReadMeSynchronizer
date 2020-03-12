@@ -182,6 +182,8 @@ export class ReadMeUpdater {
             this.mp.GetCodacy(repoMetaData.localRepoName, repoMetaData.codacyId),
             this.mp.GetCodeBeat(repoMetaData.localRepoName),
             this.mp.GetCodeFactor(repoMetaData.localRepoName),
+            this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId),
+            this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId),
             //this.mp.GetInspecodeRocroReport(repoMetaData.localRepoName, repoMetaData.inspecodeId),
             this.mp.GetLgtmAlert(repoMetaData.localRepoName),
             this.mp.GetLgtmCodeQuality(repoMetaData.localRepoName),
@@ -271,6 +273,8 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.Codacy);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeBeat);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeFactor);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneCodeHealth);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneCodeHealth);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
         //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeRocroReport);
@@ -325,6 +329,14 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.CodeFactor: {
                     repoMarkdown = this.mp.GetCodeFactor(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.CodeSceneCodeHealth: {
+                    repoMarkdown = this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId);
+                    break;
+                }
+                case GroupedBadgeType.CodeSceneCodeHealth: {
+                    repoMarkdown = this.mp.GetCodeSceneCodeHealth(repoMetaData.localRepoName, repoMetaData.codeSceneId);
                     break;
                 }
                 case GroupedBadgeType.GitHubIssues: {

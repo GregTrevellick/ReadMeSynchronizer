@@ -6,6 +6,8 @@ export enum GroupedBadgeType {
     Codacy,
     CodeBeat,
     CodeFactor,
+    CodeSceneCodeHealth,
+    CodeSceneCodeHealth,
     GitHubIssues,
     GitHubPullRequests,
     //InspecodeRocroReport,
