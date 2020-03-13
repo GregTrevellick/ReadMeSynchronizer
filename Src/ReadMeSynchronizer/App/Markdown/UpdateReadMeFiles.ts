@@ -446,7 +446,7 @@ export class ReadMeUpdater {
         // Without expand/collapse...
         //return `${title}${this.mp.lineBreak}${markdown}${this.mp.lineBreak}`;
 
-        // With expand/collapse...
+        // With expand/collapse...(which can only be all badges by definition)
         return `
 ${title}
 <details open>
