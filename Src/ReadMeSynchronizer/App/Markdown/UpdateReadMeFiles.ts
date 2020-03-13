@@ -81,10 +81,27 @@ export class ReadMeUpdater {
 `;
         });
 
-        //////////////////////////////////////////////////////gregt2 this is defo just repo alone & "Per Repo" bottom half of allbagges, not allbadges top half (todo: put into a loop)
-        ////////////////////////////////////////////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-        ////////////////////////////////////////////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
-        ////////////////////////////////////////////////////badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.lineBreak}${this.mp.lineBreak}`, this.mp.lineBreak);
+        //gregt2 this is defo just repo alone & "Per Repo" bottom half of allbagges, not allbadges top half (todo: put into a loop)
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
+        badgesMarkdownFinal = badgesMarkdownFinal.replace(`${this.mp.noMarkdown}${this.mp.lineBreak}`, " ");
 
         return badgesMarkdownFinal;
     }
