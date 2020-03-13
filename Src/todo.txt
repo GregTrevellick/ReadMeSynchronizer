@@ -1,17 +1,10 @@
 https://app.snyk.io/org/gregtrevellick-github-marketplace/project/27329e5b-74ce-4aae-a407-e1382fba7ef0
 
-https://github.com/marketplace/whitesource-bolt
+https://github.com/marketplace/code-inspector    https://frontend.code-inspector.com/project/5083/dashboard
 
-https://github.com/marketplace/sonatype-depshield
+https://github.com/marketplace/percy             https://percy.io/Moi/AutoFindReplace
 
-https://github.com/marketplace/code-inspector
-
-https://github.com/marketplace/percy
-
-https://github.com/marketplace/deepsource-io
-
-https://github.com/marketplace/star-notifier
-
+https://github.com/marketplace/deepsource-io     Create a .deepsource.toml file in your repository's root folder
 
 GitHub followers:	GitHub followers badge	/github/followers/:user?label=Follow
 GitHub forks:	GitHub forks badge	/github/forks/:user/:repo?label=Fork
