@@ -424,6 +424,8 @@ export class ReadMeUpdater {
 
         }
 
+        //badgesMarkdown = "this affects all badges only";
+
         title = this.GetTitle(groupedBadgeType);
         const titleAndBadges = this.GetTitleAndBadges(title, badgesMarkdown);
         return titleAndBadges;
