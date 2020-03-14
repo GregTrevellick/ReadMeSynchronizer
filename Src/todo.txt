@@ -4,7 +4,7 @@ https://app.snyk.io/org/gregtrevellick-github-marketplace/project/27329e5b-74ce-
 
 https://github.com/marketplace/code-inspector    https://frontend.code-inspector.com/project/5083/dashboard
 
-https://github.com/marketplace/percy             https://percy.io/Moi/AutoFindReplace
+https://github.com/marketplace/percy             https://percy.io/Moi/AutoFindReplace    works ng but not .net
 
 https://github.com/marketplace/deepsource-io     Create a .deepsource.toml file in your repository's root folder
 
