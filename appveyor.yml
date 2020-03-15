@@ -3,11 +3,11 @@ image: Visual Studio 2019
 branches:
   only:
     - master
-#environment:
-#    my_encrypted_sonarqube_token:
-#        secure: auSP7uJIC8Y5I0AW97f0ANIOLXxkszux38+nFJhry4PFvH1MBd1xfBFMcA30a8Z9
+environment:
+    my_encrypted_sonarqube_token:
+        secure: auSP7uJIC8Y5I0AW97f0ANIOLXxkszux38+nFJhry4PFvH1MBd1xfBFMcA30a8Z9  
 install:
-#    - choco install "sonarscanner-msbuild-net46" -y
+    - choco install "sonarscanner-msbuild-netcoreapp2.0" -y
     - cmd: SET NODE_PATH=%AppData%\npm\node_modules 
     - cmd: npm install -g typescript
     # Output useful info for debugging.
@@ -16,15 +16,18 @@ install:
 before_build:
     - cmd: nuget restore Src/ReadMeSynchronizer.sln
     # AppVeyor does not decrypt the secure env vars for PR builds (prevents someone from submitting PR with malicious build script displaying those variables)
-    #- SonarScanner.MSBuild.exe begin /key:"GregTrevellick_ReadMeSynchronizer" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
-#    - ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { SonarScanner.MSBuild.exe begin /key:"GregTrevellick_ReadMeSynchronizer" /d:sonar.host.url="https://sonarqube.com" /d:sonar.login="$env:my_encrypted_sonarqube_token" /d:sonar.organization="gregtrevellick-github" }'
+    #- dotnet sonarscanner begin /key:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
+    #- ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { dotnet sonarscanner begin /key:"ReadMeSynchronizer" /d:sonar.host.url="https://sonarqube.com" /d:sonar.login="$env:my_encrypted_sonarqube_token" /d:sonar.organization="gregtrevellick-github" }'
+    - dotnet tool install -g dotnet-sonarscanner
+    - dotnet sonarscanner begin /key:"ReadMeSynchronizer" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
 build:
     project: Src/ReadMeSynchronizer.sln
     verbosity: minimal
-#after_build:
+after_build:
     # AppVeyor does not decrypt the secure env vars for PR builds (prevents someone from submitting PR with malicious build script displaying those variables)
-    #- SonarScanner.MSBuild.exe end /d:"sonar.login=%my_encrypted_sonarqube_token%"
-#    - ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { SonarScanner.MSBuild.exe end /d:sonar.login="$env:my_encrypted_sonarqube_token" }'
+    #- dotnet sonarscanner end /d:"sonar.login=%my_encrypted_sonarqube_token%"
+    #- ps: 'if (-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { dotnet sonarscanner end /d:sonar.login="$env:my_encrypted_sonarqube_token" }'
+    - dotnet sonarscanner end /d:"sonar.login=%my_encrypted_sonarqube_token%"
 notifications:
 - provider: Email
   to:

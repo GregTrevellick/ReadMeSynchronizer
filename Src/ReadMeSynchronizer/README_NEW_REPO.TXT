@@ -37,11 +37,13 @@ https://ci.appveyor.com/tools/encrypt
 Edit the appveyor.yml as follows:
 	environment:
     	my_encrypted_sonarqube_token:
-        	secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le                  --publicly safe
+        	#secure: 94Py9ytqrmqFVtmUiyayJJ4Hgg2vjF1+YuRJldGGWO82/9zEens+sCjeh7wzc2Le                  #publicly safe
+            secure: auSP7uJIC8Y5I0AW97f0ANIOLXxkszux38+nFJhry4PFvH1MBd1xfBFMcA30a8Z9                  #publicly safe
 	before_build:
-		/d:"sonar.login=$env:my_encrypted_sonarqube_token" 
-
-
+        - dotnet tool install -g dotnet-sonarscanner
+        - dotnet sonarscanner begin /key:"AzureDevOpsBlazorRadiator" /d:"sonar.host.url=https://sonarcloud.io" /d:"sonar.login=%my_encrypted_sonarqube_token%" /o:"gregtrevellick-github"
+    after_build:
+        - dotnet sonarscanner end /d:"sonar.login=%my_encrypted_sonarqube_token%"
 
 Sonar
 =====
