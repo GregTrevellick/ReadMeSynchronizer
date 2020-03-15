@@ -52,9 +52,10 @@ Sonar
    Click "set up" button to initialise the project
    You then see a choice of 3 buttons (travis / other / manual) - don't bother click ing these (our next commit will trigger the sonar analysis)
    This will create https://sonarcloud.io/dashboard?id=AzureDevOpsBlazorRadiator 
-*** OR ***
+*** AND ***
 2) [Feb 2020 - Blazor Radiator - does not analyze C# yet]
     Log into sonarcloud.io using github
     Click 'Analyze New Project' plus button top right corner
     Pick from the Greg Trevellick organization - this will create https://sonarcloud.io/dashboard?id=GregTrevellick_AzureDevOpsBlazorRadiator (as opposed to the URLs above without "GregTrevellick_")
     You'll see 5 buttons - one big for Sonar auto-analysis and 4 smaller (e.g. Travis), so just click the big auto-button, this simply tells you to create an empty file in your repo called ".sonarcloud.properties"
+Note: We set up both but only use badges from the first one in ReadMe.MD as this is the only one that covers C#
