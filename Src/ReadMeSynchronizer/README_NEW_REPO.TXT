@@ -52,7 +52,7 @@ Sonar
    Scroll to the bottom and click 'Create manually' (this isn't recommended but is what we want because option 2 below fails for C#)
    For project key enter same value as in appveyor.yml (i.e. "AzureDevOpsBlazorRadiator" not "GregTrevellick_AzureDevOpsBlazorRadiator")
    Click "set up" button to initialise the project
-   You then see a choice of 3 buttons (travis / other / manual) - don't bother click ing these (our next commit will trigger the sonar analysis)
+   You then see a choice of 3 buttons (travis / other / manual) - don't bother clicking these (our next commit will trigger the sonar analysis)
    This will create https://sonarcloud.io/dashboard?id=AzureDevOpsBlazorRadiator 
 *** AND ***
 2) [Feb 2020 - Blazor Radiator - does not analyze C# yet]
