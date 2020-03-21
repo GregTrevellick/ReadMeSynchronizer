@@ -62,7 +62,7 @@ export const azureDevOpsAgileManifestoWidget: IVsmpMetaData = {
 };
 
 export const azureDevOpsBlazorRadiator: IVsmpMetaData = {
-    appVeyorId: "108odcop2p0k0n8n",
+    appVeyorId: "a65q04wobs1k6ptn",
     azureDefinitionId: "10",//TODO
     codacyId: "ce9f8f55313446e88dd56aee5346bf6f",
     codeBeatId: "815a0200-48fd-4fd8-889a-00556324d65b",
@@ -187,7 +187,7 @@ export const gregtSideWaffleV2: IRepoMetaData = {
 //};
 
 export const helloWorldTypescriptParcel: IRepoMetaData = {
-    appVeyorId: "u3s4x8kx4fo0ejog",
+    appVeyorId: "n3rp6jh2onq5pxwh",
     azureDefinitionId: "11",
     codeBeatId: "ee23d8b7-a3da-4a34-979f-426913611b02",
     //inspecodeIdId: "GPYp3gKiHmRM0_By7JNzWkVYFWAoqL5W9FJS1u7oWPg",
@@ -250,7 +250,7 @@ export const helloWorldVsixToolWindowAsyncPackageExample: IRepoMetaData = {
 };
 
 export const helloWorldVstsExtension: IRepoMetaData = {
-    appVeyorId: "ola9n1um34vha0x4",
+    appVeyorId: "7j2jfhasrr3kt5mx",
     azureDefinitionId: "35",
     codacyId: "5c49e26432e541c5861195ed4a425ac8",
     codeBeatId: "ddb8f4fc-2d56-45a9-9875-031be87ed328",
