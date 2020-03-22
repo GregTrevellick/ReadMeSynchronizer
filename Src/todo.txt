@@ -1,27 +1,9 @@
-https://app.snyk.io/org/gregtrevellick-github-marketplace/project/27329e5b-74ce-4aae-a407-e1382fba7ef0
-
-https://github.com/marketplace/deepsource-io     Create a .deepsource.toml file in your repository's root folder
-
-GitHub followers:	GitHub followers badge	/github/followers/:user?label=Follow
-GitHub forks:	GitHub forks badge	/github/forks/:user/:repo?label=Fork
-GitHub stars:	GitHub stars badge	/github/stars/:user/:repo?style=social
-GitHub watchers:	GitHub watchers badge	/github/watchers/:user/:repo?label=Watch
-GitHub top language:	GitHub top language badge	/github/languages/top/:user/:repo
-GitHub:	GitHub badge	/github/license/:user/:repo
-
-Scrutinizer code quality (GitHub/Bitbucket):	Scrutinizer code quality (GitHub/Bitbucket) badge	/scrutinizer/quality/:vcs/:user/:repo/:branch?
-
-
-
-
-
-
-
-
-
-
-
-
+GitHub followers:	 GitHub followers badge	/github/followers/:user?label=Follow
+GitHub forks:	     GitHub forks badge	/github/forks/:user/:repo?label=Fork
+GitHub stars:	     GitHub stars badge	/github/stars/:user/:repo?style=social
+GitHub watchers:	 GitHub watchers badge	/github/watchers/:user/:repo?label=Watch
+GitHub top language: GitHub top language badge	/github/languages/top/:user/:repo
+GitHub:	GitHub badge /github/license/:user/:repo
 
 
 
@@ -52,17 +34,9 @@ https://github.com/fabiospampinato/autogit-command-github-publish
 
 
 
-
-
-
-
-
 project settings > pipelines > service connections
 
 pipeline > build > edit > getsources >
-
-
-
 
 
 
@@ -89,22 +63,25 @@ YES codecov (need to add yaml file) https://codecov.io/gh
 
 Low priority in future
 ======================
-YES lgtm (JS & TS only, free for oss) https://github.com/marketplace/lgtm
-YES codebeat (JS & TS only, free for oss) https://github.com/marketplace/codebeat
+DONE codebeat (JS & TS only, free for oss) https://github.com/marketplace/codebeat
+DONE lgtm (JS & TS only, free for oss) https://github.com/marketplace/lgtm
+MAYBE deepsource https://github.com/marketplace/deepsource-io (create a .deepsource.toml file in your repository's root folder)
+MAYBE synk vulnerability scanner https://app.snyk.io/org/gregtrevellick-github-marketplace/project/27329e5b-74ce-4aae-a407-e1382fba7ef0 (have created an account)
 YES browser stack (testing, free for oss) https://www.browserstack.com/open-source?ref=pricing
 YES codeclimate (for non-c# repos) https://codeclimate.com/
-YES testquality (free for oss) https://github.com/marketplace/testquality
 YES crowdin (need resx files) https://crowdin.com/project/GregTrevellickVisualStudioMarketplaceMetrics/settings#badges Badges will appear when there is progress in your project
-NAH gitlocalize (free for 1 oss repo only) https://github.com/marketplace/gitlocalize
-NAH snyk (free but aimed at node) https://github.com/marketplace/snyk
+YES testquality (free for oss) https://github.com/marketplace/testquality
 NAH buddy (free, but for usage not for oss) https://github.com/marketplace/buddy
-NAH google cloud build (120 free build minutes a day, $0.003/minute after that) https://github.com/marketplace/google-cloud-build
-NAH codeship (ci, not free) https://codeship.com/pricing
-NAH semaphore (linux CI, free for oss) https://semaphoreci.com/pricing https://github.com/marketplace/semaphore
 NAH circleci (linux CI, free for oss) https://circleci.com/pricing/ https://github.com/marketplace/circleci
+NAH code inspector (javascript, typescript only) https://github.com/marketplace/code-inspector https://frontend.code-inspector.com/project/5083/dashboard https://doc.code-inspector.com/docs/add-badge/
+NAH codeship (ci, not free) https://codeship.com/pricing
 NAH coveralls (bit complicated for now) https://www.nuget.org/packages/coveralls.io https://github.com/csmacnz/coveralls.net
-NAH travis (fails mono build using msbuild or xbuild - see SolutionOpenPopUp repo) https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
 NAH coverity (depends on travis working) https://docs.travis-ci.com/user/coverity-scan/
 NAH dependabot (erroneously says i haven't got a .csproj file in repos) https://app.dependabot.com/accounts/GregTrevellick/repos
-NAH Javascript, Typescript only https://github.com/marketplace/code-inspector https://frontend.code-inspector.com/project/5083/dashboard https://doc.code-inspector.com/docs/add-badge/
+NAH gitlocalize (free for 1 oss repo only) https://github.com/marketplace/gitlocalize
+NAH google cloud build (120 free build minutes a day, $0.003/minute after that) https://github.com/marketplace/google-cloud-build
+NAH scrutinizer-ci (javascript, typescript only) code quality tool (have created an account)
+NAH semaphore (linux CI, free for oss) https://semaphoreci.com/pricing https://github.com/marketplace/semaphore
+NAH snyk (free but aimed at node) https://github.com/marketplace/snyk
+NAH travis (fails mono build using msbuild or xbuild - see SolutionOpenPopUp repo) https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
 NAH works for angular but not .net https://github.com/marketplace/percy https://percy.io/Moi/AutoFindReplace
