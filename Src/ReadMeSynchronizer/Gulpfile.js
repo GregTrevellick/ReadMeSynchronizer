@@ -7,6 +7,6 @@ const run = require("gulp-run");
 const Server = require('karma').Server;
 
 require('./GulpTasks/GitTasks.ts');
-require('./GulpTasks/MarkdownTasks.ts');
+require('./GulpTasks/MarkdownTasks.ts', { allowEmpty: true });
 gulp.task("Lint", () => run("npm run lint").exec());
 gulp.task("Lint_Fix", () => run("npm run lint -- --fix").exec());
