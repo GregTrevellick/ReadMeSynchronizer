@@ -11,3 +11,7 @@ require('./GulpTasks/GitTasks.ts');
 require('./GulpTasks/MarkdownTasks.ts');
 gulp.task("Lint", () => run("npm run lint").exec());
 gulp.task("Lint_Fix", () => run("npm run lint -- --fix").exec());
+
+gulp.task('Test', () => {
+	console.log('Gulp is running!');
+});
