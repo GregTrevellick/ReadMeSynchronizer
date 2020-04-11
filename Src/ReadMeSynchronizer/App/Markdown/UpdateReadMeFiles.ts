@@ -213,6 +213,11 @@ export class ReadMeUpdater {
             this.mp.GetGitHubIssues(repoMetaData.localRepoName),
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
+            //Followers, Stars, Watchers
+            this.mp.GetGitHubFollowers(repoMetaData.localRepoName),
+            this.mp.GetGitHubStars(repoMetaData.localRepoName),
+            this.mp.GetGitHubWatchers(repoMetaData.localRepoName),
+
             //Sonar
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.QualityGateStatus), repoMetaData.sonarCloudProjectPrefix),
             this.mp.GetSonarBadge(repoMetaData.localRepoName, this.sonarMetaHelper.GetSonarMetaData(SonarCategory.Bugs), repoMetaData.sonarCloudProjectPrefix),
@@ -296,8 +301,11 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneCodeHealth);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneGeneral);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneSystemMastery);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubFollowers);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubStars);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubWatchers);
         //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeRocroReport);
         //badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.InspecodeRocroStatus);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.LgtmAlert);
@@ -364,12 +372,24 @@ export class ReadMeUpdater {
                     repoMarkdown = this.mp.GetCodeSceneSystemMastery(repoMetaData.localRepoName, repoMetaData.codeSceneId);
                     break;
                 }
+                case GroupedBadgeType.GitHubFollowers: {
+                    repoMarkdown = this.mp.GetGitHubFollowers(repoMetaData.localRepoName);
+                    break;
+                }
                 case GroupedBadgeType.GitHubIssues: {
                     repoMarkdown = this.mp.GetGitHubIssues(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.GitHubPullRequests: {
                     repoMarkdown = this.mp.GetGitHubPullRequests(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.GitHubStars: {
+                    repoMarkdown = this.mp.GetGitHubStars(repoMetaData.localRepoName);
+                    break;
+                }
+                case GroupedBadgeType.GitHubWatchers: {
+                    repoMarkdown = this.mp.GetGitHubWatchers(repoMetaData.localRepoName);
                     break;
                 }
                 //case GroupedBadgeType.InspecodeRocroReport: {

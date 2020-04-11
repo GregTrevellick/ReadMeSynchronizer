@@ -21,10 +21,10 @@
     },
     "devDependencies": {
         "babel-loader": "^5.0.0",
-        "gulp": "3.9.1",
+        "gulp": "^4.0.0",
         "gulp-bower": "0.0.14",
-        "gulp-config": "0.3.0",
         "gulp-concat": "2.6.1",
+        "gulp-config": "0.3.0",
         "gulp-string-replace": "1.1.2",
         "karma": "3.0.0"
     },

@@ -101,7 +101,7 @@ export class BadgeExclusions {
         RepoNames.VsixRatingChaser,
         RepoNames.VsixTwitterWidget,
         RepoNames.VsixYeomanTemplates,
-        RepoNames.VstsDashboardWidgetProjectTemplate
+        RepoNames.VstsDashboardWidgetProjectTemplate,
     ];
 
     public gitHub: RepoNames[] = [

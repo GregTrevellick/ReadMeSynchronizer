@@ -1,24 +1,3 @@
-GitHub followers:	 GitHub followers badge	/github/followers/:user?label=Follow
-GitHub forks:	     GitHub forks badge	/github/forks/:user/:repo?label=Fork
-GitHub stars:	     GitHub stars badge	/github/stars/:user/:repo?style=social
-GitHub watchers:	 GitHub watchers badge	/github/watchers/:user/:repo?label=Watch
-GitHub top language: GitHub top language badge	/github/languages/top/:user/:repo
-GitHub:	GitHub badge /github/license/:user/:repo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 http://fabiospampinato.com/autogit/#install

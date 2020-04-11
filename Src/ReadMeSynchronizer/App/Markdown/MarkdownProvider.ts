@@ -133,6 +133,15 @@ export class MarkdownProvider {
         return this.noMarkdown;
     }
 
+    public GetGitHubFollowers(localRepoName: string) {
+        if (this.ShowGitHubBadges(localRepoName)) {
+            //return "[![GitHub followers](" + shieldsDotIoUrl + "github/followers/" + this.myUserName + ".svg?style=social&label=Follow)]" +
+            return "[![GitHub followers](" + shieldsDotIoUrl + "github/followers/" + this.myUserName + ".svg)]" +
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + "/followers)";
+        }
+        return this.noMarkdown;
+    }
+
     public GetGitHubLanguageCount(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
             return "[![Github language count](" + shieldsDotIoUrl + "github/languages/count/" + this.myUserName + "/" + localRepoName + ".svg)]" +
@@ -157,10 +166,26 @@ export class MarkdownProvider {
         return this.noMarkdown;
     }
 
+    public GetGitHubStars(localRepoName: string) {
+        if (this.ShowGitHubBadges(localRepoName)) {
+            return "[![GitHub stars](" + shieldsDotIoUrl + "github/stars/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + "/stars)";
+        }
+        return this.noMarkdown;
+    }
+
     public GetGitHubTopLanguage(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
             return "[![GitHub top language](" + shieldsDotIoUrl + "github/languages/top/" + this.myUserName + "/" + localRepoName + ".svg)]" +
                 "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
+        }
+        return this.noMarkdown;
+    }
+
+    public GetGitHubWatchers(localRepoName: string) {
+        if (this.ShowGitHubBadges(localRepoName)) {
+            return "[![GitHub watchers](" + shieldsDotIoUrl + "github/watchers/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + "/watchers)";
         }
         return this.noMarkdown;
     }
