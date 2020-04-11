@@ -137,7 +137,7 @@ export class MarkdownProvider {
         if (this.ShowGitHubBadges(localRepoName)) {
             //return "[![GitHub followers](" + shieldsDotIoUrl + "github/followers/" + this.myUserName + ".svg?style=social&label=Follow)]" +
             return "[![GitHub followers](" + shieldsDotIoUrl + "github/followers/" + this.myUserName + ".svg)]" +
-                "(" + this.GetGitHubUrlForRepo(localRepoName) + "/followers)";
+                "(" + this.GetGitHubUrlForPerson() + "?tab=followers)";
         }
         return this.noMarkdown;
     }
@@ -169,7 +169,7 @@ export class MarkdownProvider {
     public GetGitHubStars(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
             return "[![GitHub stars](" + shieldsDotIoUrl + "github/stars/" + this.myUserName + "/" + localRepoName + ".svg)]" +
-                "(" + this.GetGitHubUrlForRepo(localRepoName) + "/stars)";
+                "(" + this.GetGitHubUrlForRepo(localRepoName) + ")";
         }
         return this.noMarkdown;
     }
@@ -315,8 +315,12 @@ export class MarkdownProvider {
         return localreponame.replace(".", "-");
     }
 
+    private GetGitHubUrlForPerson() {
+        return "https://github.com/" + this.myUserName;
+    }
+
     private GetGitHubUrlForRepo(localRepoName: string) {
-        return "https://github.com/" + this.myUserName + "/" + localRepoName;
+        return this.GetGitHubUrlForPerson() + "/" + localRepoName;
     }
 
     private GetRepoName(localRepoName: string): RepoNames {
