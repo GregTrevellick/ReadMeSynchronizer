@@ -17,7 +17,7 @@
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![GitHub issues](https://img.shields.io/github/issues-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/pulls)
-[![GitHub followers](https://img.shields.io/github/followers/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/followers)
+[![GitHub followers](https://img.shields.io/github/followers/GregTrevellick.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/followers)
 [![GitHub stars](https://img.shields.io/github/stars/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/stars)
 [![GitHub watchers](https://img.shields.io/github/watchers/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/watchers)
 [![Sonar&metric=alert_status](https://sonarcloud.io/api/project_badges/measure?project=ReadMeSynchronizer&metric=alert_status)](https://sonarcloud.io/dashboard?id=ReadMeSynchronizer)

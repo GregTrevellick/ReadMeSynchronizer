@@ -385,11 +385,11 @@ export class ReadMeUpdater {
                     break;
                 }
                 case GroupedBadgeType.GitHubStars: {
-                    repoMarkdown = this.mp.GetGitHubPullRequests(repoMetaData.localRepoName);
+                    repoMarkdown = this.mp.GetGitHubStars(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.GitHubWatchers: {
-                    repoMarkdown = this.mp.GetGitHubPullRequests(repoMetaData.localRepoName);
+                    repoMarkdown = this.mp.GetGitHubWatchers(repoMetaData.localRepoName);
                     break;
                 }
                 //case GroupedBadgeType.InspecodeRocroReport: {

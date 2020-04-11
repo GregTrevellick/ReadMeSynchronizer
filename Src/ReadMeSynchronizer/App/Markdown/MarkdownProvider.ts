@@ -135,7 +135,8 @@ export class MarkdownProvider {
 
     public GetGitHubFollowers(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
-            return "[![GitHub followers](" + shieldsDotIoUrl + "github/followers/" + this.myUserName + "/" + localRepoName + ".svg)]" +
+            //return "[![GitHub followers](" + shieldsDotIoUrl + "github/followers/" + this.myUserName + ".svg?style=social&label=Follow)]" +
+            return "[![GitHub followers](" + shieldsDotIoUrl + "github/followers/" + this.myUserName + ".svg)]" +
                 "(" + this.GetGitHubUrlForRepo(localRepoName) + "/followers)";
         }
         return this.noMarkdown;
