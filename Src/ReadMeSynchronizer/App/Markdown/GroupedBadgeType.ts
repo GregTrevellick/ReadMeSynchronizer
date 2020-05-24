@@ -9,6 +9,7 @@ export enum GroupedBadgeType {
     CodeSceneCodeHealth,
     CodeSceneGeneral,
     CodeSceneSystemMastery,
+    GitHubActions,
     GitHubFollowers,
     GitHubIssues,
     GitHubPullRequests,
