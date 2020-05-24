@@ -209,7 +209,8 @@ export class ReadMeUpdater {
             this.mp.GetGitHubTopLanguage(repoMetaData.localRepoName),
             this.mp.GetGitHubLanguageCount(repoMetaData.localRepoName),
 
-            //Issues & PRs
+            //Actions, Issues & PRs
+            this.mp.GetGitHubActions(repoMetaData.localRepoName),
             this.mp.GetGitHubIssues(repoMetaData.localRepoName),
             this.mp.GetGitHubPullRequests(repoMetaData.localRepoName),
 
@@ -301,6 +302,7 @@ export class ReadMeUpdater {
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneCodeHealth);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneGeneral);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.CodeSceneSystemMastery);
+        badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubActions);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubFollowers);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubIssues);
         badgesByTypeMarkdown += this.GetGroupedBadgeTypeMarkdown(this.allReposExceptTheAllBadgesRepo, GroupedBadgeType.GitHubPullRequests);
@@ -370,6 +372,10 @@ export class ReadMeUpdater {
                 }
                 case GroupedBadgeType.CodeSceneSystemMastery: {
                     repoMarkdown = this.mp.GetCodeSceneSystemMastery(repoMetaData.localRepoName, repoMetaData.codeSceneId);
+                    break;
+                }
+                case GroupedBadgeType.GitHubActions: {
+                    repoMarkdown = this.mp.GetGitHubActions(repoMetaData.localRepoName);
                     break;
                 }
                 case GroupedBadgeType.GitHubFollowers: {
