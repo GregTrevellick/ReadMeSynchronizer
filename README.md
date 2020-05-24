@@ -15,7 +15,7 @@
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/GregTrevellick/ReadMeSynchronizer.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/GregTrevellick/ReadMeSynchronizer/context:javascript)
 [![GitHub top language](https://img.shields.io/github/languages/top/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
 [![Github language count](https://img.shields.io/github/languages/count/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer)
-[![GitHub actions](https://github.com/GregTrevellick/ReadMeSynchronizer/workflows/.NET%20Core%20CI/badge.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/actions)
+[![GitHub actions](https://github.com/GregTrevellick/ReadMeSynchronizer/workflows/.NET%20Core/badge.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/actions)
 [![GitHub issues](https://img.shields.io/github/issues-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/GregTrevellick/ReadMeSynchronizer.svg)](https://github.com/GregTrevellick/ReadMeSynchronizer/pulls)
 [![GitHub followers](https://img.shields.io/github/followers/GregTrevellick.svg)](https://github.com/GregTrevellick?tab=followers)

@@ -135,7 +135,7 @@ export class MarkdownProvider {
 
     public GetGitHubActions(localRepoName: string) {
         if (this.ShowGitHubBadges(localRepoName)) {
-            return "[![GitHub actions](" + this.GetGitHubUrlForPerson() + "/" + localRepoName + "/workflows/.NET%20Core%20CI/badge.svg)]" +
+            return "[![GitHub actions](" + this.GetGitHubUrlForPerson() + "/" + localRepoName + "/workflows/.NET%20Core/badge.svg)]" +
                 "(" + this.GetGitHubUrlForRepo(localRepoName) + "/actions)";
         }
         return this.noMarkdown;
