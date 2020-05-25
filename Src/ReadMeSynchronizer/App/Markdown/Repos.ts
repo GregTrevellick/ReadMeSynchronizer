@@ -489,11 +489,10 @@ export const vsixFootball: IVsmpMetaData = {
 //    ],
 //};
 
-//gregt
 export const vsixItemTemplateSqlScriptAgentJob: IVsmpMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "17",
-    codacyId: "",
+    appVeyorId: "3f80s4w2lph6065r",
+    azureDefinitionId: "",
+    codacyId: "da72094a1ff0476e88a4f9d598f2d5ec",
     codeBeatId: "",
     localRepoName: "VsixItemTemplateSqlScriptAgentJob",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -503,11 +502,10 @@ export const vsixItemTemplateSqlScriptAgentJob: IVsmpMetaData = {
     ],
 };
 
-//gregt
 export const vsixItemTemplateSqlScriptFunction: IVsmpMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "17",
-    codacyId: "",
+    appVeyorId: "abvxkj0d0n1dacem",
+    azureDefinitionId: "",
+    codacyId: "069677190fb740e7ac34ddb5ea7e6a5c",
     codeBeatId: "",
     localRepoName: "VsixItemTemplateSqlScriptFunction",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -517,11 +515,10 @@ export const vsixItemTemplateSqlScriptFunction: IVsmpMetaData = {
     ],
 };
 
-//gregt
 export const vsixItemTemplateSqlScriptSchema: IVsmpMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "17",
-    codacyId: "",
+    appVeyorId: "rdu96krovrvkacq5",
+    azureDefinitionId: "",
+    codacyId: "a9a31fb800d8410584742cd51b999a2c",
     codeBeatId: "",
     localRepoName: "VsixItemTemplateSqlScriptSchema",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -531,11 +528,10 @@ export const vsixItemTemplateSqlScriptSchema: IVsmpMetaData = {
     ],
 };
 
-//gregt
 export const vsixItemTemplateSqlScriptStoredProcedure: IVsmpMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "17",
-    codacyId: "",
+    appVeyorId: "fipghf7j9cao7548",
+    azureDefinitionId: "",
+    codacyId: "28a26f2ede464238b03bd31fb5be28fe",
     codeBeatId: "",
     localRepoName: "VsixItemTemplateSqlScriptStoredProcedure",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -545,11 +541,10 @@ export const vsixItemTemplateSqlScriptStoredProcedure: IVsmpMetaData = {
     ],
 };
 
-//gregt
 export const vsixItemTemplateSqlScriptSynonym: IVsmpMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "17",
-    codacyId: "",
+    appVeyorId: "cs6nmt4xi0n7awdn",
+    azureDefinitionId: "",
+    codacyId: "224f3e1b53144690a41cdc44f94ae0b0",
     codeBeatId: "",
     localRepoName: "VsixItemTemplateSqlScriptSynonym",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -559,11 +554,10 @@ export const vsixItemTemplateSqlScriptSynonym: IVsmpMetaData = {
     ],
 };
 
-//gregt
 export const vsixItemTemplateSqlScriptTable: IVsmpMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "17",
-    codacyId: "",
+    appVeyorId: "isx3ci0sl21flooj",
+    azureDefinitionId: "",
+    codacyId: "a1112b22d6eb439bbd78acd1c7de5871",
     codeBeatId: "",
     localRepoName: "VsixItemTemplateSqlScriptTable",
     repoCategory: RepoCategory.VsIdeExtension,
@@ -573,11 +567,10 @@ export const vsixItemTemplateSqlScriptTable: IVsmpMetaData = {
     ],
 };
 
-//gregt
 export const vsixItemTemplateSqlScriptView: IVsmpMetaData = {
-    appVeyorId: "",
-    azureDefinitionId: "17",
-    codacyId: "",
+    appVeyorId: "pfcems4pnn4sd396",
+    azureDefinitionId: "",
+    codacyId: "9cd274a06bd74bed862bc23b5aa38c0d",
     codeBeatId: "",
     localRepoName: "VsixItemTemplateSqlScriptView",
     repoCategory: RepoCategory.VsIdeExtension,
