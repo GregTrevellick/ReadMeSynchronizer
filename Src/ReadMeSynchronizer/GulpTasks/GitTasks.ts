@@ -4,6 +4,10 @@ import { GitExecutioner } from "../App/Git/GitExecutioner";
 
 const gitExecutioner: GitExecutioner = new GitExecutioner();
 
+gulp.task("Git_AdHocCommit", () => {
+    gitExecutioner.GitExecute(GitCommand.AdHocCommit);
+});
+
 gulp.task("Git_Commit_ReadMe", () => {
     gitExecutioner.GitExecute(GitCommand.CommitReadMe);
 });

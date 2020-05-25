@@ -25,6 +25,12 @@ export class GitExecutioner {
         const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
 
         switch (gitCommand) {
+            case GitCommand.AdHocCommit: {
+                if (repoMetaData.repoCategory !== RepoCategory.ReadMeSynchronizer) {
+                    simpleGit(workingDirPath).commit("Message_ReadMeSynchronizer_AdHocCommit", workingDirPath + "/.github/workflows/dotnet-core.yml");
+                }
+                break;
+            }
             case GitCommand.CommitReadMe: {
                 if (repoMetaData.repoCategory !== RepoCategory.ReadMeSynchronizer) {
                     const commitMessage = `ReadMeSynchronizer_${gitCommand}`;

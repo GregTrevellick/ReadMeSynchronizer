@@ -2,6 +2,7 @@
 // it may be that not all the repos listed in \App\Markdown\RepoNames.ts exist on disc
 
 export enum GitCommand {
+    AdHocCommit,
     CommitReadMe,
     PullRepo,
     PushRepo,
