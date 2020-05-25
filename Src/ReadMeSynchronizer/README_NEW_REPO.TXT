@@ -7,7 +7,7 @@ Having created the repo in GitHub, add to...
  d) codacy (slower but more depth)
  e) codefactor
  f) codescene (max 5 repos)
- g) lgtm
+ g) lgtm (Project Lists, enter full github repo url, click 'Follow')
  todo) https://codecov.io
 
 

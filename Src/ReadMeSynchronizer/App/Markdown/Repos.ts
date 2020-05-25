@@ -489,6 +489,104 @@ export const vsixFootball: IVsmpMetaData = {
 //    ],
 //};
 
+//gregt
+export const vsixItemTemplateSqlScriptAgentJob: IVsmpMetaData = {
+    appVeyorId: "",
+    azureDefinitionId: "17",
+    codacyId: "",
+    codeBeatId: "",
+    localRepoName: "VsixItemTemplateSqlScriptAgentJob",
+    repoCategory: RepoCategory.VsIdeExtension,
+    sonarCloudProjectPrefix: "",
+    vsmpItemNames: [
+        "VsixItemTemplateSqlScriptAgentJob",
+    ],
+};
+
+//gregt
+export const vsixItemTemplateSqlScriptFunction: IVsmpMetaData = {
+    appVeyorId: "",
+    azureDefinitionId: "17",
+    codacyId: "",
+    codeBeatId: "",
+    localRepoName: "VsixItemTemplateSqlScriptFunction",
+    repoCategory: RepoCategory.VsIdeExtension,
+    sonarCloudProjectPrefix: "",
+    vsmpItemNames: [
+        "VsixItemTemplateSqlScriptFunction",
+    ],
+};
+
+//gregt
+export const vsixItemTemplateSqlScriptSchema: IVsmpMetaData = {
+    appVeyorId: "",
+    azureDefinitionId: "17",
+    codacyId: "",
+    codeBeatId: "",
+    localRepoName: "VsixItemTemplateSqlScriptSchema",
+    repoCategory: RepoCategory.VsIdeExtension,
+    sonarCloudProjectPrefix: "",
+    vsmpItemNames: [
+        "VsixItemTemplateSqlScriptSchema",
+    ],
+};
+
+//gregt
+export const vsixItemTemplateSqlScriptStoredProcedure: IVsmpMetaData = {
+    appVeyorId: "",
+    azureDefinitionId: "17",
+    codacyId: "",
+    codeBeatId: "",
+    localRepoName: "VsixItemTemplateSqlScriptStoredProcedure",
+    repoCategory: RepoCategory.VsIdeExtension,
+    sonarCloudProjectPrefix: "",
+    vsmpItemNames: [
+        "VsixItemTemplateSqlScriptStoredProcedure",
+    ],
+};
+
+//gregt
+export const vsixItemTemplateSqlScriptSynonym: IVsmpMetaData = {
+    appVeyorId: "",
+    azureDefinitionId: "17",
+    codacyId: "",
+    codeBeatId: "",
+    localRepoName: "VsixItemTemplateSqlScriptSynonym",
+    repoCategory: RepoCategory.VsIdeExtension,
+    sonarCloudProjectPrefix: "",
+    vsmpItemNames: [
+        "VsixItemTemplateSqlScriptSynonym",
+    ],
+};
+
+//gregt
+export const vsixItemTemplateSqlScriptTable: IVsmpMetaData = {
+    appVeyorId: "",
+    azureDefinitionId: "17",
+    codacyId: "",
+    codeBeatId: "",
+    localRepoName: "VsixItemTemplateSqlScriptTable",
+    repoCategory: RepoCategory.VsIdeExtension,
+    sonarCloudProjectPrefix: "",
+    vsmpItemNames: [
+        "VsixItemTemplateSqlScriptTable",
+    ],
+};
+
+//gregt
+export const vsixItemTemplateSqlScriptView: IVsmpMetaData = {
+    appVeyorId: "",
+    azureDefinitionId: "17",
+    codacyId: "",
+    codeBeatId: "",
+    localRepoName: "VsixItemTemplateSqlScriptView",
+    repoCategory: RepoCategory.VsIdeExtension,
+    sonarCloudProjectPrefix: "",
+    vsmpItemNames: [
+        "VsixItemTemplateSqlScriptView",
+    ],
+};
+
 export const vsixNewYeomanProject: IVsmpMetaData = {
     appVeyorId: "awv70p92uu0u84k9",
     azureDefinitionId: "17",

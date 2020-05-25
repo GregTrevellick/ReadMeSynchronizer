@@ -39,6 +39,13 @@ export enum RepoNames {
     //VsixDotNetCorePoc, //now prefixed with Z in git
     VsixFootball,
     //VsixFootie,//archived in github
+    VsixItemTemplateSqlScriptAgentJob,
+    VsixItemTemplateSqlScriptFunction,
+    VsixItemTemplateSqlScriptSchema,
+    VsixItemTemplateSqlScriptStoredProcedure,
+    VsixItemTemplateSqlScriptSynonym,
+    VsixItemTemplateSqlScriptTable,
+    VsixItemTemplateSqlScriptView,
     VsixNewYeomanProject,
     VsixRatingChaser,
     VsixTwitterWidget,

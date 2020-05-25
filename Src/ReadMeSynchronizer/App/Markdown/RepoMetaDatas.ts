@@ -47,6 +47,13 @@ export class RepoMetaDatas {
             //myRepos.vsixDotNetCorePoc, //now prefixed with Z in git
             myRepos.vsixFootball,
             //myRepos.vsixFootie,//archived in github
+            myRepos.vsixItemTemplateSqlScriptAgentJob,
+            myRepos.vsixItemTemplateSqlScriptFunction,
+            myRepos.vsixItemTemplateSqlScriptSchema,
+            myRepos.vsixItemTemplateSqlScriptStoredProcedure,
+            myRepos.vsixItemTemplateSqlScriptSynonym,
+            myRepos.vsixItemTemplateSqlScriptTable,
+            myRepos.vsixItemTemplateSqlScriptView,
             myRepos.vsixNewYeomanProject,
             myRepos.vsixRatingChaser,
             myRepos.vsixTwitterWidget,
