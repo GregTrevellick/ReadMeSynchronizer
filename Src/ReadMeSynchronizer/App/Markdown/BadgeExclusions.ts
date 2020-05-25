@@ -157,6 +157,13 @@ export class BadgeExclusions {
         //RepoNames.VsixDotNetCorePoc,
         RepoNames.VsixFootball,
         //RepoNames.VsixFootie,
+        RepoNames.VsixItemTemplateSqlScriptAgentJob,
+        RepoNames.VsixItemTemplateSqlScriptFunction,
+        RepoNames.VsixItemTemplateSqlScriptSchema,
+        RepoNames.VsixItemTemplateSqlScriptStoredProcedure,
+        RepoNames.VsixItemTemplateSqlScriptSynonym,
+        RepoNames.VsixItemTemplateSqlScriptTable,
+        RepoNames.VsixItemTemplateSqlScriptView,
         RepoNames.VsixNewYeomanProject,
         RepoNames.VsixRatingChaser,
     ];
