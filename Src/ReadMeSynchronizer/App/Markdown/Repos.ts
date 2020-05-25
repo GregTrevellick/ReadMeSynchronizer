@@ -498,7 +498,7 @@ export const vsixItemTemplateSqlScriptAgentJob: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "VsixItemTemplateSqlScriptAgentJob",
+        "ItemTemplateSqlScriptAgentJob",
     ],
 };
 
@@ -511,7 +511,7 @@ export const vsixItemTemplateSqlScriptFunction: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "VsixItemTemplateSqlScriptFunction",
+        "ItemTemplateSqlScriptFunction",
     ],
 };
 
@@ -524,7 +524,7 @@ export const vsixItemTemplateSqlScriptSchema: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "VsixItemTemplateSqlScriptSchema",
+        "ItemTemplateSqlScriptSchema",
     ],
 };
 
@@ -537,7 +537,7 @@ export const vsixItemTemplateSqlScriptStoredProcedure: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "VsixItemTemplateSqlScriptStoredProcedure",
+        "ItemTemplateSqlScriptStoredProcedure",
     ],
 };
 
@@ -550,7 +550,7 @@ export const vsixItemTemplateSqlScriptSynonym: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "VsixItemTemplateSqlScriptSynonym",
+        "ItemTemplateSqlScriptSynonym",
     ],
 };
 
@@ -563,7 +563,7 @@ export const vsixItemTemplateSqlScriptTable: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "VsixItemTemplateSqlScriptTable",
+        "ItemTemplateSqlScriptTable",
     ],
 };
 
@@ -576,7 +576,7 @@ export const vsixItemTemplateSqlScriptView: IVsmpMetaData = {
     repoCategory: RepoCategory.VsIdeExtension,
     sonarCloudProjectPrefix: "",
     vsmpItemNames: [
-        "VsixItemTemplateSqlScriptView",
+        "ItemTemplateSqlScriptView",
     ],
 };
 
