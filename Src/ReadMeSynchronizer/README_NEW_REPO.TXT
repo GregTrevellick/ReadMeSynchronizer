@@ -8,6 +8,7 @@ Having created the repo in GitHub, add to...
  e) codefactor
  f) codescene (max 5 repos)
  g) lgtm (Project Lists, enter full github repo url, click 'Follow')
+ h) enable github actions to build the .sln
  todo) https://codecov.io
 
 
