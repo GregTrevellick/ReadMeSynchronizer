@@ -96,3 +96,25 @@ https://www.danielcrabtree.com/blog/314/upgrading-to-net-core-and-net-standard-m
 https://arminreiter.com/2017/05/port-net-framework-net-standard/
 https://docs.microsoft.com/en-us/aspnet/core/migration/proper-to-2x/?view=aspnetcore-3.1
 https://docs.microsoft.com/en-us/dotnet/core/compatibility/fx-core
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DID YOU FORGET TO SIGNAL ASYNC COMPLETION
+==========================================
+readme sync
+builds ok
+gulp fails - async error "Did you forget to signal async completion?"
+view output window for task runner explorer
+primordials is not defined
+if taskrunnerexplorer fails to load gulpfile.js => git clean -fdx
