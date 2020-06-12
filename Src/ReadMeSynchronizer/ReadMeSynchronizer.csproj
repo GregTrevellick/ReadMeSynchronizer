@@ -9,14 +9,17 @@
 
   <ItemGroup>
     <Compile Remove="build\**" />
+    <Compile Remove="node_modules2\**" />
     <Compile Remove="node_modules\**" />
     <Compile Remove="outDir\**" />
     <Compile Remove="UnitTestConfig\**" />
     <EmbeddedResource Remove="build\**" />
+    <EmbeddedResource Remove="node_modules2\**" />
     <EmbeddedResource Remove="node_modules\**" />
     <EmbeddedResource Remove="outDir\**" />
     <EmbeddedResource Remove="UnitTestConfig\**" />
     <None Remove="build\**" />
+    <None Remove="node_modules2\**" />
     <None Remove="node_modules\**" />
     <None Remove="outDir\**" />
     <None Remove="UnitTestConfig\**" />
