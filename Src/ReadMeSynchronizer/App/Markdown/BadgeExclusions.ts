@@ -125,6 +125,16 @@ export class BadgeExclusions {
         RepoNames.VstsDashboardWidgetProjectTemplate,
     ];
 
+    public gitHubActions: RepoNames[] = [
+        RepoNames.VsixItemTemplateSqlScriptAgentJob,
+        RepoNames.VsixItemTemplateSqlScriptFunction,
+        RepoNames.VsixItemTemplateSqlScriptSchema,
+        RepoNames.VsixItemTemplateSqlScriptStoredProcedure,
+        RepoNames.VsixItemTemplateSqlScriptSynonym,
+        RepoNames.VsixItemTemplateSqlScriptTable,
+        RepoNames.VsixItemTemplateSqlScriptView,
+    ];
+
     public gitHub: RepoNames[] = [
     ];
 

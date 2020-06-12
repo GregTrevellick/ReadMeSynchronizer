@@ -134,7 +134,7 @@ export class MarkdownProvider {
     }
 
     public GetGitHubActions(localRepoName: string) {
-        if (this.ShowGitHubBadges(localRepoName)) {
+        if (this.ShowGitHubActionsBadges(localRepoName)) {
             return "[![GitHub actions](" + this.GetGitHubUrlForPerson() + "/" + localRepoName + "/workflows/.NET%20Core/badge.svg)]" +
                 "(" + this.GetGitHubUrlForRepo(localRepoName) + "/actions)";
         }
@@ -396,6 +396,13 @@ export class MarkdownProvider {
 
     private ShowCodeSceneBadges(localRepoName: string): boolean {
         if (this.badgeExclusions.codescene.includes(this.GetRepoName(localRepoName))) {
+            return false;
+        }
+        return true;
+    }
+
+    private ShowGitHubActionsBadges(localRepoName: string): boolean {
+        if (this.badgeExclusions.gitHubActions.includes(this.GetRepoName(localRepoName))) {
             return false;
         }
         return true;
