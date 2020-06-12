@@ -64,3 +64,35 @@ NAH semaphore (linux CI, free for oss) https://semaphoreci.com/pricing https://g
 NAH snyk (free but aimed at node) https://github.com/marketplace/snyk
 NAH travis (fails mono build using msbuild or xbuild - see SolutionOpenPopUp repo) https://travis-ci.org/GregTrevellick/FilesForEveryExtensionCreator
 NAH works for angular but not .net https://github.com/marketplace/percy https://percy.io/Moi/AutoFindReplace
+
+
+
+
+
+
+NET CORE UPGRADEs (GitHub actions)
+==================================
+1 - Convert packages.config to PackageReference format with the conversion tool in Visual Studio (https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference) > right-click on the References node or the packages.config file > "Migrate packages.config to PackageReference...." (https://docs.microsoft.com/en-us/dotnet/core/porting/)
+2 - Analyse compatibility as follows: (https://docs.microsoft.com/en-us/dotnet/core/porting/)
+    a - [One-off] Install this vsix https://docs.microsoft.com/en-us/dotnet/standard/analyzers/portability-analyzer
+    b - VS2019 > Tools > Options (or Analyze > Portability Analyzer Settings) > select Target Platforms (use net standard for class libs / net core for applications)
+    c - Open .sln in VS2019 > Right-click project > Analyze Assembly Portability (or Analyze > Analyze Assembly Portability) > select project's executable or DLL
+3 - Convert projects (https://docs.microsoft.com/en-us/dotnet/core/porting/)
+    a - [One-off] Cmd > dotnet tool install -g try-convert (https://github.com/dotnet/try-convert)
+    b - Cmd [VS developer command prompt] > cd D:\_Dgit\_MINE_ACTIVE\OpenInApp.Launcher\src\OpenInApp.Command > try-convert (this will create a .csproj.old file & the new format .csproj file)
+    c - To run try-convert for an entire sln rather than for each csproj one by one in powershell > 
+            cd D:\_Dgit\_MINE_ACTIVE\OpenInApp.Launcher\src     
+            $paths = Get-ChildItem -include *.csproj -Recurse
+            foreach($pathobject in $paths) 
+            {
+                cd $pathobject.directory.fullName        
+                try-convert
+            }
+    d - For the conversion error "Project '..\OpenInApp.Command\OpenInApp.Command.csproj' targets 'netcoreapp3.1'. It cannot be referenced by a project that targets '.NETFramework,Version=v4.6.1'" ==> change <TargetFramework>netcoreapp3.1</TargetFramework> to <TargetFramework>netstandard2.0</TargetFramework>
+    e - For the conversion error "The imported project "C:\Program Files\dotnet\sdk\3.1.200\Microsoft\VisualStudio\v16.0\VSSDK\Microsoft.VsSDK.targets" was not found. Confirm that...the file exists on disk." ==> Simply re-try the conversion in the VS developer command prompt window rather than the standard windows command prompt
+    f - For the compile error "This project has custom imports in a manner that's not supported" ==> Edit the csproj & comment out this line <!--<Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />-->
+https://docs.microsoft.com/en-us/dotnet/core/porting/
+https://www.danielcrabtree.com/blog/314/upgrading-to-net-core-and-net-standard-made-easy
+https://arminreiter.com/2017/05/port-net-framework-net-standard/
+https://docs.microsoft.com/en-us/aspnet/core/migration/proper-to-2x/?view=aspnetcore-3.1
+https://docs.microsoft.com/en-us/dotnet/core/compatibility/fx-core
