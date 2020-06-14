@@ -127,8 +127,10 @@ export class BadgeExclusions {
 
     public gitHubActions: RepoNames[] = [
         RepoNames.AutoFindReplace,
+        RepoNames.CleanArchitecture,
         RepoNames.DotNetFlags,
         RepoNames.FilesForEveryExtensionCreator,
+        RepoNames["Gregt.sidewafflev2"],
         RepoNames.HelloWorldTypescriptParcel,
         RepoNames.HelloWorldTypescriptWebpack,
         RepoNames.HelloWorldVsixCommandButton,
@@ -137,10 +139,10 @@ export class BadgeExclusions {
         RepoNames.HelloWorldVsixToolWindowAsyncPackageExample,
         RepoNames.HelloWorldVstsExtension,
         RepoNames.HelloWorldWpfAsyncBindingPropertyExample,
-        //RepoNames."OpenInApp.Launcher",
+        RepoNames.MiscellaneousArtefacts,
+        RepoNames.More,
         RepoNames["OpenInApp.Launcher"],
         RepoNames.QuickLaunchButtons,
-        //RepoNames."Quiz.Launcher",
         RepoNames["Quiz.Launcher"],
         RepoNames.SolutionOpenPopUp,
         RepoNames.TrivialApisForIDE,
