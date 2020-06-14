@@ -34,7 +34,7 @@ export class GitExecutioner {
             }
             case GitCommand.Clone: {
                 if (repoMetaData.repoCategory !== RepoCategory.ReadMeSynchronizer) {
-                    const localPath = `D:\\_Dgit\\_MINE_ACTIVE\\${repoMetaData.localRepoName}`; //gregt dedupe
+                    const localPath = `D:\\_Dgit\\_MINE_ACTIVE\\${repoMetaData.localRepoName}`; //TODO define elsewhere
                     const remotePath = `https://github.com/GregTrevellick/${repoMetaData.localRepoName}`; //TODO dedupe
                     simpleGit(backPaths).clone(remotePath, localPath);
                 }
