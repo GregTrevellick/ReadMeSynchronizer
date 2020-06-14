@@ -22,7 +22,8 @@ export class GitExecutioner {
 
         const simpleGit = require("simple-git");
         const targetReadMeFileName = "README.md";
-        const workingDirPath: string = "../../../" + repoMetaData.localRepoName;
+        const backPaths: string = "../../../";
+        const workingDirPath: string = backPaths + repoMetaData.localRepoName;
 
         switch (gitCommand) {
             case GitCommand.AdHocCommit: {
@@ -33,9 +34,9 @@ export class GitExecutioner {
             }
             case GitCommand.Clone: {
                 if (repoMetaData.repoCategory !== RepoCategory.ReadMeSynchronizer) {
-                    const localPath = `D:\\_Dgit\\_MINE_ACTIVE\\${repoMetaData.localRepoName}`;             //gregt dedupe 
-                    const remotePath = `https://github.com/GregTrevellick/${repoMetaData.localRepoName}`;   //gregt dedupe
-                    simpleGit("../../../").clone(remotePath, localPath);                                    //gregt dedupe
+                    const localPath = `D:\\_Dgit\\_MINE_ACTIVE\\${repoMetaData.localRepoName}`; //gregt dedupe
+                    const remotePath = `https://github.com/GregTrevellick/${repoMetaData.localRepoName}`; //TODO dedupe
+                    simpleGit(backPaths).clone(remotePath, localPath);
                 }
                 break;
             }
