@@ -33,19 +33,9 @@ export class GitExecutioner {
             }
             case GitCommand.Clone: {
                 if (repoMetaData.repoCategory !== RepoCategory.ReadMeSynchronizer) {
-                    //const localPath = "D:\_Dgit\_MINE_ACTIVE\" + repoMetaData.localRepoName
-                    //const localPath = `D:\_Dgit\_MINE_ACTIVE\${repoMetaData.localRepoName}`;
-                    //const localPath = "D:\\_Dgit\\_MINE_ACTIVE\\";
-                    //const localPath = "D:/_Dgit/_MINE_ACTIVE/";
-                    //const localPath = "D:\_Dgit\_MINE_ACTIVE";
-                    //const localPath = "D:\\_Dgit\\_MINE_ACTIVE";
-                    //const localPath = "D:\\_Dgit\\_MINE_ACTIVE\\";
-                    const localPath = `D:\\_Dgit\\_MINE_ACTIVE\\${repoMetaData.localRepoName}`;
-                    const remotePath = `https://github.com/GregTrevellick/${repoMetaData.localRepoName}`;
-                    console.log("#########################");
-                    console.log(localPath);
-                    console.log(remotePath);
-                    simpleGit("../../../").clone(remotePath, localPath);
+                    const localPath = `D:\\_Dgit\\_MINE_ACTIVE\\${repoMetaData.localRepoName}`;             //gregt dedupe 
+                    const remotePath = `https://github.com/GregTrevellick/${repoMetaData.localRepoName}`;   //gregt dedupe
+                    simpleGit("../../../").clone(remotePath, localPath);                                    //gregt dedupe
                 }
                 break;
             }
