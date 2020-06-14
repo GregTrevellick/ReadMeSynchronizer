@@ -3,6 +3,7 @@
 
 export enum GitCommand {
     AdHocCommit,
+    Clone,
     CommitReadMe,
     PullRepo,
     PushRepo,
