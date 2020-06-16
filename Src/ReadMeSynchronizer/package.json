@@ -22,7 +22,7 @@
     "devDependencies": {
         "babel-loader": "^5.0.0",
         "gulp": "^4.0.0",
-        "gulp-bower": "0.0.14",
+        "gulp-bower": "0.0.15",
         "gulp-concat": "2.6.1",
         "gulp-config": "0.3.0",
         "gulp-string-replace": "1.1.2",
