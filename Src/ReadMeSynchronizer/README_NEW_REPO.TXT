@@ -9,6 +9,7 @@ Having created the repo in GitHub, add to...
  f) codescene (max 5 repos)
  g) lgtm (Project Lists, enter full github repo url, click 'Follow')
  h) enable github actions to build the .sln
+ i) Azure Devops (azure project not authorized to github ? project settings > service connections > github > edit > authorize > [disable chrome extensions] enter)
  todo) https://codecov.io
 
 
