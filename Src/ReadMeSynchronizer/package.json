@@ -12,7 +12,7 @@
         "gulpclass": "^0.2.0",
         "natives": "^1.1.6",
         "simple-git": "^1.96.0",
-        "ts-enum-util": "3.1.0",
+        "ts-enum-util": "4.0.2",
         "ts-node": "^7.0.0",
         "tslint": "^5.11.0",
         "tslint-language-service": "^0.9.9",
