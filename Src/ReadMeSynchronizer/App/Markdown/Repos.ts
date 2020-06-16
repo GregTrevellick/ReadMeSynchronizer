@@ -430,7 +430,7 @@ export const trivialApisForIDE: IVsmpMetaData = {
 
 export const visualStudioMarketplaceMetrics: IRepoMetaData = {
     appVeyorId: "6sbejo44yn8ckbc0",
-    azureDefinitionId: "23",
+    azureDefinitionId: "45",
     codacyId: "7e6f7c8bd4d240398affcd2202b84fd8",
     codeBeatId: "473ea34e-b1c4-42fe-a8df-1d7d6e587d50",
     codeSceneId: "7068",
