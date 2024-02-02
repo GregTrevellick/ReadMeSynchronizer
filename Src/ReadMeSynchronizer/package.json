@@ -6,7 +6,7 @@
         "gulp-git": "^2.8.0",
         "gulp-inject": "^1.2.0",
         "gulp-run": "^1.7.1",
-        "gulp-sourcemaps": "^1.5.1",
+        "gulp-sourcemaps": "^3.0.0",
         "gulp-tslint": "^1.4.4",
         "gulp-typescript": "^2.5.0",
         "gulpclass": "^0.2.0",
