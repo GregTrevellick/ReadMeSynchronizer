@@ -3,7 +3,7 @@
         "array-sort": "^1.0.0",
         "commonjs": "^0.0.1",
         "gulp-debug": "^2.0.1",
-        "gulp-git": "^2.8.0",
+        "gulp-git": "^2.10.2",
         "gulp-inject": "^1.2.0",
         "gulp-run": "^1.7.1",
         "gulp-sourcemaps": "^1.5.1",
